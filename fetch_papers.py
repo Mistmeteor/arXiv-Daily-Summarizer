@@ -12,8 +12,8 @@ from difflib import SequenceMatcher
 # ========== Configuration ==========
 
 # arXiv search configuration
-CATEGORIES = ['econ.EM']  # Research areas of interest (Econometrics only)
-MAX_RESULTS = 5  # Number of papers to send daily
+CATEGORIES = ['econ.EM', 'math.OC', 'stat.ML']  # Econometrics + non-convex opt + statistical ML (for BLP research)
+MAX_RESULTS = 30  # Upper bound; will send fewer if fewer new papers exist that day
 MIN_PAPERS_PER_CATEGORY = 1  # Minimum papers per category to ensure balance
 
 # Language configuration
@@ -371,6 +371,31 @@ def analyze_paper_dates(papers):
     return date_stats
 
 
+def strip_markdown(text):
+    """
+    Safety net: strip common Markdown syntax from AI-generated summaries so
+    they render cleanly in the plain-body email. Preserves LaTeX math (\\(...\\))
+    which is domain-meaningful even if not visually rendered.
+    """
+    if not text:
+        return text
+    # Remove ATX headers at line starts: "### foo" -> "foo"
+    text = re.sub(r'^\s{0,3}#{1,6}\s+', '', text, flags=re.MULTILINE)
+    # Bold: **foo** / __foo__ -> foo
+    text = re.sub(r'\*\*(.+?)\*\*', r'\1', text)
+    text = re.sub(r'__(.+?)__', r'\1', text)
+    # Italic: *foo* / _foo_ -> foo (avoid matching inside numbers like a_1)
+    text = re.sub(r'(?<!\*)\*(?!\s)([^*\n]+?)(?<!\s)\*(?!\*)', r'\1', text)
+    text = re.sub(r'(?<![A-Za-z0-9_])_(?!\s)([^_\n]+?)(?<!\s)_(?![A-Za-z0-9_])', r'\1', text)
+    # Inline code: `foo` -> foo
+    text = re.sub(r'`([^`\n]+?)`', r'\1', text)
+    # Blockquote markers at line starts
+    text = re.sub(r'^\s{0,3}>\s?', '', text, flags=re.MULTILINE)
+    # Unordered list bullets at line starts: "- foo" / "* foo" / "+ foo" -> "foo"
+    text = re.sub(r'^\s{0,3}[-*+]\s+', '', text, flags=re.MULTILINE)
+    return text
+
+
 def summarize_paper(paper, language='zh'):
     """
     Generate paper summary using DeepSeek AI
@@ -388,6 +413,17 @@ def summarize_paper(paper, language='zh'):
     summaries = {}
     
     # Define prompts for each language
+    # IMPORTANT: explicitly forbid markdown so the summary renders as plain text in email
+    plain_text_rule_zh = (
+        "输出格式要求（重要）：请只输出纯文本，不要使用任何 Markdown 语法。"
+        "禁止使用 **加粗**、*斜体*、# 标题、### 小标题、`代码`、> 引用、- 或 * 列表符号。"
+        "四个小节请直接用『1. 』『2. 』『3. 』『4. 』开头即可，不要在小节标题前后加任何符号。"
+    )
+    plain_text_rule_en = (
+        "Formatting rule (important): output plain text only, no Markdown. "
+        "Do NOT use **bold**, *italics*, # or ### headers, `code`, > blockquotes, or - / * bullet markers. "
+        "Start each of the four sections with '1. ', '2. ', '3. ', '4. ' directly, with no extra decoration."
+    )
     prompts = {
         'zh': f"""请用中文总结以下学术论文，包括以下几个方面：
 1. 研究背景和动机（1-2句话）
@@ -400,7 +436,9 @@ def summarize_paper(paper, language='zh'):
 论文摘要：
 {paper['abstract']}
 
-请用简洁专业的语言总结，适合快速阅读理解。""",
+请用简洁专业的语言总结，适合快速阅读理解。
+
+{plain_text_rule_zh}""",
         'en': f"""Please summarize the following academic paper in English, including these aspects:
 1. Research background and motivation (1-2 sentences)
 2. Main methods and innovations (2-3 sentences)
@@ -412,7 +450,9 @@ Paper title: {paper['title']}
 Paper abstract:
 {paper['abstract']}
 
-Please use concise professional language suitable for quick reading."""
+Please use concise professional language suitable for quick reading.
+
+{plain_text_rule_en}"""
     }
     
     # Determine which languages to generate
@@ -455,7 +495,7 @@ Please use concise professional language suitable for quick reading."""
                         done_reasoning = True
                     summary += answer_chunk
             
-            summaries[lang] = summary.strip()
+            summaries[lang] = strip_markdown(summary.strip())
             print(f"   ✅ {'Chinese' if lang == 'zh' else 'English'} summary completed")
         
         # Return format based on language mode
@@ -736,9 +776,9 @@ def generate_email_content(papers_with_summaries, language='zh'):
         if paper.get('quality_score', 0) >= 5.0:
             quality_badge = f'<span class="quality-badge">{txt["high_quality"]}</span>'
         
-        # Format category tags
-        categories_html = ''.join([
-            f'<span class="category-tag">{cat}</span>' 
+        # Format category tags (join with a space so tags don't run together visually)
+        categories_html = ' '.join([
+            f'<span class="category-tag">{cat}</span>'
             for cat in paper['categories'][:3]
         ])
         
