@@ -12,7 +12,7 @@ from difflib import SequenceMatcher
 # ========== Configuration ==========
 
 # arXiv search configuration
-CATEGORIES = ['cs.AI', 'cs.CV', 'cs.CL']  # Research areas of interest
+CATEGORIES = ['econ.EM']  # Research areas of interest (Econometrics only)
 MAX_RESULTS = 5  # Number of papers to send daily
 MIN_PAPERS_PER_CATEGORY = 1  # Minimum papers per category to ensure balance
 
@@ -20,10 +20,10 @@ MIN_PAPERS_PER_CATEGORY = 1  # Minimum papers per category to ensure balance
 # Supported values: 'zh' (Chinese), 'en' (English), 'both' (Bilingual)
 EMAIL_LANGUAGE = os.environ.get('EMAIL_LANGUAGE', 'zh')  # Default to Chinese
 
-# DeepSeek API configuration
+# DeepSeek API configuration (official DeepSeek platform)
 DEEPSEEK_API_KEY = os.environ.get('DEEPSEEK_API_KEY')
-DEEPSEEK_BASE_URL = 'https://api-inference.modelscope.cn/v1'
-DEEPSEEK_MODEL = 'deepseek-ai/DeepSeek-V3.2-Exp'
+DEEPSEEK_BASE_URL = 'https://api.deepseek.com/v1'
+DEEPSEEK_MODEL = 'deepseek-chat'  # points to the latest DeepSeek-V3
 
 # Email configuration
 SENDER_EMAIL = os.environ.get('SENDER_EMAIL')
