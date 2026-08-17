@@ -37,6 +37,42 @@ SMTP_PORT = int(os.environ.get('SMTP_PORT', '587'))
 MIN_ABSTRACT_LENGTH = 100  # Minimum abstract length (characters)
 SIMILARITY_THRESHOLD = 0.85  # Title similarity threshold for duplicate detection
 
+# arXiv category → Chinese label. Used to render category tags in the email.
+# Unlisted categories fall back to the raw arXiv code.
+CATEGORY_LABELS = {
+    # Economics
+    'econ.EM': '计量经济学',
+    'econ.TH': '理论经济学',
+    'econ.GN': '一般经济学',
+    # Mathematics
+    'math.OC': '优化与控制',
+    'math.ST': '数理统计',
+    'math.NA': '数值分析',
+    'math.PR': '概率论',
+    # Statistics
+    'stat.ML': '统计机器学习',
+    'stat.ME': '统计方法学',
+    'stat.AP': '统计应用',
+    'stat.TH': '统计理论',
+    'stat.CO': '计算统计学',
+    # Computer science
+    'cs.LG': '机器学习',
+    'cs.AI': '人工智能',
+    'cs.CV': '计算机视觉',
+    'cs.CL': '计算语言学',
+    'cs.NA': '数值分析(CS)',
+    # Quantitative finance
+    'q-fin.EC': '金融经济学',
+    'q-fin.ST': '金融统计',
+    'q-fin.RM': '风险管理',
+    'q-fin.PM': '投资组合管理',
+    'q-fin.CP': '计算金融',
+    'q-fin.MF': '数理金融',
+    'q-fin.PR': '金融衍生品定价',
+    'q-fin.TR': '金融交易',
+    'q-fin.GN': '一般金融',
+}
+
 # Language text templates
 TEXT_TEMPLATES = {
     'zh': {
@@ -257,10 +293,24 @@ def get_latest_papers():
             
             for result in results:
                 if result.entry_id not in seen_ids:
+                    # For non-primary categories (math.OC, stat.ML, ...) we only
+                    # want papers that intersect with economics — i.e. cross-listed
+                    # to some econ.* subcategory (or q-fin.EC). This filters out
+                    # pure math / pure CS papers that aren't relevant to a BLP /
+                    # econometrics researcher.
+                    if category != PRIMARY_CATEGORY:
+                        cats = list(result.categories)
+                        has_econ_tag = any(
+                            c.startswith('econ.') or c == 'q-fin.EC'
+                            for c in cats
+                        )
+                        if not has_econ_tag:
+                            continue  # skip pure math/CS papers
+
                     seen_ids.add(result.entry_id)
-                    
+
                     abstract_text = result.summary if hasattr(result, 'summary') else ''
-                    
+
                     paper = {
                         'title': result.title,
                         'authors': ', '.join([author.name for author in result.authors]),
@@ -271,12 +321,12 @@ def get_latest_papers():
                         'entry_id': result.entry_id,
                         'primary_category': category
                     }
-                    
+
                     # Calculate quality score
                     paper['quality_score'] = calculate_paper_quality_score(paper)
-                    
+
                     papers_by_category[category].append(paper)
-                    
+
                     print(f"  ✓ {result.title[:60]}... (score: {paper['quality_score']:.1f})")
             
             # Sort papers in this category by quality score
@@ -324,8 +374,12 @@ def get_latest_papers():
     print(f"\n🔍 Checking for duplicate/similar papers...")
     selected_papers = remove_duplicate_papers(selected_papers)
     
-    # Step 5: Final sort by publish date (newest first)
-    selected_papers.sort(key=lambda x: x['published'], reverse=True)
+    # Step 5: Final sort — econ.EM papers (including cross-listed) at the top,
+    # then everything else. Within each group, newest first.
+    selected_papers.sort(key=lambda x: (
+        PRIMARY_CATEGORY not in x.get('categories', []),  # False (=0) → sorts first
+        -x['published'].timestamp()
+    ))
     
     print(f"\n✅ Total papers collected: {len(selected_papers)}")
     print(f"📄 Papers to send: {len(selected_papers)}")
@@ -396,7 +450,12 @@ def strip_markdown(text):
     text = re.sub(r'^\s{0,3}>\s?', '', text, flags=re.MULTILINE)
     # Unordered list bullets at line starts: "- foo" / "* foo" / "+ foo" -> "foo"
     text = re.sub(r'^\s{0,3}[-*+]\s+', '', text, flags=re.MULTILINE)
-    return text
+    # Normalize whitespace: strip trailing spaces on each line, then collapse
+    # 2+ consecutive newlines down to 1 (DeepSeek often uses \n\n between sections,
+    # which turns into <br><br> = extra blank line in the email)
+    text = re.sub(r'[ \t]+\n', '\n', text)
+    text = re.sub(r'\n{2,}', '\n', text)
+    return text.strip()
 
 
 def summarize_paper(paper, language='zh'):
@@ -785,9 +844,10 @@ def generate_email_content(papers_with_summaries, language='zh'):
         if paper.get('quality_score', 0) >= 5.0:
             quality_badge = f'<span class="quality-badge">{txt["high_quality"]}</span>'
         
-        # Format category tags (join with a space so tags don't run together visually)
+        # Format category tags: translate to Chinese labels, fall back to raw code
+        # for anything not in the map. Space-separated so tags don't visually merge.
         categories_html = ' '.join([
-            f'<span class="category-tag">{cat}</span>'
+            f'<span class="category-tag">{CATEGORY_LABELS.get(cat, cat)}</span>'
             for cat in paper['categories'][:3]
         ])
         
