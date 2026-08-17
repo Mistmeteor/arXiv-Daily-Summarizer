@@ -442,7 +442,10 @@ Please use concise professional language suitable for quick reading."""
             summary = ""
             done_reasoning = False
             for chunk in response:
-                reasoning_chunk = chunk.choices[0].delta.reasoning_content or ''
+                # reasoning_content only exists on reasoning models (e.g. deepseek-reasoner,
+                # ModelScope's DeepSeek-V3.2-Exp). Non-reasoning models like deepseek-chat
+                # don't expose this attribute, so use getattr with a default to stay compatible.
+                reasoning_chunk = getattr(chunk.choices[0].delta, 'reasoning_content', None) or ''
                 answer_chunk = chunk.choices[0].delta.content or ''
                 
                 if reasoning_chunk:
