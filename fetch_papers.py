@@ -13,8 +13,9 @@ from difflib import SequenceMatcher
 
 # arXiv search configuration
 CATEGORIES = ['econ.EM', 'math.OC', 'stat.ML']  # Econometrics + non-convex opt + statistical ML (for BLP research)
-MAX_RESULTS = 30  # Upper bound; will send fewer if fewer new papers exist that day
-MIN_PAPERS_PER_CATEGORY = 1  # Minimum papers per category to ensure balance
+PRIMARY_CATEGORY = 'econ.EM'  # Dominant field; other categories only fill leftover slots
+MAX_RESULTS = 10  # Daily cap
+MIN_PAPERS_PER_CATEGORY = 1  # (kept for backward compat; not used by the primary-first selector below)
 
 # Language configuration
 # Supported values: 'zh' (Chinese), 'en' (English), 'both' (Bilingual)
@@ -241,9 +242,12 @@ def get_latest_papers():
         print(f"\n🔎 Searching category: {category}")
         
         try:
+            # Fetch a wider window so that if today has few/zero new papers in the
+            # primary category, we can fall back to high-quality papers from
+            # earlier days (~10 recent days for econ.EM at ~3 papers/day).
             search = arxiv.Search(
                 query=f'cat:{category}',
-                max_results=MAX_RESULTS * 2,  # Fetch more for better selection
+                max_results=MAX_RESULTS * 3,
                 sort_by=arxiv.SortCriterion.SubmittedDate,
                 sort_order=arxiv.SortOrder.Descending
             )
@@ -287,35 +291,34 @@ def get_latest_papers():
             print(f"  ❌ Error searching {category}: {str(e)}")
             continue
     
-    # Step 2: Ensure category balance - select minimum papers from each category
-    print(f"\n⚖️ Ensuring category balance...")
+    # Step 2: Primary category first — econ.EM dominates the digest.
+    # Take up to MAX_RESULTS from PRIMARY_CATEGORY, ordered by quality within the
+    # recent-fetch window. If today has zero new papers, this naturally rolls back
+    # to the best of the past few days (SortCriterion.SubmittedDate DESC + wider window).
+    print(f"\n⚖️ Selecting papers (primary: {PRIMARY_CATEGORY})...")
     selected_papers = []
-    
-    for category in CATEGORIES:
-        category_papers = papers_by_category[category]
-        if category_papers:
-            # Take top MIN_PAPERS_PER_CATEGORY papers from each category
-            num_to_take = min(MIN_PAPERS_PER_CATEGORY, len(category_papers))
-            selected_papers.extend(category_papers[:num_to_take])
-            print(f"  Selected {num_to_take} papers from {category}")
-    
-    # Step 3: Fill remaining slots with highest quality papers
+    primary_papers = papers_by_category.get(PRIMARY_CATEGORY, [])
+    take_from_primary = min(len(primary_papers), MAX_RESULTS)
+    selected_papers.extend(primary_papers[:take_from_primary])
+    print(f"  Selected {take_from_primary} papers from {PRIMARY_CATEGORY} (primary)")
+
+    # Step 3: Fill any remaining slots with top-quality papers from the other
+    # categories (math.OC, stat.ML, ...). If econ.EM already fills all MAX_RESULTS
+    # slots, no other-category papers are shown.
     remaining_slots = MAX_RESULTS - len(selected_papers)
-    
+
     if remaining_slots > 0:
-        print(f"\n📊 Filling {remaining_slots} remaining slots with highest quality papers...")
-        
-        # Collect all remaining papers
-        all_remaining = []
-        for category, papers in papers_by_category.items():
-            # Skip papers already selected
-            for paper in papers:
-                if paper not in selected_papers:
-                    all_remaining.append(paper)
-        
-        # Sort by quality score and take top papers
-        all_remaining.sort(key=lambda x: x['quality_score'], reverse=True)
-        selected_papers.extend(all_remaining[:remaining_slots])
+        print(f"\n📊 Filling {remaining_slots} remaining slots from other categories...")
+        others = []
+        seen_entry_ids = {p['entry_id'] for p in selected_papers}
+        for category in CATEGORIES:
+            if category == PRIMARY_CATEGORY:
+                continue
+            for paper in papers_by_category.get(category, []):
+                if paper['entry_id'] not in seen_entry_ids:
+                    others.append(paper)
+        others.sort(key=lambda x: x['quality_score'], reverse=True)
+        selected_papers.extend(others[:remaining_slots])
     
     # Step 4: Remove duplicates using intelligent similarity detection
     print(f"\n🔍 Checking for duplicate/similar papers...")
@@ -708,7 +711,7 @@ def generate_email_content(papers_with_summaries, language='zh'):
             }}
             .summary {{
                 background: #f8f9ff;
-                padding: 15px;
+                padding: 18px;
                 border-left: 4px solid #667eea;
                 margin: 15px 0;
                 border-radius: 4px;
@@ -716,7 +719,13 @@ def generate_email_content(papers_with_summaries, language='zh'):
             .summary-title {{
                 font-weight: bold;
                 color: #667eea;
-                margin-bottom: 10px;
+                margin-bottom: 12px;
+                font-size: 15px;
+            }}
+            .summary-body {{
+                font-size: 16px;
+                line-height: 1.75;
+                color: #2c2c2c;
             }}
             .links {{
                 margin-top: 15px;
@@ -819,7 +828,7 @@ def generate_email_content(papers_with_summaries, language='zh'):
             
             <div class="summary">
                 <div class="summary-title">🤖 {txt['ai_summary']}</div>
-                <div>{summary_html}</div>
+                <div class="summary-body">{summary_html}</div>
             </div>
             
             <div class="links">
