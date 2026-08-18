@@ -90,6 +90,7 @@ TEXT_TEMPLATES = {
         'yesterday_label': '昨日发布',
         'days_ago_label': '{days} 天前',
         'high_quality': '⭐ 高质量',
+        'pinned': '📌 置顶',
         'authors': '作者',
         'published': '发布日期',
         'categories': '分类',
@@ -114,6 +115,7 @@ TEXT_TEMPLATES = {
         'yesterday_label': 'YESTERDAY',
         'days_ago_label': '{days} DAYS AGO',
         'high_quality': '⭐ HIGH QUALITY',
+        'pinned': '📌 PINNED',
         'authors': 'Authors',
         'published': 'Published',
         'categories': 'Categories',
@@ -374,12 +376,29 @@ def get_latest_papers():
     print(f"\n🔍 Checking for duplicate/similar papers...")
     selected_papers = remove_duplicate_papers(selected_papers)
     
-    # Step 5: Final sort — econ.EM papers (including cross-listed) at the top,
-    # then everything else. Within each group, newest first.
+    # Step 5: Final sort — pin econometrics (econ.EM) papers to the very top
+    # with strict priority. Priority tiers (0 = highest):
+    #   0. econ.EM is the paper's arXiv primary category (truly econometrics-first)
+    #   1. econ.EM appears in the paper's category list (cross-listed to econometrics)
+    #   2. everything else
+    # Within each tier, sort by quality score DESC, then published date DESC.
+    def _econ_priority(paper):
+        cats = list(paper.get('categories', []))
+        if cats and cats[0] == PRIMARY_CATEGORY:
+            return 0
+        if PRIMARY_CATEGORY in cats:
+            return 1
+        return 2
+
     selected_papers.sort(key=lambda x: (
-        PRIMARY_CATEGORY not in x.get('categories', []),  # False (=0) → sorts first
+        _econ_priority(x),
+        -x.get('quality_score', 0),
         -x['published'].timestamp()
     ))
+
+    # Mark econometrics papers as pinned so the email renderer can show a badge
+    for paper in selected_papers:
+        paper['is_pinned'] = PRIMARY_CATEGORY in list(paper.get('categories', []))
     
     print(f"\n✅ Total papers collected: {len(selected_papers)}")
     print(f"📄 Papers to send: {len(selected_papers)}")
@@ -726,6 +745,19 @@ def generate_email_content(papers_with_summaries, language='zh'):
                 background: #ffd700;
                 color: #856404;
             }}
+            .pinned-badge {{
+                display: inline-block;
+                padding: 2px 8px;
+                border-radius: 3px;
+                font-size: 11px;
+                font-weight: bold;
+                margin-left: 8px;
+                background: #e53935;
+                color: #ffffff;
+            }}
+            .paper-pinned {{
+                border-left: 5px solid #e53935;
+            }}
             .meta {{
                 color: #666;
                 font-size: 14px;
@@ -843,6 +875,13 @@ def generate_email_content(papers_with_summaries, language='zh'):
         quality_badge = ''
         if paper.get('quality_score', 0) >= 5.0:
             quality_badge = f'<span class="quality-badge">{txt["high_quality"]}</span>'
+
+        # Add pinned badge for econometrics papers (always shown at top)
+        pinned_badge = ''
+        paper_class = 'paper'
+        if paper.get('is_pinned'):
+            pinned_badge = f'<span class="pinned-badge">{txt["pinned"]}</span>'
+            paper_class = 'paper paper-pinned'
         
         # Format category tags: translate to Chinese labels, fall back to raw code
         # for anything not in the map. Space-separated so tags don't visually merge.
@@ -868,8 +907,8 @@ def generate_email_content(papers_with_summaries, language='zh'):
             summary_html = summary_text.replace(chr(10), '<br>')
         
         html += f"""
-        <div class="paper">
-            <div class="paper-title">{i}. {paper['title']}{date_badge}{quality_badge}</div>
+        <div class="{paper_class}">
+            <div class="paper-title">{i}. {paper['title']}{pinned_badge}{date_badge}{quality_badge}</div>
             <div class="meta">
                 <div class="meta-item">
                     <strong>👥 {txt['authors']}:</strong> {paper['authors'][:200]}{'...' if len(paper['authors']) > 200 else ''}
