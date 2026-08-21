@@ -9,6 +9,8 @@ from collections import Counter, defaultdict
 import re
 from difflib import SequenceMatcher
 
+import push_history
+
 # ========== Configuration ==========
 
 # arXiv search configuration
@@ -36,6 +38,79 @@ SMTP_PORT = int(os.environ.get('SMTP_PORT', '587'))
 # Quality filtering thresholds
 MIN_ABSTRACT_LENGTH = 100  # Minimum abstract length (characters)
 SIMILARITY_THRESHOLD = 0.85  # Title similarity threshold for duplicate detection
+
+# Push-history / dedup schedule lives in push_history.py (spaced-repetition curve:
+# first push on day D, repush unlocks at D+7 and D+30, capped at 3 total pushes).
+
+# BLP / demand-estimation strong-recommend keywords. Papers whose title or
+# abstract match any of these are pinned to the very top of the digest and
+# rendered with a red "🔥 强推荐" badge. Matching is lowercase substring.
+BLP_KEYWORDS = [
+    # Core BLP
+    'blp', 'berry-levinsohn', 'berry levinsohn', 'levinsohn-pakes',
+    'berry, levinsohn', 'berry and levinsohn', 'pyblp',
+    'random coefficient', 'random-coefficient', 'random coefficients',
+    # Demand estimation
+    'demand estimation', 'demand model', 'demand system',
+    'discrete choice', 'discrete-choice',
+    # Structural IO adjacent
+    'differentiated product', 'differentiated products',
+    'merger simulation', 'merger analysis',
+    'nested logit', 'mixed logit',
+    'micro moments', 'micro-moments',
+    'consumer heterogeneity', 'characteristic space',
+    'market equilibrium',
+]
+
+
+def matches_blp(paper):
+    """True if the paper's title or abstract mentions any BLP-related keyword."""
+    text = (paper.get('title', '') + ' ' + paper.get('abstract', '')).lower()
+    return any(kw in text for kw in BLP_KEYWORDS)
+
+
+def _priority_tier(paper):
+    """0 = strongest (BLP), 3 = weakest. Used for the final digest sort."""
+    if matches_blp(paper):
+        return 0
+    cats = list(paper.get('categories', []))
+    if cats and cats[0] == PRIMARY_CATEGORY:
+        return 1
+    if PRIMARY_CATEGORY in cats:
+        return 2
+    return 3
+
+
+def fetch_papers_by_ids(id_list):
+    """Fetch paper metadata for a list of normalized arXiv IDs (e.g. '2401.12345').
+
+    Used for scheduled repushes: papers whose D+7 / D+30 window has come due
+    are usually no longer surfaced by the natural recent-window search, so we
+    look them up directly.
+    """
+    if not id_list:
+        return []
+    client = arxiv.Client()
+    search = arxiv.Search(id_list=list(id_list))
+    out = []
+    try:
+        for result in client.results(search):
+            paper = {
+                'title': result.title,
+                'authors': ', '.join([a.name for a in result.authors]),
+                'abstract': result.summary if hasattr(result, 'summary') else '',
+                'pdf_url': result.pdf_url,
+                'published': result.published,
+                'categories': result.categories,
+                'entry_id': result.entry_id,
+                'primary_category': (list(result.categories) or [PRIMARY_CATEGORY])[0],
+                'is_repush': True,
+            }
+            paper['quality_score'] = calculate_paper_quality_score(paper)
+            out.append(paper)
+    except Exception as e:
+        print(f"  ⚠️ Failed to fetch repush papers by id: {e}")
+    return out
 
 # arXiv category → Chinese label. Used to render category tags in the email.
 # Unlisted categories fall back to the raw arXiv code.
@@ -91,6 +166,8 @@ TEXT_TEMPLATES = {
         'days_ago_label': '{days} 天前',
         'high_quality': '⭐ 高质量',
         'pinned': '📌 置顶',
+        'blp_recommend': '🔥 强推荐',
+        'repush': '♻️ 二次推送',
         'authors': '作者',
         'published': '发布日期',
         'categories': '分类',
@@ -116,6 +193,8 @@ TEXT_TEMPLATES = {
         'days_ago_label': '{days} DAYS AGO',
         'high_quality': '⭐ HIGH QUALITY',
         'pinned': '📌 PINNED',
+        'blp_recommend': '🔥 STRONGLY RECOMMENDED',
+        'repush': '♻️ REPUSH',
         'authors': 'Authors',
         'published': 'Published',
         'categories': 'Categories',
@@ -376,29 +455,22 @@ def get_latest_papers():
     print(f"\n🔍 Checking for duplicate/similar papers...")
     selected_papers = remove_duplicate_papers(selected_papers)
     
-    # Step 5: Final sort — pin econometrics (econ.EM) papers to the very top
-    # with strict priority. Priority tiers (0 = highest):
-    #   0. econ.EM is the paper's arXiv primary category (truly econometrics-first)
-    #   1. econ.EM appears in the paper's category list (cross-listed to econometrics)
-    #   2. everything else
+    # Step 5: Final sort. Priority tiers (0 = highest):
+    #   0. BLP / demand-estimation match (strong recommend, above everything else)
+    #   1. econ.EM is the paper's arXiv primary category (truly econometrics-first)
+    #   2. econ.EM appears in the paper's category list (cross-listed to econometrics)
+    #   3. everything else
     # Within each tier, sort by quality score DESC, then published date DESC.
-    def _econ_priority(paper):
-        cats = list(paper.get('categories', []))
-        if cats and cats[0] == PRIMARY_CATEGORY:
-            return 0
-        if PRIMARY_CATEGORY in cats:
-            return 1
-        return 2
-
     selected_papers.sort(key=lambda x: (
-        _econ_priority(x),
+        _priority_tier(x),
         -x.get('quality_score', 0),
         -x['published'].timestamp()
     ))
 
-    # Mark econometrics papers as pinned so the email renderer can show a badge
+    # Tag papers for the email renderer
     for paper in selected_papers:
         paper['is_pinned'] = PRIMARY_CATEGORY in list(paper.get('categories', []))
+        paper['is_blp_recommend'] = matches_blp(paper)
     
     print(f"\n✅ Total papers collected: {len(selected_papers)}")
     print(f"📄 Papers to send: {len(selected_papers)}")
@@ -758,6 +830,30 @@ def generate_email_content(papers_with_summaries, language='zh'):
             .paper-pinned {{
                 border-left: 5px solid #e53935;
             }}
+            .blp-badge {{
+                display: inline-block;
+                padding: 2px 8px;
+                border-radius: 3px;
+                font-size: 11px;
+                font-weight: bold;
+                margin-left: 8px;
+                background: #ff5722;
+                color: #ffffff;
+            }}
+            .paper-blp {{
+                border-left: 5px solid #ff5722;
+                background: #fff8f5;
+            }}
+            .repush-badge {{
+                display: inline-block;
+                padding: 2px 8px;
+                border-radius: 3px;
+                font-size: 11px;
+                font-weight: bold;
+                margin-left: 8px;
+                background: #9e9e9e;
+                color: #ffffff;
+            }}
             .meta {{
                 color: #666;
                 font-size: 14px;
@@ -876,12 +972,20 @@ def generate_email_content(papers_with_summaries, language='zh'):
         if paper.get('quality_score', 0) >= 5.0:
             quality_badge = f'<span class="quality-badge">{txt["high_quality"]}</span>'
 
-        # Add pinned badge for econometrics papers (always shown at top)
+        # Badges: BLP strong-recommend > econ.EM pinned. BLP wins the left-border
+        # styling because it's the strongest signal.
         pinned_badge = ''
+        blp_badge = ''
+        repush_badge = ''
         paper_class = 'paper'
         if paper.get('is_pinned'):
             pinned_badge = f'<span class="pinned-badge">{txt["pinned"]}</span>'
             paper_class = 'paper paper-pinned'
+        if paper.get('is_blp_recommend'):
+            blp_badge = f'<span class="blp-badge">{txt["blp_recommend"]}</span>'
+            paper_class = 'paper paper-blp'
+        if paper.get('is_repush'):
+            repush_badge = f'<span class="repush-badge">{txt["repush"]}</span>'
         
         # Format category tags: translate to Chinese labels, fall back to raw code
         # for anything not in the map. Space-separated so tags don't visually merge.
@@ -908,7 +1012,7 @@ def generate_email_content(papers_with_summaries, language='zh'):
         
         html += f"""
         <div class="{paper_class}">
-            <div class="paper-title">{i}. {paper['title']}{pinned_badge}{date_badge}{quality_badge}</div>
+            <div class="paper-title">{i}. {paper['title']}{blp_badge}{pinned_badge}{repush_badge}{date_badge}{quality_badge}</div>
             <div class="meta">
                 <div class="meta-item">
                     <strong>👥 {txt['authors']}:</strong> {paper['authors'][:200]}{'...' if len(paper['authors']) > 200 else ''}
@@ -1001,11 +1105,42 @@ def main():
     try:
         # Step 1: Fetch latest papers with quality filtering
         papers = get_latest_papers()
-        
+
+        # Step 1.5: Load push history and inject any papers that are due for a
+        # scheduled repush (D+7 / D+30). Those papers usually aren't in the
+        # natural recent-window fetch anymore, so we look them up by arXiv id.
+        print("\n" + "=" * 60)
+        print("📜 Applying push-history filter (memory-curve schedule)")
+        print("=" * 60)
+        history = push_history.load()
+        history = push_history.prune(history)
+
+        have = {push_history.paper_key(p.get('entry_id')) for p in papers}
+        due_ids = [pid for pid in push_history.due_repush_ids(history) if pid not in have]
+        if due_ids:
+            print(f"  ♻️ {len(due_ids)} paper(s) due for scheduled repush, fetching by id...")
+            repush_papers = fetch_papers_by_ids(due_ids)
+            papers.extend(repush_papers)
+            # Re-rank so newly injected papers get the same priority treatment
+            for p in repush_papers:
+                p['is_pinned'] = PRIMARY_CATEGORY in list(p.get('categories', []))
+                p['is_blp_recommend'] = matches_blp(p)
+            papers.sort(key=lambda x: (
+                _priority_tier(x),
+                -x.get('quality_score', 0),
+                -x['published'].timestamp()
+            ))
+
+        # Step 1.6: Apply the schedule filter (drops papers that already pushed
+        # today's slot or are retired after TOTAL_PUSHES_CAP pushes).
+        papers, skipped = push_history.filter_papers(papers, history)
+        print(f"  Kept {len(papers)} paper(s), skipped {len(skipped)} per schedule")
+
         if not papers:
-            print("\n⚠️ No papers found, exiting")
+            print("\n⚠️ All candidate papers were skipped by push-history filter, exiting")
+            push_history.save(history)
             return
-        
+
         # Step 2: Analyze paper dates and output statistics
         date_stats = analyze_paper_dates(papers)
         print(f"\n📊 Paper Date Statistics:")
@@ -1036,8 +1171,14 @@ def main():
         # Step 5: Send email
         today = datetime.now().strftime('%Y-%m-%d')
         subject = f"📚 arXiv Daily Paper Digest - {today}"
-        send_email(subject, html_content)
-        
+        sent_ok = send_email(subject, html_content)
+
+        # Step 6: On successful send, record today's push so the schedule can
+        # decide when (and whether) each paper should be pushed again.
+        if sent_ok:
+            history = push_history.update(history, papers)
+            push_history.save(history)
+
         print("\n" + "=" * 60)
         print("✅ Execution completed successfully!")
         print("=" * 60)
