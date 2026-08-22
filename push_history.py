@@ -28,7 +28,11 @@ from datetime import date, timedelta
 PUSH_HISTORY_FILE = os.environ.get('PUSH_HISTORY_FILE', 'pushed_papers.json')
 TOTAL_PUSHES_CAP = int(os.environ.get('TOTAL_PUSHES_CAP', '3'))
 REPUSH_OFFSETS_DAYS = [7, 30]  # days after first push at which pushes #2 and #3 unlock
-LONG_TERM_RESET_DAYS = int(os.environ.get('LONG_TERM_RESET_DAYS', '60'))
+# Days since last push after which an entry is dropped from pushed_papers.json.
+# Set to 0 (default) to disable pruning and keep the file as a permanent archive
+# of every paper ever pushed. Set to a positive number (e.g. 60) to reclaim the
+# file back into a rolling window if it ever gets too large.
+LONG_TERM_RESET_DAYS = int(os.environ.get('LONG_TERM_RESET_DAYS', '0'))
 
 
 def paper_key(entry_id):
@@ -93,13 +97,20 @@ def save(history, path=None):
 
 
 def prune(history, today=None):
-    """Drop entries whose most-recent push is older than LONG_TERM_RESET_DAYS."""
+    """Drop entries whose most-recent push is older than LONG_TERM_RESET_DAYS.
+
+    When LONG_TERM_RESET_DAYS <= 0, the age-based drop is disabled and
+    pushed_papers.json accumulates as a permanent archive; only degenerate
+    entries with no push dates are removed.
+    """
     if today is None:
         today = date.today()
     kept = {}
     for key, entry in history.items():
         dates = _sorted_push_dates(entry)
-        if not dates or (today - dates[-1]).days >= LONG_TERM_RESET_DAYS:
+        if not dates:
+            continue
+        if LONG_TERM_RESET_DAYS > 0 and (today - dates[-1]).days >= LONG_TERM_RESET_DAYS:
             continue
         new_entry = dict(entry)
         new_entry['push_dates'] = [d.isoformat() for d in dates]
