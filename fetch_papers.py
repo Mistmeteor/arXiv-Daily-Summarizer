@@ -16,8 +16,20 @@ import push_history
 # arXiv search configuration
 CATEGORIES = ['econ.EM', 'math.OC', 'stat.ML']  # Econometrics + non-convex opt + statistical ML (for BLP research)
 PRIMARY_CATEGORY = 'econ.EM'  # Dominant field; other categories only fill leftover slots
-MAX_RESULTS = 10  # Daily cap
+MAX_RESULTS = 10  # Daily cap (final email size, applied AFTER push-history filter)
 MIN_PAPERS_PER_CATEGORY = 1  # (kept for backward compat; not used by the primary-first selector below)
+
+# Pre-filter candidate pool: rank this many papers BEFORE push-history filtering.
+# When today's recent Top-MAX_RESULTS are all in the "already-pushed" cooldown
+# window, the extra 2×MAX_RESULTS candidates give the schedule filter something
+# to fall back on (older papers that haven't been pushed yet).
+CANDIDATE_POOL_SIZE = MAX_RESULTS * 3
+
+# arXiv fetch depth per category, in units of MAX_RESULTS. 9× ≈ 90 papers per
+# category; for econ.EM's ~3 papers/day this covers roughly the last month —
+# wide enough to backfill from unpushed older papers, not so wide that we're
+# trawling ancient history.
+FETCH_DEPTH_MULTIPLIER = 9
 
 # Language configuration
 # Supported values: 'zh' (Chinese), 'en' (English), 'both' (Bilingual)
@@ -359,12 +371,13 @@ def get_latest_papers():
         print(f"\n🔎 Searching category: {category}")
         
         try:
-            # Fetch a wider window so that if today has few/zero new papers in the
-            # primary category, we can fall back to high-quality papers from
-            # earlier days (~10 recent days for econ.EM at ~3 papers/day).
+            # Fetch a wide window (~last month for econ.EM at ~3 papers/day) so
+            # that when the push-history filter later drops today's Top-N as
+            # "already pushed in the cooldown window", we still have unpushed
+            # older papers ranked below them to backfill from.
             search = arxiv.Search(
                 query=f'cat:{category}',
-                max_results=MAX_RESULTS * 3,
+                max_results=MAX_RESULTS * FETCH_DEPTH_MULTIPLIER,
                 sort_by=arxiv.SortCriterion.SubmittedDate,
                 sort_order=arxiv.SortOrder.Descending
             )
@@ -423,20 +436,19 @@ def get_latest_papers():
             continue
     
     # Step 2: Primary category first — econ.EM dominates the digest.
-    # Take up to MAX_RESULTS from PRIMARY_CATEGORY, ordered by quality within the
-    # recent-fetch window. If today has zero new papers, this naturally rolls back
-    # to the best of the past few days (SortCriterion.SubmittedDate DESC + wider window).
-    print(f"\n⚖️ Selecting papers (primary: {PRIMARY_CATEGORY})...")
+    # Build a CANDIDATE_POOL_SIZE-large pool (not MAX_RESULTS) so that the
+    # push-history filter downstream has enough tail to backfill from when
+    # the top papers are all in the "already-pushed" cooldown.
+    print(f"\n⚖️ Building candidate pool (primary: {PRIMARY_CATEGORY}, pool={CANDIDATE_POOL_SIZE})...")
     selected_papers = []
     primary_papers = papers_by_category.get(PRIMARY_CATEGORY, [])
-    take_from_primary = min(len(primary_papers), MAX_RESULTS)
+    take_from_primary = min(len(primary_papers), CANDIDATE_POOL_SIZE)
     selected_papers.extend(primary_papers[:take_from_primary])
-    print(f"  Selected {take_from_primary} papers from {PRIMARY_CATEGORY} (primary)")
+    print(f"  Pooled {take_from_primary} papers from {PRIMARY_CATEGORY} (primary)")
 
-    # Step 3: Fill any remaining slots with top-quality papers from the other
-    # categories (math.OC, stat.ML, ...). If econ.EM already fills all MAX_RESULTS
-    # slots, no other-category papers are shown.
-    remaining_slots = MAX_RESULTS - len(selected_papers)
+    # Step 3: Fill any remaining pool slots with top-quality papers from the
+    # other categories (math.OC, stat.ML, ...).
+    remaining_slots = CANDIDATE_POOL_SIZE - len(selected_papers)
 
     if remaining_slots > 0:
         print(f"\n📊 Filling {remaining_slots} remaining slots from other categories...")
@@ -472,8 +484,8 @@ def get_latest_papers():
         paper['is_pinned'] = PRIMARY_CATEGORY in list(paper.get('categories', []))
         paper['is_blp_recommend'] = matches_blp(paper)
     
-    print(f"\n✅ Total papers collected: {len(selected_papers)}")
-    print(f"📄 Papers to send: {len(selected_papers)}")
+    print(f"\n✅ Candidate pool built: {len(selected_papers)} papers "
+          f"(will be filtered by push history, then capped to {MAX_RESULTS})")
     
     # Print category distribution
     category_dist = Counter([p['primary_category'] for p in selected_papers])
@@ -1140,6 +1152,15 @@ def main():
             print("\n⚠️ All candidate papers were skipped by push-history filter, exiting")
             push_history.save(history)
             return
+
+        # Step 1.7: Cap the surviving pool to MAX_RESULTS. The pool was built
+        # oversized (CANDIDATE_POOL_SIZE) precisely so that when the recent
+        # top-scored papers are all in the memory-curve cooldown, backfill from
+        # unpushed older-but-still-good papers happens automatically here.
+        if len(papers) > MAX_RESULTS:
+            trimmed = len(papers) - MAX_RESULTS
+            papers = papers[:MAX_RESULTS]
+            print(f"  Capped to top {MAX_RESULTS} (trimmed {trimmed} lower-ranked candidates)")
 
         # Step 2: Analyze paper dates and output statistics
         date_stats = analyze_paper_dates(papers)
