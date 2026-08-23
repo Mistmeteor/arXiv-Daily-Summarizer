@@ -1,4 +1,40 @@
 {
+  "2608.09213": {
+    "push_dates": [
+      "2026-08-23"
+    ],
+    "title": "A Comparison of High-Dimensional Variable Selection Procedures for Electricity Spot Price Forecasting"
+  },
+  "2608.09686": {
+    "push_dates": [
+      "2026-08-23"
+    ],
+    "title": "Generalized AKM: Flexible Controls and Interactions in Wage Decompositions"
+  },
+  "2608.10177": {
+    "push_dates": [
+      "2026-08-23"
+    ],
+    "title": "Graph-Laplacian Variance Estimators for Finely Stratified Experiments"
+  },
+  "2608.10336": {
+    "push_dates": [
+      "2026-08-23"
+    ],
+    "title": "A Multinomial Probit Model for Asymmetric Choice Responses"
+  },
+  "2608.13152": {
+    "push_dates": [
+      "2026-08-23"
+    ],
+    "title": "Estimation of distribution functions, their jumps and interval probabilities under measurement error"
+  },
+  "2608.13851": {
+    "push_dates": [
+      "2026-08-23"
+    ],
+    "title": "Scalable likelihood-based inference for limited dependent variable models"
+  },
   "2608.13953": {
     "push_dates": [
       "2026-08-21"
@@ -11,6 +47,18 @@
     ],
     "title": "Macroprudential Policy and Downside Risk: Regime-Dependent Effects of Capital Regulation"
   },
+  "2608.15333": {
+    "push_dates": [
+      "2026-08-23"
+    ],
+    "title": "Optimal Control Variates for Survey Sampling and Causal Inference"
+  },
+  "2608.15339": {
+    "push_dates": [
+      "2026-08-23"
+    ],
+    "title": "Learning Sequential Mobility Choice: A Review of Route and Activity Choice through Inverse Reinforcement and Imitation Learning"
+  },
   "2608.16312": {
     "push_dates": [
       "2026-08-21"
@@ -22,6 +70,18 @@
       "2026-08-21"
     ],
     "title": "The Best Are Always the Best: COVID-19 Lockdown Stringency and the Dispersion of Olympic Medal Outcomes"
+  },
+  "2608.16468": {
+    "push_dates": [
+      "2026-08-23"
+    ],
+    "title": "Estimation and Inference for Peer Effects under Conditional Random Assignment"
+  },
+  "2608.16708": {
+    "push_dates": [
+      "2026-08-23"
+    ],
+    "title": "Quantile restrictions, revealed rankings, and the limits of multinomial choice"
   },
   "2608.16867": {
     "push_dates": [
