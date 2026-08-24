@@ -1,4 +1,10 @@
 {
+  "2608.09027": {
+    "push_dates": [
+      "2026-08-24"
+    ],
+    "title": "Local Asymptotics for Treatment Choice with Partial Identification"
+  },
   "2608.09213": {
     "push_dates": [
       "2026-08-23"
@@ -23,11 +29,47 @@
     ],
     "title": "A Multinomial Probit Model for Asymmetric Choice Responses"
   },
+  "2608.11464": {
+    "push_dates": [
+      "2026-08-24"
+    ],
+    "title": "Estimating the perturbed utility route choice model with trip-level data"
+  },
+  "2608.12589": {
+    "push_dates": [
+      "2026-08-24"
+    ],
+    "title": "Supervised Mixed-Frequency Learning for Macro-Financial Forecasting When Factors are Weak"
+  },
   "2608.13152": {
     "push_dates": [
       "2026-08-23"
     ],
     "title": "Estimation of distribution functions, their jumps and interval probabilities under measurement error"
+  },
+  "2608.13224": {
+    "push_dates": [
+      "2026-08-24"
+    ],
+    "title": "Parameter Identification in Autoregressions under Discrete Sampling or Temporal Aggregation"
+  },
+  "2608.13431": {
+    "push_dates": [
+      "2026-08-24"
+    ],
+    "title": "Measuring the Arrow of Time: Identification, Estimation, and Inference for Directional Structure in Multivariate Time Series"
+  },
+  "2608.13466": {
+    "push_dates": [
+      "2026-08-24"
+    ],
+    "title": "Learning about Treatment Effects in Panels under Unknown Interference"
+  },
+  "2608.13822": {
+    "push_dates": [
+      "2026-08-24"
+    ],
+    "title": "Sharp Minimax Theory for Randomized Experiments"
   },
   "2608.13851": {
     "push_dates": [
@@ -47,6 +89,12 @@
     ],
     "title": "Macroprudential Policy and Downside Risk: Regime-Dependent Effects of Capital Regulation"
   },
+  "2608.14528": {
+    "push_dates": [
+      "2026-08-24"
+    ],
+    "title": "Handover of In-Context Learning State Across Session Boundaries"
+  },
   "2608.15333": {
     "push_dates": [
       "2026-08-23"
@@ -58,6 +106,12 @@
       "2026-08-23"
     ],
     "title": "Learning Sequential Mobility Choice: A Review of Route and Activity Choice through Inverse Reinforcement and Imitation Learning"
+  },
+  "2608.15840": {
+    "push_dates": [
+      "2026-08-24"
+    ],
+    "title": "How Many Samples Are Needed to Determine Causal Direction? Sharp Minimax Bounds for Bivariate LiNGAM"
   },
   "2608.16312": {
     "push_dates": [
