@@ -178,5 +178,17 @@
       "2026-08-21"
     ],
     "title": "A Privacy Budgeting Framework for Online Experimentation"
+  },
+  "2608.20779": {
+    "push_dates": [
+      "2026-08-25"
+    ],
+    "title": "Candidate Set Size and Voting Behavior: A Front-Door Approach to Causal Moderation"
+  },
+  "2608.21334": {
+    "push_dates": [
+      "2026-08-25"
+    ],
+    "title": "Across-Design Uncertainty in Short Pricing Panels: Evidence from Simulated Price Trajectories"
   }
 }
