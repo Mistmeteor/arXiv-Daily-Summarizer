@@ -190,5 +190,65 @@
       "2026-08-25"
     ],
     "title": "Across-Design Uncertainty in Short Pricing Panels: Evidence from Simulated Price Trajectories"
+  },
+  "2608.21619": {
+    "push_dates": [
+      "2026-08-26"
+    ],
+    "title": "Exact Rejection Sampling for Non-Gaussian State Space Models"
+  },
+  "2608.22002": {
+    "push_dates": [
+      "2026-08-26"
+    ],
+    "title": "Uniformly Valid Inference Under Interactive and High-Dimensional Constraints"
+  },
+  "2608.22286": {
+    "push_dates": [
+      "2026-08-26"
+    ],
+    "title": "Uniform Inference on Quantile Effects under Network Interference"
+  },
+  "2608.22499": {
+    "push_dates": [
+      "2026-08-26"
+    ],
+    "title": "Fixed-$T$ Dynamic Spatial Panel Model with Common Shocks"
+  },
+  "2608.22605": {
+    "push_dates": [
+      "2026-08-26"
+    ],
+    "title": "Closed-form estimation and uniform inference in additively separable triangular models with a nonseparable first stage"
+  },
+  "2608.22706": {
+    "push_dates": [
+      "2026-08-26"
+    ],
+    "title": "Double/Debiased Machine Learning for Functional-Form-Robust Spatial Autoregression"
+  },
+  "2608.23064": {
+    "push_dates": [
+      "2026-08-26"
+    ],
+    "title": "Sequentially valid inference for probabilistic inflation forecasts"
+  },
+  "2608.23257": {
+    "push_dates": [
+      "2026-08-26"
+    ],
+    "title": "How Replicable Are Statistically Significant Findings?"
+  },
+  "2608.23420": {
+    "push_dates": [
+      "2026-08-26"
+    ],
+    "title": "Systematic Bias in Green Patent Classification: Silent Green and False Green"
+  },
+  "2608.23508": {
+    "push_dates": [
+      "2026-08-26"
+    ],
+    "title": "Testing selection on observables in parametric models with refreshment samples"
   }
 }
