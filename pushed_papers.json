@@ -250,5 +250,65 @@
       "2026-08-26"
     ],
     "title": "Testing selection on observables in parametric models with refreshment samples"
+  },
+  "2608.23732": {
+    "push_dates": [
+      "2026-08-27"
+    ],
+    "title": "Principal Component Analysis for a Mix of Stationary and Nonstationary Variables"
+  },
+  "2608.23796": {
+    "push_dates": [
+      "2026-08-27"
+    ],
+    "title": "Accelerating the Adoption of Residential Solar Power Systems: Policy Analysis using a Dynamic Structural Model"
+  },
+  "2608.23925": {
+    "push_dates": [
+      "2026-08-27"
+    ],
+    "title": "Repairing Locally Misspecified GMM: An Empirical Bayes Approach"
+  },
+  "2608.23988": {
+    "push_dates": [
+      "2026-08-27"
+    ],
+    "title": "Estimation of Random-Coefficient Dynamic Panel Data Models with a Fixed T"
+  },
+  "2608.24362": {
+    "push_dates": [
+      "2026-08-27"
+    ],
+    "title": "Dynamic Discrete Choice and Inverse Reinforcement Learning: Inferring Preferences and Beliefs From Human Behavior"
+  },
+  "2608.24811": {
+    "push_dates": [
+      "2026-08-27"
+    ],
+    "title": "How does hazard exposure influence job choice? Evaluating time-dependent tradeoffs between salary and hazard risks"
+  },
+  "2608.25720": {
+    "push_dates": [
+      "2026-08-27"
+    ],
+    "title": "Endogenous Selection and Spillovers: Bayesian Inference for Policy-Relevant Causal Effects"
+  },
+  "2608.25814": {
+    "push_dates": [
+      "2026-08-27"
+    ],
+    "title": "Nonparametric Bayesian Inference for Partially Identified Discrete Response Models"
+  },
+  "2608.25901": {
+    "push_dates": [
+      "2026-08-27"
+    ],
+    "title": "Cross-Section Estimation of Long-Run Relations Using Time-Compressed Data"
+  },
+  "2608.25923": {
+    "push_dates": [
+      "2026-08-27"
+    ],
+    "title": "Efficient tensor bases for pairwise comparisons"
   }
 }
