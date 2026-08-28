@@ -115,13 +115,15 @@
   },
   "2608.16312": {
     "push_dates": [
-      "2026-08-21"
+      "2026-08-21",
+      "2026-08-28"
     ],
     "title": "Regional advantage in rugby sevens: Is there a home effect when nobody is home?"
   },
   "2608.16325": {
     "push_dates": [
-      "2026-08-21"
+      "2026-08-21",
+      "2026-08-28"
     ],
     "title": "The Best Are Always the Best: COVID-19 Lockdown Stringency and the Dispersion of Olympic Medal Outcomes"
   },
@@ -145,25 +147,29 @@
   },
   "2608.18057": {
     "push_dates": [
-      "2026-08-21"
+      "2026-08-21",
+      "2026-08-28"
     ],
     "title": "The Limits of Experimental Design: Covariate Balance Beyond Low Dimension"
   },
   "2608.18375": {
     "push_dates": [
-      "2026-08-21"
+      "2026-08-21",
+      "2026-08-28"
     ],
     "title": "Difference-in-Differences Models in the Presence of Time-Varying Mediators"
   },
   "2608.18443": {
     "push_dates": [
-      "2026-08-21"
+      "2026-08-21",
+      "2026-08-28"
     ],
     "title": "Limit Theory for U-Statistics under Clustered and Weakly Dependent Data"
   },
   "2608.18973": {
     "push_dates": [
-      "2026-08-21"
+      "2026-08-21",
+      "2026-08-28"
     ],
     "title": "Don't Drop the Singletons: Efficient Inference for Pairwise Experiments with Independent Attrition"
   },
@@ -175,7 +181,8 @@
   },
   "2608.19944": {
     "push_dates": [
-      "2026-08-21"
+      "2026-08-21",
+      "2026-08-28"
     ],
     "title": "A Privacy Budgeting Framework for Online Experimentation"
   },
@@ -310,5 +317,23 @@
       "2026-08-27"
     ],
     "title": "Efficient tensor bases for pairwise comparisons"
+  },
+  "2608.26522": {
+    "push_dates": [
+      "2026-08-28"
+    ],
+    "title": "Inference for High-Dimensional Network Data"
+  },
+  "2608.26584": {
+    "push_dates": [
+      "2026-08-28"
+    ],
+    "title": "DIRECT: Decomposing Audience Preference and Creative Effect in Visual Content Analytics"
+  },
+  "2608.27155": {
+    "push_dates": [
+      "2026-08-28"
+    ],
+    "title": "Nonparametric Identification of Two-Way Unobserved Heterogeneity"
   }
 }
