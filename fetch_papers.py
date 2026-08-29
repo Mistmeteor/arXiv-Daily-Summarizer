@@ -1,9 +1,10 @@
 import os
+import random
 import smtplib
 import arxiv
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 from openai import OpenAI
 from collections import Counter, defaultdict
 import re
@@ -14,16 +15,59 @@ import push_history
 # ========== Configuration ==========
 
 # arXiv search configuration
-CATEGORIES = ['econ.EM', 'math.OC', 'stat.ML']  # Econometrics + non-convex opt + statistical ML (for BLP research)
-PRIMARY_CATEGORY = 'econ.EM'  # Dominant field; other categories only fill leftover slots
+# Categories were expanded beyond pure econ.EM so the digest can rotate through
+# BLP-adjacent math/stat/ML work instead of only surfacing econometrics twice
+# (see CATEGORY_WEIGHTS for the sampling mix).
+CATEGORIES = [
+    'econ.EM',   # Econometrics — primary field, weighted heaviest
+    'math.OC',   # Optimization & control (non-convex opt underlies BLP estimation)
+    'math.ST',   # Mathematical statistics (BLP inference theory)
+    'stat.ML',   # Statistical machine learning
+    'stat.ME',   # Statistical methodology (semi-parametric / IV methods live here)
+    'stat.TH',   # Statistical theory
+    'cs.LG',     # Machine learning (filtered to econ/stat cross-listings only)
+]
+PRIMARY_CATEGORY = 'econ.EM'  # Weighted heaviest in the sampler; also gets the pin badge
+
+# Weighted-random category mix used when building the candidate pool. Higher
+# weight → more slots on average. econ.EM dominates, but on days with sparse
+# econ output the other fields naturally fill in instead of forcing 2nd/3rd
+# pushes of the same econometrics papers.
+CATEGORY_WEIGHTS = {
+    'econ.EM': 5.0,
+    'stat.ME': 1.2,
+    'math.ST': 1.0,
+    'stat.ML': 1.0,
+    'stat.TH': 0.8,
+    'math.OC': 0.6,
+    'cs.LG':   0.4,
+}
+
+# For non-primary categories, a paper is kept only if at least one of its
+# categories is in this "relevant to BLP / econometrics research" set. Since
+# math.ST / stat.* are themselves in the set, papers primary-listed there pass
+# trivially; this filter really only prunes pure cs.LG (or future edge
+# additions) that have no stat/econ/math.ST/math.OC cross-listing.
+RELEVANT_CATS = {
+    'econ.EM', 'econ.TH', 'econ.GN',
+    'stat.ML', 'stat.ME', 'stat.TH', 'stat.AP', 'stat.CO',
+    'math.ST', 'math.OC', 'math.PR', 'math.NA',
+    'q-fin.EC', 'q-fin.ST', 'q-fin.RM',
+}
+
 MAX_RESULTS = 10  # Daily cap (final email size, applied AFTER push-history filter)
-MIN_PAPERS_PER_CATEGORY = 1  # (kept for backward compat; not used by the primary-first selector below)
+MIN_PAPERS_PER_CATEGORY = 1  # (kept for backward compat; not used by the sampler below)
 
 # Pre-filter candidate pool: rank this many papers BEFORE push-history filtering.
 # When today's recent Top-MAX_RESULTS are all in the "already-pushed" cooldown
 # window, the extra 2×MAX_RESULTS candidates give the schedule filter something
 # to fall back on (older papers that haven't been pushed yet).
 CANDIDATE_POOL_SIZE = MAX_RESULTS * 3
+
+# Per-category cap fed into the weighted sampler. Prevents any single category
+# from dumping its full FETCH_DEPTH_MULTIPLIER×MAX_RESULTS backlog into the
+# sampler pool; we only sample from each category's top-quality slice.
+PER_CATEGORY_SAMPLING_POOL = MAX_RESULTS * 2
 
 # arXiv fetch depth per category, in units of MAX_RESULTS. 9× ≈ 90 papers per
 # category; for econ.EM's ~3 papers/day this covers roughly the last month —
@@ -82,15 +126,24 @@ def matches_blp(paper):
 
 
 def _priority_tier(paper):
-    """0 = strongest (BLP), 3 = weakest. Used for the final digest sort."""
+    """0 = BLP strong-recommend (always on top), 1 = everything else.
+
+    Deliberately flat below the BLP tier so the weighted-random mix isn't
+    re-collapsed back into an econ-first ordering at display time.
+    """
     if matches_blp(paper):
         return 0
-    cats = list(paper.get('categories', []))
-    if cats and cats[0] == PRIMARY_CATEGORY:
-        return 1
-    if PRIMARY_CATEGORY in cats:
-        return 2
-    return 3
+    return 1
+
+
+def _is_relevant_paper(paper):
+    """Whether a non-primary-category paper is topically relevant enough to keep.
+
+    Used to prune pure cs.LG (or any future non-core-relevance category) papers
+    that have no stat/econ/math.ST/math.OC cross-listing. Categories that are
+    themselves in RELEVANT_CATS (math.ST, stat.*, econ.*) pass trivially.
+    """
+    return any(c in RELEVANT_CATS for c in paper.get('categories', []))
 
 
 def fetch_papers_by_ids(id_list):
@@ -387,19 +440,15 @@ def get_latest_papers():
             
             for result in results:
                 if result.entry_id not in seen_ids:
-                    # For non-primary categories (math.OC, stat.ML, ...) we only
-                    # want papers that intersect with economics — i.e. cross-listed
-                    # to some econ.* subcategory (or q-fin.EC). This filters out
-                    # pure math / pure CS papers that aren't relevant to a BLP /
-                    # econometrics researcher.
+                    # Soft relevance filter for non-primary categories: keep the
+                    # paper only if at least one of its arXiv categories is in
+                    # the BLP-relevance set (RELEVANT_CATS). Papers in math.ST /
+                    # stat.* pass trivially; this really only prunes pure cs.LG
+                    # / edge additions with no stat/econ/math.ST cross-listing.
                     if category != PRIMARY_CATEGORY:
                         cats = list(result.categories)
-                        has_econ_tag = any(
-                            c.startswith('econ.') or c == 'q-fin.EC'
-                            for c in cats
-                        )
-                        if not has_econ_tag:
-                            continue  # skip pure math/CS papers
+                        if not any(c in RELEVANT_CATS for c in cats):
+                            continue
 
                     seen_ids.add(result.entry_id)
 
@@ -435,53 +484,88 @@ def get_latest_papers():
             print(f"  ❌ Error searching {category}: {str(e)}")
             continue
     
-    # Step 2: Primary category first — econ.EM dominates the digest.
-    # Build a CANDIDATE_POOL_SIZE-large pool (not MAX_RESULTS) so that the
-    # push-history filter downstream has enough tail to backfill from when
-    # the top papers are all in the "already-pushed" cooldown.
-    print(f"\n⚖️ Building candidate pool (primary: {PRIMARY_CATEGORY}, pool={CANDIDATE_POOL_SIZE})...")
+    # Step 2: Build the candidate pool via BLP-first + weighted-random rotation.
+    #
+    # Why not primary-first anymore: with econ.EM's ~3 papers/day, "primary first"
+    # + push-history dedup was collapsing most emails into 2nd/3rd repushes of the
+    # same econometrics papers. Weighted-random mixing keeps econ.EM dominant
+    # (highest weight) but naturally injects math/stat variety on slow econ days.
+    #
+    # The RNG is seeded by today's date, so a given day is reproducible (useful
+    # for debugging) while consecutive days differ (the point of the mix).
+    print(f"\n⚖️ Building candidate pool (weighted-random mix, pool={CANDIDATE_POOL_SIZE})...")
+    rng = random.Random(date.today().isoformat())
+
+    # Slice each category to its top-quality PER_CATEGORY_SAMPLING_POOL so no
+    # single high-volume category (e.g. cs.LG) can drown the sampler.
+    sampling_pools = {
+        cat: list(papers_by_category.get(cat, []))[:PER_CATEGORY_SAMPLING_POOL]
+        for cat in CATEGORIES
+    }
+
     selected_papers = []
-    primary_papers = papers_by_category.get(PRIMARY_CATEGORY, [])
-    take_from_primary = min(len(primary_papers), CANDIDATE_POOL_SIZE)
-    selected_papers.extend(primary_papers[:take_from_primary])
-    print(f"  Pooled {take_from_primary} papers from {PRIMARY_CATEGORY} (primary)")
+    seen_entry_ids = set()
 
-    # Step 3: Fill any remaining pool slots with top-quality papers from the
-    # other categories (math.OC, stat.ML, ...).
-    remaining_slots = CANDIDATE_POOL_SIZE - len(selected_papers)
+    # 2a. BLP strong-recommend papers are pinned into the pool unconditionally,
+    #     regardless of which category surfaced them. These are the highest
+    #     signal for this specific researcher.
+    for cat in CATEGORIES:
+        for p in sampling_pools[cat]:
+            if matches_blp(p) and p['entry_id'] not in seen_entry_ids:
+                selected_papers.append(p)
+                seen_entry_ids.add(p['entry_id'])
+                if len(selected_papers) >= CANDIDATE_POOL_SIZE:
+                    break
+        if len(selected_papers) >= CANDIDATE_POOL_SIZE:
+            break
+    if selected_papers:
+        print(f"  Pinned {len(selected_papers)} BLP strong-recommend paper(s)")
 
-    if remaining_slots > 0:
-        print(f"\n📊 Filling {remaining_slots} remaining slots from other categories...")
-        others = []
-        seen_entry_ids = {p['entry_id'] for p in selected_papers}
-        for category in CATEGORIES:
-            if category == PRIMARY_CATEGORY:
-                continue
-            for paper in papers_by_category.get(category, []):
-                if paper['entry_id'] not in seen_entry_ids:
-                    others.append(paper)
-        others.sort(key=lambda x: x['quality_score'], reverse=True)
-        selected_papers.extend(others[:remaining_slots])
-    
-    # Step 4: Remove duplicates using intelligent similarity detection
+    # 2b. Weighted-random rotation fills the remaining slots. Each iteration
+    #     samples a category by CATEGORY_WEIGHTS, then pulls the highest-quality
+    #     unused paper from that category. When a category's sampling pool is
+    #     exhausted, drop it from the weight table and re-sample.
+    active_weights = {
+        cat: w for cat, w in CATEGORY_WEIGHTS.items()
+        if sampling_pools.get(cat)
+    }
+    while len(selected_papers) < CANDIDATE_POOL_SIZE and active_weights:
+        cats = list(active_weights.keys())
+        weights = [active_weights[c] for c in cats]
+        chosen_cat = rng.choices(cats, weights=weights, k=1)[0]
+        pool = sampling_pools[chosen_cat]
+        picked = None
+        for p in pool:
+            if p['entry_id'] not in seen_entry_ids:
+                picked = p
+                break
+        if picked is None:
+            del active_weights[chosen_cat]
+            continue
+        selected_papers.append(picked)
+        seen_entry_ids.add(picked['entry_id'])
+
+    # Step 3: Remove duplicates using intelligent similarity detection
     print(f"\n🔍 Checking for duplicate/similar papers...")
     selected_papers = remove_duplicate_papers(selected_papers)
-    
-    # Step 5: Final sort. Priority tiers (0 = highest):
-    #   0. BLP / demand-estimation match (strong recommend, above everything else)
-    #   1. econ.EM is the paper's arXiv primary category (truly econometrics-first)
-    #   2. econ.EM appears in the paper's category list (cross-listed to econometrics)
-    #   3. everything else
-    # Within each tier, sort by quality score DESC, then published date DESC.
+
+    # Step 4: Final sort. Priority tiers (0 = highest):
+    #   0. BLP / demand-estimation match (strong recommend, always on top)
+    #   1. everything else — sorted purely by quality DESC, so the deliberately
+    #      mixed field selection actually renders as a mix (no more econ-first
+    #      collapse at display time)
     selected_papers.sort(key=lambda x: (
         _priority_tier(x),
         -x.get('quality_score', 0),
         -x['published'].timestamp()
     ))
 
-    # Tag papers for the email renderer
+    # Tag papers for the email renderer. is_pinned now means "arXiv-declared
+    # primary category is econ.EM", i.e. this paper is truly econometrics-first
+    # (not merely cross-listed). Under the mix, this is a useful visual cue.
     for paper in selected_papers:
-        paper['is_pinned'] = PRIMARY_CATEGORY in list(paper.get('categories', []))
+        arxiv_primary = (list(paper.get('categories', [])) or [None])[0]
+        paper['is_pinned'] = arxiv_primary == PRIMARY_CATEGORY
         paper['is_blp_recommend'] = matches_blp(paper)
     
     print(f"\n✅ Candidate pool built: {len(selected_papers)} papers "
@@ -1135,7 +1219,8 @@ def main():
             papers.extend(repush_papers)
             # Re-rank so newly injected papers get the same priority treatment
             for p in repush_papers:
-                p['is_pinned'] = PRIMARY_CATEGORY in list(p.get('categories', []))
+                arxiv_primary = (list(p.get('categories', [])) or [None])[0]
+                p['is_pinned'] = arxiv_primary == PRIMARY_CATEGORY
                 p['is_blp_recommend'] = matches_blp(p)
             papers.sort(key=lambda x: (
                 _priority_tier(x),
