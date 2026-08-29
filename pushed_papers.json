@@ -363,6 +363,12 @@
     ],
     "title": "Inference for High-Dimensional Network Data"
   },
+  "2608.26536": {
+    "push_dates": [
+      "2026-08-29"
+    ],
+    "title": "Posterior consistency for subdiffusion inverse problems"
+  },
   "2608.26584": {
     "push_dates": [
       "2026-08-28"
@@ -375,10 +381,64 @@
     ],
     "title": "Analyzing Within-Subject Experiments: Identification, Testing, and Sensitivity"
   },
+  "2608.26618": {
+    "push_dates": [
+      "2026-08-29"
+    ],
+    "title": "A Unified Descriptive-Complexity Framework for Model Selection under Correlated Designs"
+  },
+  "2608.26638": {
+    "push_dates": [
+      "2026-08-29"
+    ],
+    "title": "Which Metrics Save the Most Human Annotation? Prediction-Powered Evaluation and Meta-Evaluation"
+  },
+  "2608.26929": {
+    "push_dates": [
+      "2026-08-29"
+    ],
+    "title": "A Bayesian Longitudinal Model for Imputing Item-Level Missing Data in Trial-Based Economic Evaluations"
+  },
+  "2608.27063": {
+    "push_dates": [
+      "2026-08-29"
+    ],
+    "title": "An Accurate and Single-Communication Federated Inference Algorithm"
+  },
   "2608.27155": {
     "push_dates": [
       "2026-08-28"
     ],
     "title": "Nonparametric Identification of Two-Way Unobserved Heterogeneity"
+  },
+  "2608.27191": {
+    "push_dates": [
+      "2026-08-29"
+    ],
+    "title": "Personalized Federated Learning for Tensor Regression"
+  },
+  "2608.27289": {
+    "push_dates": [
+      "2026-08-29"
+    ],
+    "title": "Combining covariate adjustment with information from secondary endpoints to improve precision in randomized trials"
+  },
+  "2608.27307": {
+    "push_dates": [
+      "2026-08-29"
+    ],
+    "title": "Local Laws and Edge Universality for Noncentral Sample Covariance Matrices"
+  },
+  "2608.27310": {
+    "push_dates": [
+      "2026-08-29"
+    ],
+    "title": "Conformal Prediction Through the Lens of Hypothesis Testing: Universality, Impossibility, and Optimality"
+  },
+  "2608.27368": {
+    "push_dates": [
+      "2026-08-29"
+    ],
+    "title": "UGM: A Unified Framework and New Perspectives for Accelerated Gradient Methods in Smooth and Strongly Convex Optimization"
   }
 }
