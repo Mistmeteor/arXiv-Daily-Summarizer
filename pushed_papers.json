@@ -79,13 +79,15 @@
   },
   "2608.13953": {
     "push_dates": [
-      "2026-08-21"
+      "2026-08-21",
+      "2026-08-29"
     ],
     "title": "Limited-Information Estimation of Heterogeneous Agent Models"
   },
   "2608.14307": {
     "push_dates": [
-      "2026-08-21"
+      "2026-08-21",
+      "2026-08-29"
     ],
     "title": "Macroprudential Policy and Downside Risk: Regime-Dependent Effects of Capital Regulation"
   },
@@ -141,7 +143,8 @@
   },
   "2608.16867": {
     "push_dates": [
-      "2026-08-22"
+      "2026-08-22",
+      "2026-08-29"
     ],
     "title": "Trading Scope for Credibility in Difference-in-Differences"
   },
@@ -228,11 +231,29 @@
     ],
     "title": "Closed-form estimation and uniform inference in additively separable triangular models with a nonseparable first stage"
   },
+  "2608.22608": {
+    "push_dates": [
+      "2026-08-29"
+    ],
+    "title": "Estimating Pathway Treatment Effects in the Presence of Intermediate Events with Multi-State Data"
+  },
   "2608.22706": {
     "push_dates": [
       "2026-08-26"
     ],
     "title": "Double/Debiased Machine Learning for Functional-Form-Robust Spatial Autoregression"
+  },
+  "2608.22890": {
+    "push_dates": [
+      "2026-08-29"
+    ],
+    "title": "Randomization tests for model specification in causal inference under network interference"
+  },
+  "2608.22957": {
+    "push_dates": [
+      "2026-08-29"
+    ],
+    "title": "Identification and Inference for Causal Effects in Extremes under General Conditions"
   },
   "2608.23064": {
     "push_dates": [
@@ -245,6 +266,12 @@
       "2026-08-26"
     ],
     "title": "How Replicable Are Statistically Significant Findings?"
+  },
+  "2608.23315": {
+    "push_dates": [
+      "2026-08-29"
+    ],
+    "title": "Classification testing: A new framework for drawing qualitative conclusions from quantitative estimates"
   },
   "2608.23420": {
     "push_dates": [
@@ -294,6 +321,18 @@
     ],
     "title": "How does hazard exposure influence job choice? Evaluating time-dependent tradeoffs between salary and hazard risks"
   },
+  "2608.25009": {
+    "push_dates": [
+      "2026-08-29"
+    ],
+    "title": "Theory as data compression"
+  },
+  "2608.25304": {
+    "push_dates": [
+      "2026-08-29"
+    ],
+    "title": "SAUSS: Stochastic Approximation with Unbiased Simulated Scores for Limited Dependent Variable Models"
+  },
   "2608.25720": {
     "push_dates": [
       "2026-08-27"
@@ -329,6 +368,12 @@
       "2026-08-28"
     ],
     "title": "DIRECT: Decomposing Audience Preference and Creative Effect in Visual Content Analytics"
+  },
+  "2608.26606": {
+    "push_dates": [
+      "2026-08-29"
+    ],
+    "title": "Analyzing Within-Subject Experiments: Identification, Testing, and Sensitivity"
   },
   "2608.27155": {
     "push_dates": [
