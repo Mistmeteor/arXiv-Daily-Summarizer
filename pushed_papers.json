@@ -73,7 +73,8 @@
   },
   "2608.13851": {
     "push_dates": [
-      "2026-08-23"
+      "2026-08-23",
+      "2026-08-30"
     ],
     "title": "Scalable likelihood-based inference for limited dependent variable models"
   },
@@ -105,7 +106,8 @@
   },
   "2608.15339": {
     "push_dates": [
-      "2026-08-23"
+      "2026-08-23",
+      "2026-08-30"
     ],
     "title": "Learning Sequential Mobility Choice: A Review of Route and Activity Choice through Inverse Reinforcement and Imitation Learning"
   },
@@ -137,7 +139,8 @@
   },
   "2608.16708": {
     "push_dates": [
-      "2026-08-23"
+      "2026-08-23",
+      "2026-08-30"
     ],
     "title": "Quantile restrictions, revealed rankings, and the limits of multinomial choice"
   },
@@ -315,6 +318,12 @@
     ],
     "title": "Dynamic Discrete Choice and Inverse Reinforcement Learning: Inferring Preferences and Beliefs From Human Behavior"
   },
+  "2608.24785": {
+    "push_dates": [
+      "2026-08-30"
+    ],
+    "title": "Physics Attention Transformer Surrogate for Rapid Vertical Instability Growth Rate Prediction: Alcator C-Mod to SPARC"
+  },
   "2608.24811": {
     "push_dates": [
       "2026-08-27"
@@ -333,11 +342,23 @@
     ],
     "title": "SAUSS: Stochastic Approximation with Unbiased Simulated Scores for Limited Dependent Variable Models"
   },
+  "2608.25718": {
+    "push_dates": [
+      "2026-08-30"
+    ],
+    "title": "Estimation of a regression function from dependent data by over-parametrized deep neural networks learned by gradient descent"
+  },
   "2608.25720": {
     "push_dates": [
       "2026-08-27"
     ],
     "title": "Endogenous Selection and Spillovers: Bayesian Inference for Policy-Relevant Causal Effects"
+  },
+  "2608.25743": {
+    "push_dates": [
+      "2026-08-30"
+    ],
+    "title": "Learning of deep neural network regression estimates using gradient descent with pruning"
   },
   "2608.25814": {
     "push_dates": [
@@ -356,6 +377,24 @@
       "2026-08-27"
     ],
     "title": "Efficient tensor bases for pairwise comparisons"
+  },
+  "2608.25930": {
+    "push_dates": [
+      "2026-08-30"
+    ],
+    "title": "Controlling for Omitted Variable Bias in Deep Neural Networks"
+  },
+  "2608.26338": {
+    "push_dates": [
+      "2026-08-30"
+    ],
+    "title": "FLEX-CP-DT: A Flexible Conditional Power Framework for Interim Futility Analysis in Clinical Trials with Count Endpoints and Temporal Trends"
+  },
+  "2608.26465": {
+    "push_dates": [
+      "2026-08-30"
+    ],
+    "title": "Compositional Generalization via Structural Identification in a Category-Theoretic Framework"
   },
   "2608.26522": {
     "push_dates": [
@@ -416,6 +455,12 @@
       "2026-08-29"
     ],
     "title": "Personalized Federated Learning for Tensor Regression"
+  },
+  "2608.27256": {
+    "push_dates": [
+      "2026-08-30"
+    ],
+    "title": "Enforcing Dirichlet Boundary Conditions in Operator Learning"
   },
   "2608.27289": {
     "push_dates": [
