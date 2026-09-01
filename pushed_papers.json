@@ -540,5 +540,65 @@
       "2026-09-01"
     ],
     "title": "QGPINNs: A Physics-Informed Neural Network Framework for Nonlocal Differential Equations on Quantum Graphs"
+  },
+  "2608.30412": {
+    "push_dates": [
+      "2026-09-01"
+    ],
+    "title": "Power and sample size calculations for causal mediation analysis with a binary mediator in randomized trials"
+  },
+  "2608.30473": {
+    "push_dates": [
+      "2026-09-01"
+    ],
+    "title": "Bounds on the Posterior-to-Prior Ratios for Inclusion Belief under Bounded Differential Privacy"
+  },
+  "2608.30512": {
+    "push_dates": [
+      "2026-09-01"
+    ],
+    "title": "Trajectory-Initialized Neural Double Q-Routing for Large-Scale Overhead Hoist Transport Systems"
+  },
+  "2608.30693": {
+    "push_dates": [
+      "2026-09-01"
+    ],
+    "title": "Efficient primal--dual splitting methods for a Poisson-constrained JKO scheme for Poisson-Nernst-Planck models"
+  },
+  "2608.30801": {
+    "push_dates": [
+      "2026-09-01"
+    ],
+    "title": "From Test Performance to Risk-Based Effect Sizes: A Unified Wald-Type Framework to Design Clinical Validation Studies for Binary and Survival Outcomes"
+  },
+  "2608.31047": {
+    "push_dates": [
+      "2026-09-01"
+    ],
+    "title": "Posterior Geometry and Identifiability in Multi-Response Bayesian Calibration"
+  },
+  "2608.31085": {
+    "push_dates": [
+      "2026-09-01"
+    ],
+    "title": "Moments of Random Coefficients in Short Panels"
+  },
+  "2608.31092": {
+    "push_dates": [
+      "2026-09-01"
+    ],
+    "title": "Interpolation Conditions for Instant Data Consistency with Port-Hamiltonian Structure"
+  },
+  "2608.31133": {
+    "push_dates": [
+      "2026-09-01"
+    ],
+    "title": "Implementing neural network mixed-effects models in Template Model Builder (TMB)"
+  },
+  "2608.31138": {
+    "push_dates": [
+      "2026-09-01"
+    ],
+    "title": "Scale Analysis and Shape Selection for the Generalized Gaussian Mechanism under Approximate Differential Privacy"
   }
 }
