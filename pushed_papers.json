@@ -200,9 +200,10 @@
   },
   "2608.21334": {
     "push_dates": [
-      "2026-08-25"
+      "2026-08-25",
+      "2026-09-01"
     ],
-    "title": "Across-Design Uncertainty in Short Pricing Panels: Evidence from Simulated Price Trajectories"
+    "title": "Across-Design Uncertainty in Short Pricing Panels: Inference and Identification"
   },
   "2608.21619": {
     "push_dates": [
@@ -485,5 +486,59 @@
       "2026-08-29"
     ],
     "title": "UGM: A Unified Framework and New Perspectives for Accelerated Gradient Methods in Smooth and Strongly Convex Optimization"
+  },
+  "2608.27728": {
+    "push_dates": [
+      "2026-09-01"
+    ],
+    "title": "Diffusion Distillation for Efficient Weather Ensembles"
+  },
+  "2608.27884": {
+    "push_dates": [
+      "2026-09-01"
+    ],
+    "title": "Exploiting Exact Conditionals Improves Conditioning: Provably Fast Mixing Time Bounds By Sampling from the Marginal"
+  },
+  "2608.28087": {
+    "push_dates": [
+      "2026-09-01"
+    ],
+    "title": "A Design Concept of Forecasting Software for Normalized Vector Autoregressions with Fat Tails and Stochastic Volatility"
+  },
+  "2608.28115": {
+    "push_dates": [
+      "2026-09-01"
+    ],
+    "title": "Causal Non-causal State Space Models and the Modelling of Financial Bubbles"
+  },
+  "2608.28362": {
+    "push_dates": [
+      "2026-09-01"
+    ],
+    "title": "Optimal Adversarial Testing: Extracting Honest Test Results from Dishonest Test Takers"
+  },
+  "2608.28419": {
+    "push_dates": [
+      "2026-09-01"
+    ],
+    "title": "Refining Relational Event Models: Bayesian Penalization and Variable Selection in REMs"
+  },
+  "2608.28530": {
+    "push_dates": [
+      "2026-09-01"
+    ],
+    "title": "On Nonsmooth and Relatively Weakly Convex Minimization"
+  },
+  "2608.28556": {
+    "push_dates": [
+      "2026-09-01"
+    ],
+    "title": "A Complete Characterization of Tensorizable $f$-divergences"
+  },
+  "2608.28589": {
+    "push_dates": [
+      "2026-09-01"
+    ],
+    "title": "QGPINNs: A Physics-Informed Neural Network Framework for Nonlocal Differential Equations on Quantum Graphs"
   }
 }
