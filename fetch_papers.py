@@ -1,6 +1,7 @@
 import os
 import random
 import smtplib
+import sys
 import arxiv
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -1196,7 +1197,7 @@ def main():
     if missing_vars:
         print(f"❌ Missing required environment variables: {', '.join(missing_vars)}")
         print("Please set these environment variables")
-        return
+        sys.exit(1)
     
     try:
         # Step 1: Fetch latest papers with quality filtering
@@ -1234,9 +1235,11 @@ def main():
         print(f"  Kept {len(papers)} paper(s), skipped {len(skipped)} per schedule")
 
         if not papers:
-            print("\n⚠️ All candidate papers were skipped by push-history filter, exiting")
+            print("\n❌ No papers to push. Either arXiv fetch returned an empty pool "
+                  "or every candidate is in the memory-curve cooldown. Failing the job "
+                  "so the miss is visible instead of silently succeeding.")
             push_history.save(history)
-            return
+            sys.exit(1)
 
         # Step 1.7: Cap the surviving pool to MAX_RESULTS. The pool was built
         # oversized (CANDIDATE_POOL_SIZE) precisely so that when the recent
@@ -1281,9 +1284,13 @@ def main():
 
         # Step 6: On successful send, record today's push so the schedule can
         # decide when (and whether) each paper should be pushed again.
-        if sent_ok:
-            history = push_history.update(history, papers)
-            push_history.save(history)
+        if not sent_ok:
+            print("\n❌ send_email() returned False (SMTP failure). "
+                  "Not updating push history. Failing the job so the miss is visible.")
+            sys.exit(1)
+
+        history = push_history.update(history, papers)
+        push_history.save(history)
 
         print("\n" + "=" * 60)
         print("✅ Execution completed successfully!")
