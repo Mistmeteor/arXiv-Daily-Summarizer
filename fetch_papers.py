@@ -1191,11 +1191,23 @@ def generate_pushplus_content(papers_with_summaries, language='zh', preview_char
         # abs page is nicer than pdf for a quick tap-through — has title/abstract too.
         link = paper.get('entry_id') or paper.get('pdf_url', '')
 
+        # Category chips: up to 3 categories, primary first. Translate to Chinese
+        # via CATEGORY_LABELS, fall back to raw arxiv code (e.g. "q-fin.MF") for
+        # anything not mapped.
+        cats = list(paper.get('categories') or [])[:3]
+        cat_html = ' '.join(
+            f'<span style="display:inline-block;background:#eef1ff;color:#4a5aa8;'
+            f'font-size:11px;padding:1px 6px;border-radius:3px;margin-right:4px;">'
+            f'{CATEGORY_LABELS.get(c, c)}</span>'
+            for c in cats
+        )
+
         parts.append(
             f'<div style="margin:0 0 14px;padding:10px;background:#f7f8fa;border-left:3px solid #667eea;border-radius:4px;">'
             f'<div style="font-weight:600;margin-bottom:4px;">'
             f'{i}. <a href="{link}" style="color:#333;text-decoration:none;">{paper["title"]}</a> {badge_html}'
             f'</div>'
+            f'<div style="margin:4px 0 6px;">{cat_html}</div>'
             f'<div style="color:#555;font-size:13px;">{summary_text}</div>'
             f'</div>'
         )
