@@ -1,11 +1,11 @@
+import json
 import os
 import random
-import smtplib
 import sys
 import time
+import urllib.error
+import urllib.request
 import arxiv
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 from datetime import datetime, timedelta, date
 from openai import OpenAI
 from collections import Counter, defaultdict
@@ -86,12 +86,10 @@ DEEPSEEK_API_KEY = os.environ.get('DEEPSEEK_API_KEY')
 DEEPSEEK_BASE_URL = 'https://api.deepseek.com/v1'
 DEEPSEEK_MODEL = 'deepseek-chat'  # points to the latest DeepSeek-V3
 
-# Email configuration
-SENDER_EMAIL = os.environ.get('SENDER_EMAIL')
-SENDER_PASSWORD = os.environ.get('SENDER_PASSWORD')
-RECEIVER_EMAIL = os.environ.get('RECEIVER_EMAIL')
-SMTP_SERVER = os.environ.get('SMTP_SERVER', 'smtp.gmail.com')
-SMTP_PORT = int(os.environ.get('SMTP_PORT', '587'))
+# PushPlus (WeChat push) configuration. Replaces SMTP because QQ Mail
+# blocks GitHub Actions IPs even on 465/SSL.
+PUSHPLUS_TOKEN = os.environ.get('PUSHPLUS_TOKEN')
+PUSHPLUS_URL = 'https://www.pushplus.plus/send'
 
 # Quality filtering thresholds
 MIN_ABSTRACT_LENGTH = 100  # Minimum abstract length (characters)
@@ -1150,66 +1148,49 @@ def generate_email_content(papers_with_summaries, language='zh'):
     return html
 
 
-def send_email(subject, html_content):
+def send_pushplus(subject, html_content):
+    """Push the digest to WeChat via PushPlus (https://www.pushplus.plus).
+
+    Returns True on success, False on failure. PushPlus renders the HTML in
+    a WeChat webview when the user taps the notification.
     """
-    Send email via SMTP
-    
-    Args:
-        subject: Email subject line
-        html_content: HTML formatted email content
-        
-    Returns:
-        bool: True if successful, False otherwise
-    """
-    print(f"\n📧 Sending email to {RECEIVER_EMAIL} via {SMTP_SERVER}:{SMTP_PORT}...")
+    print(f"\n📱 Pushing to WeChat via PushPlus ({len(html_content)} chars)...")
 
-    message = MIMEMultipart('alternative')
-    message['Subject'] = subject
-    message['From'] = SENDER_EMAIL
-    message['To'] = RECEIVER_EMAIL
-    message.attach(MIMEText(html_content, 'html', 'utf-8'))
-
-    def _try_send(mode):
-        """mode: 'ssl' (implicit TLS, port 465) or 'starttls' (upgrade from cleartext)."""
-        if mode == 'ssl':
-            cm = smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT, timeout=30)
-        else:
-            cm = smtplib.SMTP(SMTP_SERVER, SMTP_PORT, timeout=30)
-        with cm as server:
-            if mode == 'starttls':
-                server.starttls()
-            server.login(SENDER_EMAIL, SENDER_PASSWORD)
-            server.send_message(message)
-
-    # Prefer the transport that matches the port; if the server drops us
-    # anyway ("Connection unexpectedly closed"), try the other mode once
-    # in case the port/transport pairing is unconventional.
-    primary = 'ssl' if SMTP_PORT == 465 else 'starttls'
-    fallback = 'starttls' if primary == 'ssl' else 'ssl'
-    modes = [primary, fallback]
+    payload = json.dumps({
+        'token': PUSHPLUS_TOKEN,
+        'title': subject,
+        'content': html_content,
+        'template': 'html',
+    }).encode('utf-8')
 
     max_attempts = 3
     backoff = 5
 
     for attempt in range(1, max_attempts + 1):
-        # attempt 1 → primary, 2 → fallback, 3 → primary again
-        mode = modes[(attempt - 1) % len(modes)]
         try:
-            print(f"  attempt {attempt}/{max_attempts} using {mode.upper()}")
-            _try_send(mode)
-            print(f"✅ Email sent successfully!")
-            return True
-        except (smtplib.SMTPAuthenticationError, smtplib.SMTPRecipientsRefused) as e:
-            # Auth / recipient errors won't fix themselves on retry.
-            print(f"❌ Email sending failed (non-retryable): {e}")
+            req = urllib.request.Request(
+                PUSHPLUS_URL,
+                data=payload,
+                headers={'Content-Type': 'application/json'},
+                method='POST',
+            )
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                body = resp.read().decode('utf-8', errors='replace')
+            data = json.loads(body)
+            if data.get('code') == 200:
+                print(f"✅ Pushed successfully (msg_id={data.get('data')})")
+                return True
+            # code != 200 is an application-level failure (bad token, quota,
+            # etc.) and won't self-heal on retry.
+            print(f"❌ PushPlus rejected the request: code={data.get('code')} msg={data.get('msg')}")
             return False
-        except Exception as e:
-            print(f"⚠️ Email attempt {attempt}/{max_attempts} ({mode}) failed: {e}")
+        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError) as e:
+            print(f"⚠️ Push attempt {attempt}/{max_attempts} failed: {e}")
             if attempt < max_attempts:
                 time.sleep(backoff)
                 backoff *= 2
 
-    print("❌ Email sending failed after all retries.")
+    print("❌ PushPlus push failed after all retries.")
     return False
 
 
@@ -1220,7 +1201,7 @@ def main():
     print("=" * 60)
     
     # Check required environment variables
-    required_vars = ['DEEPSEEK_API_KEY', 'SENDER_EMAIL', 'SENDER_PASSWORD', 'RECEIVER_EMAIL']
+    required_vars = ['DEEPSEEK_API_KEY', 'PUSHPLUS_TOKEN']
     missing_vars = [var for var in required_vars if not os.environ.get(var)]
     
     if missing_vars:
@@ -1300,21 +1281,21 @@ def main():
                 'summary': summary
             })
         
-        # Step 4: Generate email content
+        # Step 4: Generate digest HTML content
         print("\n" + "=" * 60)
-        print("📧 Generating Email Content")
+        print("📧 Generating Digest Content")
         print("=" * 60)
         html_content = generate_email_content(papers_with_summaries, EMAIL_LANGUAGE)
-        
-        # Step 5: Send email
+
+        # Step 5: Push via PushPlus
         today = datetime.now().strftime('%Y-%m-%d')
         subject = f"📚 arXiv Daily Paper Digest - {today}"
-        sent_ok = send_email(subject, html_content)
+        sent_ok = send_pushplus(subject, html_content)
 
         # Step 6: On successful send, record today's push so the schedule can
         # decide when (and whether) each paper should be pushed again.
         if not sent_ok:
-            print("\n❌ send_email() returned False (SMTP failure). "
+            print("\n❌ send_pushplus() returned False. "
                   "Not updating push history. Failing the job so the miss is visible.")
             sys.exit(1)
 
