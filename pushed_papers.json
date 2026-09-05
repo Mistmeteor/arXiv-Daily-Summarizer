@@ -459,7 +459,8 @@
   },
   "2608.27191": {
     "push_dates": [
-      "2026-08-29"
+      "2026-08-29",
+      "2026-09-05"
     ],
     "title": "Personalized Federated Learning for Tensor Regression"
   },
@@ -471,19 +472,22 @@
   },
   "2608.27289": {
     "push_dates": [
-      "2026-08-29"
+      "2026-08-29",
+      "2026-09-05"
     ],
     "title": "Combining covariate adjustment with information from secondary endpoints to improve precision in randomized trials"
   },
   "2608.27307": {
     "push_dates": [
-      "2026-08-29"
+      "2026-08-29",
+      "2026-09-05"
     ],
     "title": "Local Laws and Edge Universality for Noncentral Sample Covariance Matrices"
   },
   "2608.27310": {
     "push_dates": [
-      "2026-08-29"
+      "2026-08-29",
+      "2026-09-05"
     ],
     "title": "Conformal Prediction Through the Lens of Hypothesis Testing: Universality, Impossibility, and Optimality"
   },
@@ -596,6 +600,12 @@
     ],
     "title": "Posterior Geometry and Identifiability in Multi-Response Bayesian Calibration"
   },
+  "2608.31059": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "When Can We Work in Embedding Space? What Text Embeddings Preserve"
+  },
   "2608.31085": {
     "push_dates": [
       "2026-09-01"
@@ -620,6 +630,12 @@
     ],
     "title": "Scale Analysis and Shape Selection for the Generalized Gaussian Mechanism under Approximate Differential Privacy"
   },
+  "2609.00089": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Foundation models for electricity price forecasting and battery arbitrage: Can they replace market-specific forecasting models?"
+  },
   "2609.00350": {
     "push_dates": [
       "2026-09-05"
@@ -632,17 +648,41 @@
     ],
     "title": "Optimal Uniform Pricing for Multi-Interval Dispatch without Make-Whole Uplifts"
   },
+  "2609.00943": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Illiquidity at Risk"
+  },
   "2609.01467": {
     "push_dates": [
       "2026-09-05"
     ],
     "title": "Which Policy Works, and Where? Estimation and Inference for State-Level Treatment Effects in Difference-in-Differences"
   },
+  "2609.01804": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Robust Variance Estimation in Linear Regression: A Projection-Geometry Perspective"
+  },
   "2609.01943": {
     "push_dates": [
       "2026-09-05"
     ],
     "title": "Headline Estimation with Multiple Research Designs"
+  },
+  "2609.02024": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Spectral Analysis of Gram Matrices with Missing at Random Observations: Convergence, Central Limit Theorems, and Applications in Statistical Inference"
+  },
+  "2609.02382": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "A computational approach to maximum likelihood thresholds for colored Gaussian graphical models"
   },
   "2609.02673": {
     "push_dates": [
