@@ -604,11 +604,47 @@
     ],
     "title": "Scale Analysis and Shape Selection for the Generalized Gaussian Mechanism under Approximate Differential Privacy"
   },
+  "2609.01467": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Which Policy Works, and Where? Estimation and Inference for State-Level Treatment Effects in Difference-in-Differences"
+  },
+  "2609.02673": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Estimation risk in conditional expectiles"
+  },
+  "2609.03227": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Randomization Inference for Matched Pairs with Binary Outcomes"
+  },
+  "2609.03501": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Towards a Statistical Understanding of Mixture-of-Experts"
+  },
+  "2609.03523": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Random mixtures in Bayes Hilbert spaces"
+  },
   "2609.03549": {
     "push_dates": [
       "2026-09-05"
     ],
     "title": "Well-posedness of Filtering Equations in Weighted Sobolev Spaces with Unbounded System Coefficients"
+  },
+  "2609.03805": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Comment on: \"The Two Cultures of Prevalence Mapping: Small Area Estimation and Model-Based Geostatistics\""
   },
   "2609.03858": {
     "push_dates": [
@@ -645,5 +681,29 @@
       "2026-09-05"
     ],
     "title": "Influence of Extruded Filament Shape on Buildability in 3D Concrete Printing: A Geometry-Informed Deep Learning-FEM Approach"
+  },
+  "2609.04115": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "One Probability, Two Roles: The Separation of Coherence and Frequency in Adaptive Regimes"
+  },
+  "2609.04124": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Bernstein--von Mises theorems for Bayesian probabilistic numerics"
+  },
+  "2609.04136": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Natural Disasters and the Nonprofit Sector"
+  },
+  "2609.04157": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Spurious quantum correlations"
   }
 }
