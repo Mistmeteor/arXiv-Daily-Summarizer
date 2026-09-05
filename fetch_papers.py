@@ -2,6 +2,7 @@ import os
 import random
 import smtplib
 import sys
+import time
 import arxiv
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -1161,27 +1162,45 @@ def send_email(subject, html_content):
         bool: True if successful, False otherwise
     """
     print(f"\n📧 Sending email to {RECEIVER_EMAIL}...")
-    
-    try:
-        message = MIMEMultipart('alternative')
-        message['Subject'] = subject
-        message['From'] = SENDER_EMAIL
-        message['To'] = RECEIVER_EMAIL
-        
-        html_part = MIMEText(html_content, 'html', 'utf-8')
-        message.attach(html_part)
-        
-        with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
-            server.starttls()
-            server.login(SENDER_EMAIL, SENDER_PASSWORD)
-            server.send_message(message)
-        
-        print(f"✅ Email sent successfully!")
-        return True
-    
-    except Exception as e:
-        print(f"❌ Email sending failed: {str(e)}")
-        return False
+
+    message = MIMEMultipart('alternative')
+    message['Subject'] = subject
+    message['From'] = SENDER_EMAIL
+    message['To'] = RECEIVER_EMAIL
+    message.attach(MIMEText(html_content, 'html', 'utf-8'))
+
+    # Port 465 speaks implicit TLS (SMTPS); everything else (587, 25) speaks
+    # cleartext then upgrades via STARTTLS. Picking the wrong transport makes
+    # the server drop the socket with "Connection unexpectedly closed".
+    use_ssl = SMTP_PORT == 465
+    max_attempts = 3
+    backoff = 5
+
+    for attempt in range(1, max_attempts + 1):
+        try:
+            if use_ssl:
+                server_cm = smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT, timeout=30)
+            else:
+                server_cm = smtplib.SMTP(SMTP_SERVER, SMTP_PORT, timeout=30)
+            with server_cm as server:
+                if not use_ssl:
+                    server.starttls()
+                server.login(SENDER_EMAIL, SENDER_PASSWORD)
+                server.send_message(message)
+            print(f"✅ Email sent successfully!")
+            return True
+        except (smtplib.SMTPAuthenticationError, smtplib.SMTPRecipientsRefused) as e:
+            # Auth / recipient errors won't fix themselves on retry.
+            print(f"❌ Email sending failed (non-retryable): {e}")
+            return False
+        except Exception as e:
+            print(f"⚠️ Email attempt {attempt}/{max_attempts} failed: {e}")
+            if attempt < max_attempts:
+                time.sleep(backoff)
+                backoff *= 2
+
+    print("❌ Email sending failed after all retries.")
+    return False
 
 
 def main():
