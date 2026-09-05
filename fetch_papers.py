@@ -1158,9 +1158,9 @@ def generate_pushplus_content(papers_with_summaries, language='zh'):
     """
     today = datetime.now().strftime('%Y-%m-%d')
     parts = [
-        '<div style="font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.5;">',
-        f'<h3 style="color:#667eea;margin:0 0 10px;">📚 arXiv 每日推送 · {today}</h3>',
-        f'<p style="color:#888;font-size:12px;margin:0 0 15px;">共 {len(papers_with_summaries)} 篇 · 点标题跳 arXiv</p>',
+        '<div style="font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;font-size:16px;">',
+        f'<h3 style="color:#667eea;margin:0 0 10px;font-size:20px;">📚 arXiv 每日推送 · {today}</h3>',
+        f'<p style="color:#888;font-size:14px;margin:0 0 15px;">共 {len(papers_with_summaries)} 篇 · 点标题跳 arXiv</p>',
     ]
 
     for i, item in enumerate(papers_with_summaries, 1):
@@ -1177,13 +1177,13 @@ def generate_pushplus_content(papers_with_summaries, language='zh'):
 
         badges = []
         if paper.get('is_blp_recommend'):
-            badges.append('<span style="color:#e91e63;font-size:11px;">⭐BLP</span>')
+            badges.append('<span style="color:#e91e63;font-size:13px;">⭐BLP</span>')
         if paper.get('is_pinned'):
-            badges.append('<span style="color:#ff9800;font-size:11px;">📌</span>')
+            badges.append('<span style="color:#ff9800;font-size:13px;">📌</span>')
         if paper.get('is_repush'):
-            badges.append('<span style="color:#4caf50;font-size:11px;">♻️</span>')
+            badges.append('<span style="color:#4caf50;font-size:13px;">♻️</span>')
         score = paper.get('quality_score', 0)
-        badges.append(f'<span style="color:#888;font-size:11px;">[{score:.1f}]</span>')
+        badges.append(f'<span style="color:#888;font-size:13px;">[{score:.1f}]</span>')
         badge_html = ' '.join(badges)
 
         # entry_id is the arxiv abs page (e.g. https://arxiv.org/abs/2401.12345v1).
@@ -1196,18 +1196,18 @@ def generate_pushplus_content(papers_with_summaries, language='zh'):
         cats = list(paper.get('categories') or [])[:3]
         cat_html = ' '.join(
             f'<span style="display:inline-block;background:#eef1ff;color:#4a5aa8;'
-            f'font-size:11px;padding:1px 6px;border-radius:3px;margin-right:4px;">'
+            f'font-size:13px;padding:1px 6px;border-radius:3px;margin-right:4px;">'
             f'{CATEGORY_LABELS.get(c, c)}</span>'
             for c in cats
         )
 
         parts.append(
-            f'<div style="margin:0 0 14px;padding:10px;background:#f7f8fa;border-left:3px solid #667eea;border-radius:4px;">'
-            f'<div style="font-weight:600;margin-bottom:4px;">'
+            f'<div style="margin:0 0 16px;padding:12px;background:#f7f8fa;border-left:3px solid #667eea;border-radius:4px;">'
+            f'<div style="font-weight:600;font-size:17px;margin-bottom:6px;">'
             f'{i}. <a href="{link}" style="color:#333;text-decoration:none;">{paper["title"]}</a> {badge_html}'
             f'</div>'
-            f'<div style="margin:4px 0 6px;">{cat_html}</div>'
-            f'<div style="color:#555;font-size:13px;">{summary_html}</div>'
+            f'<div style="margin:4px 0 8px;">{cat_html}</div>'
+            f'<div style="color:#555;font-size:15px;">{summary_html}</div>'
             f'</div>'
         )
 
