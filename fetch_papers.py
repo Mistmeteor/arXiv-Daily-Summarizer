@@ -1148,13 +1148,13 @@ def generate_email_content(papers_with_summaries, language='zh'):
     return html
 
 
-def generate_pushplus_content(papers_with_summaries, language='zh', preview_chars=140):
-    """Compact HTML digest for PushPlus (WeChat webview).
+def generate_pushplus_content(papers_with_summaries, language='zh'):
+    """HTML digest for PushPlus (WeChat webview).
 
-    PushPlus content is capped per account tier; the full ~23KB email HTML gets
-    rejected on the free tier with code=999. This trims each paper down to a
-    title / score / short summary preview / arXiv abs link so the whole digest
-    fits under a few KB. Users tap through to arXiv for the full text.
+    Uses inline-styled divs only (no <html>/<head>/<style>) so PushPlus's
+    HTML sanitizer doesn't reject it — the original full email HTML got a
+    code=999 服务端验证错误 because of its <style> block, not raw length.
+    Summaries are rendered in full; newlines are preserved as <br>.
     """
     today = datetime.now().strftime('%Y-%m-%d')
     parts = [
@@ -1167,14 +1167,13 @@ def generate_pushplus_content(papers_with_summaries, language='zh', preview_char
         paper = item['paper']
         summary = item['summary']
 
-        # Normalize summary to a single Chinese preview snippet.
+        # Normalize summary and preserve paragraph breaks as <br> so the
+        # WeChat webview keeps the structure DeepSeek generated.
         if isinstance(summary, dict):
             summary_text = summary.get('zh') or summary.get('en') or ''
         else:
             summary_text = summary or ''
-        summary_text = summary_text.replace('\n', ' ').strip()
-        if len(summary_text) > preview_chars:
-            summary_text = summary_text[:preview_chars].rstrip() + '…'
+        summary_html = summary_text.strip().replace('\n', '<br>')
 
         badges = []
         if paper.get('is_blp_recommend'):
@@ -1208,7 +1207,7 @@ def generate_pushplus_content(papers_with_summaries, language='zh', preview_char
             f'{i}. <a href="{link}" style="color:#333;text-decoration:none;">{paper["title"]}</a> {badge_html}'
             f'</div>'
             f'<div style="margin:4px 0 6px;">{cat_html}</div>'
-            f'<div style="color:#555;font-size:13px;">{summary_text}</div>'
+            f'<div style="color:#555;font-size:13px;">{summary_html}</div>'
             f'</div>'
         )
 
