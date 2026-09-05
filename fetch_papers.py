@@ -1148,6 +1148,62 @@ def generate_email_content(papers_with_summaries, language='zh'):
     return html
 
 
+def generate_pushplus_content(papers_with_summaries, language='zh', preview_chars=140):
+    """Compact HTML digest for PushPlus (WeChat webview).
+
+    PushPlus content is capped per account tier; the full ~23KB email HTML gets
+    rejected on the free tier with code=999. This trims each paper down to a
+    title / score / short summary preview / arXiv abs link so the whole digest
+    fits under a few KB. Users tap through to arXiv for the full text.
+    """
+    today = datetime.now().strftime('%Y-%m-%d')
+    parts = [
+        '<div style="font-family:-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.5;">',
+        f'<h3 style="color:#667eea;margin:0 0 10px;">📚 arXiv 每日推送 · {today}</h3>',
+        f'<p style="color:#888;font-size:12px;margin:0 0 15px;">共 {len(papers_with_summaries)} 篇 · 点标题跳 arXiv</p>',
+    ]
+
+    for i, item in enumerate(papers_with_summaries, 1):
+        paper = item['paper']
+        summary = item['summary']
+
+        # Normalize summary to a single Chinese preview snippet.
+        if isinstance(summary, dict):
+            summary_text = summary.get('zh') or summary.get('en') or ''
+        else:
+            summary_text = summary or ''
+        summary_text = summary_text.replace('\n', ' ').strip()
+        if len(summary_text) > preview_chars:
+            summary_text = summary_text[:preview_chars].rstrip() + '…'
+
+        badges = []
+        if paper.get('is_blp_recommend'):
+            badges.append('<span style="color:#e91e63;font-size:11px;">⭐BLP</span>')
+        if paper.get('is_pinned'):
+            badges.append('<span style="color:#ff9800;font-size:11px;">📌</span>')
+        if paper.get('is_repush'):
+            badges.append('<span style="color:#4caf50;font-size:11px;">♻️</span>')
+        score = paper.get('quality_score', 0)
+        badges.append(f'<span style="color:#888;font-size:11px;">[{score:.1f}]</span>')
+        badge_html = ' '.join(badges)
+
+        # entry_id is the arxiv abs page (e.g. https://arxiv.org/abs/2401.12345v1).
+        # abs page is nicer than pdf for a quick tap-through — has title/abstract too.
+        link = paper.get('entry_id') or paper.get('pdf_url', '')
+
+        parts.append(
+            f'<div style="margin:0 0 14px;padding:10px;background:#f7f8fa;border-left:3px solid #667eea;border-radius:4px;">'
+            f'<div style="font-weight:600;margin-bottom:4px;">'
+            f'{i}. <a href="{link}" style="color:#333;text-decoration:none;">{paper["title"]}</a> {badge_html}'
+            f'</div>'
+            f'<div style="color:#555;font-size:13px;">{summary_text}</div>'
+            f'</div>'
+        )
+
+    parts.append('</div>')
+    return ''.join(parts)
+
+
 def send_pushplus(subject, html_content):
     """Push the digest to WeChat via PushPlus (https://www.pushplus.plus).
 
@@ -1281,15 +1337,16 @@ def main():
                 'summary': summary
             })
         
-        # Step 4: Generate digest HTML content
+        # Step 4: Generate compact HTML digest for PushPlus (must fit under
+        # the account tier's content limit; free tier caps out around ~5KB).
         print("\n" + "=" * 60)
         print("📧 Generating Digest Content")
         print("=" * 60)
-        html_content = generate_email_content(papers_with_summaries, EMAIL_LANGUAGE)
+        html_content = generate_pushplus_content(papers_with_summaries, EMAIL_LANGUAGE)
 
         # Step 5: Push via PushPlus
         today = datetime.now().strftime('%Y-%m-%d')
-        subject = f"📚 arXiv Daily Paper Digest - {today}"
+        subject = f"📚 arXiv {today} · {len(papers_with_summaries)}篇"
         sent_ok = send_pushplus(subject, html_content)
 
         # Step 6: On successful send, record today's push so the schedule can
