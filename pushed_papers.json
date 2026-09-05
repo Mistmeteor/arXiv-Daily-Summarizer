@@ -309,13 +309,15 @@
   },
   "2608.23988": {
     "push_dates": [
-      "2026-08-27"
+      "2026-08-27",
+      "2026-09-05"
     ],
     "title": "Estimation of Random-Coefficient Dynamic Panel Data Models with a Fixed T"
   },
   "2608.24362": {
     "push_dates": [
-      "2026-08-27"
+      "2026-08-27",
+      "2026-09-05"
     ],
     "title": "Dynamic Discrete Choice and Inverse Reinforcement Learning: Inferring Preferences and Beliefs From Human Behavior"
   },
@@ -327,7 +329,8 @@
   },
   "2608.24811": {
     "push_dates": [
-      "2026-08-27"
+      "2026-08-27",
+      "2026-09-05"
     ],
     "title": "How does hazard exposure influence job choice? Evaluating time-dependent tradeoffs between salary and hazard risks"
   },
@@ -600,5 +603,47 @@
       "2026-09-01"
     ],
     "title": "Scale Analysis and Shape Selection for the Generalized Gaussian Mechanism under Approximate Differential Privacy"
+  },
+  "2609.03549": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Well-posedness of Filtering Equations in Weighted Sobolev Spaces with Unbounded System Coefficients"
+  },
+  "2609.03858": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "High-Dimensional Learning Dynamics of Attention-Indexed Models"
+  },
+  "2609.03933": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Causal Inference for Heterogeneous Extreme Quantiles with Heavy-Tailed Outcomes"
+  },
+  "2609.03987": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "High-Order Triadic Functional Connectivity in the Brain and Beyond"
+  },
+  "2609.04011": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Differentiable Hybrid Modelling for Learning and Optimising Chemical Transport Processes from Experimental Data"
+  },
+  "2609.04018": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "A location-invariant estimator of extremal quantile treatment effects for heavy-tailed distributions"
+  },
+  "2609.04028": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Influence of Extruded Filament Shape on Buildability in 3D Concrete Printing: A Geometry-Informed Deep Learning-FEM Approach"
   }
 }
