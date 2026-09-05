@@ -1161,7 +1161,7 @@ def send_email(subject, html_content):
     Returns:
         bool: True if successful, False otherwise
     """
-    print(f"\n📧 Sending email to {RECEIVER_EMAIL}...")
+    print(f"\n📧 Sending email to {RECEIVER_EMAIL} via {SMTP_SERVER}:{SMTP_PORT}...")
 
     message = MIMEMultipart('alternative')
     message['Subject'] = subject
@@ -1169,24 +1169,34 @@ def send_email(subject, html_content):
     message['To'] = RECEIVER_EMAIL
     message.attach(MIMEText(html_content, 'html', 'utf-8'))
 
-    # Port 465 speaks implicit TLS (SMTPS); everything else (587, 25) speaks
-    # cleartext then upgrades via STARTTLS. Picking the wrong transport makes
-    # the server drop the socket with "Connection unexpectedly closed".
-    use_ssl = SMTP_PORT == 465
+    def _try_send(mode):
+        """mode: 'ssl' (implicit TLS, port 465) or 'starttls' (upgrade from cleartext)."""
+        if mode == 'ssl':
+            cm = smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT, timeout=30)
+        else:
+            cm = smtplib.SMTP(SMTP_SERVER, SMTP_PORT, timeout=30)
+        with cm as server:
+            if mode == 'starttls':
+                server.starttls()
+            server.login(SENDER_EMAIL, SENDER_PASSWORD)
+            server.send_message(message)
+
+    # Prefer the transport that matches the port; if the server drops us
+    # anyway ("Connection unexpectedly closed"), try the other mode once
+    # in case the port/transport pairing is unconventional.
+    primary = 'ssl' if SMTP_PORT == 465 else 'starttls'
+    fallback = 'starttls' if primary == 'ssl' else 'ssl'
+    modes = [primary, fallback]
+
     max_attempts = 3
     backoff = 5
 
     for attempt in range(1, max_attempts + 1):
+        # attempt 1 → primary, 2 → fallback, 3 → primary again
+        mode = modes[(attempt - 1) % len(modes)]
         try:
-            if use_ssl:
-                server_cm = smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT, timeout=30)
-            else:
-                server_cm = smtplib.SMTP(SMTP_SERVER, SMTP_PORT, timeout=30)
-            with server_cm as server:
-                if not use_ssl:
-                    server.starttls()
-                server.login(SENDER_EMAIL, SENDER_PASSWORD)
-                server.send_message(message)
+            print(f"  attempt {attempt}/{max_attempts} using {mode.upper()}")
+            _try_send(mode)
             print(f"✅ Email sent successfully!")
             return True
         except (smtplib.SMTPAuthenticationError, smtplib.SMTPRecipientsRefused) as e:
@@ -1194,7 +1204,7 @@ def send_email(subject, html_content):
             print(f"❌ Email sending failed (non-retryable): {e}")
             return False
         except Exception as e:
-            print(f"⚠️ Email attempt {attempt}/{max_attempts} failed: {e}")
+            print(f"⚠️ Email attempt {attempt}/{max_attempts} ({mode}) failed: {e}")
             if attempt < max_attempts:
                 time.sleep(backoff)
                 backoff *= 2
