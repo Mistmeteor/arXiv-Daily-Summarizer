@@ -426,19 +426,22 @@
   },
   "2608.26618": {
     "push_dates": [
-      "2026-08-29"
+      "2026-08-29",
+      "2026-09-05"
     ],
     "title": "A Unified Descriptive-Complexity Framework for Model Selection under Correlated Designs"
   },
   "2608.26638": {
     "push_dates": [
-      "2026-08-29"
+      "2026-08-29",
+      "2026-09-05"
     ],
     "title": "Which Metrics Save the Most Human Annotation? Prediction-Powered Evaluation and Meta-Evaluation"
   },
   "2608.26929": {
     "push_dates": [
-      "2026-08-29"
+      "2026-08-29",
+      "2026-09-05"
     ],
     "title": "A Bayesian Longitudinal Model for Imputing Item-Level Missing Data in Trial-Based Economic Evaluations"
   },
@@ -486,7 +489,8 @@
   },
   "2608.27368": {
     "push_dates": [
-      "2026-08-29"
+      "2026-08-29",
+      "2026-09-05"
     ],
     "title": "UGM: A Unified Framework and New Perspectives for Accelerated Gradient Methods in Smooth and Strongly Convex Optimization"
   },
@@ -543,6 +547,18 @@
       "2026-09-01"
     ],
     "title": "QGPINNs: A Physics-Informed Neural Network Framework for Nonlocal Differential Equations on Quantum Graphs"
+  },
+  "2608.29430": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Content Exploration Beyond the Feed: Creator Supply and the Shared Corpus"
+  },
+  "2608.30225": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Redefining Stablecoins from Nominal to Real Value: A Maximum Likelihood Approach"
   },
   "2608.30412": {
     "push_dates": [
@@ -604,17 +620,41 @@
     ],
     "title": "Scale Analysis and Shape Selection for the Generalized Gaussian Mechanism under Approximate Differential Privacy"
   },
+  "2609.00350": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Manipulation Testing in Boundary Discontinuity Designs"
+  },
+  "2609.00541": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Optimal Uniform Pricing for Multi-Interval Dispatch without Make-Whole Uplifts"
+  },
   "2609.01467": {
     "push_dates": [
       "2026-09-05"
     ],
     "title": "Which Policy Works, and Where? Estimation and Inference for State-Level Treatment Effects in Difference-in-Differences"
   },
+  "2609.01943": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Headline Estimation with Multiple Research Designs"
+  },
   "2609.02673": {
     "push_dates": [
       "2026-09-05"
     ],
     "title": "Estimation risk in conditional expectiles"
+  },
+  "2609.02756": {
+    "push_dates": [
+      "2026-09-05"
+    ],
+    "title": "Off-policy causal estimation in networks"
   },
   "2609.03227": {
     "push_dates": [
