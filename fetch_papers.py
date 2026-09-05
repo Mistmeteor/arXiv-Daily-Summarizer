@@ -157,7 +157,7 @@ def fetch_papers_by_ids(id_list):
     """
     if not id_list:
         return []
-    client = arxiv.Client()
+    client = arxiv.Client(page_size=100, delay_seconds=5.0, num_retries=5)
     search = arxiv.Search(id_list=list(id_list))
     out = []
     try:
@@ -417,7 +417,7 @@ def get_latest_papers():
     print(f"🔍 Searching for latest papers on arXiv...")
     print(f"📚 Categories: {', '.join(CATEGORIES)}")
     
-    client = arxiv.Client()
+    client = arxiv.Client(page_size=100, delay_seconds=5.0, num_retries=5)
     papers_by_category = defaultdict(list)
     seen_ids = set()
     
