@@ -323,7 +323,8 @@
   },
   "2608.24785": {
     "push_dates": [
-      "2026-08-30"
+      "2026-08-30",
+      "2026-09-06"
     ],
     "title": "Physics Attention Transformer Surrogate for Rapid Vertical Instability Growth Rate Prediction: Alcator C-Mod to SPARC"
   },
@@ -360,7 +361,8 @@
   },
   "2608.25743": {
     "push_dates": [
-      "2026-08-30"
+      "2026-08-30",
+      "2026-09-06"
     ],
     "title": "Learning of deep neural network regression estimates using gradient descent with pruning"
   },
@@ -384,19 +386,22 @@
   },
   "2608.25930": {
     "push_dates": [
-      "2026-08-30"
+      "2026-08-30",
+      "2026-09-06"
     ],
     "title": "Controlling for Omitted Variable Bias in Deep Neural Networks"
   },
   "2608.26338": {
     "push_dates": [
-      "2026-08-30"
+      "2026-08-30",
+      "2026-09-06"
     ],
     "title": "FLEX-CP-DT: A Flexible Conditional Power Framework for Interim Futility Analysis in Clinical Trials with Count Endpoints and Temporal Trends"
   },
   "2608.26465": {
     "push_dates": [
-      "2026-08-30"
+      "2026-08-30",
+      "2026-09-06"
     ],
     "title": "Compositional Generalization via Structural Identification in a Category-Theoretic Framework"
   },
@@ -678,6 +683,18 @@
     ],
     "title": "Spectral Analysis of Gram Matrices with Missing at Random Observations: Convergence, Central Limit Theorems, and Applications in Statistical Inference"
   },
+  "2609.02139": {
+    "push_dates": [
+      "2026-09-06"
+    ],
+    "title": "A variational quantum eigensolver-based cutting plane framework for semidefinite programming problems"
+  },
+  "2609.02304": {
+    "push_dates": [
+      "2026-09-06"
+    ],
+    "title": "Bayes-Optimal BER and AUC: Estimation and Evaluation of Estimators"
+  },
   "2609.02382": {
     "push_dates": [
       "2026-09-05"
@@ -690,11 +707,23 @@
     ],
     "title": "Estimation risk in conditional expectiles"
   },
+  "2609.02727": {
+    "push_dates": [
+      "2026-09-06"
+    ],
+    "title": "Neural operators approximate strongly continuous convex monotone semigroups"
+  },
   "2609.02756": {
     "push_dates": [
       "2026-09-05"
     ],
     "title": "Off-policy causal estimation in networks"
+  },
+  "2609.03129": {
+    "push_dates": [
+      "2026-09-06"
+    ],
+    "title": "A Closed-Form Formula for Consistent Lipschitz Regression on Metric Spaces with Sparse Neural Network Realizations"
   },
   "2609.03227": {
     "push_dates": [
@@ -785,5 +814,11 @@
       "2026-09-05"
     ],
     "title": "Spurious quantum correlations"
+  },
+  "2609.04188": {
+    "push_dates": [
+      "2026-09-06"
+    ],
+    "title": "Computation of Strong Solutions to Stochastic Variational Inequalities"
   }
 }
