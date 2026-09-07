@@ -60,6 +60,13 @@ RELEVANT_CATS = {
 MAX_RESULTS = 10  # Daily cap (final email size, applied AFTER push-history filter)
 MIN_PAPERS_PER_CATEGORY = 1  # (kept for backward compat; not used by the sampler below)
 
+# Hard floor: minimum econ.EM (primary or cross-listed) papers per digest.
+# User rule: "一定确保每天推送有计量的" — the weighted-random mixer alone
+# can occasionally skip econ.EM on sparse days, so we pin this many before
+# opening the remaining slots to the weighted rotation. Backfill for slow
+# econ days comes from the FETCH_DEPTH_MULTIPLIER (~30d) window.
+MIN_ECONOMETRICS_PER_PUSH = 3
+
 # Pre-filter candidate pool: rank this many papers BEFORE push-history filtering.
 # When today's recent Top-MAX_RESULTS are all in the "already-pushed" cooldown
 # window, the extra 2×MAX_RESULTS candidates give the schedule filter something
@@ -126,14 +133,21 @@ def matches_blp(paper):
 
 
 def _priority_tier(paper):
-    """0 = BLP strong-recommend (always on top), 1 = everything else.
+    """Display ordering tiers (0 = highest). User rule: 计量在前，其它在后.
 
-    Deliberately flat below the BLP tier so the weighted-random mix isn't
-    re-collapsed back into an econ-first ordering at display time.
+    0. BLP / demand-estimation strong-recommend (always on top)
+    1. Econometrics: econ.EM as primary OR cross-listed category
+    2. Adjacent fields: math / stat / ML / q-fin
+
+    Within a tier, papers still sort by quality DESC then recency, so the
+    tier separation only fires when it actually matters (moving an econ
+    paper above a higher-scoring math paper).
     """
     if matches_blp(paper):
         return 0
-    return 1
+    if PRIMARY_CATEGORY in (paper.get('categories') or []):
+        return 1
+    return 2
 
 
 def _is_relevant_paper(paper):
@@ -521,7 +535,33 @@ def get_latest_papers():
     if selected_papers:
         print(f"  Pinned {len(selected_papers)} BLP strong-recommend paper(s)")
 
-    # 2b. Weighted-random rotation fills the remaining slots. Each iteration
+    # 2b. Econometrics floor: guarantee at least MIN_ECONOMETRICS_PER_PUSH
+    #     papers with econ.EM as primary or cross-listed category. Without
+    #     this, sparse-econ days can produce a digest with zero econ content
+    #     just because the weighted-random rotation happened to skip it.
+    #     Sources are considered in this order:
+    #       1) econ.EM sampling pool (primary listing) — best signal
+    #       2) other categories' pools where econ.EM appears as cross-listing
+    def _is_econ(p):
+        return PRIMARY_CATEGORY in (p.get('categories') or [])
+
+    econ_pinned = sum(1 for p in selected_papers if _is_econ(p))
+    econ_sources = [PRIMARY_CATEGORY] + [c for c in CATEGORIES if c != PRIMARY_CATEGORY]
+    for cat in econ_sources:
+        if econ_pinned >= MIN_ECONOMETRICS_PER_PUSH:
+            break
+        for p in sampling_pools.get(cat, []):
+            if econ_pinned >= MIN_ECONOMETRICS_PER_PUSH:
+                break
+            if p['entry_id'] in seen_entry_ids or not _is_econ(p):
+                continue
+            selected_papers.append(p)
+            seen_entry_ids.add(p['entry_id'])
+            econ_pinned += 1
+    print(f"  Pinned {econ_pinned} econometrics paper(s) "
+          f"(floor ≥ {MIN_ECONOMETRICS_PER_PUSH})")
+
+    # 2c. Weighted-random rotation fills the remaining slots. Each iteration
     #     samples a category by CATEGORY_WEIGHTS, then pulls the highest-quality
     #     unused paper from that category. When a category's sampling pool is
     #     exhausted, drop it from the weight table and re-sample.
@@ -551,9 +591,10 @@ def get_latest_papers():
 
     # Step 4: Final sort. Priority tiers (0 = highest):
     #   0. BLP / demand-estimation match (strong recommend, always on top)
-    #   1. everything else — sorted purely by quality DESC, so the deliberately
-    #      mixed field selection actually renders as a mix (no more econ-first
-    #      collapse at display time)
+    #   1. Econometrics: econ.EM primary or cross-listed
+    #   2. Adjacent fields: math / stat / ML / q-fin
+    # Within each tier, sort by quality DESC then recency. User rule:
+    # 计量在前，其它在后 (see _priority_tier).
     selected_papers.sort(key=lambda x: (
         _priority_tier(x),
         -x.get('quality_score', 0),
