@@ -261,7 +261,8 @@
   },
   "2608.23064": {
     "push_dates": [
-      "2026-08-26"
+      "2026-08-26",
+      "2026-09-07"
     ],
     "title": "Sequentially valid inference for probabilistic inflation forecasts"
   },
@@ -279,7 +280,8 @@
   },
   "2608.23420": {
     "push_dates": [
-      "2026-08-26"
+      "2026-08-26",
+      "2026-09-07"
     ],
     "title": "Systematic Bias in Green Patent Classification: Silent Green and False Green"
   },
@@ -297,7 +299,8 @@
   },
   "2608.23796": {
     "push_dates": [
-      "2026-08-27"
+      "2026-08-27",
+      "2026-09-07"
     ],
     "title": "Accelerating the Adoption of Residential Solar Power Systems: Policy Analysis using a Dynamic Structural Model"
   },
@@ -343,7 +346,8 @@
   },
   "2608.25304": {
     "push_dates": [
-      "2026-08-29"
+      "2026-08-29",
+      "2026-09-07"
     ],
     "title": "SAUSS: Stochastic Approximation with Unbiased Simulated Scores for Limited Dependent Variable Models"
   },
@@ -380,7 +384,8 @@
   },
   "2608.25923": {
     "push_dates": [
-      "2026-08-27"
+      "2026-08-27",
+      "2026-09-07"
     ],
     "title": "Efficient tensor bases for pairwise comparisons"
   },
@@ -419,7 +424,8 @@
   },
   "2608.26584": {
     "push_dates": [
-      "2026-08-28"
+      "2026-08-28",
+      "2026-09-07"
     ],
     "title": "DIRECT: Decomposing Audience Preference and Creative Effect in Visual Content Analytics"
   },
@@ -820,5 +826,29 @@
       "2026-09-06"
     ],
     "title": "Computation of Strong Solutions to Stochastic Variational Inequalities"
+  },
+  "2609.04356": {
+    "push_dates": [
+      "2026-09-07"
+    ],
+    "title": "Blockchain-Enabled Secure Logging for Fiscal Electronic Mechanisms: Evaluation of the Greek eSEND and myDATA Tax Systems"
+  },
+  "2609.04994": {
+    "push_dates": [
+      "2026-09-07"
+    ],
+    "title": "Identification and Estimation of Intergenerational Income Mobility Measures"
+  },
+  "2609.05101": {
+    "push_dates": [
+      "2026-09-07"
+    ],
+    "title": "Duality for Stochastic Control with non-Markovian Random Coefficients"
+  },
+  "2609.05372": {
+    "push_dates": [
+      "2026-09-07"
+    ],
+    "title": "Does p-Hacking Mitigate or Exacerbate the Effects of Publication Bias?"
   }
 }
