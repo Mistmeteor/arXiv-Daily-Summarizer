@@ -219,7 +219,8 @@
   },
   "2608.22286": {
     "push_dates": [
-      "2026-08-26"
+      "2026-08-26",
+      "2026-09-08"
     ],
     "title": "Uniform Inference on Quantile Effects under Network Interference"
   },
@@ -237,7 +238,8 @@
   },
   "2608.22608": {
     "push_dates": [
-      "2026-08-29"
+      "2026-08-29",
+      "2026-09-08"
     ],
     "title": "Estimating Pathway Treatment Effects in the Presence of Intermediate Events with Multi-State Data"
   },
@@ -372,13 +374,15 @@
   },
   "2608.25814": {
     "push_dates": [
-      "2026-08-27"
+      "2026-08-27",
+      "2026-09-08"
     ],
     "title": "Nonparametric Bayesian Inference for Partially Identified Discrete Response Models"
   },
   "2608.25901": {
     "push_dates": [
-      "2026-08-27"
+      "2026-08-27",
+      "2026-09-08"
     ],
     "title": "Cross-Section Estimation of Long-Run Relations Using Time-Compressed Data"
   },
@@ -412,7 +416,8 @@
   },
   "2608.26522": {
     "push_dates": [
-      "2026-08-28"
+      "2026-08-28",
+      "2026-09-08"
     ],
     "title": "Inference for High-Dimensional Network Data"
   },
@@ -431,7 +436,8 @@
   },
   "2608.26606": {
     "push_dates": [
-      "2026-08-29"
+      "2026-08-29",
+      "2026-09-08"
     ],
     "title": "Analyzing Within-Subject Experiments: Identification, Testing, and Sensitivity"
   },
@@ -464,7 +470,8 @@
   },
   "2608.27155": {
     "push_dates": [
-      "2026-08-28"
+      "2026-08-28",
+      "2026-09-08"
     ],
     "title": "Nonparametric Identification of Two-Way Unobserved Heterogeneity"
   },
@@ -523,13 +530,15 @@
   },
   "2608.28087": {
     "push_dates": [
-      "2026-09-01"
+      "2026-09-01",
+      "2026-09-08"
     ],
     "title": "A Design Concept of Forecasting Software for Normalized Vector Autoregressions with Fat Tails and Stochastic Volatility"
   },
   "2608.28115": {
     "push_dates": [
-      "2026-09-01"
+      "2026-09-01",
+      "2026-09-08"
     ],
     "title": "Causal Non-causal State Space Models and the Modelling of Financial Bubbles"
   },
@@ -619,7 +628,8 @@
   },
   "2608.31085": {
     "push_dates": [
-      "2026-09-01"
+      "2026-09-01",
+      "2026-09-08"
     ],
     "title": "Moments of Random Coefficients in Short Panels"
   },
