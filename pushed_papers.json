@@ -860,5 +860,65 @@
       "2026-09-07"
     ],
     "title": "Does p-Hacking Mitigate or Exacerbate the Effects of Publication Bias?"
+  },
+  "2609.06827": {
+    "push_dates": [
+      "2026-09-09"
+    ],
+    "title": "Beyond Aggregate VARs: A Bayesian Benchmark for HANK Models"
+  },
+  "2609.06907": {
+    "push_dates": [
+      "2026-09-09"
+    ],
+    "title": "Sign Restrictions and Supply-demand Decompositions of Inflation"
+  },
+  "2609.07033": {
+    "push_dates": [
+      "2026-09-09"
+    ],
+    "title": "Choosing the Dictionary and Penalty for IV-LASSO"
+  },
+  "2609.07207": {
+    "push_dates": [
+      "2026-09-09"
+    ],
+    "title": "Filtering without recursion and some of its uses in financial economics"
+  },
+  "2609.07633": {
+    "push_dates": [
+      "2026-09-09"
+    ],
+    "title": "Robust A/B Decisions"
+  },
+  "2609.07888": {
+    "push_dates": [
+      "2026-09-09"
+    ],
+    "title": "Median-based Splitting Rules for Causal Trees and Forests"
+  },
+  "2609.07944": {
+    "push_dates": [
+      "2026-09-09"
+    ],
+    "title": "CausalVerify: An Execution-Grounded Benchmark for LLM Causal Inference Workflows"
+  },
+  "2609.08335": {
+    "push_dates": [
+      "2026-09-09"
+    ],
+    "title": "Designing Spatial Treatments"
+  },
+  "2609.08411": {
+    "push_dates": [
+      "2026-09-09"
+    ],
+    "title": "Policy Gains or Household Need? The Allocation Logic of China's Dibao Program"
+  },
+  "2609.09039": {
+    "push_dates": [
+      "2026-09-09"
+    ],
+    "title": "Covariate Adjustment in Randomized Experiments: A Unified Framework for Decision and Practice"
   }
 }
