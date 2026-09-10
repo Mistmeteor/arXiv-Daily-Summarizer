@@ -276,7 +276,8 @@
   },
   "2608.23315": {
     "push_dates": [
-      "2026-08-29"
+      "2026-08-29",
+      "2026-09-10"
     ],
     "title": "Classification testing: A new framework for drawing qualitative conclusions from quantitative estimates"
   },
@@ -289,13 +290,15 @@
   },
   "2608.23508": {
     "push_dates": [
-      "2026-08-26"
+      "2026-08-26",
+      "2026-09-10"
     ],
     "title": "Testing selection on observables in parametric models with refreshment samples"
   },
   "2608.23732": {
     "push_dates": [
-      "2026-08-27"
+      "2026-08-27",
+      "2026-09-10"
     ],
     "title": "Principal Component Analysis for a Mix of Stationary and Nonstationary Variables"
   },
@@ -308,7 +311,8 @@
   },
   "2608.23925": {
     "push_dates": [
-      "2026-08-27"
+      "2026-08-27",
+      "2026-09-10"
     ],
     "title": "Repairing Locally Misspecified GMM: An Empirical Bayes Approach"
   },
@@ -361,7 +365,8 @@
   },
   "2608.25720": {
     "push_dates": [
-      "2026-08-27"
+      "2026-08-27",
+      "2026-09-10"
     ],
     "title": "Endogenous Selection and Spillovers: Bayesian Inference for Policy-Relevant Causal Effects"
   },
@@ -861,6 +866,18 @@
     ],
     "title": "Does p-Hacking Mitigate or Exacerbate the Effects of Publication Bias?"
   },
+  "2609.05792": {
+    "push_dates": [
+      "2026-09-10"
+    ],
+    "title": "Scalable Clustered Network Connectedness with Control Variables: Theory and Application to Global Banking"
+  },
+  "2609.05883": {
+    "push_dates": [
+      "2026-09-10"
+    ],
+    "title": "Fixed-smoothing Uniform Inference for Quantile Regression"
+  },
   "2609.06827": {
     "push_dates": [
       "2026-09-09"
@@ -920,5 +937,23 @@
       "2026-09-09"
     ],
     "title": "Covariate Adjustment in Randomized Experiments: A Unified Framework for Decision and Practice"
+  },
+  "2609.09488": {
+    "push_dates": [
+      "2026-09-10"
+    ],
+    "title": "Two Margins in Difference-in-Differences with a Continuous Treatment"
+  },
+  "2609.09544": {
+    "push_dates": [
+      "2026-09-10"
+    ],
+    "title": "When is statistical evidence strong enough? Using hypothesis tests to value data collection"
+  },
+  "2609.10233": {
+    "push_dates": [
+      "2026-09-10"
+    ],
+    "title": "On the Tightness of Standard Relaxations for Mixed-Integer Bilevel Linear Programs"
   }
 }
