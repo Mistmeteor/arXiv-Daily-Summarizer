@@ -955,5 +955,65 @@
       "2026-09-10"
     ],
     "title": "On the Tightness of Standard Relaxations for Mixed-Integer Bilevel Linear Programs"
+  },
+  "2609.10587": {
+    "push_dates": [
+      "2026-09-11"
+    ],
+    "title": "Expected Shortfall Factor Models: Common Tail Losses and Expected Returns"
+  },
+  "2609.10615": {
+    "push_dates": [
+      "2026-09-11"
+    ],
+    "title": "ACT, WAIT, or EXPERIMENT: A Causal Governance Framework for Retail Price Optimization Under Abstentions"
+  },
+  "2609.10617": {
+    "push_dates": [
+      "2026-09-11"
+    ],
+    "title": "Average Treatment Effect Localization: Projection Methods in Synthetic Control"
+  },
+  "2609.10925": {
+    "push_dates": [
+      "2026-09-11"
+    ],
+    "title": "Identification in Linear Quantile Panel Models"
+  },
+  "2609.10971": {
+    "push_dates": [
+      "2026-09-11"
+    ],
+    "title": "Experimental Design for Policy Choice"
+  },
+  "2609.11222": {
+    "push_dates": [
+      "2026-09-11"
+    ],
+    "title": "Optimal Covariate Adjustment beyond the Average Treatment Effect: Treated-Population and Overlap-Weighted Estimands"
+  },
+  "2609.11455": {
+    "push_dates": [
+      "2026-09-11"
+    ],
+    "title": "Efficient Algorithms for Energy-Aware Single-Machine Scheduling with Battery Storage"
+  },
+  "2609.11575": {
+    "push_dates": [
+      "2026-09-11"
+    ],
+    "title": "Market-Informed Networks for Modeling and Forecast Evaluation of Financial Extremes"
+  },
+  "2609.11829": {
+    "push_dates": [
+      "2026-09-11"
+    ],
+    "title": "WFDroneBench: A Benchmark for Sensor Placement and Drone Routing for Wildfire Detection"
+  },
+  "2609.11915": {
+    "push_dates": [
+      "2026-09-11"
+    ],
+    "title": "Generative Marketing Mix Modeling: A Causal Inference Framework Linking GEO and GEM to Business Impact"
   }
 }
