@@ -13,6 +13,7 @@ import re
 from difflib import SequenceMatcher
 
 import push_history
+import notion_push
 
 # ========== Configuration ==========
 
@@ -97,6 +98,14 @@ DEEPSEEK_MODEL = 'deepseek-chat'  # points to the latest DeepSeek-V3
 # blocks GitHub Actions IPs even on 465/SSL.
 PUSHPLUS_TOKEN = os.environ.get('PUSHPLUS_TOKEN')
 PUSHPLUS_URL = 'https://www.pushplus.plus/send'
+
+# Notion mirror (secondary sink). PushPlus in JP is slow to render, so the
+# digest is also pushed to a Notion database when both env vars are set. Both
+# unset → Notion path is skipped silently. Secret names match the Codelib
+# weread_sync convention (NOTION_API_KEY + NOTION_DATABASE_ID) so the same
+# integration can be reused across projects.
+NOTION_API_KEY = os.environ.get('NOTION_API_KEY')
+NOTION_DATABASE_ID = os.environ.get('NOTION_DATABASE_ID')
 
 # Quality filtering thresholds
 MIN_ABSTRACT_LENGTH = 100  # Minimum abstract length (characters)
@@ -1420,6 +1429,16 @@ def main():
 
         history = push_history.update(history, papers)
         push_history.save(history)
+
+        # Step 7: Best-effort mirror to Notion. Runs AFTER PushPlus success +
+        # history save so a Notion outage can't affect the primary channel or
+        # the dedup schedule. Silently skipped if either env var is missing.
+        try:
+            notion_push.push_to_notion(
+                papers_with_summaries, NOTION_API_KEY, NOTION_DATABASE_ID
+            )
+        except Exception as e:
+            print(f"⚠️ Notion push crashed but is non-fatal: {e}")
 
         print("\n" + "=" * 60)
         print("✅ Execution completed successfully!")

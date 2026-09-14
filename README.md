@@ -62,6 +62,32 @@ cd arxiv-daily-summarizer
 3. 获取授权码
 4. `SMTP_SERVER` 设置为 `smtp.163.com`
 
+#### 📓 Notion 镜像（可选，PushPlus 慢/打不开时兜底）
+
+PushPlus 在日本等海外网络下加载很慢。开启后每次推送会**同步写入你的 Notion 数据库**（PushPlus 成功后 best-effort 触发，失败不影响主流程，按 arXiv ID 自动去重）。
+
+Secret 名字（`NOTION_API_KEY` / `NOTION_DATABASE_ID`）与 Codelib 的 `weread_sync.yml` 完全一致——**同一个 integration 可以复用**，把它 Connections 到多个 database 就行。
+
+**准备步骤：**
+1. 打开 https://www.notion.so/my-integrations → New integration → 拿 `secret_xxx` → 存进 GitHub Secret `NOTION_API_KEY`
+2. 在 Notion 里新建一个 database（Full page 或 Inline 都行）。列名支持中英文任写一种，大小写不敏感；缺列会被自动跳过不报错：
+
+| 推荐列名 | 类型 | 也识别 | 说明 |
+|---------|------|--------|------|
+| 标题 (title) | Title | 任意 title 列 | 每个 DB 必有的那列，叫什么名字都能被识别 |
+| 分类 | Multi-select | Category / Categories | arXiv 分类码（`econ.EM`、`math.ST` …） |
+| 日期 | Date | Date / Published | arXiv 发布日期 |
+| arXiv 编号 | Rich text | arXiv ID / ID | 例如 `2609.12345`（**存在则启用按 ID 去重**） |
+| 链接 | URL | URL / Link | arXiv abs 页面 |
+| 评分 | Number | Quality / Score | 质量评分 |
+| 摘要 | Rich text | Summary / Abstract | AI 摘要（属性截断到 1900 字符；完整版写入页面正文段落） |
+| 标签 | Multi-select | Badges / Flags | `BLP` / `Pinned` / `Repush` |
+
+3. 打开该 database → 右上角 `···` → **Connections** → 把上一步的 integration 加进去（**不加会 403**）
+4. 复制 database ID：URL 形如 `https://www.notion.so/xxx/<32位ID>?v=...`，中间那 32 位就是 → 存进 GitHub Secret `NOTION_DATABASE_ID`
+
+不设 Notion secrets → 只推微信；两个都设 → 两边都推。
+
 ### 3. 启用 GitHub Actions
 
 1. 进入仓库的 **Actions** 标签页
