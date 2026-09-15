@@ -866,7 +866,8 @@
   },
   "2609.05101": {
     "push_dates": [
-      "2026-09-07"
+      "2026-09-07",
+      "2026-09-15"
     ],
     "title": "Duality for Stochastic Control with non-Markovian Random Coefficients"
   },
@@ -1085,5 +1086,59 @@
       "2026-09-15"
     ],
     "title": "Benign Loss Landscapes Can Coexist with Worst-Case Hardness"
+  },
+  "2609.13345": {
+    "push_dates": [
+      "2026-09-15"
+    ],
+    "title": "Beyond Point Forecasts: A Survey on Probabilistic Forecasting for Time Series and Spatiotemporal Data"
+  },
+  "2609.13586": {
+    "push_dates": [
+      "2026-09-15"
+    ],
+    "title": "Synthetic Nearest Neighbors: Extending Synthetic Controls for Matrix Completion with Missing Not at Random Data"
+  },
+  "2609.13698": {
+    "push_dates": [
+      "2026-09-15"
+    ],
+    "title": "Spectral Design of Random-Duration Switchbacks"
+  },
+  "2609.14049": {
+    "push_dates": [
+      "2026-09-15"
+    ],
+    "title": "Homophily and transitivity in dynamic network formation"
+  },
+  "2609.14069": {
+    "push_dates": [
+      "2026-09-15"
+    ],
+    "title": "What Variation Identifies Payoffs in a Dynamic Game?"
+  },
+  "2609.14398": {
+    "push_dates": [
+      "2026-09-15"
+    ],
+    "title": "Identification and Inference in proxy-SVARs with non-Gaussian shocks"
+  },
+  "2609.15111": {
+    "push_dates": [
+      "2026-09-15"
+    ],
+    "title": "Eigenvalue-Decomposition Cost Denoising as an Alternative to Predict-then-Optimize for Shortest-Path Problems"
+  },
+  "2609.15736": {
+    "push_dates": [
+      "2026-09-15"
+    ],
+    "title": "Conditional-Moment Estimation and Inference in the BLP Model"
+  },
+  "2609.15796": {
+    "push_dates": [
+      "2026-09-15"
+    ],
+    "title": "Penalized Maximum Likelihood Inference of Core-Periphery Networks"
   }
 }
