@@ -89,6 +89,18 @@ FETCH_DEPTH_MULTIPLIER = 9
 # Supported values: 'zh' (Chinese), 'en' (English), 'both' (Bilingual)
 EMAIL_LANGUAGE = os.environ.get('EMAIL_LANGUAGE', 'zh')  # Default to Chinese
 
+# Summary style configuration
+# Supported values:
+#   'academic' — original 4-section academic phrasing (背景/方法/结果/应用)
+#   'plain'    — plain-language walkthrough optimized for fast comprehension:
+#                what real-world problem, what the authors did (intuition first,
+#                jargon translated inline), what came out, what it means for me.
+# Default is 'academic' to preserve the previous behavior.
+SUMMARY_STYLE = os.environ.get('SUMMARY_STYLE', 'academic').lower()
+if SUMMARY_STYLE not in ('academic', 'plain'):
+    print(f"⚠️  Unknown SUMMARY_STYLE={SUMMARY_STYLE!r}, falling back to 'academic'.")
+    SUMMARY_STYLE = 'academic'
+
 # DeepSeek API configuration (official DeepSeek platform)
 DEEPSEEK_API_KEY = os.environ.get('DEEPSEEK_API_KEY')
 DEEPSEEK_BASE_URL = 'https://api.deepseek.com/v1'
@@ -695,22 +707,31 @@ def strip_markdown(text):
     return text.strip()
 
 
-def summarize_paper(paper, language='zh'):
+def summarize_paper(paper, language='zh', style=None):
     """
     Generate paper summary using DeepSeek AI
-    
+
     Args:
         paper: Dictionary containing paper information
         language: 'zh' for Chinese, 'en' for English, 'both' for bilingual
-        
+        style: 'academic' (original 4-section academic phrasing) or 'plain'
+               (plain-language walkthrough). Defaults to the module-level
+               SUMMARY_STYLE if not passed.
+
     Returns:
         dict: AI-generated summaries {'zh': str, 'en': str} or single language str
     """
+    if style is None:
+        style = SUMMARY_STYLE
+    if style not in ('academic', 'plain'):
+        style = 'academic'
+
     print(f"\n🤖 Generating AI summary for:")
     print(f"   {paper['title'][:70]}...")
-    
+    print(f"   style={style}")
+
     summaries = {}
-    
+
     # Define prompts for each language
     # IMPORTANT: explicitly forbid markdown so the summary renders as plain text in email
     plain_text_rule_zh = (
@@ -723,7 +744,9 @@ def summarize_paper(paper, language='zh'):
         "Do NOT use **bold**, *italics*, # or ### headers, `code`, > blockquotes, or - / * bullet markers. "
         "Start each of the four sections with '1. ', '2. ', '3. ', '4. ' directly, with no extra decoration."
     )
-    prompts = {
+
+    # ---------------- Style: academic (original) ----------------
+    academic_prompts = {
         'zh': f"""请用中文总结以下学术论文，包括以下几个方面：
 1. 研究背景和动机（1-2句话）
 2. 主要方法和创新点（2-3句话）
@@ -753,6 +776,88 @@ Please use concise professional language suitable for quick reading.
 
 {plain_text_rule_en}"""
     }
+
+    # ---------------- Style: plain (easy-to-read walkthrough) ----------------
+    # Goal: reader (an econometrics learner, not a specialist in this paper's
+    # sub-field) should understand what the authors did in ~30 seconds.
+    # Rules baked into the prompt:
+    #   - Explain the problem with a concrete scenario or analogy first.
+    #   - Method: intuition first, then name the technique; every jargon term
+    #     that first appears gets a short parenthetical translation.
+    #   - Numbers/results in everyday language (avoid raw notation).
+    #   - Section 4 tells the reader why they should care.
+    plain_prompts = {
+        'zh': f"""请用中文，把下面这篇学术论文讲给一个学计量经济学的研究生听——
+他懂基本术语（OLS/IV/MLE/GMM 这种不用解释），但对这篇论文的细分方向不熟。
+目标：让他 30 秒内看懂作者到底在干嘛，而不是背下摘要。
+
+请严格按下面四小节输出：
+
+1. 作者想解决什么问题（1-2 句）
+   用一个具体场景或类比开头，先说清楚"现实里什么情况会用到这个"，再点问题。
+   不要用『本文研究了……』这种论文腔。
+
+2. 作者怎么做的（3-4 句）
+   先讲直觉——他们的核心想法是什么，为什么这样做能解决上面那个问题；
+   再点出方法名称。凡是较冷门的术语（细分领域的估计量、算子、正则化名字等）
+   首次出现时用括号给一句大白话解释，例如：
+   "sieve estimator（用一族越来越复杂的基函数去逼近未知的函数，规模随样本长）"。
+   OLS / IV / GMM / MLE / bootstrap / bias 这种基础术语不用解释。
+
+3. 结果是什么（1-2 句）
+   用大白话说结论，别只丢公式或"我们证明了 Theorem 3"。
+   如果摘要里有具体数字（收敛率、误差下降幅度、覆盖率等），保留 1-2 个关键数字。
+
+4. 对我意味着什么（1 句）
+   如果这个方法/结论跟 BLP、需求估计、离散选择、非线性 GMM、内生性处理、
+   面板/工具变量、机器学习+计量交叉 有关系，直接点出"在 XX 场景下可以借鉴 XX"；
+   如果关系不大，就诚实说"跟 BLP 关系较远，属于 XX 方向的进展"。
+
+论文标题：{paper['title']}
+
+论文摘要：
+{paper['abstract']}
+
+{plain_text_rule_zh}""",
+        'en': f"""Please explain the following academic paper in English to a graduate
+student in econometrics — they know standard terms (OLS/IV/MLE/GMM don't need
+explaining) but are not a specialist in this paper's sub-field.
+Goal: they should understand what the authors are actually doing in ~30 seconds,
+not memorize the abstract.
+
+Follow this four-section structure strictly:
+
+1. What real problem the authors are trying to solve (1-2 sentences)
+   Open with a concrete scenario or analogy — "in the real world, this comes up when …" —
+   then state the problem. Do NOT use "This paper studies …" boilerplate.
+
+2. What the authors do (3-4 sentences)
+   Intuition first: what is the core idea and why does it solve the problem above.
+   Then name the method. For any narrow jargon (sub-field-specific estimators,
+   operators, regularizers, etc.), give a short plain-English gloss in parentheses
+   the first time it appears, e.g.
+   "sieve estimator (approximate the unknown function with a growing family of
+   basis functions whose size scales with the sample)".
+   Basic terms (OLS / IV / GMM / MLE / bootstrap / bias) do NOT need gloss.
+
+3. What comes out (1-2 sentences)
+   Plain-language conclusion, not just "we prove Theorem 3". If the abstract has
+   concrete numbers (convergence rate, error reduction, coverage), keep 1-2 key ones.
+
+4. Why the reader should care (1 sentence)
+   If the method/result connects to BLP, demand estimation, discrete choice,
+   nonlinear GMM, endogeneity, panel/IV, or ML-meets-econometrics, say
+   "useful in X because Y." Otherwise be honest: "far from BLP, but progress in X."
+
+Paper title: {paper['title']}
+
+Paper abstract:
+{paper['abstract']}
+
+{plain_text_rule_en}"""
+    }
+
+    prompts = plain_prompts if style == 'plain' else academic_prompts
     
     # Determine which languages to generate
     langs_to_generate = ['zh', 'en'] if language == 'both' else [language]

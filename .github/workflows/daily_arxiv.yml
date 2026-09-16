@@ -43,6 +43,10 @@ jobs:
           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+          # Summary style: 'academic' (original) or 'plain' (easy-to-read).
+          # Flip via repo → Settings → Secrets and variables → Actions → Variables,
+          # add/edit a repository variable named SUMMARY_STYLE. Defaults to 'academic'.
+          SUMMARY_STYLE: ${{ vars.SUMMARY_STYLE || 'academic' }}
         run: |
           python fetch_papers.py
 
