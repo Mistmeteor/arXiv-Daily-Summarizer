@@ -927,7 +927,8 @@
   },
   "2609.07944": {
     "push_dates": [
-      "2026-09-09"
+      "2026-09-09",
+      "2026-09-16"
     ],
     "title": "CausalVerify: An Execution-Grounded Benchmark for LLM Causal Inference Workflows"
   },
@@ -939,7 +940,8 @@
   },
   "2609.08411": {
     "push_dates": [
-      "2026-09-09"
+      "2026-09-09",
+      "2026-09-16"
     ],
     "title": "Policy Gains or Household Need? The Allocation Logic of China's Dibao Program"
   },
@@ -1140,5 +1142,53 @@
       "2026-09-15"
     ],
     "title": "Penalized Maximum Likelihood Inference of Core-Periphery Networks"
+  },
+  "2609.16086": {
+    "push_dates": [
+      "2026-09-16"
+    ],
+    "title": "Tractable Estimation of the Money Pump Index: A Comment"
+  },
+  "2609.16509": {
+    "push_dates": [
+      "2026-09-16"
+    ],
+    "title": "Anthropogenic Forcing, Climate Change, and the Shape of Warming: Statistical Inference for Distributional Cointegration"
+  },
+  "2609.16618": {
+    "push_dates": [
+      "2026-09-16"
+    ],
+    "title": "A Multiverse of Good and Bad Controls: Candidate Causal Graphs for Interpreting Model Robustness Analysis"
+  },
+  "2609.16952": {
+    "push_dates": [
+      "2026-09-16"
+    ],
+    "title": "Learning Choice Model Trees for Feature-Based Multi-Product Pricing: Exact Optimization and Field Evidence"
+  },
+  "2609.16968": {
+    "push_dates": [
+      "2026-09-16"
+    ],
+    "title": "Rate-Agnostic Wald Inference for Dyadic Regressions"
+  },
+  "2609.17158": {
+    "push_dates": [
+      "2026-09-16"
+    ],
+    "title": "Empirical Bayes for compound adaptive experiments"
+  },
+  "2609.17170": {
+    "push_dates": [
+      "2026-09-16"
+    ],
+    "title": "Causal Inference under Dynamic Selection: Time-Varying Covariates and Latent Heterogeneity"
+  },
+  "2609.17296": {
+    "push_dates": [
+      "2026-09-16"
+    ],
+    "title": "Conformal Policy Learning with Distribution-Free Safety Guarantees"
   }
 }
