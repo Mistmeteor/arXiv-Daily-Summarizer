@@ -965,7 +965,8 @@
   },
   "2609.10233": {
     "push_dates": [
-      "2026-09-10"
+      "2026-09-10",
+      "2026-09-17"
     ],
     "title": "On the Tightness of Standard Relaxations for Mixed-Integer Bilevel Linear Programs"
   },
@@ -1190,5 +1191,59 @@
       "2026-09-16"
     ],
     "title": "Conformal Policy Learning with Distribution-Free Safety Guarantees"
+  },
+  "2609.17626": {
+    "push_dates": [
+      "2026-09-17"
+    ],
+    "title": "Structural Complexity of One-Factor Sparse Portfolio Selection: Exact Algorithms, Parameterized Hardness, and Restricted Circuit Lower Bounds"
+  },
+  "2609.17939": {
+    "push_dates": [
+      "2026-09-17"
+    ],
+    "title": "Recursive-Head Geometry and Order-Free Efficient Inference in Finite-State Nested Markov Models"
+  },
+  "2609.18150": {
+    "push_dates": [
+      "2026-09-17"
+    ],
+    "title": "Profiled Anderson--Rubin Test: Robust Inference Allowing for Direct Effects of Instruments"
+  },
+  "2609.18157": {
+    "push_dates": [
+      "2026-09-17"
+    ],
+    "title": "Tensor-BEKK: Conditional Covariance Modeling and Inference for Tensor-Valued Time Series"
+  },
+  "2609.18172": {
+    "push_dates": [
+      "2026-09-17"
+    ],
+    "title": "What No First Stage Can Detect: Functional-Form Contamination in Linear IV"
+  },
+  "2609.18600": {
+    "push_dates": [
+      "2026-09-17"
+    ],
+    "title": "Policy Targeting with Market Equilibrium"
+  },
+  "2609.18734": {
+    "push_dates": [
+      "2026-09-17"
+    ],
+    "title": "Conditionally linear, matrix normal state space models"
+  },
+  "2609.18903": {
+    "push_dates": [
+      "2026-09-17"
+    ],
+    "title": "Shrinkage Bayesian Causal Forest with Instrumental Variable"
+  },
+  "2609.19081": {
+    "push_dates": [
+      "2026-09-17"
+    ],
+    "title": "Beyond Pretrends: A Discordance-Based Sensitivity Analysis for Difference-in-Differences"
   }
 }
