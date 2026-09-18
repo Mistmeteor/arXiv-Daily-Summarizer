@@ -5,16 +5,18 @@ Secondary push channel alongside PushPlus. Users in latency-sensitive regions
 the WeChat webview.
 
 Adaptive schema: queries the target database once, auto-detects the title
-property, and only sets known columns that actually exist. Recognized columns
-(case-insensitive; either English or Chinese name accepted; type must match):
+property, and only sets known columns that actually exist. Name matching is
+whitespace- and case-insensitive (so "arXiv编号" == "arXiv 编号" == "ARXIV ID").
+Type matching prefers the semantic type below but falls back to rich_text if
+that's what the user set — the value is written as a string in that case.
 
-  - <title col>            (title)         paper title  [always required]
-  - Category   / 分类       (multi_select)  arxiv category codes, primary first
-  - Date       / 日期       (date)          arxiv published date
-  - arXiv ID   / arXiv 编号 (rich_text)     arxiv id (e.g. 2609.12345)
-  - URL        / 链接       (url)           arxiv abs page link
-  - Quality    / 评分       (number)        quality_score
-  - Badges     / 标签       (multi_select)  BLP / Pinned / Repush
+  - <title col>            (title)                       paper title  [required]
+  - Category   / 分类       (multi_select)                arxiv category codes
+  - Date       / 日期       (date)                        arxiv published date
+  - arXiv ID   / arXiv 编号 (rich_text)                   arxiv id (e.g. 2609.12345)
+  - URL        / 链接/连接  (url, or rich_text fallback)  arxiv abs page link
+  - Quality    / 评分       (number, or rich_text)        quality_score
+  - Badges     / 标签       (multi_select, or rich_text)  BLP / Pinned / Repush
 
 AI summary is written to the page body as paragraph blocks only — the DB list
 view stays scannable (open the page to read the summary). A rich_text
@@ -59,13 +61,40 @@ def _find_title_prop(schema):
     return None
 
 
+def _norm(s):
+    """Normalize a column name for matching: strip whitespace, lowercase."""
+    return re.sub(r'\s+', '', s or '').lower()
+
+
 def _match(schema, candidates, expected_type):
-    lower_map = {n.lower(): n for n in schema}
+    lower_map = {_norm(n): n for n in schema}
     for cand in candidates:
-        real = lower_map.get(cand.lower())
+        real = lower_map.get(_norm(cand))
         if real and schema.get(real) == expected_type:
             return real
     return None
+
+
+def _match_flex(schema, candidates, preferred_type):
+    """Match by name (whitespace-insensitive) and return (name, actual_type).
+
+    Prefers columns whose actual type is `preferred_type`. If none match by
+    name at that type, falls back to any column matching by name with type
+    `rich_text` — so users who set the column to text still get a value
+    written (as a string) instead of a silent skip.
+    """
+    lower_map = {_norm(n): n for n in schema}
+    # Preferred type first
+    for cand in candidates:
+        real = lower_map.get(_norm(cand))
+        if real and schema.get(real) == preferred_type:
+            return real, preferred_type
+    # rich_text fallback
+    for cand in candidates:
+        real = lower_map.get(_norm(cand))
+        if real and schema.get(real) == 'rich_text':
+            return real, 'rich_text'
+    return None, None
 
 
 def _extract_arxiv_id(entry_id):
@@ -118,20 +147,33 @@ def _build_properties(paper, summary, schema, title_prop):
         aid = _extract_arxiv_id(paper.get('entry_id'))
         props[id_prop] = {'rich_text': [{'text': {'content': aid[:2000]}}]}
 
-    url_prop = _match(schema, ['URL', 'Link', 'arXiv URL', '链接'], 'url')
+    url_prop, url_type = _match_flex(
+        schema, ['URL', 'Link', 'arXiv URL', '链接', '连接'], 'url'
+    )
     if url_prop:
         url = paper.get('entry_id') or paper.get('pdf_url')
         if url:
-            props[url_prop] = {'url': url}
+            if url_type == 'url':
+                props[url_prop] = {'url': url}
+            else:  # rich_text fallback
+                props[url_prop] = {'rich_text': [{'text': {'content': url[:2000]}}]}
 
-    quality_prop = _match(schema, ['Quality', 'Score', 'Quality Score', '评分', '质量'], 'number')
+    quality_prop, quality_type = _match_flex(
+        schema, ['Quality', 'Score', 'Quality Score', '评分', '质量'], 'number'
+    )
     if quality_prop:
-        props[quality_prop] = {'number': round(paper.get('quality_score', 0), 2)}
+        value = round(paper.get('quality_score', 0), 2)
+        if quality_type == 'number':
+            props[quality_prop] = {'number': value}
+        else:  # rich_text fallback
+            props[quality_prop] = {'rich_text': [{'text': {'content': str(value)}}]}
 
     # Summary text goes into the page body via _build_children, not into a
     # property column — keeps the DB list view scannable.
 
-    badges_prop = _match(schema, ['Badges', 'Flags', 'Flag', '标签', '徽章'], 'multi_select')
+    badges_prop, badges_type = _match_flex(
+        schema, ['Badges', 'Flags', 'Flag', '标签', '徽章'], 'multi_select'
+    )
     if badges_prop:
         tags = []
         if paper.get('is_blp_recommend'):
@@ -141,7 +183,12 @@ def _build_properties(paper, summary, schema, title_prop):
         if paper.get('is_repush'):
             tags.append('Repush')
         if tags:
-            props[badges_prop] = {'multi_select': [{'name': t} for t in tags]}
+            if badges_type == 'multi_select':
+                props[badges_prop] = {'multi_select': [{'name': t} for t in tags]}
+            else:  # rich_text fallback
+                props[badges_prop] = {
+                    'rich_text': [{'text': {'content': ', '.join(tags)}}]
+                }
 
     return props
 
