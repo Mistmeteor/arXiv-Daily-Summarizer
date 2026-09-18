@@ -14,11 +14,11 @@ property, and only sets known columns that actually exist. Recognized columns
   - arXiv ID   / arXiv 编号 (rich_text)     arxiv id (e.g. 2609.12345)
   - URL        / 链接       (url)           arxiv abs page link
   - Quality    / 评分       (number)        quality_score
-  - Summary    / 摘要       (rich_text)     AI summary, truncated to <2000 chars
   - Badges     / 标签       (multi_select)  BLP / Pinned / Repush
 
-Full AI summary is also written to the page body as paragraph blocks, so long
-summaries survive the property-length cap.
+AI summary is written to the page body as paragraph blocks only — the DB list
+view stays scannable (open the page to read the summary). A rich_text
+Summary/摘要 column, if present, is intentionally left empty.
 
 Uses only stdlib (urllib). Never raises — the caller treats this as a best-
 effort sink so a Notion outage cannot take down the PushPlus path.
@@ -31,7 +31,6 @@ import urllib.request
 
 NOTION_API_VERSION = '2022-06-28'
 NOTION_API_ROOT = 'https://api.notion.com/v1'
-PROP_TEXT_LIMIT = 1900
 BLOCK_TEXT_LIMIT = 1900
 
 
@@ -129,12 +128,8 @@ def _build_properties(paper, summary, schema, title_prop):
     if quality_prop:
         props[quality_prop] = {'number': round(paper.get('quality_score', 0), 2)}
 
-    summary_prop = _match(schema, ['Summary', 'Abstract', 'AI Summary', '摘要', 'AI 摘要'], 'rich_text')
-    text = _summary_text(summary)
-    if summary_prop and text:
-        props[summary_prop] = {
-            'rich_text': [{'text': {'content': text[:PROP_TEXT_LIMIT]}}]
-        }
+    # Summary text goes into the page body via _build_children, not into a
+    # property column — keeps the DB list view scannable.
 
     badges_prop = _match(schema, ['Badges', 'Flags', 'Flag', '标签', '徽章'], 'multi_select')
     if badges_prop:
