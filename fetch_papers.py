@@ -104,7 +104,7 @@ if SUMMARY_STYLE not in ('academic', 'plain'):
 # DeepSeek API configuration (official DeepSeek platform)
 DEEPSEEK_API_KEY = os.environ.get('DEEPSEEK_API_KEY')
 DEEPSEEK_BASE_URL = 'https://api.deepseek.com/v1'
-DEEPSEEK_MODEL = 'deepseek-chat'  # points to the latest DeepSeek-V3
+DEEPSEEK_MODEL = 'deepseek-flash'  # DeepSeek-V4.1-Flash (fast, non-thinking by default)
 
 # PushPlus (WeChat push) configuration. Replaces SMTP because QQ Mail
 # blocks GitHub Actions IPs even on 465/SSL.
@@ -856,9 +856,9 @@ Paper abstract:
             summary = ""
             done_reasoning = False
             for chunk in response:
-                # reasoning_content only exists on reasoning models (e.g. deepseek-reasoner,
-                # ModelScope's DeepSeek-V3.2-Exp). Non-reasoning models like deepseek-chat
-                # don't expose this attribute, so use getattr with a default to stay compatible.
+                # reasoning_content only exists when thinking is enabled (deepseek-reasoner,
+                # or deepseek-flash / deepseek-v4-pro with `thinking: enabled`). Default
+                # deepseek-flash requests here don't opt in, so use getattr with a default.
                 reasoning_chunk = getattr(chunk.choices[0].delta, 'reasoning_content', None) or ''
                 answer_chunk = chunk.choices[0].delta.content or ''
                 
