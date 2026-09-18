@@ -104,7 +104,7 @@ if SUMMARY_STYLE not in ('academic', 'plain'):
 # DeepSeek API configuration (official DeepSeek platform)
 DEEPSEEK_API_KEY = os.environ.get('DEEPSEEK_API_KEY')
 DEEPSEEK_BASE_URL = 'https://api.deepseek.com/v1'
-DEEPSEEK_MODEL = 'deepseek-flash'  # DeepSeek-V4.1-Flash (fast, non-thinking by default)
+DEEPSEEK_MODEL = 'deepseek-flash'  # DeepSeek-V4.1-Flash, called with thinking mode enabled below
 
 # PushPlus (WeChat push) configuration. Replaces SMTP because QQ Mail
 # blocks GitHub Actions IPs even on 465/SSL.
@@ -849,16 +849,18 @@ Paper abstract:
                         'content': prompts[lang]
                     }
                 ],
-                stream=True
+                stream=True,
+                reasoning_effort="high",
+                extra_body={"thinking": {"type": "enabled"}},
             )
             
             # Collect streaming response
             summary = ""
             done_reasoning = False
             for chunk in response:
-                # reasoning_content only exists when thinking is enabled (deepseek-reasoner,
-                # or deepseek-flash / deepseek-v4-pro with `thinking: enabled`). Default
-                # deepseek-flash requests here don't opt in, so use getattr with a default.
+                # Thinking mode is enabled above (reasoning_effort=high +
+                # thinking.type=enabled), so chunks may carry reasoning_content
+                # first, then content. We drop reasoning and keep only content.
                 reasoning_chunk = getattr(chunk.choices[0].delta, 'reasoning_content', None) or ''
                 answer_chunk = chunk.choices[0].delta.content or ''
                 
