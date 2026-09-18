@@ -744,6 +744,16 @@ def summarize_paper(paper, language='zh', style=None):
         "Do NOT use **bold**, *italics*, # or ### headers, `code`, > blockquotes, or - / * bullet markers. "
         "Start each of the four sections with '1. ', '2. ', '3. ', '4. ' directly, with no extra decoration."
     )
+    plain_prose_rule_zh = (
+        "输出格式要求（重要）：请只输出纯文本，不要使用任何 Markdown 语法。"
+        "禁止使用 **加粗**、*斜体*、# 标题、### 小标题、`代码`、> 引用、- 或 * 列表符号。"
+        "整段自然叙述，不加小节编号（1./2./3./4.），不加小标题。"
+    )
+    plain_prose_rule_en = (
+        "Formatting rule (important): output plain text only, no Markdown. "
+        "Do NOT use **bold**, *italics*, # or ### headers, `code`, > blockquotes, or - / * bullet markers. "
+        "Write as one flowing paragraph — no section numbers (1./2./3./4.), no sub-headings."
+    )
 
     # ---------------- Style: academic (original) ----------------
     academic_prompts = {
@@ -777,84 +787,44 @@ Please use concise professional language suitable for quick reading.
 {plain_text_rule_en}"""
     }
 
-    # ---------------- Style: plain (easy-to-read walkthrough) ----------------
-    # Goal: reader (an econometrics learner, not a specialist in this paper's
-    # sub-field) should understand what the authors did in ~30 seconds.
-    # Rules baked into the prompt:
-    #   - Explain the problem with a concrete scenario or analogy first.
-    #   - Method: intuition first, then name the technique; every jargon term
-    #     that first appears gets a short parenthetical translation.
-    #   - Numbers/results in everyday language (avoid raw notation).
-    #   - Section 4 tells the reader why they should care.
+    # ---------------- Style: plain (short, jargon-preserving) ----------------
+    # Reader is an economics grad student. Standard econ/stats jargon
+    # (OLS/IV/MLE/GMM/sieve/kernel/copula/bootstrap/…) is left un-glossed —
+    # the reader judges relevance themselves. No rigid section template,
+    # no forced tie-in to any specific sub-field (BLP, demand estimation, …).
     plain_prompts = {
-        'zh': f"""请用中文，把下面这篇学术论文讲给一个学计量经济学的研究生听——
-他懂基本术语（OLS/IV/MLE/GMM 这种不用解释），但对这篇论文的细分方向不熟。
-目标：让他 30 秒内看懂作者到底在干嘛，而不是背下摘要。
+        'zh': f"""用中文简要说明下面这篇论文做了什么。读者是经济学研究生，OLS/IV/MLE/GMM/sieve/kernel/copula/bootstrap 这类术语直接用，不用解释。
 
-请严格按下面四小节输出：
+写 3–5 句自然叙述，讲清三件事：作者要解决的问题、他们怎么做（方法名称直接写）、得到什么结果。摘要里若有关键数字（收敛率、误差下降、覆盖率、样本量等）保留 1 个即可。
 
-1. 作者想解决什么问题（1-2 句）
-   用一个具体场景或类比开头，先说清楚"现实里什么情况会用到这个"，再点问题。
-   不要用『本文研究了……』这种论文腔。
-
-2. 作者怎么做的（3-4 句）
-   先讲直觉——他们的核心想法是什么，为什么这样做能解决上面那个问题；
-   再点出方法名称。凡是较冷门的术语（细分领域的估计量、算子、正则化名字等）
-   首次出现时用括号给一句大白话解释，例如：
-   "sieve estimator（用一族越来越复杂的基函数去逼近未知的函数，规模随样本长）"。
-   OLS / IV / GMM / MLE / bootstrap / bias 这种基础术语不用解释。
-
-3. 结果是什么（1-2 句）
-   用大白话说结论，别只丢公式或"我们证明了 Theorem 3"。
-   如果摘要里有具体数字（收敛率、误差下降幅度、覆盖率等），保留 1-2 个关键数字。
-
-4. 对我意味着什么（1 句）
-   如果这个方法/结论跟 BLP、需求估计、离散选择、非线性 GMM、内生性处理、
-   面板/工具变量、机器学习+计量交叉 有关系，直接点出"在 XX 场景下可以借鉴 XX"；
-   如果关系不大，就诚实说"跟 BLP 关系较远，属于 XX 方向的进展"。
+不要：
+- 分小节编号（『1. 』『2. 』这种）或加小标题
+- 『本文研究了……』这类论文腔
+- 评价论文对某个具体研究方向（BLP、需求估计、离散选择等）意味着什么——读者自己会判断
+- 给术语加大白话括号解释
 
 论文标题：{paper['title']}
 
 论文摘要：
 {paper['abstract']}
 
-{plain_text_rule_zh}""",
-        'en': f"""Please explain the following academic paper in English to a graduate
-student in econometrics — they know standard terms (OLS/IV/MLE/GMM don't need
-explaining) but are not a specialist in this paper's sub-field.
-Goal: they should understand what the authors are actually doing in ~30 seconds,
-not memorize the abstract.
+{plain_prose_rule_zh}""",
+        'en': f"""Explain in English what this paper does. The reader is an economics grad student; standard jargon (OLS/IV/MLE/GMM/sieve/kernel/copula/bootstrap/…) can be used directly without gloss.
 
-Follow this four-section structure strictly:
+Write 3–5 sentences of flowing prose covering three things: the problem the authors tackle, what they do (name the method directly), and what comes out. If the abstract has a key number (convergence rate, error reduction, coverage, sample size), keep one.
 
-1. What real problem the authors are trying to solve (1-2 sentences)
-   Open with a concrete scenario or analogy — "in the real world, this comes up when …" —
-   then state the problem. Do NOT use "This paper studies …" boilerplate.
-
-2. What the authors do (3-4 sentences)
-   Intuition first: what is the core idea and why does it solve the problem above.
-   Then name the method. For any narrow jargon (sub-field-specific estimators,
-   operators, regularizers, etc.), give a short plain-English gloss in parentheses
-   the first time it appears, e.g.
-   "sieve estimator (approximate the unknown function with a growing family of
-   basis functions whose size scales with the sample)".
-   Basic terms (OLS / IV / GMM / MLE / bootstrap / bias) do NOT need gloss.
-
-3. What comes out (1-2 sentences)
-   Plain-language conclusion, not just "we prove Theorem 3". If the abstract has
-   concrete numbers (convergence rate, error reduction, coverage), keep 1-2 key ones.
-
-4. Why the reader should care (1 sentence)
-   If the method/result connects to BLP, demand estimation, discrete choice,
-   nonlinear GMM, endogeneity, panel/IV, or ML-meets-econometrics, say
-   "useful in X because Y." Otherwise be honest: "far from BLP, but progress in X."
+Do NOT:
+- use section numbers ("1.", "2.", …) or sub-headings
+- use "This paper studies …" boilerplate
+- editorialize about relevance to any specific sub-field (BLP, demand estimation, discrete choice, …) — the reader judges that
+- add plain-English parenthetical glosses to jargon
 
 Paper title: {paper['title']}
 
 Paper abstract:
 {paper['abstract']}
 
-{plain_text_rule_en}"""
+{plain_prose_rule_en}"""
     }
 
     prompts = plain_prompts if style == 'plain' else academic_prompts
