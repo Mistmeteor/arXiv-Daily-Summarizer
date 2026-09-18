@@ -854,7 +854,8 @@
   },
   "2609.04356": {
     "push_dates": [
-      "2026-09-07"
+      "2026-09-07",
+      "2026-09-18"
     ],
     "title": "Blockchain-Enabled Secure Logging for Fiscal Electronic Mechanisms: Evaluation of the Greek eSEND and myDATA Tax Systems"
   },
@@ -873,19 +874,22 @@
   },
   "2609.05372": {
     "push_dates": [
-      "2026-09-07"
+      "2026-09-07",
+      "2026-09-18"
     ],
     "title": "Does p-Hacking Mitigate or Exacerbate the Effects of Publication Bias?"
   },
   "2609.05792": {
     "push_dates": [
-      "2026-09-10"
+      "2026-09-10",
+      "2026-09-18"
     ],
     "title": "Scalable Clustered Network Connectedness with Control Variables: Theory and Application to Global Banking"
   },
   "2609.05883": {
     "push_dates": [
-      "2026-09-10"
+      "2026-09-10",
+      "2026-09-18"
     ],
     "title": "Fixed-smoothing Uniform Inference for Quantile Regression"
   },
@@ -898,7 +902,8 @@
   },
   "2609.06907": {
     "push_dates": [
-      "2026-09-09"
+      "2026-09-09",
+      "2026-09-18"
     ],
     "title": "Sign Restrictions and Supply-demand Decompositions of Inflation"
   },
@@ -911,7 +916,8 @@
   },
   "2609.07207": {
     "push_dates": [
-      "2026-09-09"
+      "2026-09-09",
+      "2026-09-18"
     ],
     "title": "Filtering without recursion and some of its uses in financial economics"
   },
@@ -924,7 +930,8 @@
   },
   "2609.07888": {
     "push_dates": [
-      "2026-09-09"
+      "2026-09-09",
+      "2026-09-18"
     ],
     "title": "Median-based Splitting Rules for Causal Trees and Forests"
   },
@@ -957,13 +964,15 @@
   },
   "2609.09488": {
     "push_dates": [
-      "2026-09-10"
+      "2026-09-10",
+      "2026-09-18"
     ],
     "title": "Two Margins in Difference-in-Differences with a Continuous Treatment"
   },
   "2609.09544": {
     "push_dates": [
-      "2026-09-10"
+      "2026-09-10",
+      "2026-09-18"
     ],
     "title": "When is statistical evidence strong enough? Using hypothesis tests to value data collection"
   },
@@ -990,7 +999,8 @@
   },
   "2609.10617": {
     "push_dates": [
-      "2026-09-11"
+      "2026-09-11",
+      "2026-09-18"
     ],
     "title": "Average Treatment Effect Localization: Projection Methods in Synthetic Control"
   },
