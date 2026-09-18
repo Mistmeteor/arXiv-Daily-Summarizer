@@ -891,7 +891,8 @@
   },
   "2609.06827": {
     "push_dates": [
-      "2026-09-09"
+      "2026-09-09",
+      "2026-09-18"
     ],
     "title": "Beyond Aggregate VARs: A Bayesian Benchmark for HANK Models"
   },
@@ -903,7 +904,8 @@
   },
   "2609.07033": {
     "push_dates": [
-      "2026-09-09"
+      "2026-09-09",
+      "2026-09-18"
     ],
     "title": "Choosing the Dictionary and Penalty for IV-LASSO"
   },
@@ -915,7 +917,8 @@
   },
   "2609.07633": {
     "push_dates": [
-      "2026-09-09"
+      "2026-09-09",
+      "2026-09-18"
     ],
     "title": "Robust A/B Decisions"
   },
@@ -947,7 +950,8 @@
   },
   "2609.09039": {
     "push_dates": [
-      "2026-09-09"
+      "2026-09-09",
+      "2026-09-18"
     ],
     "title": "Covariate Adjustment in Randomized Experiments: A Unified Framework for Decision and Practice"
   },
@@ -972,13 +976,15 @@
   },
   "2609.10587": {
     "push_dates": [
-      "2026-09-11"
+      "2026-09-11",
+      "2026-09-18"
     ],
     "title": "Expected Shortfall Factor Models: Common Tail Losses and Expected Returns"
   },
   "2609.10615": {
     "push_dates": [
-      "2026-09-11"
+      "2026-09-11",
+      "2026-09-18"
     ],
     "title": "ACT, WAIT, or EXPERIMENT: A Causal Governance Framework for Retail Price Optimization Under Abstentions"
   },
@@ -996,13 +1002,15 @@
   },
   "2609.10971": {
     "push_dates": [
-      "2026-09-11"
+      "2026-09-11",
+      "2026-09-18"
     ],
     "title": "Experimental Design for Policy Choice"
   },
   "2609.11222": {
     "push_dates": [
-      "2026-09-11"
+      "2026-09-11",
+      "2026-09-18"
     ],
     "title": "Optimal Covariate Adjustment beyond the Average Treatment Effect: Treated-Population and Overlap-Weighted Estimands"
   },
@@ -1014,7 +1022,8 @@
   },
   "2609.11575": {
     "push_dates": [
-      "2026-09-11"
+      "2026-09-11",
+      "2026-09-18"
     ],
     "title": "Market-Informed Networks for Modeling and Forecast Evaluation of Financial Extremes"
   },
@@ -1026,7 +1035,8 @@
   },
   "2609.11915": {
     "push_dates": [
-      "2026-09-11"
+      "2026-09-11",
+      "2026-09-18"
     ],
     "title": "Generative Marketing Mix Modeling: A Causal Inference Framework Linking GEO and GEM to Business Impact"
   },
