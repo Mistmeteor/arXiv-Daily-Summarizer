@@ -251,13 +251,15 @@
   },
   "2608.22890": {
     "push_dates": [
-      "2026-08-29"
+      "2026-08-29",
+      "2026-09-19"
     ],
     "title": "Randomization tests for model specification in causal inference under network interference"
   },
   "2608.22957": {
     "push_dates": [
-      "2026-08-29"
+      "2026-08-29",
+      "2026-09-19"
     ],
     "title": "Identification and Inference for Causal Effects in Extremes under General Conditions"
   },
@@ -270,7 +272,8 @@
   },
   "2608.23257": {
     "push_dates": [
-      "2026-08-26"
+      "2026-08-26",
+      "2026-09-19"
     ],
     "title": "How Replicable Are Statistically Significant Findings?"
   },
@@ -629,7 +632,8 @@
   },
   "2608.31059": {
     "push_dates": [
-      "2026-09-05"
+      "2026-09-05",
+      "2026-09-19"
     ],
     "title": "When Can We Work in Embedding Space? What Text Embeddings Preserve"
   },
@@ -660,7 +664,8 @@
   },
   "2609.00089": {
     "push_dates": [
-      "2026-09-05"
+      "2026-09-05",
+      "2026-09-19"
     ],
     "title": "Foundation models for electricity price forecasting and battery arbitrage: Can they replace market-specific forecasting models?"
   },
@@ -680,7 +685,8 @@
   },
   "2609.00943": {
     "push_dates": [
-      "2026-09-05"
+      "2026-09-05",
+      "2026-09-19"
     ],
     "title": "Illiquidity at Risk"
   },
@@ -693,7 +699,8 @@
   },
   "2609.01804": {
     "push_dates": [
-      "2026-09-05"
+      "2026-09-05",
+      "2026-09-19"
     ],
     "title": "Robust Variance Estimation in Linear Regression: A Projection-Geometry Perspective"
   },
@@ -861,7 +868,8 @@
   },
   "2609.04994": {
     "push_dates": [
-      "2026-09-07"
+      "2026-09-07",
+      "2026-09-19"
     ],
     "title": "Identification and Estimation of Intergenerational Income Mobility Measures"
   },
@@ -944,7 +952,8 @@
   },
   "2609.08335": {
     "push_dates": [
-      "2026-09-09"
+      "2026-09-09",
+      "2026-09-19"
     ],
     "title": "Designing Spatial Treatments"
   },
@@ -1006,7 +1015,8 @@
   },
   "2609.10925": {
     "push_dates": [
-      "2026-09-11"
+      "2026-09-11",
+      "2026-09-19"
     ],
     "title": "Identification in Linear Quantile Panel Models"
   },
