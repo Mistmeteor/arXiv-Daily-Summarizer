@@ -161,7 +161,8 @@
   "2608.18375": {
     "push_dates": [
       "2026-08-21",
-      "2026-08-28"
+      "2026-08-28",
+      "2026-09-20"
     ],
     "title": "Difference-in-Differences Models in the Presence of Time-Varying Mediators"
   },
@@ -175,7 +176,8 @@
   "2608.18973": {
     "push_dates": [
       "2026-08-21",
-      "2026-08-28"
+      "2026-08-28",
+      "2026-09-20"
     ],
     "title": "Don't Drop the Singletons: Efficient Inference for Pairwise Experiments with Independent Attrition"
   },
@@ -188,13 +190,15 @@
   "2608.19944": {
     "push_dates": [
       "2026-08-21",
-      "2026-08-28"
+      "2026-08-28",
+      "2026-09-20"
     ],
     "title": "A Privacy Budgeting Framework for Online Experimentation"
   },
   "2608.20779": {
     "push_dates": [
-      "2026-08-25"
+      "2026-08-25",
+      "2026-09-20"
     ],
     "title": "Candidate Set Size and Voting Behavior: A Front-Door Approach to Causal Moderation"
   },
@@ -207,13 +211,15 @@
   },
   "2608.21619": {
     "push_dates": [
-      "2026-08-26"
+      "2026-08-26",
+      "2026-09-20"
     ],
     "title": "Exact Rejection Sampling for Non-Gaussian State Space Models"
   },
   "2608.22002": {
     "push_dates": [
-      "2026-08-26"
+      "2026-08-26",
+      "2026-09-20"
     ],
     "title": "Uniformly Valid Inference Under Interactive and High-Dimensional Constraints"
   },
@@ -226,13 +232,15 @@
   },
   "2608.22499": {
     "push_dates": [
-      "2026-08-26"
+      "2026-08-26",
+      "2026-09-20"
     ],
     "title": "Fixed-$T$ Dynamic Spatial Panel Model with Common Shocks"
   },
   "2608.22605": {
     "push_dates": [
-      "2026-08-26"
+      "2026-08-26",
+      "2026-09-20"
     ],
     "title": "Closed-form estimation and uniform inference in additively separable triangular models with a nonseparable first stage"
   },
@@ -245,7 +253,8 @@
   },
   "2608.22706": {
     "push_dates": [
-      "2026-08-26"
+      "2026-08-26",
+      "2026-09-20"
     ],
     "title": "Double/Debiased Machine Learning for Functional-Form-Robust Spatial Autoregression"
   },
@@ -349,7 +358,8 @@
   },
   "2608.25009": {
     "push_dates": [
-      "2026-08-29"
+      "2026-08-29",
+      "2026-09-20"
     ],
     "title": "Theory as data compression"
   },
