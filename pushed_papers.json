@@ -74,7 +74,8 @@
   "2608.13851": {
     "push_dates": [
       "2026-08-23",
-      "2026-08-30"
+      "2026-08-30",
+      "2026-09-22"
     ],
     "title": "Scalable likelihood-based inference for limited dependent variable models"
   },
@@ -107,9 +108,10 @@
   "2608.15339": {
     "push_dates": [
       "2026-08-23",
-      "2026-08-30"
+      "2026-08-30",
+      "2026-09-22"
     ],
-    "title": "Learning Sequential Mobility Choice: A Review of Route and Activity Choice through Inverse Reinforcement and Imitation Learning"
+    "title": "Learning Sequential Mobility Choice: A Review of Route and Activity Choice through Inverse Reinforcement Learning and Imitation Learning"
   },
   "2608.15840": {
     "push_dates": [
@@ -140,7 +142,8 @@
   "2608.16708": {
     "push_dates": [
       "2026-08-23",
-      "2026-08-30"
+      "2026-08-30",
+      "2026-09-22"
     ],
     "title": "Quantile restrictions, revealed rankings, and the limits of multinomial choice"
   },
@@ -1114,7 +1117,8 @@
   },
   "2609.12987": {
     "push_dates": [
-      "2026-09-15"
+      "2026-09-15",
+      "2026-09-22"
     ],
     "title": "Demand Estimation with Variable Choice Sets: A Likelihood Correction for Nested Logit"
   },
@@ -1174,7 +1178,8 @@
   },
   "2609.15736": {
     "push_dates": [
-      "2026-09-15"
+      "2026-09-15",
+      "2026-09-22"
     ],
     "title": "Conditional-Moment Estimation and Inference in the BLP Model"
   },
@@ -1345,5 +1350,35 @@
       "2026-09-18"
     ],
     "title": "Using machine learning metrics to provide deeper insights into the performance of choice models"
+  },
+  "2609.21056": {
+    "push_dates": [
+      "2026-09-22"
+    ],
+    "title": "Poisson Regression under Multivariate Sample Selection"
+  },
+  "2609.21393": {
+    "push_dates": [
+      "2026-09-22"
+    ],
+    "title": "Summary Indices in Treatment Effect Estimation"
+  },
+  "2609.21587": {
+    "push_dates": [
+      "2026-09-22"
+    ],
+    "title": "The \"Rough\" HAR Model"
+  },
+  "2609.21622": {
+    "push_dates": [
+      "2026-09-22"
+    ],
+    "title": "Testing Conditional Stochastic Dominance via Copula Derivatives"
+  },
+  "2609.21674": {
+    "push_dates": [
+      "2026-09-22"
+    ],
+    "title": "Match forecasts in UEFA club competitions: Elo ratings versus Transfermarkt valuations"
   }
 }
