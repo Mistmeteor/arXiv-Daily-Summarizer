@@ -1075,7 +1075,8 @@
   },
   "2609.12107": {
     "push_dates": [
-      "2026-09-15"
+      "2026-09-15",
+      "2026-09-22"
     ],
     "title": "Extracting Dataset Mentions in Forced Displacement and FCV Documents: A Weakly Supervised Framework with LLM-Based Label Refinement"
   },
@@ -1136,13 +1137,15 @@
   },
   "2609.13345": {
     "push_dates": [
-      "2026-09-15"
+      "2026-09-15",
+      "2026-09-22"
     ],
     "title": "Beyond Point Forecasts: A Survey on Probabilistic Forecasting for Time Series and Spatiotemporal Data"
   },
   "2609.13586": {
     "push_dates": [
-      "2026-09-15"
+      "2026-09-15",
+      "2026-09-22"
     ],
     "title": "Synthetic Nearest Neighbors: Extending Synthetic Controls for Matrix Completion with Missing Not at Random Data"
   },
@@ -1154,7 +1157,8 @@
   },
   "2609.14049": {
     "push_dates": [
-      "2026-09-15"
+      "2026-09-15",
+      "2026-09-22"
     ],
     "title": "Homophily and transitivity in dynamic network formation"
   },
@@ -1380,5 +1384,41 @@
       "2026-09-22"
     ],
     "title": "Match forecasts in UEFA club competitions: Elo ratings versus Transfermarkt valuations"
+  },
+  "2609.22761": {
+    "push_dates": [
+      "2026-09-22"
+    ],
+    "title": "Causal inference in two-sided randomization designs: factorial regression, two-way clustering, and covariate adjustment"
+  },
+  "2609.23220": {
+    "push_dates": [
+      "2026-09-22"
+    ],
+    "title": "Consistent Order Selection under Non-Identifiability and Dependence"
+  },
+  "2609.23223": {
+    "push_dates": [
+      "2026-09-22"
+    ],
+    "title": "Stealing profits: Spread-based temporal hierarchy forecasting for day-ahead electricity markets"
+  },
+  "2609.23303": {
+    "push_dates": [
+      "2026-09-22"
+    ],
+    "title": "Uniform Inference for Parameters Identified by Conditional Quantile Restrictions"
+  },
+  "2609.23998": {
+    "push_dates": [
+      "2026-09-22"
+    ],
+    "title": "A Stochastic Nested Fixed Point Algorithm for Large-Scale BLP Estimation"
+  },
+  "2609.24849": {
+    "push_dates": [
+      "2026-09-22"
+    ],
+    "title": "Quantitative finite-population approximation of heterogeneous linear--quadratic mean-field control with common noise"
   }
 }
