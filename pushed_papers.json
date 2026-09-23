@@ -1189,7 +1189,8 @@
   },
   "2609.15796": {
     "push_dates": [
-      "2026-09-15"
+      "2026-09-15",
+      "2026-09-23"
     ],
     "title": "Penalized Maximum Likelihood Inference of Core-Periphery Networks"
   },
@@ -1201,43 +1202,50 @@
   },
   "2609.16509": {
     "push_dates": [
-      "2026-09-16"
+      "2026-09-16",
+      "2026-09-23"
     ],
     "title": "Anthropogenic Forcing, Climate Change, and the Shape of Warming: Statistical Inference for Distributional Cointegration"
   },
   "2609.16618": {
     "push_dates": [
-      "2026-09-16"
+      "2026-09-16",
+      "2026-09-23"
     ],
     "title": "A Multiverse of Good and Bad Controls: Candidate Causal Graphs for Interpreting Model Robustness Analysis"
   },
   "2609.16952": {
     "push_dates": [
-      "2026-09-16"
+      "2026-09-16",
+      "2026-09-23"
     ],
     "title": "Learning Choice Model Trees for Feature-Based Multi-Product Pricing: Exact Optimization and Field Evidence"
   },
   "2609.16968": {
     "push_dates": [
-      "2026-09-16"
+      "2026-09-16",
+      "2026-09-23"
     ],
     "title": "Rate-Agnostic Wald Inference for Dyadic Regressions"
   },
   "2609.17158": {
     "push_dates": [
-      "2026-09-16"
+      "2026-09-16",
+      "2026-09-23"
     ],
     "title": "Empirical Bayes for compound adaptive experiments"
   },
   "2609.17170": {
     "push_dates": [
-      "2026-09-16"
+      "2026-09-16",
+      "2026-09-23"
     ],
     "title": "Causal Inference under Dynamic Selection: Time-Varying Covariates and Latent Heterogeneity"
   },
   "2609.17296": {
     "push_dates": [
-      "2026-09-16"
+      "2026-09-16",
+      "2026-09-23"
     ],
     "title": "Conformal Policy Learning with Distribution-Free Safety Guarantees"
   },
@@ -1420,5 +1428,17 @@
       "2026-09-22"
     ],
     "title": "Quantitative finite-population approximation of heterogeneous linear--quadratic mean-field control with common noise"
+  },
+  "2609.25924": {
+    "push_dates": [
+      "2026-09-23"
+    ],
+    "title": "Conditional Tensor Diffusion: Distributional Counterfactual Learning and Inference"
+  },
+  "2609.26303": {
+    "push_dates": [
+      "2026-09-23"
+    ],
+    "title": "Target alignment, dilution and forecast selection when cross-sectional forecasts share a common target"
   }
 }
