@@ -1429,6 +1429,12 @@
     ],
     "title": "Quantitative finite-population approximation of heterogeneous linear--quadratic mean-field control with common noise"
   },
+  "2609.25645": {
+    "push_dates": [
+      "2026-09-25"
+    ],
+    "title": "Efficient Cost-Aware LLM Evaluation via Bayesian Bandit Gittins Indices"
+  },
   "2609.25924": {
     "push_dates": [
       "2026-09-23"
@@ -1440,5 +1446,59 @@
       "2026-09-23"
     ],
     "title": "Target alignment, dilution and forecast selection when cross-sectional forecasts share a common target"
+  },
+  "2609.27180": {
+    "push_dates": [
+      "2026-09-25"
+    ],
+    "title": "Artificial intelligence surrogates for treatment effect estimation with before-and-after data"
+  },
+  "2609.27206": {
+    "push_dates": [
+      "2026-09-25"
+    ],
+    "title": "Prediction with Expert Advice: Anytime Regret with Many Experts Matches the Fixed-Time Constant"
+  },
+  "2609.27546": {
+    "push_dates": [
+      "2026-09-25"
+    ],
+    "title": "Robustness of Diffusion Models under Distribution Shift"
+  },
+  "2609.27654": {
+    "push_dates": [
+      "2026-09-25"
+    ],
+    "title": "FedIncome: Federated Learning for Income Estimation in Digital Lending Under Data Sovereignty Constraints"
+  },
+  "2609.27741": {
+    "push_dates": [
+      "2026-09-25"
+    ],
+    "title": "Limiting-Kernel Q($λ$): Bridging Short and Long Horizons"
+  },
+  "2609.28122": {
+    "push_dates": [
+      "2026-09-25"
+    ],
+    "title": "NPBoost: Neural Processes with Gradient-Boosted Fixed Effects"
+  },
+  "2609.28163": {
+    "push_dates": [
+      "2026-09-25"
+    ],
+    "title": "Rank-One Signal Recovery in Sparse Wishart Noise"
+  },
+  "2609.28177": {
+    "push_dates": [
+      "2026-09-25"
+    ],
+    "title": "How Sensitive Are LLM Leaderboard Claims to Hidden Model Selection?"
+  },
+  "2609.28364": {
+    "push_dates": [
+      "2026-09-25"
+    ],
+    "title": "LEAP-CBF: A Safety Filter for Uncertain Systems with Least-Effort Adversarial Potentials"
   }
 }
