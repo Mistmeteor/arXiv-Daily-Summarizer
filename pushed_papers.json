@@ -1260,7 +1260,8 @@
   },
   "2609.17939": {
     "push_dates": [
-      "2026-09-17"
+      "2026-09-17",
+      "2026-09-26"
     ],
     "title": "Recursive-Head Geometry and Order-Free Efficient Inference in Finite-State Nested Markov Models"
   },
@@ -1291,7 +1292,8 @@
   },
   "2609.18734": {
     "push_dates": [
-      "2026-09-17"
+      "2026-09-17",
+      "2026-09-26"
     ],
     "title": "Conditionally linear, matrix normal state space models"
   },
@@ -1309,7 +1311,8 @@
   },
   "2609.19386": {
     "push_dates": [
-      "2026-09-18"
+      "2026-09-18",
+      "2026-09-26"
     ],
     "title": "Omitted Variable Bias in Difference-in-Differences Designs"
   },
@@ -1321,7 +1324,8 @@
   },
   "2609.19418": {
     "push_dates": [
-      "2026-09-18"
+      "2026-09-18",
+      "2026-09-26"
     ],
     "title": "Stable Policy Learning"
   },
@@ -1363,7 +1367,8 @@
   },
   "2609.20655": {
     "push_dates": [
-      "2026-09-18"
+      "2026-09-18",
+      "2026-09-26"
     ],
     "title": "Using machine learning metrics to provide deeper insights into the performance of choice models"
   },
@@ -1451,6 +1456,18 @@
     ],
     "title": "Target alignment, dilution and forecast selection when cross-sectional forecasts share a common target"
   },
+  "2609.26840": {
+    "push_dates": [
+      "2026-09-26"
+    ],
+    "title": "Positive weight Hermite and Legendre quadrature rules"
+  },
+  "2609.26994": {
+    "push_dates": [
+      "2026-09-26"
+    ],
+    "title": "Nonlinear Drivers of Macroeconomic Tail Risk: A Threshold Stochastic Volatility-in-Mean VAR with Regime-Dependent Leverage"
+  },
   "2609.27180": {
     "push_dates": [
       "2026-09-25"
@@ -1480,6 +1497,12 @@
       "2026-09-25"
     ],
     "title": "FedIncome: Federated Learning for Income Estimation in Digital Lending Under Data Sovereignty Constraints"
+  },
+  "2609.27691": {
+    "push_dates": [
+      "2026-09-26"
+    ],
+    "title": "Testing for Heterogeneous Treatment Effects in Regression Discontinuity Designs"
   },
   "2609.27741": {
     "push_dates": [
@@ -1511,6 +1534,12 @@
     ],
     "title": "LEAP-CBF: A Safety Filter for Uncertain Systems with Least-Effort Adversarial Potentials"
   },
+  "2609.28678": {
+    "push_dates": [
+      "2026-09-26"
+    ],
+    "title": "Heterogeneous Policy Effects in Comparative Case Studies with Treated-Unit Microdata"
+  },
   "2609.28841": {
     "push_dates": [
       "2026-09-26"
@@ -1534,6 +1563,12 @@
       "2026-09-26"
     ],
     "title": "Kernel Balancing in Tree-based Methods"
+  },
+  "2609.29958": {
+    "push_dates": [
+      "2026-09-26"
+    ],
+    "title": "Multi-Dimensional Matching"
   },
   "2609.30007": {
     "push_dates": [
