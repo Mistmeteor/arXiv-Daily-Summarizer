@@ -1279,7 +1279,8 @@
   },
   "2609.18172": {
     "push_dates": [
-      "2026-09-17"
+      "2026-09-17",
+      "2026-09-27"
     ],
     "title": "What No First Stage Can Detect: Functional-Form Contamination in Linear IV"
   },
@@ -1299,13 +1300,15 @@
   },
   "2609.18903": {
     "push_dates": [
-      "2026-09-17"
+      "2026-09-17",
+      "2026-09-27"
     ],
     "title": "Shrinkage Bayesian Causal Forest with Instrumental Variable"
   },
   "2609.19081": {
     "push_dates": [
-      "2026-09-17"
+      "2026-09-17",
+      "2026-09-27"
     ],
     "title": "Beyond Pretrends: A Discordance-Based Sensitivity Analysis for Difference-in-Differences"
   },
@@ -1318,7 +1321,8 @@
   },
   "2609.19415": {
     "push_dates": [
-      "2026-09-18"
+      "2026-09-18",
+      "2026-09-27"
     ],
     "title": "Aggregating many estimators using estimated weights"
   },
@@ -1331,37 +1335,43 @@
   },
   "2609.19547": {
     "push_dates": [
-      "2026-09-18"
+      "2026-09-18",
+      "2026-09-27"
     ],
     "title": "Vector Vine Copula Models for Multivariate Longitudinal Data"
   },
   "2609.19738": {
     "push_dates": [
-      "2026-09-18"
+      "2026-09-18",
+      "2026-09-27"
     ],
     "title": "Axiomatizing Local Asymptotic Minimax Risk"
   },
   "2609.20044": {
     "push_dates": [
-      "2026-09-18"
+      "2026-09-18",
+      "2026-09-27"
     ],
     "title": "Noise-adjusted turnover in estimated networks"
   },
   "2609.20393": {
     "push_dates": [
-      "2026-09-18"
+      "2026-09-18",
+      "2026-09-27"
     ],
     "title": "Gaussian Boundary Inference in a Hypergeometric Heavy-Tailed Family"
   },
   "2609.20424": {
     "push_dates": [
-      "2026-09-18"
+      "2026-09-18",
+      "2026-09-27"
     ],
     "title": "Cosine metric as a structural economic similarity measure"
   },
   "2609.20473": {
     "push_dates": [
-      "2026-09-18"
+      "2026-09-18",
+      "2026-09-27"
     ],
     "title": "Beyond Linearity: Semiparametric Solutions to Contamination Bias with Multi-valued Treatments"
   },
