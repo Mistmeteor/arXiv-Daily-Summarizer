@@ -1438,13 +1438,15 @@
   },
   "2609.23998": {
     "push_dates": [
-      "2026-09-22"
+      "2026-09-22",
+      "2026-09-29"
     ],
     "title": "A Stochastic Nested Fixed Point Algorithm for Large-Scale BLP Estimation"
   },
   "2609.24849": {
     "push_dates": [
-      "2026-09-22"
+      "2026-09-22",
+      "2026-09-29"
     ],
     "title": "Quantitative finite-population approximation of heterogeneous linear--quadratic mean-field control with common noise"
   },
@@ -1585,5 +1587,53 @@
       "2026-09-26"
     ],
     "title": "First as Tragedy? Second as What? Estimating Dynamic Effects of Recurrent Events"
+  },
+  "2609.30528": {
+    "push_dates": [
+      "2026-09-29"
+    ],
+    "title": "When Do Surrogate Metrics Work? A Finite-Sample Comparison Under Realistic Failure Modes"
+  },
+  "2609.30617": {
+    "push_dates": [
+      "2026-09-29"
+    ],
+    "title": "Risk-Averse Welfare Maximization via Marginal Treatment Effects"
+  },
+  "2609.31442": {
+    "push_dates": [
+      "2026-09-29"
+    ],
+    "title": "Improved Bootstrap Inference for Dynamic Panel Data models with Interactive Effects"
+  },
+  "2609.31561": {
+    "push_dates": [
+      "2026-09-29"
+    ],
+    "title": "Orthogonal Moments in Likelihood Models"
+  },
+  "2609.31958": {
+    "push_dates": [
+      "2026-09-29"
+    ],
+    "title": "Multiple testing of a function's monotonicity"
+  },
+  "2609.32076": {
+    "push_dates": [
+      "2026-09-29"
+    ],
+    "title": "An Adversarial Approach to Identification, Computation, and Inference in Models with a Linear-in-Measures Representation"
+  },
+  "2609.32369": {
+    "push_dates": [
+      "2026-09-29"
+    ],
+    "title": "Two-Point Dependent Wild Bootstrap for Weakly Dependent Estimating Equations"
+  },
+  "2609.32725": {
+    "push_dates": [
+      "2026-09-29"
+    ],
+    "title": "Minimax Choice of Projection Geometry under Linear Inequality Constraints"
   }
 }
