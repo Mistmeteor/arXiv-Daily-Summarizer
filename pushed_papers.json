@@ -656,7 +656,8 @@
   "2608.31085": {
     "push_dates": [
       "2026-09-01",
-      "2026-09-08"
+      "2026-09-08",
+      "2026-10-01"
     ],
     "title": "Moments of Random Coefficients in Short Panels"
   },
@@ -1396,13 +1397,15 @@
   },
   "2609.21587": {
     "push_dates": [
-      "2026-09-22"
+      "2026-09-22",
+      "2026-10-01"
     ],
     "title": "The \"Rough\" HAR Model"
   },
   "2609.21622": {
     "push_dates": [
-      "2026-09-22"
+      "2026-09-22",
+      "2026-10-01"
     ],
     "title": "Testing Conditional Stochastic Dominance via Copula Derivatives"
   },
@@ -1434,7 +1437,8 @@
   },
   "2609.23303": {
     "push_dates": [
-      "2026-09-22"
+      "2026-09-22",
+      "2026-10-01"
     ],
     "title": "Uniform Inference for Parameters Identified by Conditional Quantile Restrictions"
   },
@@ -1680,5 +1684,41 @@
       "2026-09-30"
     ],
     "title": "Price Stability in the European Union: A Systemic Approach Using Random Matrix Theory"
+  },
+  "2609.36280": {
+    "push_dates": [
+      "2026-10-01"
+    ],
+    "title": "Probabilistic Seasonality"
+  },
+  "2609.36445": {
+    "push_dates": [
+      "2026-10-01"
+    ],
+    "title": "Continuously Updating GMM in Linear IV Models: A Polynomial Approach"
+  },
+  "2609.36824": {
+    "push_dates": [
+      "2026-10-01"
+    ],
+    "title": "Testing for Unobserved Heterogeneity in Censored Duration Models: EM Approach"
+  },
+  "2609.37168": {
+    "push_dates": [
+      "2026-10-01"
+    ],
+    "title": "Are there asymmetries in euro area monetary policy transmission?"
+  },
+  "2609.37412": {
+    "push_dates": [
+      "2026-10-01"
+    ],
+    "title": "Debiased Inference for Bounding Wage Inequality with Many Controls"
+  },
+  "2609.37477": {
+    "push_dates": [
+      "2026-10-01"
+    ],
+    "title": "Calibrated Order-Randomized Rosenblatt Tests"
   }
 }
