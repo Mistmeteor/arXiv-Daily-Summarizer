@@ -1168,13 +1168,15 @@
   },
   "2609.14069": {
     "push_dates": [
-      "2026-09-15"
+      "2026-09-15",
+      "2026-10-02"
     ],
     "title": "What Variation Identifies Payoffs in a Dynamic Game?"
   },
   "2609.14398": {
     "push_dates": [
-      "2026-09-15"
+      "2026-09-15",
+      "2026-10-02"
     ],
     "title": "Identification and Inference in proxy-SVARs with non-Gaussian shocks"
   },
@@ -1200,7 +1202,8 @@
   },
   "2609.16086": {
     "push_dates": [
-      "2026-09-16"
+      "2026-09-16",
+      "2026-10-02"
     ],
     "title": "Tractable Estimation of the Money Pump Index: A Comment"
   },
@@ -1255,7 +1258,8 @@
   },
   "2609.17626": {
     "push_dates": [
-      "2026-09-17"
+      "2026-09-17",
+      "2026-10-02"
     ],
     "title": "Structural Complexity of One-Factor Sparse Portfolio Selection: Exact Algorithms, Parameterized Hardness, and Restricted Circuit Lower Bounds"
   },
@@ -1268,13 +1272,15 @@
   },
   "2609.18150": {
     "push_dates": [
-      "2026-09-17"
+      "2026-09-17",
+      "2026-10-02"
     ],
     "title": "Profiled Anderson--Rubin Test: Robust Inference Allowing for Direct Effects of Instruments"
   },
   "2609.18157": {
     "push_dates": [
-      "2026-09-17"
+      "2026-09-17",
+      "2026-10-02"
     ],
     "title": "Tensor-BEKK: Conditional Covariance Modeling and Inference for Tensor-Valued Time Series"
   },
@@ -1385,13 +1391,15 @@
   },
   "2609.21056": {
     "push_dates": [
-      "2026-09-22"
+      "2026-09-22",
+      "2026-10-02"
     ],
     "title": "Poisson Regression under Multivariate Sample Selection"
   },
   "2609.21393": {
     "push_dates": [
-      "2026-09-22"
+      "2026-09-22",
+      "2026-10-02"
     ],
     "title": "Summary Indices in Treatment Effect Estimation"
   },
@@ -1424,7 +1432,8 @@
   },
   "2609.23220": {
     "push_dates": [
-      "2026-09-22"
+      "2026-09-22",
+      "2026-10-02"
     ],
     "title": "Consistent Order Selection under Non-Identifiability and Dependence"
   },
@@ -1720,5 +1729,11 @@
       "2026-10-01"
     ],
     "title": "Calibrated Order-Randomized Rosenblatt Tests"
+  },
+  "2609.40156": {
+    "push_dates": [
+      "2026-10-02"
+    ],
+    "title": "Partial identification with entropy regularized optimal transport"
   }
 }
