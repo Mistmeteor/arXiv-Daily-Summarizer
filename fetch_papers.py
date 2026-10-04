@@ -106,6 +106,26 @@ DEEPSEEK_API_KEY = os.environ.get('DEEPSEEK_API_KEY')
 DEEPSEEK_BASE_URL = 'https://api.deepseek.com/v1'
 DEEPSEEK_MODEL = 'deepseek-flash'  # DeepSeek-V4.1-Flash, called with thinking mode enabled below
 
+# DeepSeek pricing (CNY per 1M tokens, deepseek-chat / V3 off-peak rates).
+# Cron fires at 21:43 UTC and the whole run finishes well within the
+# 16:30-00:30 UTC off-peak window, so the price table only carries off-peak.
+# Update if DeepSeek changes its price list:
+#   https://api-docs.deepseek.com/quick_start/pricing
+DEEPSEEK_PRICE_CACHE_HIT_PER_1M = 0.25
+DEEPSEEK_PRICE_CACHE_MISS_PER_1M = 1.0
+DEEPSEEK_PRICE_OUTPUT_PER_1M = 4.0
+
+# Module-level accumulator for this run's DeepSeek token usage. The push
+# footer reports the sum as "本次花费" — DeepSeek has no public API for a
+# true "today's aggregate spend", and the cron fires once per day anyway, so
+# per-run ≈ per-day.
+_DEEPSEEK_USAGE_TOTAL = {
+    'cache_hit': 0,
+    'cache_miss': 0,
+    'completion': 0,
+    'calls': 0,
+}
+
 # PushPlus (WeChat push) configuration. Replaces SMTP because QQ Mail
 # blocks GitHub Actions IPs even on 465/SSL.
 PUSHPLUS_TOKEN = os.environ.get('PUSHPLUS_TOKEN')
@@ -850,20 +870,40 @@ Paper abstract:
                     }
                 ],
                 stream=True,
+                stream_options={"include_usage": True},
                 reasoning_effort="high",
                 extra_body={"thinking": {"type": "enabled"}},
             )
-            
+
             # Collect streaming response
             summary = ""
             done_reasoning = False
             for chunk in response:
+                # Final chunk when stream_options.include_usage=True carries
+                # only `.usage` (empty choices). Grab it before the choices
+                # guard below drops this chunk.
+                chunk_usage = getattr(chunk, 'usage', None)
+                if chunk_usage:
+                    hit = getattr(chunk_usage, 'prompt_cache_hit_tokens', None)
+                    miss = getattr(chunk_usage, 'prompt_cache_miss_tokens', None)
+                    if hit is None and miss is None:
+                        # Model didn't report the cache split; charge all as miss.
+                        miss = getattr(chunk_usage, 'prompt_tokens', 0) or 0
+                        hit = 0
+                    _DEEPSEEK_USAGE_TOTAL['cache_hit'] += hit or 0
+                    _DEEPSEEK_USAGE_TOTAL['cache_miss'] += miss or 0
+                    _DEEPSEEK_USAGE_TOTAL['completion'] += (
+                        getattr(chunk_usage, 'completion_tokens', 0) or 0
+                    )
+                    _DEEPSEEK_USAGE_TOTAL['calls'] += 1
+                if not chunk.choices:
+                    continue
                 # Thinking mode is enabled above (reasoning_effort=high +
                 # thinking.type=enabled), so chunks may carry reasoning_content
                 # first, then content. We drop reasoning and keep only content.
                 reasoning_chunk = getattr(chunk.choices[0].delta, 'reasoning_content', None) or ''
                 answer_chunk = chunk.choices[0].delta.content or ''
-                
+
                 if reasoning_chunk:
                     continue  # Skip reasoning process
                 elif answer_chunk:
@@ -1275,7 +1315,65 @@ def generate_email_content(papers_with_summaries, language='zh'):
     return html
 
 
-def generate_pushplus_content(papers_with_summaries, language='zh'):
+def query_deepseek_balance():
+    """Query DeepSeek account balance in CNY. Returns float, or None on failure.
+
+    Uses the same DEEPSEEK_API_KEY the chat calls use — no extra secret.
+    Docs: https://api-docs.deepseek.com/api/get-user-balance
+    """
+    try:
+        req = urllib.request.Request(
+            'https://api.deepseek.com/user/balance',
+            headers={
+                'Authorization': f'Bearer {DEEPSEEK_API_KEY}',
+                'Accept': 'application/json',
+            },
+        )
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read().decode('utf-8', errors='replace'))
+        for info in data.get('balance_infos', []):
+            if info.get('currency') == 'CNY':
+                return float(info['total_balance'])
+    except Exception as e:
+        print(f"⚠️  Failed to query DeepSeek balance: {e}")
+    return None
+
+
+def compute_deepseek_cost_cny(usage):
+    """Convert accumulated token counts to CNY using the off-peak price table."""
+    hit = usage.get('cache_hit', 0) / 1_000_000 * DEEPSEEK_PRICE_CACHE_HIT_PER_1M
+    miss = usage.get('cache_miss', 0) / 1_000_000 * DEEPSEEK_PRICE_CACHE_MISS_PER_1M
+    out = usage.get('completion', 0) / 1_000_000 * DEEPSEEK_PRICE_OUTPUT_PER_1M
+    return hit + miss + out
+
+
+def render_cost_footer(usage, cost_cny, balance_cny):
+    """Inline-styled footer appended to the PushPlus HTML digest.
+
+    Mirrors the inline-style convention of generate_pushplus_content since
+    PushPlus's sanitizer rejects <style> blocks.
+    """
+    prompt_total = usage.get('cache_hit', 0) + usage.get('cache_miss', 0)
+    hit_rate = (usage.get('cache_hit', 0) / prompt_total * 100) if prompt_total else 0
+    balance_html = (
+        f'¥{balance_cny:.2f}' if balance_cny is not None
+        else '<span style="color:#c62828;">查询失败</span>'
+    )
+    return (
+        '<div style="margin:20px 0 0;padding:12px;background:#fff8e1;'
+        'border-left:3px solid #ffb300;border-radius:4px;'
+        'color:#555;font-size:15px;line-height:1.7;">'
+        f'💰 本次花费：¥{cost_cny:.4f} '
+        f'<span style="color:#888;font-size:14px;">'
+        f'（prompt {prompt_total:,} tok · 缓存命中 {hit_rate:.0f}% · '
+        f'completion {usage.get("completion", 0):,} tok · '
+        f'{usage.get("calls", 0)} 次调用）</span><br>'
+        f'💳 账户余额：{balance_html}'
+        '</div>'
+    )
+
+
+def generate_pushplus_content(papers_with_summaries, language='zh', cost_info=None):
     """HTML digest for PushPlus (WeChat webview).
 
     Uses inline-styled divs only (no <html>/<head>/<style>) so PushPlus's
@@ -1348,6 +1446,8 @@ def generate_pushplus_content(papers_with_summaries, language='zh'):
             f'</div>'
         )
 
+    if cost_info:
+        parts.append(render_cost_footer(**cost_info))
     parts.append('</div>')
     return ''.join(parts)
 
@@ -1490,7 +1590,27 @@ def main():
         print("\n" + "=" * 60)
         print("📧 Generating Digest Content")
         print("=" * 60)
-        html_content = generate_pushplus_content(papers_with_summaries, EMAIL_LANGUAGE)
+        usage = dict(_DEEPSEEK_USAGE_TOTAL)
+        cost_cny = compute_deepseek_cost_cny(usage)
+        balance_cny = query_deepseek_balance()
+        balance_display = (
+            f"¥{balance_cny:.2f}" if balance_cny is not None else "查询失败"
+        )
+        print(
+            f"💰 DeepSeek 本次花费: ¥{cost_cny:.4f} "
+            f"(prompt_hit={usage['cache_hit']}, prompt_miss={usage['cache_miss']}, "
+            f"completion={usage['completion']}, calls={usage['calls']}) "
+            f"| 账户余额: {balance_display}"
+        )
+        html_content = generate_pushplus_content(
+            papers_with_summaries,
+            EMAIL_LANGUAGE,
+            cost_info={
+                'usage': usage,
+                'cost_cny': cost_cny,
+                'balance_cny': balance_cny,
+            },
+        )
 
         # Step 5: Push via PushPlus
         today = datetime.now().strftime('%Y-%m-%d')
