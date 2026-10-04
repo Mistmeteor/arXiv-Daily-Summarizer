@@ -1098,7 +1098,8 @@
   },
   "2609.12280": {
     "push_dates": [
-      "2026-09-15"
+      "2026-09-15",
+      "2026-10-04"
     ],
     "title": "Simultaneous Clustered Orthogonalization"
   },
@@ -1110,7 +1111,8 @@
   },
   "2609.12545": {
     "push_dates": [
-      "2026-09-15"
+      "2026-09-15",
+      "2026-10-04"
     ],
     "title": "Moment Restrictions for Dyadic Network Formation Models with Nontransferable Utility"
   },
@@ -1129,7 +1131,8 @@
   },
   "2609.13026": {
     "push_dates": [
-      "2026-09-15"
+      "2026-09-15",
+      "2026-10-04"
     ],
     "title": "Identification via Distributional Shifts without Exclusion Restrictions"
   },
@@ -1419,7 +1422,8 @@
   },
   "2609.21674": {
     "push_dates": [
-      "2026-09-22"
+      "2026-09-22",
+      "2026-10-04"
     ],
     "title": "Match forecasts in UEFA club competitions: Elo ratings versus Transfermarkt valuations"
   },
@@ -1480,19 +1484,22 @@
   },
   "2609.26303": {
     "push_dates": [
-      "2026-09-23"
+      "2026-09-23",
+      "2026-10-04"
     ],
     "title": "Target alignment, dilution and forecast selection when cross-sectional forecasts share a common target"
   },
   "2609.26840": {
     "push_dates": [
-      "2026-09-26"
+      "2026-09-26",
+      "2026-10-04"
     ],
     "title": "Positive weight Hermite and Legendre quadrature rules"
   },
   "2609.26994": {
     "push_dates": [
-      "2026-09-26"
+      "2026-09-26",
+      "2026-10-04"
     ],
     "title": "Nonlinear Drivers of Macroeconomic Tail Risk: A Threshold Stochastic Volatility-in-Mean VAR with Regime-Dependent Leverage"
   },
@@ -1504,7 +1511,8 @@
   },
   "2609.27200": {
     "push_dates": [
-      "2026-09-26"
+      "2026-09-26",
+      "2026-10-04"
     ],
     "title": "Local Optimality and Rigidity of Frobenius Tests for Dense High-Dimensional Covariance Alternatives"
   },
@@ -1590,7 +1598,8 @@
   },
   "2609.29440": {
     "push_dates": [
-      "2026-09-26"
+      "2026-09-26",
+      "2026-10-04"
     ],
     "title": "Kernel Balancing in Tree-based Methods"
   },
@@ -1602,7 +1611,8 @@
   },
   "2609.30007": {
     "push_dates": [
-      "2026-09-26"
+      "2026-09-26",
+      "2026-10-04"
     ],
     "title": "First as Tragedy? Second as What? Estimating Dynamic Effects of Recurrent Events"
   },
