@@ -50,21 +50,29 @@ jobs:
         run: |
           python fetch_papers.py
 
-      # 5. Persist push history so tomorrow's run knows what was already sent.
-      #    Skips the commit cleanly when nothing changed.
-      - name: 💾 Commit push history
+      # 5. Persist push history + econ.EM backlog so tomorrow's run knows what
+      #    was already sent and has a cushion of recent econ.EM papers to draw
+      #    from if arXiv's export API rate-limits us. Skips cleanly if neither
+      #    file changed.
+      - name: 💾 Commit state files
         if: always()
         run: |
-          if [ ! -f pushed_papers.json ]; then
-            echo "No pushed_papers.json to commit."
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add pushed_papers.json
-          if git diff --cached --quiet; then
-            echo "pushed_papers.json unchanged; nothing to commit."
+          staged=0
+          for f in pushed_papers.json econ_backlog.json; do
+            if [ -f "$f" ]; then
+              git add "$f"
+              staged=1
+            fi
+          done
+          if [ "$staged" = "0" ]; then
+            echo "No state files to commit."
             exit 0
           fi
-          git commit -m "chore: update pushed_papers.json [skip ci]"
+          if git diff --cached --quiet; then
+            echo "State files unchanged; nothing to commit."
+            exit 0
+          fi
+          git commit -m "chore: update push history + econ backlog [skip ci]"
           git push

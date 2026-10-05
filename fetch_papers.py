@@ -13,6 +13,7 @@ import re
 from difflib import SequenceMatcher
 
 import push_history
+import econ_backlog
 import notion_push
 
 # ========== Configuration ==========
@@ -460,39 +461,74 @@ def remove_duplicate_papers(papers):
     return filtered_papers
 
 
-def get_latest_papers():
-    """
-    Fetch latest papers from arXiv with quality filtering and deduplication
-    
-    Returns:
-        list: List of selected paper dictionaries
-    """
-    print(f"🔍 Searching for latest papers on arXiv...")
-    print(f"📚 Categories: {', '.join(CATEGORIES)}")
-    
-    client = arxiv.Client(page_size=100, delay_seconds=5.0, num_retries=5)
-    papers_by_category = defaultdict(list)
-    seen_ids = set()
-    
-    # Step 1: Fetch papers from each category separately
-    for category in CATEGORIES:
-        print(f"\n🔎 Searching category: {category}")
-        
+# Retry schedule applied specifically to econ.EM when arXiv responds with a
+# transient 429/503. Non-primary categories don't retry: on days when half the
+# arXiv export API is sick the digest can still ship if econ.EM comes back,
+# and the econ backlog fills in otherwise.
+ECON_RETRY_DELAYS_SECONDS = [60, 120]
+
+
+def _arxiv_search_results(client, category, retry_delays=None):
+    """Run one arXiv category search. For econ.EM (retry_delays non-empty),
+    retries after sleep on transient errors; returns None if all attempts fail.
+    For other categories, retry_delays is empty / None so we fall through to
+    the arxiv client's own num_retries and give up on first exception."""
+    delays = [0] + list(retry_delays or [])
+    last_err = None
+    for i, sleep_s in enumerate(delays):
+        if sleep_s > 0:
+            print(f"  ⏳ sleeping {sleep_s}s before retry #{i} of {category}...")
+            time.sleep(sleep_s)
         try:
-            # Fetch a wide window (~last month for econ.EM at ~3 papers/day) so
-            # that when the push-history filter later drops today's Top-N as
-            # "already pushed in the cooldown window", we still have unpushed
-            # older papers ranked below them to backfill from.
             search = arxiv.Search(
                 query=f'cat:{category}',
                 max_results=MAX_RESULTS * FETCH_DEPTH_MULTIPLIER,
                 sort_by=arxiv.SortCriterion.SubmittedDate,
                 sort_order=arxiv.SortOrder.Descending
             )
-            
-            results = list(client.results(search))
+            return list(client.results(search))
+        except Exception as e:
+            last_err = e
+            print(f"  ❌ Error searching {category}: {str(e)}")
+    if last_err is not None and delays[1:]:
+        print(f"  ❌ {category}: all {len(delays)} attempts exhausted, giving up.")
+    return None
+
+
+def get_latest_papers():
+    """
+    Fetch latest papers from arXiv with quality filtering and deduplication
+
+    Returns:
+        list: List of selected paper dictionaries
+    """
+    print(f"🔍 Searching for latest papers on arXiv...")
+    print(f"📚 Categories: {', '.join(CATEGORIES)}")
+
+    client = arxiv.Client(page_size=100, delay_seconds=5.0, num_retries=5)
+    papers_by_category = defaultdict(list)
+    seen_ids = set()
+
+    # Load (and prune) the econ.EM backlog pool. If arXiv fails us today we
+    # draw from this to still satisfy MIN_ECONOMETRICS_PER_PUSH. Papers we
+    # successfully fetch below are upserted back into it before we return.
+    backlog = econ_backlog.prune(econ_backlog.load())
+    econ_fetch_ok = False
+
+    # Step 1: Fetch papers from each category separately
+    for category in CATEGORIES:
+        print(f"\n🔎 Searching category: {category}")
+
+        # Only econ.EM gets the sleep-and-retry loop — it's the one we must
+        # not lose. Other categories fall back to the backlog-less status quo.
+        retry_delays = ECON_RETRY_DELAYS_SECONDS if category == PRIMARY_CATEGORY else None
+        results = _arxiv_search_results(client, category, retry_delays=retry_delays)
+        if results is None:
+            continue
+
+        try:
             print(f"  API returned {len(results)} papers")
-            
+
             for result in results:
                 if result.entry_id not in seen_ids:
                     # Soft relevance filter for non-primary categories: keep the
@@ -529,14 +565,18 @@ def get_latest_papers():
             
             # Sort papers in this category by quality score
             papers_by_category[category].sort(
-                key=lambda x: x['quality_score'], 
+                key=lambda x: x['quality_score'],
                 reverse=True
             )
-            
+
             print(f"  Found {len(papers_by_category[category])} papers in {category}")
-            
+
+            if category == PRIMARY_CATEGORY:
+                econ_fetch_ok = True
+                backlog = econ_backlog.upsert(backlog, papers_by_category[category])
+
         except Exception as e:
-            print(f"  ❌ Error searching {category}: {str(e)}")
+            print(f"  ❌ Error parsing {category} results: {str(e)}")
             continue
     
     # Step 2: Build the candidate pool via BLP-first + weighted-random rotation.
@@ -599,6 +639,31 @@ def get_latest_papers():
             selected_papers.append(p)
             seen_entry_ids.add(p['entry_id'])
             econ_pinned += 1
+
+    # 2b.5 Backlog fallback. If today's live arXiv fetch failed or came back
+    # thin, fill the econ floor from the econ_backlog.json pool. We ask
+    # push_history to exclude papers already in cooldown so this doesn't
+    # recycle papers you just saw.
+    if econ_pinned < MIN_ECONOMETRICS_PER_PUSH:
+        shortfall = MIN_ECONOMETRICS_PER_PUSH - econ_pinned
+        print(f"  🧺 econ floor short by {shortfall} after live fetch "
+              f"(econ_fetch_ok={econ_fetch_ok}, backlog size={len(backlog)}); "
+              f"drawing from backlog...")
+        history_for_pick = push_history.prune(push_history.load())
+        fillers = econ_backlog.pick_fillers(
+            backlog, history_for_pick, shortfall,
+            exclude_ids=seen_entry_ids,
+        )
+        for p in fillers:
+            selected_papers.append(p)
+            seen_entry_ids.add(p['entry_id'])
+            econ_pinned += 1
+            print(f"  ✓ backlog filler: {p['title'][:60]}... "
+                  f"(first seen {p.get('categories')})")
+        if not fillers:
+            print(f"  ⚠️ backlog has no eligible econ.EM papers either "
+                  f"(all in cooldown or empty)")
+
     print(f"  Pinned {econ_pinned} econometrics paper(s) "
           f"(floor ≥ {MIN_ECONOMETRICS_PER_PUSH})")
 
@@ -652,13 +717,19 @@ def get_latest_papers():
     
     print(f"\n✅ Candidate pool built: {len(selected_papers)} papers "
           f"(will be filtered by push history, then capped to {MAX_RESULTS})")
-    
+
     # Print category distribution
     category_dist = Counter([p['primary_category'] for p in selected_papers])
     print(f"\n📊 Category distribution:")
     for cat, count in category_dist.items():
         print(f"   {cat}: {count} papers")
-    
+
+    # Persist the econ.EM backlog so tomorrow's run has a cushion if arXiv
+    # export is unreachable. Only re-save when econ.EM actually responded
+    # today (otherwise upsert was skipped — keep yesterday's snapshot).
+    if econ_fetch_ok:
+        econ_backlog.save(backlog)
+
     return selected_papers
 
 
