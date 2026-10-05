@@ -1754,6 +1754,12 @@
     ],
     "title": "Optimal Allocation and Volume under Surface"
   },
+  "2609.39736": {
+    "push_dates": [
+      "2026-10-05"
+    ],
+    "title": "Improved KKT Complexity for First-Order Bilevel Optimization under Weak Lower-Level Convexity"
+  },
   "2609.40156": {
     "push_dates": [
       "2026-10-02"
@@ -1766,11 +1772,29 @@
     ],
     "title": "The Anatomy of Commodity Risk: Micro, Market, and Economy-Wide Sources"
   },
+  "2610.00912": {
+    "push_dates": [
+      "2026-10-05"
+    ],
+    "title": "OR for AI That Does OR: Routing LLMs up the Escalator inside the OSCAR Framework"
+  },
+  "2610.01015": {
+    "push_dates": [
+      "2026-10-05"
+    ],
+    "title": "Initial condition recovery in nonlinear damped viscous photoacoustic tomography using a convolutional neural network-guided gradient-free optimization framework"
+  },
   "2610.01115": {
     "push_dates": [
       "2026-10-03"
     ],
     "title": "Certified Alpha Capacity: Statistical Evidence, Economic Lifetime, and Arbitrage under Decay"
+  },
+  "2610.01340": {
+    "push_dates": [
+      "2026-10-05"
+    ],
+    "title": "P-curve: An improved solution for the single-facility location problem in two regions with $\\ell_{p}$- and $\\ell_{q}$-norms"
   },
   "2610.01464": {
     "push_dates": [
@@ -1790,10 +1814,46 @@
     ],
     "title": "Identifying Panel Conditioning with Refreshment Samples: Sharp Bounds and Design Assumptions"
   },
+  "2610.01812": {
+    "push_dates": [
+      "2026-10-05"
+    ],
+    "title": "Recognizing Signomial Convexity is Hard"
+  },
   "2610.01935": {
     "push_dates": [
       "2026-10-03"
     ],
     "title": "Pragmatic DML with AI-Learned Representations"
+  },
+  "2610.01980": {
+    "push_dates": [
+      "2026-10-05"
+    ],
+    "title": "The Curvature of Regret in Contextual Linear Optimization"
+  },
+  "2610.02007": {
+    "push_dates": [
+      "2026-10-05"
+    ],
+    "title": "Approximation and computation of the geodesic Sinkhorn distance"
+  },
+  "2610.02018": {
+    "push_dates": [
+      "2026-10-05"
+    ],
+    "title": "Euclidean Distance Optimization Within the Grassmannian"
+  },
+  "2610.02190": {
+    "push_dates": [
+      "2026-10-05"
+    ],
+    "title": "Trust the Direction, Search the Step: Zero-and-First-Order Methods for LLM Fine-Tuning"
+  },
+  "2610.02199": {
+    "push_dates": [
+      "2026-10-05"
+    ],
+    "title": "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning"
   }
 }
