@@ -1642,13 +1642,15 @@
   },
   "2609.31442": {
     "push_dates": [
-      "2026-09-29"
+      "2026-09-29",
+      "2026-10-06"
     ],
-    "title": "Improved Bootstrap Inference for Dynamic Panel Data models with Interactive Effects"
+    "title": "Bootstrap Inference for Dynamic Panel Data Models with Common Correlated Effects"
   },
   "2609.31561": {
     "push_dates": [
-      "2026-09-29"
+      "2026-09-29",
+      "2026-10-06"
     ],
     "title": "Orthogonal Moments in Likelihood Models"
   },
@@ -1660,7 +1662,8 @@
   },
   "2609.32076": {
     "push_dates": [
-      "2026-09-29"
+      "2026-09-29",
+      "2026-10-06"
     ],
     "title": "An Adversarial Approach to Identification, Computation, and Inference in Models with a Linear-in-Measures Representation"
   },
@@ -1855,5 +1858,47 @@
       "2026-10-05"
     ],
     "title": "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning"
+  },
+  "2610.02530": {
+    "push_dates": [
+      "2026-10-06"
+    ],
+    "title": "Recursive Stochastic Linear-Quadratic Control with Indefinite Weights for Jump-Diffusion Systems with Random Coefficients"
+  },
+  "2610.02938": {
+    "push_dates": [
+      "2026-10-06"
+    ],
+    "title": "Evaluating Threshold Policies in Randomized Threshold Designs: A Cautionary Tale for Regression Discontinuity Designs"
+  },
+  "2610.02944": {
+    "push_dates": [
+      "2026-10-06"
+    ],
+    "title": "Cross-Fitting Under Nonregularity: Normality and Inference via Locality"
+  },
+  "2610.03895": {
+    "push_dates": [
+      "2026-10-06"
+    ],
+    "title": "A Path-Dependent Agent-Based Microsimulation of Crime and Violence Reduction Policy Portfolios in Bolivia: Survey Calibration, Adaptive Emulator Ensembles, Global Sensitivity, Tempered MCMC, and Multi-Objective Policy Analysis"
+  },
+  "2610.04146": {
+    "push_dates": [
+      "2026-10-06"
+    ],
+    "title": "Partial Identification under Imperfect Measurement: A Distributionally Robust Approach"
+  },
+  "2610.04217": {
+    "push_dates": [
+      "2026-10-06"
+    ],
+    "title": "Bootstrap Inference with a Randomly Assigned Regressor: Covariance Filtering and the Limits of Marginal Resampling"
+  },
+  "2610.04223": {
+    "push_dates": [
+      "2026-10-06"
+    ],
+    "title": "Matched Triple-Differences: A Framework for Covariate Adjustment"
   }
 }
