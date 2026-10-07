@@ -893,7 +893,8 @@
   "2609.05101": {
     "push_dates": [
       "2026-09-07",
-      "2026-09-15"
+      "2026-09-15",
+      "2026-10-07"
     ],
     "title": "Duality for Stochastic Control with non-Markovian Random Coefficients"
   },
@@ -1900,5 +1901,59 @@
       "2026-10-06"
     ],
     "title": "Matched Triple-Differences: A Framework for Covariate Adjustment"
+  },
+  "2610.04982": {
+    "push_dates": [
+      "2026-10-07"
+    ],
+    "title": "Nonlinear fiscal multiplier controlling for policy and economic regimes"
+  },
+  "2610.05405": {
+    "push_dates": [
+      "2026-10-07"
+    ],
+    "title": "Impulse Response Inference for Matrix Autoregressions"
+  },
+  "2610.05486": {
+    "push_dates": [
+      "2026-10-07"
+    ],
+    "title": "Surrogate-powered Causal Inference with Censored Outcomes"
+  },
+  "2610.05535": {
+    "push_dates": [
+      "2026-10-07"
+    ],
+    "title": "Synthetic Control under Out-of-Span Common Shocks: Diagnosis, Exposure Balance and Correction"
+  },
+  "2610.05618": {
+    "push_dates": [
+      "2026-10-07"
+    ],
+    "title": "Causal Lag Structure Discovery in Confounded Time Series via Orthogonalized Adaptive Estimation"
+  },
+  "2610.05705": {
+    "push_dates": [
+      "2026-10-07"
+    ],
+    "title": "An Averaging Alternative to Pre-Trend Testing"
+  },
+  "2610.06119": {
+    "push_dates": [
+      "2026-10-07"
+    ],
+    "title": "Power enhancement via cross-fit variance estimation: Applications to specification, overidentification, and many-restriction testing"
+  },
+  "2610.06412": {
+    "push_dates": [
+      "2026-10-07"
+    ],
+    "title": "Measuring Trade Direction in a Prediction Market: Settlement Ground Truth and Trading-Cost Measurement on Polymarket"
+  },
+  "2610.07589": {
+    "push_dates": [
+      "2026-10-07"
+    ],
+    "title": "Vine Copula VAR:From Recursive Margins to Joint Forecast Inference"
   }
 }
