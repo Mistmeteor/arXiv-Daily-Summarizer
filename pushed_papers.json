@@ -1682,7 +1682,8 @@
   },
   "2609.33058": {
     "push_dates": [
-      "2026-09-30"
+      "2026-09-30",
+      "2026-10-09"
     ],
     "title": "Evolution of Market Microstructure in the Age of AI"
   },
@@ -1695,25 +1696,29 @@
   },
   "2609.33471": {
     "push_dates": [
-      "2026-09-30"
+      "2026-09-30",
+      "2026-10-09"
     ],
     "title": "A One-Saddle 1/5 Approximation Algorithm for Common-Kernel Bimatrix Games: Recognition, Exact Segment Optimization, Sharp Selector Bounds, and Certified Robustness"
   },
   "2609.33859": {
     "push_dates": [
-      "2026-09-30"
+      "2026-09-30",
+      "2026-10-09"
     ],
     "title": "The Potential of Nighttime Light Imagery for Detailed Local Economic Analysis"
   },
   "2609.35011": {
     "push_dates": [
-      "2026-09-30"
+      "2026-09-30",
+      "2026-10-09"
     ],
     "title": "Price Stability in the European Union: A Systemic Approach Using Random Matrix Theory"
   },
   "2609.36280": {
     "push_dates": [
-      "2026-10-01"
+      "2026-10-01",
+      "2026-10-09"
     ],
     "title": "Probabilistic Seasonality"
   },
@@ -1733,7 +1738,8 @@
   },
   "2609.37168": {
     "push_dates": [
-      "2026-10-01"
+      "2026-10-01",
+      "2026-10-09"
     ],
     "title": "Are there asymmetries in euro area monetary policy transmission?"
   },
@@ -1770,7 +1776,8 @@
   },
   "2609.40156": {
     "push_dates": [
-      "2026-10-02"
+      "2026-10-02",
+      "2026-10-09"
     ],
     "title": "Partial identification with entropy regularized optimal transport"
   },
@@ -1995,5 +2002,23 @@
       "2026-10-08"
     ],
     "title": "Cluster-Robust Prediction-Powered Inference"
+  },
+  "2610.10043": {
+    "push_dates": [
+      "2026-10-09"
+    ],
+    "title": "Building Macroeconomically Relevant Climate Indices via the Assemblage VAR"
+  },
+  "2610.10476": {
+    "push_dates": [
+      "2026-10-09"
+    ],
+    "title": "From a Hierarchy of Stochastic Differential Equations to a Hierarchy of Generalized Beta Distributions"
+  },
+  "2610.10873": {
+    "push_dates": [
+      "2026-10-09"
+    ],
+    "title": "When Does Inexact Matching Ensure Balance and Inference without Adjustment?"
   }
 }
