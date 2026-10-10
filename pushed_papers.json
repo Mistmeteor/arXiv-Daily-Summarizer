@@ -1006,7 +1006,8 @@
   "2609.10233": {
     "push_dates": [
       "2026-09-10",
-      "2026-09-17"
+      "2026-09-17",
+      "2026-10-10"
     ],
     "title": "On the Tightness of Standard Relaxations for Mixed-Integer Bilevel Linear Programs"
   },
@@ -1764,7 +1765,8 @@
   },
   "2609.38875": {
     "push_dates": [
-      "2026-10-03"
+      "2026-10-03",
+      "2026-10-10"
     ],
     "title": "Optimal Allocation and Volume under Surface"
   },
@@ -1783,7 +1785,8 @@
   },
   "2610.00581": {
     "push_dates": [
-      "2026-10-03"
+      "2026-10-03",
+      "2026-10-10"
     ],
     "title": "The Anatomy of Commodity Risk: Micro, Market, and Economy-Wide Sources"
   },
@@ -1813,19 +1816,22 @@
   },
   "2610.01464": {
     "push_dates": [
-      "2026-10-03"
+      "2026-10-03",
+      "2026-10-10"
     ],
     "title": "Inference after data-driven control-unit selection in difference-in-differences with estimated covariance"
   },
   "2610.01465": {
     "push_dates": [
-      "2026-10-03"
+      "2026-10-03",
+      "2026-10-10"
     ],
     "title": "A distributional modelling approach with application to electricity price forecasting"
   },
   "2610.01654": {
     "push_dates": [
-      "2026-10-03"
+      "2026-10-03",
+      "2026-10-10"
     ],
     "title": "Identifying Panel Conditioning with Refreshment Samples: Sharp Bounds and Design Assumptions"
   },
@@ -1837,7 +1843,8 @@
   },
   "2610.01935": {
     "push_dates": [
-      "2026-10-03"
+      "2026-10-03",
+      "2026-10-10"
     ],
     "title": "Pragmatic DML with AI-Learned Representations"
   },
@@ -2020,5 +2027,23 @@
       "2026-10-09"
     ],
     "title": "When Does Inexact Matching Ensure Balance and Inference without Adjustment?"
+  },
+  "2610.11898": {
+    "push_dates": [
+      "2026-10-10"
+    ],
+    "title": "Inference in Panel SVARs with Two-Way Dependence"
+  },
+  "2610.12025": {
+    "push_dates": [
+      "2026-10-10"
+    ],
+    "title": "Rolling Window Selection in FAR Models with Structural Instabilities"
+  },
+  "2610.12350": {
+    "push_dates": [
+      "2026-10-10"
+    ],
+    "title": "The Panel Information Matrix Test"
   }
 }
