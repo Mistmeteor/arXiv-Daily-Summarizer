@@ -1587,7 +1587,8 @@
   },
   "2609.28871": {
     "push_dates": [
-      "2026-09-26"
+      "2026-09-26",
+      "2026-10-11"
     ],
     "title": "Panel Conditioning in Fixed-Effects Models: Identification and Bias Propagation"
   },
@@ -1620,25 +1621,29 @@
   },
   "2609.30481": {
     "push_dates": [
-      "2026-09-30"
+      "2026-09-30",
+      "2026-10-11"
     ],
     "title": "Do Third-Party Web Traffic Estimates Preserve Causal Variation?"
   },
   "2609.30504": {
     "push_dates": [
-      "2026-09-30"
+      "2026-09-30",
+      "2026-10-11"
     ],
     "title": "A Characterization of the $M$-tests Under Nearly Integrated Nearly White Noise"
   },
   "2609.30528": {
     "push_dates": [
-      "2026-09-29"
+      "2026-09-29",
+      "2026-10-11"
     ],
     "title": "When Do Surrogate Metrics Work? A Finite-Sample Comparison Under Realistic Failure Modes"
   },
   "2609.30617": {
     "push_dates": [
-      "2026-09-29"
+      "2026-09-29",
+      "2026-10-11"
     ],
     "title": "Risk-Averse Welfare Maximization via Marginal Treatment Effects"
   },
@@ -1658,7 +1663,8 @@
   },
   "2609.31958": {
     "push_dates": [
-      "2026-09-29"
+      "2026-09-29",
+      "2026-10-11"
     ],
     "title": "Multiple testing of a function's monotonicity"
   },
@@ -1671,13 +1677,15 @@
   },
   "2609.32369": {
     "push_dates": [
-      "2026-09-29"
+      "2026-09-29",
+      "2026-10-11"
     ],
     "title": "Two-Point Dependent Wild Bootstrap for Weakly Dependent Estimating Equations"
   },
   "2609.32725": {
     "push_dates": [
-      "2026-09-29"
+      "2026-09-29",
+      "2026-10-11"
     ],
     "title": "Minimax Choice of Projection Geometry under Linear Inequality Constraints"
   },
@@ -1753,13 +1761,15 @@
   },
   "2609.37477": {
     "push_dates": [
-      "2026-10-01"
+      "2026-10-01",
+      "2026-10-11"
     ],
     "title": "Calibrated Order-Randomized Rosenblatt Tests"
   },
   "2609.38692": {
     "push_dates": [
-      "2026-10-03"
+      "2026-10-03",
+      "2026-10-11"
     ],
     "title": "Imputation is all you need: double robustness, semiparametric efficiency, and automatic covariate balance for estimating the average treatment effect"
   },
