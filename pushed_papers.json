@@ -922,7 +922,8 @@
   "2609.06827": {
     "push_dates": [
       "2026-09-09",
-      "2026-09-18"
+      "2026-09-18",
+      "2026-10-12"
     ],
     "title": "Beyond Aggregate VARs: A Bayesian Benchmark for HANK Models"
   },
@@ -978,7 +979,8 @@
   "2609.08411": {
     "push_dates": [
       "2026-09-09",
-      "2026-09-16"
+      "2026-09-16",
+      "2026-10-12"
     ],
     "title": "Policy Gains or Household Need? The Allocation Logic of China's Dibao Program"
   },
@@ -1062,7 +1064,8 @@
   "2609.11575": {
     "push_dates": [
       "2026-09-11",
-      "2026-09-18"
+      "2026-09-18",
+      "2026-10-12"
     ],
     "title": "Market-Informed Networks for Modeling and Forecast Evaluation of Financial Extremes"
   },
@@ -1075,7 +1078,8 @@
   "2609.11915": {
     "push_dates": [
       "2026-09-11",
-      "2026-09-18"
+      "2026-09-18",
+      "2026-10-12"
     ],
     "title": "Generative Marketing Mix Modeling: A Causal Inference Framework Linking GEO and GEM to Business Impact"
   },
@@ -1107,7 +1111,8 @@
   },
   "2609.12406": {
     "push_dates": [
-      "2026-09-15"
+      "2026-09-15",
+      "2026-10-12"
     ],
     "title": "Representation Multiplicity in Causal Forests"
   },
@@ -1160,7 +1165,8 @@
   },
   "2609.13698": {
     "push_dates": [
-      "2026-09-15"
+      "2026-09-15",
+      "2026-10-12"
     ],
     "title": "Spectral Design of Random-Duration Switchbacks"
   },
@@ -1187,7 +1193,8 @@
   },
   "2609.15111": {
     "push_dates": [
-      "2026-09-15"
+      "2026-09-15",
+      "2026-10-12"
     ],
     "title": "Eigenvalue-Decomposition Cost Denoising as an Alternative to Predict-then-Optimize for Shortest-Path Problems"
   },
@@ -1538,7 +1545,8 @@
   },
   "2609.27691": {
     "push_dates": [
-      "2026-09-26"
+      "2026-09-26",
+      "2026-10-12"
     ],
     "title": "Testing for Heterogeneous Treatment Effects in Regression Discontinuity Designs"
   },
@@ -1574,7 +1582,8 @@
   },
   "2609.28678": {
     "push_dates": [
-      "2026-09-26"
+      "2026-09-26",
+      "2026-10-12"
     ],
     "title": "Heterogeneous Policy Effects in Comparative Case Studies with Treated-Unit Microdata"
   },
@@ -1608,7 +1617,8 @@
   },
   "2609.29958": {
     "push_dates": [
-      "2026-09-26"
+      "2026-09-26",
+      "2026-10-12"
     ],
     "title": "Multi-Dimensional Matching"
   },
