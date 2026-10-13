@@ -43,6 +43,8 @@ jobs:
           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
           NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+          # 推送正文统一使用中文，必要的概念原文和缩写除外。
+          EMAIL_LANGUAGE: zh
           # Summary style: 'academic' (original) or 'plain' (easy-to-read).
           # Flip via repo → Settings → Secrets and variables → Actions → Variables,
           # add/edit a repository variable named SUMMARY_STYLE. Defaults to 'academic'.

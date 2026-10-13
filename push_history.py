@@ -5,6 +5,7 @@ Persisted to pushed_papers.json in this format:
     {
       "2401.12345": {
         "title": "...",
+        "categories": ["econ.EM"],
         "push_dates": ["2026-08-01", "2026-08-08"]
       },
       ...
@@ -14,7 +15,8 @@ Schedule (anchored to the first push at day D):
     push #1 : day D                     (any day the paper first surfaces)
     push #2 : day D + REPUSH_OFFSETS_DAYS[0]   (default 7)
     push #3 : day D + REPUSH_OFFSETS_DAYS[1]   (default 30)
-After TOTAL_PUSHES_CAP pushes the paper is permanently retired until pruned.
+Only econometrics/statistics papers use all three slots. Other fields are
+retired after their first push. Category metadata is retained in the history.
 Entries with no push in the last LONG_TERM_RESET_DAYS are dropped entirely,
 so the paper becomes eligible from scratch if arXiv ever surfaces it again.
 """
@@ -60,11 +62,34 @@ def _sorted_push_dates(entry):
     return sorted({d for d in (_parse_iso_date(x) for x in entry.get('push_dates', [])) if d})
 
 
-def _next_allowed_date(dates):
+def push_cap(paper):
+    """计量、统计（包括交叉分类）最多三次；其他领域只推一次。"""
+    categories = set(paper.get('categories') or [])
+    primary = paper.get('primary_category')
+    if primary:
+        categories.add(primary)
+    is_core = any(
+        category in ('econ.EM', 'math.ST') or category.startswith('stat.')
+        for category in categories
+    )
+    return min(TOTAL_PUSHES_CAP, 3 if is_core else 1)
+
+
+def remember_categories(entry, paper):
+    """补全旧历史的分类，不增加推送次数。"""
+    if paper.get('categories'):
+        entry['categories'] = list(paper['categories'])
+    if paper.get('primary_category'):
+        entry['primary_category'] = paper['primary_category']
+
+
+def _next_allowed_date(dates, cap=None):
     """Return the next date on which a push is allowed, or None if the paper
-    has already hit TOTAL_PUSHES_CAP."""
+    has already hit its category-specific cap."""
     n = len(dates)
-    if n >= TOTAL_PUSHES_CAP:
+    if cap is None:
+        cap = min(TOTAL_PUSHES_CAP, 3)
+    if n >= cap:
         return None
     if n == 0:
         return date.min  # first push always allowed
@@ -131,7 +156,8 @@ def filter_papers(papers, history, today=None):
         key = paper_key(paper.get('entry_id'))
         entry = history.get(key) or {}
         dates = _sorted_push_dates(entry)
-        next_date = _next_allowed_date(dates)
+        remember_categories(entry, paper)
+        next_date = _next_allowed_date(dates, push_cap(entry))
         title = (paper.get('title') or '')[:60]
         if next_date is None:
             skipped.append(paper)
@@ -155,7 +181,11 @@ def due_repush_ids(history, today=None):
     due = []
     for key, entry in history.items():
         dates = _sorted_push_dates(entry)
-        next_date = _next_allowed_date(dates)
+        # 旧记录没有分类：允许重新查询元数据，最终仍须通过 filter_papers。
+        # 查询到分类后会存回历史，其他领域不会再次进入待复推队列。
+        has_categories = bool(entry.get('categories') or entry.get('primary_category'))
+        cap = push_cap(entry) if has_categories else min(TOTAL_PUSHES_CAP, 3)
+        next_date = _next_allowed_date(dates, cap)
         if next_date is None or dates == []:
             continue
         if today >= next_date:
@@ -174,6 +204,7 @@ def update(history, pushed_papers, today=None):
             continue
         entry = history.setdefault(key, {'title': paper.get('title', ''), 'push_dates': []})
         entry['title'] = paper.get('title', entry.get('title', ''))
+        remember_categories(entry, paper)
         if today_str not in entry['push_dates']:
             entry['push_dates'].append(today_str)
     return history

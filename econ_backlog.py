@@ -173,7 +173,7 @@ def pick_fillers(backlog, history, need, exclude_ids=None, today=None):
             continue
         entry = history.get(key) or {}
         dates = push_history._sorted_push_dates(entry)
-        next_date = push_history._next_allowed_date(dates)
+        next_date = push_history._next_allowed_date(dates, push_history.push_cap(rec))
         if next_date is None:
             continue
         if today < next_date:

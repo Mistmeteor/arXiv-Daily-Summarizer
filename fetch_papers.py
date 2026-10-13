@@ -145,7 +145,7 @@ MIN_ABSTRACT_LENGTH = 100  # Minimum abstract length (characters)
 SIMILARITY_THRESHOLD = 0.85  # Title similarity threshold for duplicate detection
 
 # Push-history / dedup schedule lives in push_history.py (spaced-repetition curve:
-# first push on day D, repush unlocks at D+7 and D+30, capped at 3 total pushes).
+# econ/stat: day D, D+7, D+30 (at most 3); other fields: first push only).
 
 # BLP / demand-estimation strong-recommend keywords. Papers whose title or
 # abstract match any of these are pinned to the very top of the digest and
@@ -823,6 +823,14 @@ def summarize_paper(paper, language='zh', style=None):
 
     summaries = {}
 
+    chinese_language_rule = (
+        "语言要求（必须遵守）：正文全部用自然、完整的中文叙述，不写英文句子，"
+        "不照搬英文摘要或英文短语，不提供中英对照。已有通行中文译名的术语优先用中文，"
+        "例如筛估计、核方法、自助法、极大似然估计、工具变量、广义矩估计。"
+        "只有重要概念确有必要保留原文、专有名词或必要缩写（如 BLP、GMM、IV）时才用英文；"
+        "不要给每个中文术语都附上英文括注，也不要把整段方法描述写成英文。"
+    )
+
     # Define prompts for each language
     # IMPORTANT: explicitly forbid markdown so the summary renders as plain text in email
     plain_text_rule_zh = (
@@ -861,6 +869,8 @@ def summarize_paper(paper, language='zh', style=None):
 
 请用简洁专业的语言总结，适合快速阅读理解。
 
+{chinese_language_rule}
+
 {plain_text_rule_zh}""",
         'en': f"""Please summarize the following academic paper in English, including these aspects:
 1. Research background and motivation (1-2 sentences)
@@ -878,15 +888,12 @@ Please use concise professional language suitable for quick reading.
 {plain_text_rule_en}"""
     }
 
-    # ---------------- Style: plain (short, jargon-preserving) ----------------
-    # Reader is an economics grad student. Standard econ/stats jargon
-    # (OLS/IV/MLE/GMM/sieve/kernel/copula/bootstrap/…) is left un-glossed —
-    # the reader judges relevance themselves. No rigid section template,
-    # no forced tie-in to any specific sub-field (BLP, demand estimation, …).
+    # ---------------- Style: plain (short, Chinese prose) ----------------
+    # 读者是经济学研究生：保留方法的准确含义，但优先用中文名称。
     plain_prompts = {
-        'zh': f"""用中文简要说明下面这篇论文做了什么。读者是经济学研究生，OLS/IV/MLE/GMM/sieve/kernel/copula/bootstrap 这类术语直接用，不用解释。
+        'zh': f"""用中文简要说明下面这篇论文做了什么。读者是经济学研究生，方法和概念优先使用通行中文名称，仅在必要时保留重要英文原文或缩写。
 
-写 3–5 句自然叙述，讲清三件事：作者要解决的问题、他们怎么做（方法名称直接写）、得到什么结果。摘要里若有关键数字（收敛率、误差下降、覆盖率、样本量等）保留 1 个即可。
+写 3–5 句自然叙述，讲清三件事：作者要解决的问题、他们怎么做（方法名称优先用中文）、得到什么结果。摘要里若有关键数字（收敛率、误差下降、覆盖率、样本量等）保留 1 个即可。
 
 不要：
 - 分小节编号（『1. 』『2. 』这种）或加小标题
@@ -898,6 +905,8 @@ Please use concise professional language suitable for quick reading.
 
 论文摘要：
 {paper['abstract']}
+
+{chinese_language_rule}
 
 {plain_prose_rule_zh}""",
         'en': f"""Explain in English what this paper does. The reader is an economics grad student; standard jargon (OLS/IV/MLE/GMM/sieve/kernel/copula/bootstrap/…) can be used directly without gloss.
