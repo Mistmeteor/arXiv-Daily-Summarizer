@@ -1900,13 +1900,15 @@
   },
   "2610.02530": {
     "push_dates": [
-      "2026-10-06"
+      "2026-10-06",
+      "2026-10-13"
     ],
     "title": "Recursive Stochastic Linear-Quadratic Control with Indefinite Weights for Jump-Diffusion Systems with Random Coefficients"
   },
   "2610.02938": {
     "push_dates": [
-      "2026-10-06"
+      "2026-10-06",
+      "2026-10-13"
     ],
     "title": "Evaluating Threshold Policies in Randomized Threshold Designs: A Cautionary Tale for Regression Discontinuity Designs"
   },
@@ -1918,7 +1920,8 @@
   },
   "2610.03895": {
     "push_dates": [
-      "2026-10-06"
+      "2026-10-06",
+      "2026-10-13"
     ],
     "title": "A Path-Dependent Agent-Based Microsimulation of Crime and Violence Reduction Policy Portfolios in Bolivia: Survey Calibration, Adaptive Emulator Ensembles, Global Sensitivity, Tempered MCMC, and Multi-Objective Policy Analysis"
   },
@@ -1936,7 +1939,8 @@
   },
   "2610.04223": {
     "push_dates": [
-      "2026-10-06"
+      "2026-10-06",
+      "2026-10-13"
     ],
     "title": "Matched Triple-Differences: A Framework for Covariate Adjustment"
   },
@@ -2065,5 +2069,41 @@
       "2026-10-10"
     ],
     "title": "The Panel Information Matrix Test"
+  },
+  "2610.12509": {
+    "push_dates": [
+      "2026-10-13"
+    ],
+    "title": "Early Investment Snowballs for Low-Skill Children: Average Marginal Returns and the Dynamics of Skill Formation"
+  },
+  "2610.12674": {
+    "push_dates": [
+      "2026-10-13"
+    ],
+    "title": "Simple Standard Errors for Complicated (Quasi-)Experimental Designs"
+  },
+  "2610.12824": {
+    "push_dates": [
+      "2026-10-13"
+    ],
+    "title": "GMM for Panel Data Quantile Regression"
+  },
+  "2610.12873": {
+    "push_dates": [
+      "2026-10-13"
+    ],
+    "title": "An efficient stochastic generalized method of moments estimator for nonlinear moment models"
+  },
+  "2610.13269": {
+    "push_dates": [
+      "2026-10-13"
+    ],
+    "title": "Intentionally Overidentifying Local Projections"
+  },
+  "2610.13446": {
+    "push_dates": [
+      "2026-10-13"
+    ],
+    "title": "Realized Tail-Risk Conditional Autoregressive Expectile Models: Accurate and Stable Forecasting Performance"
   }
 }
