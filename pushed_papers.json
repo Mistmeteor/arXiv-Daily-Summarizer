@@ -30,6 +30,10 @@
     "title": "Generalized AKM: Flexible Controls and Interactions in Wage Decompositions"
   },
   "2608.10177": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-08-23"
     ],
@@ -1799,6 +1803,13 @@
     "title": "Generative Marketing Mix Modeling: A Causal Inference Framework Linking GEO and GEM to Business Impact"
   },
   "2609.12107": {
+    "categories": [
+      "cs.CL",
+      "cs.AI",
+      "cs.IR",
+      "econ.EM"
+    ],
+    "primary_category": "cs.CL",
     "push_dates": [
       "2026-09-15",
       "2026-09-22"
@@ -1829,6 +1840,12 @@
     "title": "A Sharp Signal-to-Noise Threshold for Quasi-Maximum Likelihood Breakpoint Estimation"
   },
   "2609.12280": {
+    "categories": [
+      "econ.EM",
+      "stat.AP",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-15",
       "2026-10-04"
@@ -1836,6 +1853,10 @@
     "title": "Simultaneous Clustered Orthogonalization"
   },
   "2609.12406": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-15",
       "2026-10-12"
@@ -1843,6 +1864,10 @@
     "title": "Representation Multiplicity in Causal Forests"
   },
   "2609.12545": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-15",
       "2026-10-04"
@@ -1861,13 +1886,22 @@
     "title": "Extended Mean Field Control Games with Moment Interactions: General Framework and Linear-Quadratic Model"
   },
   "2609.12987": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-15",
-      "2026-09-22"
+      "2026-09-22",
+      "2026-10-15"
     ],
     "title": "Demand Estimation with Variable Choice Sets: A Likelihood Correction for Nested Logit"
   },
   "2609.13026": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-15",
       "2026-10-04"
@@ -1886,6 +1920,13 @@
     "title": "Benign Loss Landscapes Can Coexist with Worst-Case Hardness"
   },
   "2609.13345": {
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "stat.ML",
     "push_dates": [
       "2026-09-15",
       "2026-09-22"
@@ -1893,6 +1934,12 @@
     "title": "Beyond Point Forecasts: A Survey on Probabilistic Forecasting for Time Series and Spatiotemporal Data"
   },
   "2609.13586": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "stat.ML"
+    ],
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-09-15",
       "2026-09-22"
@@ -1900,6 +1947,12 @@
     "title": "Synthetic Nearest Neighbors: Extending Synthetic Controls for Matrix Completion with Missing Not at Random Data"
   },
   "2609.13698": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "math.ST"
+    ],
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-09-15",
       "2026-10-12"
@@ -1907,6 +1960,10 @@
     "title": "Spectral Design of Random-Duration Switchbacks"
   },
   "2609.14049": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-15",
       "2026-09-22"
@@ -1914,6 +1971,11 @@
     "title": "Homophily and transitivity in dynamic network formation"
   },
   "2609.14069": {
+    "categories": [
+      "econ.EM",
+      "econ.TH"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-15",
       "2026-10-02"
@@ -1921,6 +1983,11 @@
     "title": "What Variation Identifies Payoffs in a Dynamic Game?"
   },
   "2609.14398": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-15",
       "2026-10-02"
@@ -1928,6 +1995,13 @@
     "title": "Identification and Inference in proxy-SVARs with non-Gaussian shocks"
   },
   "2609.15111": {
+    "categories": [
+      "econ.EM",
+      "cs.LG",
+      "math.OC",
+      "math.SP"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-15",
       "2026-10-12"
@@ -1935,13 +2009,25 @@
     "title": "Eigenvalue-Decomposition Cost Denoising as an Alternative to Predict-then-Optimize for Shortest-Path Problems"
   },
   "2609.15736": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-15",
-      "2026-09-22"
+      "2026-09-22",
+      "2026-10-15"
     ],
     "title": "Conditional-Moment Estimation and Inference in the BLP Model"
   },
   "2609.15796": {
+    "categories": [
+      "physics.soc-ph",
+      "cond-mat.stat-mech",
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "physics.soc-ph",
     "push_dates": [
       "2026-09-15",
       "2026-09-23"
@@ -2904,6 +2990,11 @@
     "title": "Measuring Trade Direction in a Prediction Market: Settlement Ground Truth and Trading-Cost Measurement on Polymarket"
   },
   "2610.07363": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-08"
     ],
@@ -2923,6 +3014,12 @@
     "title": "Vine Copula VAR:From Recursive Margins to Joint Forecast Inference"
   },
   "2610.08194": {
+    "categories": [
+      "econ.EM",
+      "econ.GN",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-08"
     ],
@@ -2934,7 +3031,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-08"
+      "2026-10-08",
+      "2026-10-15"
     ],
     "title": "Bayesian Machine Learning Methods For Large Scale Demand Estimation"
   },
@@ -2950,12 +3048,22 @@
     "title": "Measuring Gift Card Program Incrementality via Causal Data Fusion"
   },
   "2610.09351": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-08"
     ],
     "title": "Detecting Copula Structural Changes: A Smooth Testing Approach"
   },
   "2610.09601": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "stat.ML"
+    ],
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-10-08"
     ],
@@ -3080,5 +3188,82 @@
       "2026-10-13"
     ],
     "title": "Realized Tail-Risk Conditional Autoregressive Expectile Models: Accurate and Stable Forecasting Performance"
+  },
+  "2610.15168": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-15"
+    ],
+    "title": "GMM under finite-population asymptotics: instrumental variables and regression adjustment"
+  },
+  "2610.15789": {
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "econ.EM",
+      "math.ST"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-15"
+    ],
+    "title": "Inference on the Value of Policy Improvement in Adaptive Experiments"
+  },
+  "2610.16503": {
+    "categories": [
+      "stat.ME",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-15"
+    ],
+    "title": "Honest Inference for High-Dimensional Linear Models"
+  },
+  "2610.16701": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-15"
+    ],
+    "title": "Estimation of Rational Inattention--Additive Random Utility Models"
+  },
+  "2610.16754": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-15"
+    ],
+    "title": "Pseudo-Panel Event Studies: Econometric Foundations for Credible Applications"
+  },
+  "2610.17104": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-15"
+    ],
+    "title": "Dynamic Panel Multinomial Logit Models"
+  },
+  "2610.18387": {
+    "categories": [
+      "q-fin.RM",
+      "econ.EM",
+      "q-fin.PM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-15"
+    ],
+    "title": "Risk Measures for the Climate Transition Age: Why Symmetric Risk Budgets are unlikely to mitigate two-dimensionally asymmetric Climate Change risks"
   }
 }
