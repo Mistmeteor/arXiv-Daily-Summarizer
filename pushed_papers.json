@@ -2996,7 +2996,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-08"
+      "2026-10-08",
+      "2026-10-15"
     ],
     "title": "Network Experiments with Edge Treatments and Node Outcomes"
   },
@@ -3021,7 +3022,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-08"
+      "2026-10-08",
+      "2026-10-15"
     ],
     "title": "The Noise Is the Signal: Correlated Sampling Error Is Rank-Informative for Proxy Metric Selection"
   },
@@ -3043,7 +3045,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-08"
+      "2026-10-08",
+      "2026-10-15"
     ],
     "title": "Measuring Gift Card Program Incrementality via Causal Data Fusion"
   },
@@ -3053,7 +3056,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-08"
+      "2026-10-08",
+      "2026-10-15"
     ],
     "title": "Detecting Copula Structural Changes: A Smooth Testing Approach"
   },
@@ -3065,7 +3069,8 @@
     ],
     "primary_category": "stat.ME",
     "push_dates": [
-      "2026-10-08"
+      "2026-10-08",
+      "2026-10-15"
     ],
     "title": "Cluster-Robust Prediction-Powered Inference"
   },
@@ -3189,6 +3194,26 @@
     ],
     "title": "Realized Tail-Risk Conditional Autoregressive Expectile Models: Accurate and Stable Forecasting Performance"
   },
+  "2610.14511": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-15"
+    ],
+    "title": "A Balanced Parametrization of Correlation Matrices"
+  },
+  "2610.15063": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-15"
+    ],
+    "title": "Randomized Experiments with Ambiguous Record Linkage"
+  },
   "2610.15168": {
     "categories": [
       "econ.EM"
@@ -3198,6 +3223,26 @@
       "2026-10-15"
     ],
     "title": "GMM under finite-population asymptotics: instrumental variables and regression adjustment"
+  },
+  "2610.15296": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-15"
+    ],
+    "title": "Recurrent Neural Networks for Forecasting Autoregressive Noncausal Processes"
+  },
+  "2610.15672": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-15"
+    ],
+    "title": "Uncertainty in Compound Decisions"
   },
   "2610.15789": {
     "categories": [
@@ -3265,5 +3310,15 @@
       "2026-10-15"
     ],
     "title": "Risk Measures for the Climate Transition Age: Why Symmetric Risk Budgets are unlikely to mitigate two-dimensionally asymmetric Climate Change risks"
+  },
+  "2610.19075": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-15"
+    ],
+    "title": "Randomization Inference for Dynamic Causal Effects in Short Panels with Autoregressive Instruments"
   }
 }
