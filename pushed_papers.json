@@ -2035,6 +2035,11 @@
     "title": "Penalized Maximum Likelihood Inference of Core-Periphery Networks"
   },
   "2609.16086": {
+    "categories": [
+      "econ.EM",
+      "econ.TH"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-16",
       "2026-10-02"
@@ -2042,6 +2047,11 @@
     "title": "Tractable Estimation of the Money Pump Index: A Comment"
   },
   "2609.16509": {
+    "categories": [
+      "stat.AP",
+      "econ.EM"
+    ],
+    "primary_category": "stat.AP",
     "push_dates": [
       "2026-09-16",
       "2026-09-23"
@@ -2049,6 +2059,12 @@
     "title": "Anthropogenic Forcing, Climate Change, and the Shape of Warming: Statistical Inference for Distributional Cointegration"
   },
   "2609.16618": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-09-16",
       "2026-09-23"
@@ -2056,13 +2072,23 @@
     "title": "A Multiverse of Good and Bad Controls: Candidate Causal Graphs for Interpreting Model Robustness Analysis"
   },
   "2609.16952": {
+    "categories": [
+      "math.OC",
+      "stat.ML"
+    ],
+    "primary_category": "math.OC",
     "push_dates": [
       "2026-09-16",
-      "2026-09-23"
+      "2026-09-23",
+      "2026-10-16"
     ],
     "title": "Learning Choice Model Trees for Feature-Based Multi-Product Pricing: Exact Optimization and Field Evidence"
   },
   "2609.16968": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-16",
       "2026-09-23"
@@ -2070,13 +2096,23 @@
     "title": "Rate-Agnostic Wald Inference for Dyadic Regressions"
   },
   "2609.17158": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-16",
-      "2026-09-23"
+      "2026-09-23",
+      "2026-10-16"
     ],
     "title": "Empirical Bayes for compound adaptive experiments"
   },
   "2609.17170": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-16",
       "2026-09-23"
@@ -2084,6 +2120,14 @@
     "title": "Causal Inference under Dynamic Selection: Time-Varying Covariates and Latent Heterogeneity"
   },
   "2609.17296": {
+    "categories": [
+      "stat.ME",
+      "cs.LG",
+      "econ.EM",
+      "math.ST",
+      "stat.ML"
+    ],
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-09-16",
       "2026-09-23"
@@ -2854,7 +2898,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-06"
+      "2026-10-06",
+      "2026-10-16"
     ],
     "title": "Cross-Fitting Under Nonregularity: Normality and Inference via Locality"
   },
@@ -2872,7 +2917,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-06"
+      "2026-10-06",
+      "2026-10-16"
     ],
     "title": "Partial Identification under Imperfect Measurement: A Distributionally Robust Approach"
   },
@@ -3080,13 +3126,22 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-09"
+      "2026-10-09",
+      "2026-10-16"
     ],
     "title": "Building Macroeconomically Relevant Climate Indices via the Assemblage VAR"
   },
   "2610.10476": {
+    "categories": [
+      "econ.EM",
+      "cond-mat.stat-mech",
+      "physics.data-an",
+      "q-fin.ST"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-09"
+      "2026-10-09",
+      "2026-10-16"
     ],
     "title": "From a Hierarchy of Stochastic Differential Equations to a Hierarchy of Generalized Beta Distributions"
   },
@@ -3096,9 +3151,10 @@
       "econ.EM",
       "stat.ME"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "math.ST",
     "push_dates": [
-      "2026-10-09"
+      "2026-10-09",
+      "2026-10-16"
     ],
     "title": "When Does Inexact Matching Ensure Balance and Inference without Adjustment?"
   },
@@ -3320,5 +3376,37 @@
       "2026-10-15"
     ],
     "title": "Randomization Inference for Dynamic Causal Effects in Short Panels with Autoregressive Instruments"
+  },
+  "2610.21019": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-16"
+    ],
+    "title": "Testing Tail-Index Homogeneity via Exceedance-Covariate Independence"
+  },
+  "2610.21296": {
+    "categories": [
+      "econ.EM",
+      "physics.soc-ph",
+      "stat.AP"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-16"
+    ],
+    "title": "On the fairness of single round-robin tournaments: Evidence from European football"
+  },
+  "2610.21756": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-16"
+    ],
+    "title": "Locally Robust Inference with Outcomes Predicted by Machine Learning"
   }
 }
