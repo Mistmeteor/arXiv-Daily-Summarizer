@@ -1812,7 +1812,8 @@
     "primary_category": "cs.CL",
     "push_dates": [
       "2026-09-15",
-      "2026-09-22"
+      "2026-09-22",
+      "2026-10-17"
     ],
     "title": "Extracting Dataset Mentions in Forced Displacement and FCV Documents: A Weakly Supervised Framework with LLM-Based Label Refinement"
   },
@@ -2135,6 +2136,10 @@
     "title": "Conformal Policy Learning with Distribution-Free Safety Guarantees"
   },
   "2609.17626": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-17",
       "2026-10-02"
@@ -2142,13 +2147,23 @@
     "title": "Structural Complexity of One-Factor Sparse Portfolio Selection: Exact Algorithms, Parameterized Hardness, and Restricted Circuit Lower Bounds"
   },
   "2609.17939": {
+    "categories": [
+      "math.ST",
+      "econ.EM"
+    ],
+    "primary_category": "math.ST",
     "push_dates": [
       "2026-09-17",
-      "2026-09-26"
+      "2026-09-26",
+      "2026-10-17"
     ],
     "title": "Recursive-Head Geometry and Order-Free Efficient Inference in Finite-State Nested Markov Models"
   },
   "2609.18150": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-17",
       "2026-10-02"
@@ -2156,6 +2171,10 @@
     "title": "Profiled Anderson--Rubin Test: Robust Inference Allowing for Direct Effects of Instruments"
   },
   "2609.18157": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-17",
       "2026-10-02"
@@ -2163,37 +2182,64 @@
     "title": "Tensor-BEKK: Conditional Covariance Modeling and Inference for Tensor-Valued Time Series"
   },
   "2609.18172": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-17",
-      "2026-09-27"
+      "2026-09-27",
+      "2026-10-17"
     ],
     "title": "What No First Stage Can Detect: Functional-Form Contamination in Linear IV"
   },
   "2609.18600": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-17",
-      "2026-09-26"
+      "2026-09-26",
+      "2026-10-17"
     ],
     "title": "Policy Targeting with Market Equilibrium"
   },
   "2609.18734": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-17",
-      "2026-09-26"
+      "2026-09-26",
+      "2026-10-17"
     ],
     "title": "Conditionally linear, matrix normal state space models"
   },
   "2609.18903": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-17",
-      "2026-09-27"
+      "2026-09-27",
+      "2026-10-17"
     ],
     "title": "Shrinkage Bayesian Causal Forest with Instrumental Variable"
   },
   "2609.19081": {
+    "categories": [
+      "stat.ME",
+      "econ.EM"
+    ],
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-09-17",
-      "2026-09-27"
+      "2026-09-27",
+      "2026-10-17"
     ],
     "title": "Beyond Pretrends: A Discordance-Based Sensitivity Analysis for Difference-in-Differences"
   },
@@ -3164,7 +3210,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-10"
+      "2026-10-10",
+      "2026-10-17"
     ],
     "title": "Inference in Panel SVARs with Two-Way Dependence"
   },
@@ -3174,7 +3221,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-10"
+      "2026-10-10",
+      "2026-10-17"
     ],
     "title": "Rolling Window Selection in FAR Models with Structural Instabilities"
   },
@@ -3184,7 +3232,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-10"
+      "2026-10-10",
+      "2026-10-17"
     ],
     "title": "The Panel Information Matrix Test"
   },
