@@ -2244,72 +2244,131 @@
     "title": "Beyond Pretrends: A Discordance-Based Sensitivity Analysis for Difference-in-Differences"
   },
   "2609.19386": {
+    "categories": [
+      "stat.ME",
+      "econ.EM"
+    ],
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-09-18",
-      "2026-09-26"
+      "2026-09-26",
+      "2026-10-18"
     ],
     "title": "Omitted Variable Bias in Difference-in-Differences Designs"
   },
   "2609.19415": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-18",
-      "2026-09-27"
+      "2026-09-27",
+      "2026-10-18"
     ],
     "title": "Aggregating many estimators using estimated weights"
   },
   "2609.19418": {
+    "categories": [
+      "econ.EM",
+      "cs.LG",
+      "math.ST",
+      "stat.ML"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-18",
-      "2026-09-26"
+      "2026-09-26",
+      "2026-10-18"
     ],
     "title": "Stable Policy Learning"
   },
   "2609.19547": {
+    "categories": [
+      "stat.ME",
+      "econ.EM"
+    ],
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-09-18",
-      "2026-09-27"
+      "2026-09-27",
+      "2026-10-18"
     ],
     "title": "Vector Vine Copula Models for Multivariate Longitudinal Data"
   },
   "2609.19738": {
+    "categories": [
+      "econ.EM",
+      "econ.TH"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-18",
-      "2026-09-27"
+      "2026-09-27",
+      "2026-10-18"
     ],
     "title": "Axiomatizing Local Asymptotic Minimax Risk"
   },
   "2609.20044": {
+    "categories": [
+      "stat.ME",
+      "econ.EM"
+    ],
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-09-18",
-      "2026-09-27"
+      "2026-09-27",
+      "2026-10-18"
     ],
     "title": "Noise-adjusted turnover in estimated networks"
   },
   "2609.20393": {
+    "categories": [
+      "stat.ME",
+      "econ.EM"
+    ],
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-09-18",
-      "2026-09-27"
+      "2026-09-27",
+      "2026-10-18"
     ],
     "title": "Gaussian Boundary Inference in a Hypergeometric Heavy-Tailed Family"
   },
   "2609.20424": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-18",
-      "2026-09-27"
+      "2026-09-27",
+      "2026-10-18"
     ],
     "title": "Cosine metric as a structural economic similarity measure"
   },
   "2609.20473": {
+    "categories": [
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-18",
-      "2026-09-27"
+      "2026-09-27",
+      "2026-10-18"
     ],
     "title": "Beyond Linearity: Semiparametric Solutions to Contamination Bias with Multi-valued Treatments"
   },
   "2609.20655": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-18",
-      "2026-09-26"
+      "2026-09-26",
+      "2026-10-18"
     ],
     "title": "Using machine learning metrics to provide deeper insights into the performance of choice models"
   },
