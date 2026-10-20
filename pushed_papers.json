@@ -2177,7 +2177,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-17",
-      "2026-10-02"
+      "2026-10-02",
+      "2026-10-20"
     ],
     "title": "Tensor-BEKK: Conditional Covariance Modeling and Inference for Tensor-Valued Time Series"
   },
@@ -3297,8 +3298,13 @@
     "title": "The Panel Information Matrix Test"
   },
   "2610.12509": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-13"
+      "2026-10-13",
+      "2026-10-20"
     ],
     "title": "Early Investment Snowballs for Low-Skill Children: Average Marginal Returns and the Dynamics of Skill Formation"
   },
@@ -3309,7 +3315,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-13"
+      "2026-10-13",
+      "2026-10-20"
     ],
     "title": "Simple Standard Errors for Complicated (Quasi-)Experimental Designs"
   },
@@ -3319,7 +3326,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-13"
+      "2026-10-13",
+      "2026-10-20"
     ],
     "title": "GMM for Panel Data Quantile Regression"
   },
@@ -3330,9 +3338,10 @@
       "math.PR",
       "math.ST"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.ME",
     "push_dates": [
-      "2026-10-13"
+      "2026-10-13",
+      "2026-10-20"
     ],
     "title": "An efficient stochastic generalized method of moments estimator for nonlinear moment models"
   },
@@ -3342,7 +3351,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-13"
+      "2026-10-13",
+      "2026-10-20"
     ],
     "title": "Intentionally Overidentifying Local Projections"
   },
@@ -3354,7 +3364,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-13"
+      "2026-10-13",
+      "2026-10-20"
     ],
     "title": "Realized Tail-Risk Conditional Autoregressive Expectile Models: Accurate and Stable Forecasting Performance"
   },
@@ -3367,6 +3378,18 @@
       "2026-10-15"
     ],
     "title": "A Balanced Parametrization of Correlation Matrices"
+  },
+  "2610.14617": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "stat.ML"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-20"
+    ],
+    "title": "Cointegrated Regressors: Where Folded Concave Penalties Go Beyond LASSO"
   },
   "2610.15063": {
     "categories": [
@@ -3516,5 +3539,30 @@
       "2026-10-16"
     ],
     "title": "Locally Robust Inference with Outcomes Predicted by Machine Learning"
+  },
+  "2610.22522": {
+    "categories": [
+      "econ.EM",
+      "cs.ET",
+      "q-fin.RM",
+      "q-fin.TR"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-20"
+    ],
+    "title": "Agentic AI in Automated Markets"
+  },
+  "2610.23119": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-20"
+    ],
+    "title": "Online Conditional Vine Copulas: Forecasting Electricity Demand"
   }
 }
