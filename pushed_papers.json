@@ -3564,5 +3564,112 @@
       "2026-10-20"
     ],
     "title": "Online Conditional Vine Copulas: Forecasting Electricity Demand"
+  },
+  "2610.25009": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-21"
+    ],
+    "title": "Nonparametric Dyadic Quantile Regression"
+  },
+  "2610.25038": {
+    "categories": [
+      "math.OC",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-21"
+    ],
+    "title": "Globally Optimal Estimation of Nested Logit Models"
+  },
+  "2610.25421": {
+    "categories": [
+      "math.ST",
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-21"
+    ],
+    "title": "Efficient estimation of measures of functional dependence"
+  },
+  "2610.25495": {
+    "categories": [
+      "cs.LG",
+      "econ.EM",
+      "q-fin.TR"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-21"
+    ],
+    "title": "Probabilistic Limit Order Book Forecasting with Conditional Diffusion Models"
+  },
+  "2610.25589": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-21"
+    ],
+    "title": "Linear Regression with Common Unobserved Heterogeneity"
+  },
+  "2610.25667": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-21"
+    ],
+    "title": "A LATE-Targeting Experimental Design for Multi-Arm RCTs"
+  },
+  "2610.25986": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-21"
+    ],
+    "title": "Tuning-Free Tests for Treatment Effect Heterogeneity via Expectile Processes"
+  },
+  "2610.26298": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-21"
+    ],
+    "title": "Deep-$π^*$: A Neural Network Estimate of Trend Inflation"
+  },
+  "2610.26427": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-21"
+    ],
+    "title": "Almost Uniform Bias Correction for Persistent Panel Local Projections"
+  },
+  "2610.26576": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-21"
+    ],
+    "title": "Synthetic Control: An Exact Geometric Formulation"
   }
 }
