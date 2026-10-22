@@ -2374,6 +2374,10 @@
     "title": "Using machine learning metrics to provide deeper insights into the performance of choice models"
   },
   "2609.21056": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-22",
       "2026-10-02"
@@ -2381,6 +2385,11 @@
     "title": "Poisson Regression under Multivariate Sample Selection"
   },
   "2609.21393": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-22",
       "2026-10-02"
@@ -2388,6 +2397,10 @@
     "title": "Summary Indices in Treatment Effect Estimation"
   },
   "2609.21587": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-22",
       "2026-10-01"
@@ -2395,6 +2408,12 @@
     "title": "The \"Rough\" HAR Model"
   },
   "2609.21622": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-09-22",
       "2026-10-01"
@@ -2402,6 +2421,11 @@
     "title": "Testing Conditional Stochastic Dominance via Copula Derivatives"
   },
   "2609.21674": {
+    "categories": [
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-22",
       "2026-10-04"
@@ -2409,6 +2433,10 @@
     "title": "Match forecasts in UEFA club competitions: Elo ratings versus Transfermarkt valuations"
   },
   "2609.22761": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-22",
       "2026-09-30"
@@ -2416,6 +2444,11 @@
     "title": "Causal inference in two-sided randomization designs: factorial regression, two-way clustering, and covariate adjustment"
   },
   "2609.23220": {
+    "categories": [
+      "stat.ME",
+      "econ.EM"
+    ],
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-09-22",
       "2026-10-02"
@@ -2423,6 +2456,12 @@
     "title": "Consistent Order Selection under Non-Identifiability and Dependence"
   },
   "2609.23223": {
+    "categories": [
+      "q-fin.ST",
+      "cs.LG",
+      "econ.EM"
+    ],
+    "primary_category": "q-fin.ST",
     "push_dates": [
       "2026-09-22",
       "2026-09-30"
@@ -2430,6 +2469,10 @@
     "title": "Stealing profits: Spread-based temporal hierarchy forecasting for day-ahead electricity markets"
   },
   "2609.23303": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-22",
       "2026-10-01"
@@ -2437,13 +2480,25 @@
     "title": "Uniform Inference for Parameters Identified by Conditional Quantile Restrictions"
   },
   "2609.23998": {
+    "categories": [
+      "econ.EM",
+      "stat.CO",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-22",
-      "2026-09-29"
+      "2026-09-29",
+      "2026-10-22"
     ],
     "title": "A Stochastic Nested Fixed Point Algorithm for Large-Scale BLP Estimation"
   },
   "2609.24849": {
+    "categories": [
+      "math.OC",
+      "math.PR"
+    ],
+    "primary_category": "math.OC",
     "push_dates": [
       "2026-09-22",
       "2026-09-29"
@@ -3438,7 +3493,7 @@
       "econ.EM",
       "math.ST"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.ML",
     "push_dates": [
       "2026-10-15"
     ],
@@ -3449,7 +3504,7 @@
       "stat.ME",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-10-15"
     ],
@@ -3492,7 +3547,7 @@
       "q-fin.PM",
       "stat.ME"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "q-fin.RM",
     "push_dates": [
       "2026-10-15"
     ],
@@ -3671,5 +3726,104 @@
       "2026-10-21"
     ],
     "title": "Synthetic Control: An Exact Geometric Formulation"
+  },
+  "2610.27255": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-22"
+    ],
+    "title": "Is sophistication a panacea? The learning capacity of random feature models for financial forecasting"
+  },
+  "2610.27324": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-22"
+    ],
+    "title": "Discrete Choice with Generalized Social Interactions"
+  },
+  "2610.27405": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-22"
+    ],
+    "title": "Evidence-Based Policy Choice in Macroeconomics"
+  },
+  "2610.27857": {
+    "categories": [
+      "math.ST",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-22"
+    ],
+    "title": "Central Limit Theorems for Optimal Transport Functionals"
+  },
+  "2610.28071": {
+    "categories": [
+      "q-fin.PR",
+      "econ.EM",
+      "q-fin.ST"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-22"
+    ],
+    "title": "Arithmetic Models for Commodity Futures, Vanilla, and Calendar Spread Options"
+  },
+  "2610.28169": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-22"
+    ],
+    "title": "A multiplier bootstrap score test for Tobit specification"
+  },
+  "2610.28175": {
+    "categories": [
+      "econ.EM",
+      "stat.ML"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-22"
+    ],
+    "title": "Where Has the Foreign Signal Gone?"
+  },
+  "2610.28440": {
+    "categories": [
+      "econ.TH",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-22"
+    ],
+    "title": "Entry, Exit, and Technological Progress in Markov-Perfect Duopoly"
+  },
+  "2610.28562": {
+    "categories": [
+      "cs.AI",
+      "cs.LG",
+      "cs.SC",
+      "econ.EM",
+      "math.OC"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-22"
+    ],
+    "title": "OptScientist: Automated Discovery of Optimization Laws"
   }
 }
