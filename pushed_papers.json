@@ -2518,6 +2518,12 @@
     "title": "Efficient Cost-Aware LLM Evaluation via Bayesian Bandit Gittins Indices"
   },
   "2609.25924": {
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "econ.EM"
+    ],
+    "primary_category": "stat.ML",
     "push_dates": [
       "2026-09-23",
       "2026-09-30"
@@ -2525,6 +2531,13 @@
     "title": "Conditional Tensor Diffusion: Distributional Counterfactual Learning and Inference"
   },
   "2609.26303": {
+    "categories": [
+      "econ.EM",
+      "cs.LG",
+      "q-fin.ST",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-23",
       "2026-10-04"
@@ -3506,7 +3519,8 @@
     ],
     "primary_category": "stat.ME",
     "push_dates": [
-      "2026-10-15"
+      "2026-10-15",
+      "2026-10-23"
     ],
     "title": "Honest Inference for High-Dimensional Linear Models"
   },
@@ -3536,7 +3550,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-15"
+      "2026-10-15",
+      "2026-10-23"
     ],
     "title": "Dynamic Panel Multinomial Logit Models"
   },
@@ -3549,7 +3564,8 @@
     ],
     "primary_category": "q-fin.RM",
     "push_dates": [
-      "2026-10-15"
+      "2026-10-15",
+      "2026-10-23"
     ],
     "title": "Risk Measures for the Climate Transition Age: Why Symmetric Risk Budgets are unlikely to mitigate two-dimensionally asymmetric Climate Change risks"
   },
@@ -3581,7 +3597,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-16"
+      "2026-10-16",
+      "2026-10-23"
     ],
     "title": "On the fairness of single round-robin tournaments: Evidence from European football"
   },
@@ -3619,6 +3636,20 @@
       "2026-10-20"
     ],
     "title": "Online Conditional Vine Copulas: Forecasting Electricity Demand"
+  },
+  "2610.24113": {
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "econ.EM",
+      "stat.ME",
+      "stat.ML"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-23"
+    ],
+    "title": "Graph-Regularized Synthetic Control for Stable Counterfactual Estimation under Donor Redundancy"
   },
   "2610.25009": {
     "categories": [
@@ -3825,5 +3856,47 @@
       "2026-10-22"
     ],
     "title": "OptScientist: Automated Discovery of Optimization Laws"
+  },
+  "2610.28979": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-23"
+    ],
+    "title": "Anytime-Valid Inference in Conjoint Experiments"
+  },
+  "2610.29148": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-23"
+    ],
+    "title": "Testing Common Causality of Covariates: Evidence from Private-Sector Ban-the-Box Policies"
+  },
+  "2610.29221": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-23"
+    ],
+    "title": "Policy Learning with Network-Shaping Assignments"
+  },
+  "2610.29600": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-23"
+    ],
+    "title": "Demand Estimation for Rationally Inattentive Consumers"
   }
 }
