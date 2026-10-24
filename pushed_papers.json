@@ -2416,7 +2416,8 @@
     "primary_category": "stat.ME",
     "push_dates": [
       "2026-09-22",
-      "2026-10-01"
+      "2026-10-01",
+      "2026-10-24"
     ],
     "title": "Testing Conditional Stochastic Dominance via Copula Derivatives"
   },
@@ -2439,7 +2440,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-22",
-      "2026-09-30"
+      "2026-09-30",
+      "2026-10-24"
     ],
     "title": "Causal inference in two-sided randomization designs: factorial regression, two-way clustering, and covariate adjustment"
   },
@@ -2464,7 +2466,8 @@
     "primary_category": "q-fin.ST",
     "push_dates": [
       "2026-09-22",
-      "2026-09-30"
+      "2026-09-30",
+      "2026-10-24"
     ],
     "title": "Stealing profits: Spread-based temporal hierarchy forecasting for day-ahead electricity markets"
   },
@@ -2475,7 +2478,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-22",
-      "2026-10-01"
+      "2026-10-01",
+      "2026-10-24"
     ],
     "title": "Uniform Inference for Parameters Identified by Conditional Quantile Restrictions"
   },
@@ -2526,7 +2530,8 @@
     "primary_category": "stat.ML",
     "push_dates": [
       "2026-09-23",
-      "2026-09-30"
+      "2026-09-30",
+      "2026-10-24"
     ],
     "title": "Conditional Tensor Diffusion: Distributional Counterfactual Learning and Inference"
   },
@@ -2540,7 +2545,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-23",
-      "2026-10-04"
+      "2026-10-04",
+      "2026-10-24"
     ],
     "title": "Target alignment, dilution and forecast selection when cross-sectional forecasts share a common target"
   },
@@ -3443,7 +3449,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-15"
+      "2026-10-15",
+      "2026-10-24"
     ],
     "title": "A Balanced Parametrization of Correlation Matrices"
   },
@@ -3465,7 +3472,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-15"
+      "2026-10-15",
+      "2026-10-24"
     ],
     "title": "Randomized Experiments with Ambiguous Record Linkage"
   },
@@ -3497,7 +3505,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-15"
+      "2026-10-15",
+      "2026-10-24"
     ],
     "title": "Uncertainty in Compound Decisions"
   },
@@ -3544,7 +3553,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-15"
+      "2026-10-15",
+      "2026-10-24"
     ],
     "title": "Pseudo-Panel Event Studies: Econometric Foundations for Credible Applications"
   },
