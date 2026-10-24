@@ -3475,7 +3475,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-15"
+      "2026-10-15",
+      "2026-10-24"
     ],
     "title": "GMM under finite-population asymptotics: instrumental variables and regression adjustment"
   },
@@ -3485,7 +3486,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-15"
+      "2026-10-15",
+      "2026-10-24"
     ],
     "title": "Recurrent Neural Networks for Forecasting Autoregressive Noncausal Processes"
   },
@@ -3508,7 +3510,8 @@
     ],
     "primary_category": "stat.ML",
     "push_dates": [
-      "2026-10-15"
+      "2026-10-15",
+      "2026-10-24"
     ],
     "title": "Inference on the Value of Policy Improvement in Adaptive Experiments"
   },
@@ -3530,7 +3533,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-15"
+      "2026-10-15",
+      "2026-10-24"
     ],
     "title": "Estimation of Rational Inattention--Additive Random Utility Models"
   },
@@ -3575,7 +3579,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-15"
+      "2026-10-15",
+      "2026-10-24"
     ],
     "title": "Randomization Inference for Dynamic Causal Effects in Short Panels with Autoregressive Instruments"
   },
@@ -3585,7 +3590,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-16"
+      "2026-10-16",
+      "2026-10-24"
     ],
     "title": "Testing Tail-Index Homogeneity via Exceedance-Covariate Independence"
   },
@@ -3608,7 +3614,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-16"
+      "2026-10-16",
+      "2026-10-24"
     ],
     "title": "Locally Robust Inference with Outcomes Predicted by Machine Learning"
   },
@@ -3898,5 +3905,36 @@
       "2026-10-23"
     ],
     "title": "Demand Estimation for Rationally Inattentive Consumers"
+  },
+  "2610.30487": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-24"
+    ],
+    "title": "Monetary Policy Forecast Errors and Inflation Compensation under Sovereign Stress in Brazil"
+  },
+  "2610.31106": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-24"
+    ],
+    "title": "Testing for peer effects in short panels without identifying the network structure"
+  },
+  "2610.31537": {
+    "categories": [
+      "stat.AP",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-24"
+    ],
+    "title": "Causal inference in staggered adoption panels: The correct comparison set depends on your intervention"
   }
 }
