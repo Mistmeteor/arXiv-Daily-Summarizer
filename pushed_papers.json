@@ -2561,6 +2561,11 @@
     "title": "Target alignment, dilution and forecast selection when cross-sectional forecasts share a common target"
   },
   "2609.26840": {
+    "categories": [
+      "econ.EM",
+      "stat.CO"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-26",
       "2026-10-04"
@@ -2568,6 +2573,10 @@
     "title": "Positive weight Hermite and Legendre quadrature rules"
   },
   "2609.26994": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-26",
       "2026-10-04"
@@ -2586,9 +2595,15 @@
     "title": "Artificial intelligence surrogates for treatment effect estimation with before-and-after data"
   },
   "2609.27200": {
+    "categories": [
+      "math.ST",
+      "econ.EM"
+    ],
+    "primary_category": "math.ST",
     "push_dates": [
       "2026-09-26",
-      "2026-10-04"
+      "2026-10-04",
+      "2026-10-27"
     ],
     "title": "Local Optimality and Rigidity of Frobenius Tests for Dense High-Dimensional Covariance Alternatives"
   },
@@ -2629,6 +2644,10 @@
     "title": "FedIncome: Federated Learning for Income Estimation in Digital Lending Under Data Sovereignty Constraints"
   },
   "2609.27691": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-26",
       "2026-10-12"
@@ -2694,6 +2713,10 @@
     "title": "LEAP-CBF: A Safety Filter for Uncertain Systems with Least-Effort Adversarial Potentials"
   },
   "2609.28678": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-26",
       "2026-10-12"
@@ -2701,13 +2724,26 @@
     "title": "Heterogeneous Policy Effects in Comparative Case Studies with Treated-Unit Microdata"
   },
   "2609.28841": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "math.ST"
+    ],
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-09-26",
-      "2026-10-03"
+      "2026-10-03",
+      "2026-10-27"
     ],
     "title": "Reduced-Rank Autoregressive Models for Matrix Time Series"
   },
   "2609.28871": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-09-26",
       "2026-10-11"
@@ -2715,13 +2751,22 @@
     "title": "Panel Conditioning in Fixed-Effects Models: Identification and Bias Propagation"
   },
   "2609.29249": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-26",
-      "2026-10-03"
+      "2026-10-03",
+      "2026-10-27"
     ],
     "title": "Generic Covariate Adjustment for Regression Discontinuity Designs"
   },
   "2609.29440": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-26",
       "2026-10-04"
@@ -2729,6 +2774,14 @@
     "title": "Kernel Balancing in Tree-based Methods"
   },
   "2609.29958": {
+    "categories": [
+      "econ.EM",
+      "cs.GT",
+      "cs.LG",
+      "cs.MA",
+      "econ.TH"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-26",
       "2026-10-12"
@@ -2736,9 +2789,14 @@
     "title": "Multi-Dimensional Matching"
   },
   "2609.30007": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-26",
-      "2026-10-04"
+      "2026-10-04",
+      "2026-10-27"
     ],
     "title": "First as Tragedy? Second as What? Estimating Dynamic Effects of Recurrent Events"
   },
@@ -3470,9 +3528,10 @@
       "econ.EM",
       "stat.ML"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.ME",
     "push_dates": [
-      "2026-10-20"
+      "2026-10-20",
+      "2026-10-27"
     ],
     "title": "Cointegrated Regressors: Where Folded Concave Penalties Go Beyond LASSO"
   },
@@ -3648,7 +3707,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-20"
+      "2026-10-20",
+      "2026-10-27"
     ],
     "title": "Agentic AI in Automated Markets"
   },
@@ -3658,9 +3718,10 @@
       "econ.EM",
       "stat.AP"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.ME",
     "push_dates": [
-      "2026-10-20"
+      "2026-10-20",
+      "2026-10-27"
     ],
     "title": "Online Conditional Vine Copulas: Forecasting Electricity Demand"
   },
@@ -3956,5 +4017,37 @@
       "2026-10-24"
     ],
     "title": "Causal inference in staggered adoption panels: The correct comparison set depends on your intervention"
+  },
+  "2610.31978": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "math.ST"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-27"
+    ],
+    "title": "Parallel Trends as a Spectrum"
+  },
+  "2610.32735": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-27"
+    ],
+    "title": "Optimal Treatment Assignment Rules on Networked Populations"
+  },
+  "2610.32846": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-27"
+    ],
+    "title": "Local Polynomial Estimation in Irregular Correlated Random Coefficient Panel Data Models"
   }
 }
