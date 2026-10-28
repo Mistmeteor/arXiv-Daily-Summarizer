@@ -3754,9 +3754,10 @@
       "math.OC",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "math.OC",
     "push_dates": [
-      "2026-10-21"
+      "2026-10-21",
+      "2026-10-28"
     ],
     "title": "Globally Optimal Estimation of Nested Logit Models"
   },
@@ -3766,7 +3767,7 @@
       "econ.EM",
       "stat.ME"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "math.ST",
     "push_dates": [
       "2026-10-21"
     ],
@@ -3778,7 +3779,7 @@
       "econ.EM",
       "q-fin.TR"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "cs.LG",
     "push_dates": [
       "2026-10-21"
     ],
@@ -4049,5 +4050,105 @@
       "2026-10-27"
     ],
     "title": "Local Polynomial Estimation in Irregular Correlated Random Coefficient Panel Data Models"
+  },
+  "2610.33254": {
+    "categories": [
+      "stat.ME",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-28"
+    ],
+    "title": "Informative inference on the average treatment effect with instrumental variables"
+  },
+  "2610.34198": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-28"
+    ],
+    "title": "Testing for Essential Heterogeneity in the Marginal Treatment Effects Model"
+  },
+  "2610.34547": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "math.OC"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-28"
+    ],
+    "title": "Demand Estimation with Unobserved Stockout Substitution: Exact Likelihood Maximization"
+  },
+  "2610.34629": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-28"
+    ],
+    "title": "Higher-Order Marginal Likelihood Approximation for Nonlinear State Space Models"
+  },
+  "2610.34818": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-28"
+    ],
+    "title": "Cordon Tolls and Urban Traffic Volumes: Evidence from NYC's 2025 Congestion Relief Zone"
+  },
+  "2610.35666": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-28"
+    ],
+    "title": "Regression Adjustment for Ratios of Treatment Effects in Randomized Experiments"
+  },
+  "2610.35738": {
+    "categories": [
+      "econ.EM",
+      "cs.SI",
+      "q-fin.TR"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-28"
+    ],
+    "title": "Fuji: The Shape, Composition, and Spread of Demand Bursts on Robinhood Chain"
+  },
+  "2610.35748": {
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-28"
+    ],
+    "title": "Model Selection for Off-Policy Evaluation via Pairwise Bellman Validation"
+  },
+  "2610.35853": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-28"
+    ],
+    "title": "Adequacy radii for stepped-wedge trials with time-varying effects"
   }
 }
