@@ -2815,6 +2815,12 @@
     "title": "A Characterization of the $M$-tests Under Nearly Integrated Nearly White Noise"
   },
   "2609.30528": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-09-29",
       "2026-10-11"
@@ -2822,6 +2828,10 @@
     "title": "When Do Surrogate Metrics Work? A Finite-Sample Comparison Under Realistic Failure Modes"
   },
   "2609.30617": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-29",
       "2026-10-11"
@@ -2829,6 +2839,10 @@
     "title": "Risk-Averse Welfare Maximization via Marginal Treatment Effects"
   },
   "2609.31442": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-29",
       "2026-10-06"
@@ -2836,6 +2850,10 @@
     "title": "Bootstrap Inference for Dynamic Panel Data Models with Common Correlated Effects"
   },
   "2609.31561": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-29",
       "2026-10-06"
@@ -2843,6 +2861,12 @@
     "title": "Orthogonal Moments in Likelihood Models"
   },
   "2609.31958": {
+    "categories": [
+      "math.ST",
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "math.ST",
     "push_dates": [
       "2026-09-29",
       "2026-10-11"
@@ -2850,6 +2874,10 @@
     "title": "Multiple testing of a function's monotonicity"
   },
   "2609.32076": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-29",
       "2026-10-06"
@@ -2857,6 +2885,11 @@
     "title": "An Adversarial Approach to Identification, Computation, and Inference in Models with a Linear-in-Measures Representation"
   },
   "2609.32369": {
+    "categories": [
+      "stat.ME",
+      "econ.EM"
+    ],
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-09-29",
       "2026-10-11"
@@ -2864,6 +2897,10 @@
     "title": "Two-Point Dependent Wild Bootstrap for Weakly Dependent Estimating Equations"
   },
   "2609.32725": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-29",
       "2026-10-11"
@@ -3863,7 +3900,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-22"
+      "2026-10-22",
+      "2026-10-29"
     ],
     "title": "Discrete Choice with Generalized Social Interactions"
   },
@@ -3882,7 +3920,7 @@
       "math.ST",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "math.ST",
     "push_dates": [
       "2026-10-22"
     ],
@@ -3894,7 +3932,7 @@
       "econ.EM",
       "q-fin.ST"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "q-fin.PR",
     "push_dates": [
       "2026-10-22"
     ],
@@ -3926,7 +3964,7 @@
       "econ.TH",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "econ.TH",
     "push_dates": [
       "2026-10-22"
     ],
@@ -3940,7 +3978,7 @@
       "econ.EM",
       "math.OC"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "cs.AI",
     "push_dates": [
       "2026-10-22"
     ],
@@ -4150,5 +4188,101 @@
       "2026-10-28"
     ],
     "title": "Adequacy radii for stepped-wedge trials with time-varying effects"
+  },
+  "2610.36176": {
+    "categories": [
+      "stat.ME",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-29"
+    ],
+    "title": "Probabilistic Causal Panel Analysis"
+  },
+  "2610.36206": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-29"
+    ],
+    "title": "Indirect inference in incomplete and partially identified econometric models"
+  },
+  "2610.36352": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-29"
+    ],
+    "title": "Many Hands Make Light Work: Long-Term Effect Inference for the Experiment Reservoir"
+  },
+  "2610.36443": {
+    "categories": [
+      "econ.EM",
+      "math.ST"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-29"
+    ],
+    "title": "Bias Correction and Inference for Panel Quantile Regression"
+  },
+  "2610.36634": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-29"
+    ],
+    "title": "Time-Varying Quantile VAR Models: Estimation and Inference"
+  },
+  "2610.36739": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-29"
+    ],
+    "title": "A Semiparametric Real-Time GARCH Model with Nonstationary Variance"
+  },
+  "2610.37049": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-29"
+    ],
+    "title": "Identifying and disentangling direct and spillover effects using multiple pre-treatment periods"
+  },
+  "2610.37269": {
+    "categories": [
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-29"
+    ],
+    "title": "Personal preference or system role? Battery swapping among UK electric vehicle users"
+  },
+  "2610.37487": {
+    "categories": [
+      "q-fin.ST",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-29"
+    ],
+    "title": "Contemporaneous Transmission Networks and Systemic Risk in European Banking"
   }
 }
