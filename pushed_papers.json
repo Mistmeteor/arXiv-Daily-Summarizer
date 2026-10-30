@@ -2801,6 +2801,10 @@
     "title": "First as Tragedy? Second as What? Estimating Dynamic Effects of Recurrent Events"
   },
   "2609.30481": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-30",
       "2026-10-11"
@@ -2808,6 +2812,10 @@
     "title": "Do Third-Party Web Traffic Estimates Preserve Causal Variation?"
   },
   "2609.30504": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-30",
       "2026-10-11"
@@ -2908,6 +2916,13 @@
     "title": "Minimax Choice of Projection Geometry under Linear Inequality Constraints"
   },
   "2609.33058": {
+    "categories": [
+      "econ.EM",
+      "cs.GT",
+      "q-fin.GN",
+      "q-fin.TR"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-30",
       "2026-10-09"
@@ -2915,6 +2930,11 @@
     "title": "Evolution of Market Microstructure in the Age of AI"
   },
   "2609.33418": {
+    "categories": [
+      "math.ST",
+      "econ.EM"
+    ],
+    "primary_category": "math.ST",
     "push_dates": [
       "2026-09-30",
       "2026-10-08"
@@ -2922,6 +2942,10 @@
     "title": "An adaptive $L_2$-type test for high-dimensional white noise"
   },
   "2609.33471": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-09-30",
       "2026-10-09"
@@ -2929,6 +2953,11 @@
     "title": "A One-Saddle 1/5 Approximation Algorithm for Common-Kernel Bimatrix Games: Recognition, Exact Segment Optimization, Sharp Selector Bounds, and Certified Robustness"
   },
   "2609.33859": {
+    "categories": [
+      "cs.CY",
+      "econ.EM"
+    ],
+    "primary_category": "cs.CY",
     "push_dates": [
       "2026-09-30",
       "2026-10-09"
@@ -2936,6 +2965,13 @@
     "title": "The Potential of Nighttime Light Imagery for Detailed Local Economic Analysis"
   },
   "2609.35011": {
+    "categories": [
+      "cs.LG",
+      "econ.EM",
+      "stat.AP",
+      "stat.ME"
+    ],
+    "primary_category": "cs.LG",
     "push_dates": [
       "2026-09-30",
       "2026-10-09"
@@ -3770,7 +3806,7 @@
       "stat.ME",
       "stat.ML"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "cs.LG",
     "push_dates": [
       "2026-10-23"
     ],
@@ -3818,7 +3854,8 @@
     ],
     "primary_category": "cs.LG",
     "push_dates": [
-      "2026-10-21"
+      "2026-10-21",
+      "2026-10-30"
     ],
     "title": "Probabilistic Limit Order Book Forecasting with Conditional Diffusion Models"
   },
@@ -3934,7 +3971,8 @@
     ],
     "primary_category": "q-fin.PR",
     "push_dates": [
-      "2026-10-22"
+      "2026-10-22",
+      "2026-10-30"
     ],
     "title": "Arithmetic Models for Commodity Futures, Vanilla, and Calendar Spread Options"
   },
@@ -3944,7 +3982,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-22"
+      "2026-10-22",
+      "2026-10-30"
     ],
     "title": "A multiplier bootstrap score test for Tobit specification"
   },
@@ -3966,7 +4005,8 @@
     ],
     "primary_category": "econ.TH",
     "push_dates": [
-      "2026-10-22"
+      "2026-10-22",
+      "2026-10-30"
     ],
     "title": "Entry, Exit, and Technological Progress in Markov-Perfect Duopoly"
   },
@@ -3980,7 +4020,8 @@
     ],
     "primary_category": "cs.AI",
     "push_dates": [
-      "2026-10-22"
+      "2026-10-22",
+      "2026-10-30"
     ],
     "title": "OptScientist: Automated Discovery of Optimization Laws"
   },
@@ -3990,9 +4031,10 @@
       "econ.EM",
       "stat.AP"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.ME",
     "push_dates": [
-      "2026-10-23"
+      "2026-10-23",
+      "2026-10-30"
     ],
     "title": "Anytime-Valid Inference in Conjoint Experiments"
   },
@@ -4022,7 +4064,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-23"
+      "2026-10-23",
+      "2026-10-30"
     ],
     "title": "Demand Estimation for Rationally Inattentive Consumers"
   },
@@ -4088,6 +4131,19 @@
       "2026-10-27"
     ],
     "title": "Local Polynomial Estimation in Irregular Correlated Random Coefficient Panel Data Models"
+  },
+  "2610.33137": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "stat.AP",
+      "stat.CO"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-30"
+    ],
+    "title": "Smoothing splines with some discontinuities"
   },
   "2610.33254": {
     "categories": [
@@ -4189,6 +4245,17 @@
     ],
     "title": "Adequacy radii for stepped-wedge trials with time-varying effects"
   },
+  "2610.36093": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-30"
+    ],
+    "title": "Testing strong exogeneity in proxy SVARs with internal synthetic proxies"
+  },
   "2610.36176": {
     "categories": [
       "stat.ME",
@@ -4284,5 +4351,17 @@
       "2026-10-29"
     ],
     "title": "Contemporaneous Transmission Networks and Systemic Risk in European Banking"
+  },
+  "2610.37883": {
+    "categories": [
+      "stat.CO",
+      "cs.SI",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-30"
+    ],
+    "title": "fastC-GC and fastC-GC*: Efficient RCCP-Guided Graph Estimation for Time Series"
   }
 }
