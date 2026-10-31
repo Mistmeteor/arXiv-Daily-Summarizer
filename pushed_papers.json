@@ -2979,6 +2979,10 @@
     "title": "Price Stability in the European Union: A Systemic Approach Using Random Matrix Theory"
   },
   "2609.36280": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-01",
       "2026-10-09"
@@ -2986,6 +2990,10 @@
     "title": "Probabilistic Seasonality"
   },
   "2609.36445": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-01",
       "2026-10-08"
@@ -2993,6 +3001,11 @@
     "title": "Continuously Updating GMM in Linear IV Models: A Polynomial Approach"
   },
   "2609.36824": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-01",
       "2026-10-08"
@@ -3000,6 +3013,11 @@
     "title": "Testing for Unobserved Heterogeneity in Censored Duration Models: EM Approach"
   },
   "2609.37168": {
+    "categories": [
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-01",
       "2026-10-09"
@@ -3007,6 +3025,10 @@
     "title": "Are there asymmetries in euro area monetary policy transmission?"
   },
   "2609.37412": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-01",
       "2026-10-08"
@@ -3014,6 +3036,12 @@
     "title": "Debiased Inference for Bounding Wage Inequality with Many Controls"
   },
   "2609.37477": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-10-01",
       "2026-10-11"
@@ -4085,7 +4113,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-24"
+      "2026-10-24",
+      "2026-10-31"
     ],
     "title": "Testing for peer effects in short panels without identifying the network structure"
   },
@@ -4094,9 +4123,10 @@
       "stat.AP",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.AP",
     "push_dates": [
-      "2026-10-24"
+      "2026-10-24",
+      "2026-10-31"
     ],
     "title": "Causal inference in staggered adoption panels: The correct comparison set depends on your intervention"
   },
@@ -4363,5 +4393,88 @@
       "2026-10-30"
     ],
     "title": "fastC-GC and fastC-GC*: Efficient RCCP-Guided Graph Estimation for Time Series"
+  },
+  "2610.38529": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-31"
+    ],
+    "title": "Debiasing Functionals of Conditional Distributions"
+  },
+  "2610.38665": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-31"
+    ],
+    "title": "Quantile Methods in Large Panels with Fixed Effects"
+  },
+  "2610.38896": {
+    "categories": [
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-31"
+    ],
+    "title": "The Hidden Value of Soft Infrastructure for Urban Flood Adaptation"
+  },
+  "2610.38965": {
+    "categories": [
+      "econ.EM",
+      "math.ST",
+      "stat.ML"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-31"
+    ],
+    "title": "Orthogonal Inference for Conditional Z-Estimation without Cross-Fitting: A Distributional Nearest-Neighbor Approach"
+  },
+  "2610.39871": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-31"
+    ],
+    "title": "Threshold Regression with a Nearly Integrated Threshold Variable"
+  },
+  "2610.39995": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-31"
+    ],
+    "title": "How Different are Different Differences-in-Differences? A Large-Scale Meta-Analysis"
+  },
+  "2610.40047": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-31"
+    ],
+    "title": "Smooth Threshold GARCH: Quasi Maximum Likelihood Estimation and Empirical Evidence"
+  },
+  "2610.40582": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-10-31"
+    ],
+    "title": "Optimal Policy With Noisy Sufficient Statistics"
   }
 }
