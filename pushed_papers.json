@@ -3073,9 +3073,16 @@
     "title": "Improved KKT Complexity for First-Order Bilevel Optimization under Weak Lower-Level Convexity"
   },
   "2609.40156": {
+    "categories": [
+      "econ.EM",
+      "math.ST",
+      "stat.ML"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-02",
-      "2026-10-09"
+      "2026-10-09",
+      "2026-11-01"
     ],
     "title": "Partial identification with entropy regularized optimal transport"
   },
@@ -3836,7 +3843,8 @@
     ],
     "primary_category": "cs.LG",
     "push_dates": [
-      "2026-10-23"
+      "2026-10-23",
+      "2026-11-01"
     ],
     "title": "Graph-Regularized Synthetic Control for Stable Counterfactual Estimation under Donor Redundancy"
   },
@@ -3846,7 +3854,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-21"
+      "2026-10-21",
+      "2026-11-01"
     ],
     "title": "Nonparametric Dyadic Quantile Regression"
   },
@@ -3870,7 +3879,8 @@
     ],
     "primary_category": "math.ST",
     "push_dates": [
-      "2026-10-21"
+      "2026-10-21",
+      "2026-11-01"
     ],
     "title": "Efficient estimation of measures of functional dependence"
   },
@@ -3924,7 +3934,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-21"
+      "2026-10-21",
+      "2026-11-01"
     ],
     "title": "Deep-$π^*$: A Neural Network Estimate of Trend Inflation"
   },
@@ -3987,7 +3998,8 @@
     ],
     "primary_category": "math.ST",
     "push_dates": [
-      "2026-10-22"
+      "2026-10-22",
+      "2026-11-01"
     ],
     "title": "Central Limit Theorems for Optimal Transport Functionals"
   },
@@ -4022,7 +4034,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-22"
+      "2026-10-22",
+      "2026-11-01"
     ],
     "title": "Where Has the Foreign Signal Gone?"
   },
@@ -4072,7 +4085,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-23"
+      "2026-10-23",
+      "2026-11-01"
     ],
     "title": "Testing Common Causality of Covariates: Evidence from Private-Sector Ban-the-Box Policies"
   },
@@ -4082,7 +4096,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-23"
+      "2026-10-23",
+      "2026-11-01"
     ],
     "title": "Policy Learning with Network-Shaping Assignments"
   },
@@ -4103,7 +4118,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-24"
+      "2026-10-24",
+      "2026-11-01"
     ],
     "title": "Monetary Policy Forecast Errors and Inflation Compensation under Sovereign Stress in Brazil"
   },
