@@ -3049,6 +3049,11 @@
     "title": "Calibrated Order-Randomized Rosenblatt Tests"
   },
   "2609.38692": {
+    "categories": [
+      "math.ST",
+      "econ.EM"
+    ],
+    "primary_category": "math.ST",
     "push_dates": [
       "2026-10-03",
       "2026-10-11"
@@ -3056,6 +3061,12 @@
     "title": "Imputation is all you need: double robustness, semiparametric efficiency, and automatic covariate balance for estimating the average treatment effect"
   },
   "2609.38875": {
+    "categories": [
+      "econ.EM",
+      "stat.ME",
+      "stat.ML"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-03",
       "2026-10-10"
@@ -3087,9 +3098,14 @@
     "title": "Partial identification with entropy regularized optimal transport"
   },
   "2610.00581": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-03",
-      "2026-10-10"
+      "2026-10-10",
+      "2026-11-02"
     ],
     "title": "The Anatomy of Commodity Risk: Micro, Market, and Economy-Wide Sources"
   },
@@ -3137,6 +3153,10 @@
     "title": "P-curve: An improved solution for the single-facility location problem in two regions with $\\ell_{p}$- and $\\ell_{q}$-norms"
   },
   "2610.01464": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-03",
       "2026-10-10"
@@ -3144,13 +3164,24 @@
     "title": "Inference after data-driven control-unit selection in difference-in-differences with estimated covariance"
   },
   "2610.01465": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-03",
-      "2026-10-10"
+      "2026-10-10",
+      "2026-11-02"
     ],
     "title": "A distributional modelling approach with application to electricity price forecasting"
   },
   "2610.01654": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-10-03",
       "2026-10-10"
@@ -3168,9 +3199,15 @@
     "title": "Recognizing Signomial Convexity is Hard"
   },
   "2610.01935": {
+    "categories": [
+      "econ.EM",
+      "stat.ML"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-03",
-      "2026-10-10"
+      "2026-10-10",
+      "2026-11-02"
     ],
     "title": "Pragmatic DML with AI-Learned Representations"
   },
@@ -3903,7 +3940,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-21"
+      "2026-10-21",
+      "2026-11-02"
     ],
     "title": "Linear Regression with Common Unobserved Heterogeneity"
   },
@@ -3914,7 +3952,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-21"
+      "2026-10-21",
+      "2026-11-02"
     ],
     "title": "A LATE-Targeting Experimental Design for Multi-Arm RCTs"
   },
@@ -3924,7 +3963,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-21"
+      "2026-10-21",
+      "2026-11-02"
     ],
     "title": "Tuning-Free Tests for Treatment Effect Heterogeneity via Expectile Processes"
   },
@@ -3945,7 +3985,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-21"
+      "2026-10-21",
+      "2026-11-02"
     ],
     "title": "Almost Uniform Bias Correction for Persistent Panel Local Projections"
   },
@@ -3956,7 +3997,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-21"
+      "2026-10-21",
+      "2026-11-02"
     ],
     "title": "Synthetic Control: An Exact Geometric Formulation"
   },
@@ -3966,7 +4008,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-22"
+      "2026-10-22",
+      "2026-11-02"
     ],
     "title": "Is sophistication a panacea? The learning capacity of random feature models for financial forecasting"
   },
@@ -3987,7 +4030,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-22"
+      "2026-10-22",
+      "2026-11-02"
     ],
     "title": "Evidence-Based Policy Choice in Macroeconomics"
   },
