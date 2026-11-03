@@ -4196,7 +4196,7 @@
       "econ.EM",
       "math.ST"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-10-27"
     ],
@@ -4218,7 +4218,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-27"
+      "2026-10-27",
+      "2026-11-03"
     ],
     "title": "Local Polynomial Estimation in Irregular Correlated Random Coefficient Panel Data Models"
   },
@@ -4536,5 +4537,99 @@
       "2026-10-31"
     ],
     "title": "Optimal Policy With Noisy Sufficient Statistics"
+  },
+  "2610.41171": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-03"
+    ],
+    "title": "Convolution Skew-$t$ Distributions"
+  },
+  "2610.41428": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-03"
+    ],
+    "title": "xtlp: A new Stata command for panel local projection"
+  },
+  "2610.41722": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-03"
+    ],
+    "title": "Covariance Identification from Regression Residuals"
+  },
+  "2610.41881": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-03"
+    ],
+    "title": "Evaluating Maternity Leave Reforms When RD Fails"
+  },
+  "2610.41963": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-03"
+    ],
+    "title": "Zero Crossings on the Accuracy-Smoothness Frontier: Maximal Monotone and Minimal Inflection Non Stationary Predictors"
+  },
+  "2610.42052": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-03"
+    ],
+    "title": "Valid GMM Inference with Non-parametrically Generated Discrete Type"
+  },
+  "2611.00246": {
+    "categories": [
+      "math.OC",
+      "math.NA",
+      "math.SP"
+    ],
+    "primary_category": "math.OC",
+    "push_dates": [
+      "2026-11-03"
+    ],
+    "title": "A Preconditioned Semismooth Newton Method for Box-Constrained Elliptic Optimal Control Problems with Random Coefficients"
+  },
+  "2611.00338": {
+    "categories": [
+      "q-fin.TR",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-03"
+    ],
+    "title": "Reading the Count: Prediction Markets and Brazil's 2026 Presidential Election"
+  },
+  "2611.00348": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-03"
+    ],
+    "title": "Robustness of Median-based Splitting Rules for Causal Trees"
   }
 }
