@@ -3270,6 +3270,10 @@
     "title": "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning"
   },
   "2610.02530": {
+    "categories": [
+      "math.OC"
+    ],
+    "primary_category": "math.OC",
     "push_dates": [
       "2026-10-06",
       "2026-10-13"
@@ -3277,6 +3281,10 @@
     "title": "Recursive Stochastic Linear-Quadratic Control with Indefinite Weights for Jump-Diffusion Systems with Random Coefficients"
   },
   "2610.02938": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-06",
       "2026-10-13"
@@ -3297,6 +3305,11 @@
     "title": "Cross-Fitting Under Nonregularity: Normality and Inference via Locality"
   },
   "2610.03895": {
+    "categories": [
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-06",
       "2026-10-13"
@@ -3327,6 +3340,10 @@
     "title": "Bootstrap Inference with a Randomly Assigned Regressor: Covariance Filtering and the Limits of Marginal Resampling"
   },
   "2610.04223": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-06",
       "2026-10-13"
@@ -4321,7 +4338,8 @@
     ],
     "primary_category": "stat.ML",
     "push_dates": [
-      "2026-10-28"
+      "2026-10-28",
+      "2026-11-05"
     ],
     "title": "Model Selection for Off-Policy Evaluation via Pairwise Bellman Validation"
   },
@@ -4353,7 +4371,7 @@
       "stat.ME",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-10-29"
     ],
@@ -4397,7 +4415,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-29"
+      "2026-10-29",
+      "2026-11-05"
     ],
     "title": "Time-Varying Quantile VAR Models: Estimation and Inference"
   },
@@ -4407,7 +4426,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-29"
+      "2026-10-29",
+      "2026-11-05"
     ],
     "title": "A Semiparametric Real-Time GARCH Model with Nonstationary Variance"
   },
@@ -4429,7 +4449,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-29"
+      "2026-10-29",
+      "2026-11-05"
     ],
     "title": "Personal preference or system role? Battery swapping among UK electric vehicle users"
   },
@@ -4438,9 +4459,10 @@
       "q-fin.ST",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "q-fin.ST",
     "push_dates": [
-      "2026-10-29"
+      "2026-10-29",
+      "2026-11-05"
     ],
     "title": "Contemporaneous Transmission Networks and Systemic Risk in European Banking"
   },
@@ -4717,5 +4739,52 @@
       "2026-11-04"
     ],
     "title": "Unconfoundedness as an Information Constraint"
+  },
+  "2611.04000": {
+    "categories": [
+      "cs.CR",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-05"
+    ],
+    "title": "Revisiting Elliptic++ for Bitcoin Forensics: Feature Reconstruction and Leakage-Resistant Evaluation"
+  },
+  "2611.04040": {
+    "categories": [
+      "q-fin.ST",
+      "econ.EM",
+      "stat.ML"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-05"
+    ],
+    "title": "PanelGP: A Probabilistic Factor Model for Asset-Return Panels"
+  },
+  "2611.04366": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-05"
+    ],
+    "title": "When Listwise Deletion Works: Causal Diagrams and Complete-Case Regression"
+  },
+  "2611.05227": {
+    "categories": [
+      "econ.EM",
+      "cs.IT",
+      "cs.LG"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-05"
+    ],
+    "title": "Regret-based Characterization, Information Limits, and the Sample Complexity of Auditing Adaptive Policies"
   }
 }
