@@ -148,17 +148,24 @@ def filter_papers(papers, history, today=None):
 
     A paper is kept if today >= its next-allowed-push date, and skipped if
     either the schedule cap is reached or its next window hasn't opened yet.
+    Within a single batch, a paper_key is only kept once — duplicates from
+    different arXiv versions or overlapping fetch sources are dropped.
     """
     if today is None:
         today = date.today()
     kept, skipped = [], []
+    kept_keys = set()
     for paper in papers:
         key = paper_key(paper.get('entry_id'))
+        title = (paper.get('title') or '')[:60]
+        if key and key in kept_keys:
+            skipped.append(paper)
+            print(f"  ⏩ Skip (duplicate within this batch, key={key}): {title}...")
+            continue
         entry = history.get(key) or {}
         dates = _sorted_push_dates(entry)
         remember_categories(entry, paper)
         next_date = _next_allowed_date(dates, push_cap(entry))
-        title = (paper.get('title') or '')[:60]
         if next_date is None:
             skipped.append(paper)
             last = dates[-1].isoformat() if dates else '?'
@@ -169,6 +176,8 @@ def filter_papers(papers, history, today=None):
                   f"{next_date.isoformat()}): {title}...")
         else:
             kept.append(paper)
+            if key:
+                kept_keys.add(key)
     return kept, skipped
 
 

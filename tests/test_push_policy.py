@@ -72,6 +72,20 @@ class PushPolicyTests(unittest.TestCase):
         with patch.object(push_history, 'TOTAL_PUSHES_CAP', 5):
             self.assertEqual(push_history.push_cap(self.paper), 3)
 
+    def test_duplicate_within_batch_is_deduped(self):
+        # 同一 run 内，不同 arXiv version / 重复 fetch 命中同一 paper_key 时，
+        # history 在 filter 循环里还没被 update，必须靠批内去重挡住，不能
+        # 让两条同 key 的 paper 都进推送。
+        v1 = {**self.paper, 'entry_id': 'https://arxiv.org/abs/2609.00001v1'}
+        v2 = {**self.paper, 'entry_id': 'https://arxiv.org/abs/2609.00001v2'}
+        kept, skipped = push_history.filter_papers([v1, v2], {}, self.start)
+        self.assertEqual(len(kept), 1)
+        self.assertEqual(len(skipped), 1)
+        self.assertEqual(
+            push_history.paper_key(kept[0]['entry_id']),
+            push_history.paper_key(skipped[0]['entry_id']),
+        )
+
 
 class ChinesePromptTests(unittest.TestCase):
     def test_both_summary_styles_request_chinese_prose(self):
