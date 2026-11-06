@@ -4249,7 +4249,8 @@
     ],
     "primary_category": "stat.ME",
     "push_dates": [
-      "2026-10-30"
+      "2026-10-30",
+      "2026-11-06"
     ],
     "title": "Smoothing splines with some discontinuities"
   },
@@ -4260,7 +4261,8 @@
     ],
     "primary_category": "stat.ME",
     "push_dates": [
-      "2026-10-28"
+      "2026-10-28",
+      "2026-11-06"
     ],
     "title": "Informative inference on the average treatment effect with instrumental variables"
   },
@@ -4373,7 +4375,8 @@
     ],
     "primary_category": "stat.ME",
     "push_dates": [
-      "2026-10-29"
+      "2026-10-29",
+      "2026-11-06"
     ],
     "title": "Probabilistic Causal Panel Analysis"
   },
@@ -4439,7 +4442,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-29"
+      "2026-10-29",
+      "2026-11-06"
     ],
     "title": "Identifying and disentangling direct and spillover effects using multiple pre-treatment periods"
   },
@@ -4881,5 +4885,71 @@
       "2026-11-06"
     ],
     "title": "Regression with Many Generated Controls"
+  },
+  "2611.07240": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-06"
+    ],
+    "title": "Nonparametric Subgraph Regression"
+  },
+  "2611.07249": {
+    "categories": [
+      "econ.EM",
+      "stat.ML"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-06"
+    ],
+    "title": "Double Machine Learning for Panel Data: Identification, Specification, and a Bank Regulation Effect"
+  },
+  "2611.07698": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-06"
+    ],
+    "title": "Willingness-to-pay space and preference space: a unified treatment of equivalence, heterogeneity and interpretation"
+  },
+  "2611.07774": {
+    "categories": [
+      "econ.EM",
+      "econ.TH",
+      "stat.AP"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-06"
+    ],
+    "title": "Unobserved Consideration and Consumer Welfare"
+  },
+  "2611.07787": {
+    "categories": [
+      "econ.EM",
+      "econ.TH"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-06"
+    ],
+    "title": "Discrete Choice under Congestion: Equilibrium and Welfare"
+  },
+  "2611.08160": {
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-06"
+    ],
+    "title": "Patch Attention Wisely: Understanding Patch Length in Attention-Based Forecasting"
   }
 }

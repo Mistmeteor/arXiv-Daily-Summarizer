@@ -2465,7 +2465,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.29148v1",
     "primary_category": "econ.EM",
     "published": "2026-10-21T03:33:16+00:00",
-    "quality_score": -1.9,
+    "quality_score": -2.2,
     "title": "Testing Common Causality of Covariates: Evidence from Private-Sector Ban-the-Box Policies"
   },
   "2610.29221": {
@@ -2479,7 +2479,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.29221v1",
     "primary_category": "econ.EM",
     "published": "2026-10-21T05:27:11+00:00",
-    "quality_score": -1.9,
+    "quality_score": -2.2,
     "title": "Policy Learning with Network-Shaping Assignments"
   },
   "2610.29600": {
@@ -2640,7 +2640,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.33461v1",
     "primary_category": "econ.EM",
     "published": "2026-10-24T05:33:32+00:00",
-    "quality_score": -1.5,
+    "quality_score": -1.7999999999999998,
     "title": "Approximate Quantile Factor Models"
   },
   "2610.33660": {
@@ -2712,7 +2712,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.34818v1",
     "primary_category": "econ.EM",
     "published": "2026-10-26T04:02:59+00:00",
-    "quality_score": -0.3999999999999999,
+    "quality_score": -0.6999999999999997,
     "title": "Cordon Tolls and Urban Traffic Volumes: Evidence from NYC's 2025 Congestion Relief Zone"
   },
   "2610.35666": {
@@ -2877,7 +2877,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.36634v2",
     "primary_category": "econ.EM",
     "published": "2026-10-27T04:47:10+00:00",
-    "quality_score": 0.8999999999999999,
+    "quality_score": 0.6000000000000001,
     "title": "Time-Varying Quantile VAR Models: Estimation and Inference"
   },
   "2610.36739": {
@@ -2891,7 +2891,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.36739v1",
     "primary_category": "econ.EM",
     "published": "2026-10-27T06:55:10+00:00",
-    "quality_score": 0.8999999999999999,
+    "quality_score": 0.6000000000000001,
     "title": "A Semiparametric Real-Time GARCH Model with Nonstationary Variance"
   },
   "2610.37049": {
@@ -3081,7 +3081,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.40719v1",
     "primary_category": "econ.EM",
     "published": "2026-10-29T03:59:13+00:00",
-    "quality_score": 0.5,
+    "quality_score": 0.20000000000000018,
     "title": "Weak Identification in Bunching Designs: Rare Events and Counterfactual Uncertainty"
   },
   "2610.41171": {
@@ -3095,7 +3095,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.41171v1",
     "primary_category": "econ.EM",
     "published": "2026-10-30T02:48:13+00:00",
-    "quality_score": 1.3,
+    "quality_score": 1.0,
     "title": "Convolution Skew-$t$ Distributions"
   },
   "2610.41294": {
@@ -3109,7 +3109,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.41294v1",
     "primary_category": "econ.EM",
     "published": "2026-10-30T05:57:03+00:00",
-    "quality_score": 0.8,
+    "quality_score": 0.5,
     "title": "The Double Diagonal Estimator: Reducing Bias in Two-Sided Marketplace Experiments"
   },
   "2610.41361": {
@@ -3238,7 +3238,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.00677v1",
     "primary_category": "econ.EM",
     "published": "2026-10-31T06:16:05+00:00",
-    "quality_score": 2.1,
+    "quality_score": 1.8,
     "title": "When Does $N$ Buy Precision? Heterogeneous Responses to Aggregate Shocks in Micro Panels"
   },
   "2611.00705": {
@@ -3255,7 +3255,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.00705v1",
     "primary_category": "econ.EM",
     "published": "2026-10-31T06:59:30+00:00",
-    "quality_score": 1.1,
+    "quality_score": 0.8,
     "title": "Estimating Average Treatment Effects with Projected Instrumental Variables"
   },
   "2611.01799": {
@@ -3378,7 +3378,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.02443v1",
     "primary_category": "econ.EM",
     "published": "2026-11-02T03:08:25+00:00",
-    "quality_score": 1.7,
+    "quality_score": 1.4,
     "title": "Selective Randomization Inference for Interference"
   },
   "2611.02716": {
@@ -3513,7 +3513,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.04366v1",
     "primary_category": "econ.EM",
     "published": "2026-11-03T05:52:58+00:00",
-    "quality_score": 2.5,
+    "quality_score": 1.7,
     "title": "When Listwise Deletion Works: Causal Diagrams and Complete-Case Regression"
   },
   "2611.05227": {
@@ -3661,5 +3661,95 @@
     "published": "2026-11-04T18:10:56+00:00",
     "quality_score": 3.5,
     "title": "Regression with Many Generated Controls"
+  },
+  "2611.07240": {
+    "abstract": "Estimation and inference on a single large network are challenging due to dependence among observations. This paper studies nonparametric regression for outcomes defined on groups of $p$ agents, such as the indicator that three agents in a network form a triangle. Outcomes on groups that share an agent may be dependent, while outcomes on disjoint groups are independent. I call this problem subgraph regression; it nests dyadic regression as the special case $p=2$. Its leading application concerns subgraphs of a network, but the methods apply to any outcome defined on groups of agents. I establish a variance bound, uniform convergence rates in probability, and pointwise asymptotic normality for the subgraph analogue of the Nadaraya-Watson kernel regression estimator. The setting differs from regression with i.i.d. data in two ways: (i) the number of observations, of order $N^p$, overstates the effective sample size, which is $N$, and (ii) the rate of convergence depends on the dimension of the covariates of a single agent rather than of all $p$ agents, which mitigates the curse of dimensionality.",
+    "authors": "Wenxuan Ding",
+    "categories": [
+      "econ.EM"
+    ],
+    "entry_id": "http://arxiv.org/abs/2611.07240v1",
+    "first_seen_at": "2026-11-06",
+    "pdf_url": "https://arxiv.org/pdf/2611.07240v1",
+    "primary_category": "econ.EM",
+    "published": "2026-11-04T23:43:52+00:00",
+    "quality_score": 3.0,
+    "title": "Nonparametric Subgraph Regression"
+  },
+  "2611.07249": {
+    "abstract": "This paper examines robustness and causal interpretation of panel estimates using double/debiased machine learning. The prototype treatment setup is the 2018 US banking regulation. Under common treatment timing, we characterize identification and nuisance restrictions and derive exact bank-level representations of specified \"within\" and \"first-difference\" scores. Simulations assess panel model transformation-induced specification bias and inference under weaker overlap. Empirically, estimates vary with asset-size classification and prior growth. Prior-growth adjustment reduces overlap-weighted estimates across four Machine Learners (ML); doubly robust estimates depend on the fitted propensity and concentrated weights. Both bank groups received relief, so we estimate differential exposure effects. The findings highlight specification issues and the relation between functional-form robustness and causal identification.",
+    "authors": "Ali Habibnia, Esfandiar Maasoumi, Gaurav Shah",
+    "categories": [
+      "econ.EM",
+      "stat.ML"
+    ],
+    "entry_id": "http://arxiv.org/abs/2611.07249v1",
+    "first_seen_at": "2026-11-06",
+    "pdf_url": "https://arxiv.org/pdf/2611.07249v1",
+    "primary_category": "econ.EM",
+    "published": "2026-11-04T23:57:32+00:00",
+    "quality_score": 4.5,
+    "title": "Double Machine Learning for Panel Data: Identification, Specification, and a Bank Regulation Effect"
+  },
+  "2611.07698": {
+    "abstract": "A growing number of choice modelling studies estimate their models \"in willingness-to-pay (WTP) space\", yet often treat this as a different model that fits better (or worse) than \"preference space\", and misread what its parameters represent. This note brings together and makes precise insights that have mostly been stated only in scattered places, organising them around a single condition for two specifications to be the same model. WTP space is a reparameterisation, and with non-random coefficients the two spaces give identical likelihoods, WTP estimates and standard errors. With deterministic heterogeneity in cost sensitivity, or non-linearity, WTP must still be computed as a ratio of partial derivatives, although a simple normalisation recovers a directly estimated WTP at a reference point. With random heterogeneity, latent class models are equivalent in the two spaces, while other mixtures are equivalent only when the implied distributions match, as with full-covariance lognormals, and independence is not a neutral assumption.",
+    "authors": "Stephane Hess",
+    "categories": [
+      "econ.EM"
+    ],
+    "entry_id": "http://arxiv.org/abs/2611.07698v1",
+    "first_seen_at": "2026-11-06",
+    "pdf_url": "https://arxiv.org/pdf/2611.07698v1",
+    "primary_category": "econ.EM",
+    "published": "2026-11-05T09:22:46+00:00",
+    "quality_score": 5.0,
+    "title": "Willingness-to-pay space and preference space: a unified treatment of equivalence, heterogeneity and interpretation"
+  },
+  "2611.07774": {
+    "abstract": "Can welfare effects of price change be identified when consumers' consideration sets are heterogeneous and unobserved? We establish that the welfare distribution is the same functional of structural choice probabilities under stable but limited consideration as under full consideration. The result permits unrestricted income-effects, preference heterogeneity, and dependence between preferences and consideration. Within this class, limited consideration admits a full-consideration representation preserving choice-probabilities and money-metric compensation: consideration/preferences can remain unidentified while demand and welfare are identified. When consideration sets contract as prices rise, the welfare distribution can be bounded using demand and a bound on choice-set attrition.",
+    "authors": "Debopam Bhattacharya, Ryan J. Martin",
+    "categories": [
+      "econ.EM",
+      "econ.TH",
+      "stat.AP"
+    ],
+    "entry_id": "http://arxiv.org/abs/2611.07774v1",
+    "first_seen_at": "2026-11-06",
+    "pdf_url": "https://arxiv.org/pdf/2611.07774v1",
+    "primary_category": "econ.EM",
+    "published": "2026-11-05T10:12:26+00:00",
+    "quality_score": 5.0,
+    "title": "Unobserved Consideration and Consumer Welfare"
+  },
+  "2611.07787": {
+    "abstract": "In many choice settings, a rise in aggregate demand for an option lowers an individual's payoff from choosing it. Driving becomes less attractive than taking a train when more commuters drive, clogging the highway. In such cases, a targeted intervention that mitigates the externality at the congested option can divert it elsewhere and also undermine preference based sorting, making overall welfare effects theoretically ambiguous. We develop an empirical framework to analyze such scenarios of endogenous congestion. We show that in these settings, equilibrium exists and is unique without restrictions on functional-form of utilities or dimension/distribution of preference heterogeneity, and even when congestion at one option affects payoffs from other choices. Under a linear-index structure, micro-data on choice enables semiparametric identification of utility contrasts and welfare effects of some, but not all, interventions. We apply the framework to Cambridge undergraduate admissions, where candidates apply through one constituent college, and admission probability depends on application numbers relative to capacity in that college. Using administrative micro-data on 25,325 applicants, we calculate welfare under two counterfactuals: (i) centralized random allocation and (ii) higher rent at popular colleges. Random allocation reduces welfare for everyone: it removes individual choice without improving admission chances since, by design, lower congestion at a college exactly counterbalances the lower probability of being allocated there. Targeted rent increase produces both gains and losses, with median loss for men and median gain for women. This exercise shows how identified preferences and equilibrium feedback jointly determine welfare when choices entail externalities.",
+    "authors": "Debopam Bhattacharya, Matias Makiranta",
+    "categories": [
+      "econ.EM",
+      "econ.TH"
+    ],
+    "entry_id": "http://arxiv.org/abs/2611.07787v1",
+    "first_seen_at": "2026-11-06",
+    "pdf_url": "https://arxiv.org/pdf/2611.07787v1",
+    "primary_category": "econ.EM",
+    "published": "2026-11-05T10:27:17+00:00",
+    "quality_score": 5.0,
+    "title": "Discrete Choice under Congestion: Equilibrium and Welfare"
+  },
+  "2611.08160": {
+    "abstract": "Attention-based time series forecasters commonly group consecutive observations into patches. Patch length is known to have a substantial impact on forecasting performance, yet its selection remains largely empirical. We develop a theoretical framework that explains why patch length matters for forecasting accuracy and provides a principled basis for its selection. For linear state-space models, we derive an exact factorization of the forecasting coefficient matrix that separates forecast dynamics from filtering dynamics. We show that dominance of a single forecast component at long horizons does not generally imply a rank-one representation. This explains why longer horizons alone need not reduce representational complexity. We combine the factorization with estimation bounds to develop a patch-selection criterion that balances representation and estimation errors under temporal dependence. Our analysis establishes conditions under which balanced patching is justified and clarifies how predictive structure, head count, training sample size, and long-run dependence enter the selection criterion.",
+    "authors": "Junyu Chen, Likai Chen, Weining Wang",
+    "categories": [
+      "stat.ML",
+      "cs.LG",
+      "econ.EM"
+    ],
+    "entry_id": "http://arxiv.org/abs/2611.08160v1",
+    "first_seen_at": "2026-11-06",
+    "pdf_url": "https://arxiv.org/pdf/2611.08160v1",
+    "primary_category": "econ.EM",
+    "published": "2026-11-05T15:18:11+00:00",
+    "quality_score": 6.5,
+    "title": "Patch Attention Wisely: Understanding Patch Length in Attention-Based Forecasting"
   }
 }
