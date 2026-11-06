@@ -39,6 +39,8 @@ jobs:
       # 4. Run the paper digest script
       - name: 🚀 Run Paper Digest Script
         env:
+          # Primary LLM provider; falls back to DeepSeek if GLM fails on a paper.
+          GLM_API_KEY: ${{ secrets.GLM_API_KEY }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           PUSHPLUS_TOKEN: ${{ secrets.PUSHPLUS_TOKEN }}
           NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}

@@ -127,6 +127,24 @@ _DEEPSEEK_USAGE_TOTAL = {
     'calls': 0,
 }
 
+# GLM (Zhipu AI) API configuration. Primary provider; DeepSeek is the
+# fallback. Set GLM_API_KEY to enable. Docs:
+#   models   — https://docs.bigmodel.cn/cn/guide/models
+#   pricing  — https://docs.bigmodel.cn/cn/guide/start/pricing
+GLM_API_KEY = os.environ.get('GLM_API_KEY')
+GLM_BASE_URL = 'https://open.bigmodel.cn/api/paas/v4/'
+GLM_MODEL = 'glm-5.3-flash'
+
+# GLM pricing (CNY per 1M tokens). Update if Zhipu changes its price list.
+GLM_PRICE_INPUT_PER_1M = 0.6
+GLM_PRICE_OUTPUT_PER_1M = 1.4
+
+_GLM_USAGE_TOTAL = {
+    'input': 0,
+    'output': 0,
+    'calls': 0,
+}
+
 # PushPlus (WeChat push) configuration. Replaces SMTP because QQ Mail
 # blocks GitHub Actions IPs even on 465/SSL.
 PUSHPLUS_TOKEN = os.environ.get('PUSHPLUS_TOKEN')
@@ -932,84 +950,98 @@ Paper abstract:
     # Determine which languages to generate
     langs_to_generate = ['zh', 'en'] if language == 'both' else [language]
     
-    try:
-        client = OpenAI(
-            base_url=DEEPSEEK_BASE_URL,
-            api_key=DEEPSEEK_API_KEY,
-        )
-        
-        for lang in langs_to_generate:
-            print(f"   Generating {'Chinese' if lang == 'zh' else 'English'} summary...")
-            
-            response = client.chat.completions.create(
-                model=DEEPSEEK_MODEL,
-                messages=[
-                    {
-                        'role': 'user',
-                        'content': prompts[lang]
-                    }
-                ],
-                stream=True,
-                stream_options={"include_usage": True},
-                reasoning_effort="high",
-                extra_body={"thinking": {"type": "enabled"}},
-            )
+    # Provider priority: GLM first (if configured), DeepSeek as fallback.
+    providers = []
+    if GLM_API_KEY:
+        providers.append('glm')
+    if DEEPSEEK_API_KEY:
+        providers.append('deepseek')
 
-            # Collect streaming response
-            summary = ""
-            done_reasoning = False
-            for chunk in response:
-                # Final chunk when stream_options.include_usage=True carries
-                # only `.usage` (empty choices). Grab it before the choices
-                # guard below drops this chunk.
-                chunk_usage = getattr(chunk, 'usage', None)
-                if chunk_usage:
-                    hit = getattr(chunk_usage, 'prompt_cache_hit_tokens', None)
-                    miss = getattr(chunk_usage, 'prompt_cache_miss_tokens', None)
-                    if hit is None and miss is None:
-                        # Model didn't report the cache split; charge all as miss.
-                        miss = getattr(chunk_usage, 'prompt_tokens', 0) or 0
-                        hit = 0
-                    _DEEPSEEK_USAGE_TOTAL['cache_hit'] += hit or 0
-                    _DEEPSEEK_USAGE_TOTAL['cache_miss'] += miss or 0
-                    _DEEPSEEK_USAGE_TOTAL['completion'] += (
-                        getattr(chunk_usage, 'completion_tokens', 0) or 0
-                    )
-                    _DEEPSEEK_USAGE_TOTAL['calls'] += 1
-                if not chunk.choices:
-                    continue
-                # Thinking mode is enabled above (reasoning_effort=high +
-                # thinking.type=enabled), so chunks may carry reasoning_content
-                # first, then content. We drop reasoning and keep only content.
-                reasoning_chunk = getattr(chunk.choices[0].delta, 'reasoning_content', None) or ''
-                answer_chunk = chunk.choices[0].delta.content or ''
+    last_error = None
+    for provider in providers:
+        try:
+            if provider == 'glm':
+                client = OpenAI(base_url=GLM_BASE_URL, api_key=GLM_API_KEY)
+                model = GLM_MODEL
+                extra_kwargs = {}
+            else:
+                client = OpenAI(base_url=DEEPSEEK_BASE_URL, api_key=DEEPSEEK_API_KEY)
+                model = DEEPSEEK_MODEL
+                extra_kwargs = {
+                    'reasoning_effort': 'high',
+                    'extra_body': {'thinking': {'type': 'enabled'}},
+                }
 
-                if reasoning_chunk:
-                    continue  # Skip reasoning process
-                elif answer_chunk:
-                    if not done_reasoning:
-                        done_reasoning = True
-                    summary += answer_chunk
-            
-            summaries[lang] = strip_markdown(summary.strip())
-            print(f"   ✅ {'Chinese' if lang == 'zh' else 'English'} summary completed")
-        
-        # Return format based on language mode
-        if language == 'both':
-            return summaries
-        else:
-            return summaries[language]
-    
-    except Exception as e:
-        print(f"   ❌ AI summary generation failed: {str(e)}")
-        error_msg = {
-            'zh': "摘要生成失败，请直接查看原文。",
-            'en': "Summary generation failed. Please read the original paper."
-        }
-        if language == 'both':
-            return error_msg
-        else:
-            return error_msg.get(language, error_msg['en'])
+            for lang in langs_to_generate:
+                print(f"   Generating {'Chinese' if lang == 'zh' else 'English'} summary via {provider.upper()}...")
+
+                response = client.chat.completions.create(
+                    model=model,
+                    messages=[{'role': 'user', 'content': prompts[lang]}],
+                    stream=True,
+                    stream_options={"include_usage": True},
+                    **extra_kwargs,
+                )
+
+                summary = ""
+                for chunk in response:
+                    # Final chunk carries only .usage (empty choices); grab it first.
+                    chunk_usage = getattr(chunk, 'usage', None)
+                    if chunk_usage:
+                        if provider == 'glm':
+                            _GLM_USAGE_TOTAL['input'] += getattr(chunk_usage, 'prompt_tokens', 0) or 0
+                            _GLM_USAGE_TOTAL['output'] += getattr(chunk_usage, 'completion_tokens', 0) or 0
+                            _GLM_USAGE_TOTAL['calls'] += 1
+                        else:
+                            hit = getattr(chunk_usage, 'prompt_cache_hit_tokens', None)
+                            miss = getattr(chunk_usage, 'prompt_cache_miss_tokens', None)
+                            if hit is None and miss is None:
+                                miss = getattr(chunk_usage, 'prompt_tokens', 0) or 0
+                                hit = 0
+                            _DEEPSEEK_USAGE_TOTAL['cache_hit'] += hit or 0
+                            _DEEPSEEK_USAGE_TOTAL['cache_miss'] += miss or 0
+                            _DEEPSEEK_USAGE_TOTAL['completion'] += (
+                                getattr(chunk_usage, 'completion_tokens', 0) or 0
+                            )
+                            _DEEPSEEK_USAGE_TOTAL['calls'] += 1
+                    if not chunk.choices:
+                        continue
+                    # DeepSeek with thinking mode streams reasoning_content before
+                    # content. GLM-5.3-Flash doesn't emit reasoning_content but the
+                    # getattr() is safe either way — we just skip it when present.
+                    reasoning_chunk = getattr(chunk.choices[0].delta, 'reasoning_content', None) or ''
+                    answer_chunk = chunk.choices[0].delta.content or ''
+                    if reasoning_chunk:
+                        continue
+                    elif answer_chunk:
+                        summary += answer_chunk
+
+                summaries[lang] = strip_markdown(summary.strip())
+                print(f"   ✅ {'Chinese' if lang == 'zh' else 'English'} summary completed via {provider.upper()}")
+
+            # All langs succeeded with this provider.
+            if language == 'both':
+                return summaries
+            else:
+                return summaries[language]
+
+        except Exception as e:
+            last_error = e
+            print(f"   ⚠️  {provider.upper()} failed: {e}")
+            if provider != providers[-1]:
+                print(f"   🔄 Falling back to next provider...")
+            summaries = {}  # Reset so partial success isn't returned
+            continue
+
+    print(f"   ❌ AI summary generation failed on all providers. Last error: {last_error}")
+    error_msg = {
+        'zh': "摘要生成失败，请直接查看原文。",
+        'en': "Summary generation failed. Please read the original paper."
+    }
+    if language == 'both':
+        return error_msg
+    else:
+        return error_msg.get(language, error_msg['en'])
 
 
 def generate_date_notice(date_stats, papers, language='zh'):
@@ -1427,28 +1459,51 @@ def compute_deepseek_cost_cny(usage):
     return hit + miss + out
 
 
-def render_cost_footer(usage, cost_cny, balance_cny):
+def compute_glm_cost_cny(usage):
+    """Convert accumulated GLM token counts to CNY."""
+    inp = usage.get('input', 0) / 1_000_000 * GLM_PRICE_INPUT_PER_1M
+    out = usage.get('output', 0) / 1_000_000 * GLM_PRICE_OUTPUT_PER_1M
+    return inp + out
+
+
+def render_cost_footer(ds_usage, ds_cost, balance_cny, glm_usage=None, glm_cost=0.0):
     """Inline-styled footer appended to the PushPlus HTML digest.
 
-    Mirrors the inline-style convention of generate_pushplus_content since
-    PushPlus's sanitizer rejects <style> blocks.
+    Shows a line per provider that actually got called. DeepSeek line always
+    renders (keeps the account balance visible); GLM line only renders when
+    GLM did at least one call in this run.
     """
-    prompt_total = usage.get('cache_hit', 0) + usage.get('cache_miss', 0)
-    hit_rate = (usage.get('cache_hit', 0) / prompt_total * 100) if prompt_total else 0
+    prompt_total = ds_usage.get('cache_hit', 0) + ds_usage.get('cache_miss', 0)
+    hit_rate = (ds_usage.get('cache_hit', 0) / prompt_total * 100) if prompt_total else 0
     balance_html = (
         f'¥{balance_cny:.2f}' if balance_cny is not None
         else '<span style="color:#c62828;">查询失败</span>'
     )
+
+    glm_line = ''
+    if glm_usage and glm_usage.get('calls', 0):
+        glm_line = (
+            f'🤖 GLM 花费：¥{glm_cost:.4f} '
+            f'<span style="color:#888;font-size:14px;">'
+            f'（input {glm_usage.get("input", 0):,} tok · '
+            f'output {glm_usage.get("output", 0):,} tok · '
+            f'{glm_usage.get("calls", 0)} 次调用）</span><br>'
+        )
+
+    ds_line = (
+        f'💰 DeepSeek 花费：¥{ds_cost:.4f} '
+        f'<span style="color:#888;font-size:14px;">'
+        f'（prompt {prompt_total:,} tok · 缓存命中 {hit_rate:.0f}% · '
+        f'completion {ds_usage.get("completion", 0):,} tok · '
+        f'{ds_usage.get("calls", 0)} 次调用）</span><br>'
+    )
+
     return (
         '<div style="margin:20px 0 0;padding:12px;background:#fff8e1;'
         'border-left:3px solid #ffb300;border-radius:4px;'
         'color:#555;font-size:15px;line-height:1.7;">'
-        f'💰 本次花费：¥{cost_cny:.4f} '
-        f'<span style="color:#888;font-size:14px;">'
-        f'（prompt {prompt_total:,} tok · 缓存命中 {hit_rate:.0f}% · '
-        f'completion {usage.get("completion", 0):,} tok · '
-        f'{usage.get("calls", 0)} 次调用）</span><br>'
-        f'💳 账户余额：{balance_html}'
+        + glm_line + ds_line
+        + f'💳 DeepSeek 账户余额：{balance_html}'
         '</div>'
     )
 
@@ -1584,13 +1639,14 @@ def main():
     print("🚀 arXiv Daily Paper Digest - Starting")
     print("=" * 60)
     
-    # Check required environment variables
-    required_vars = ['DEEPSEEK_API_KEY', 'PUSHPLUS_TOKEN']
-    missing_vars = [var for var in required_vars if not os.environ.get(var)]
-    
-    if missing_vars:
-        print(f"❌ Missing required environment variables: {', '.join(missing_vars)}")
-        print("Please set these environment variables")
+    # Check required environment variables. Need PUSHPLUS_TOKEN + at least one
+    # LLM provider key. GLM is primary, DeepSeek is the fallback — both can be
+    # set (recommended) or either alone.
+    if not PUSHPLUS_TOKEN:
+        print("❌ Missing required environment variable: PUSHPLUS_TOKEN")
+        sys.exit(1)
+    if not (GLM_API_KEY or DEEPSEEK_API_KEY):
+        print("❌ Missing LLM API key: set at least one of GLM_API_KEY, DEEPSEEK_API_KEY")
         sys.exit(1)
     
     try:
@@ -1670,25 +1726,35 @@ def main():
         print("\n" + "=" * 60)
         print("📧 Generating Digest Content")
         print("=" * 60)
-        usage = dict(_DEEPSEEK_USAGE_TOTAL)
-        cost_cny = compute_deepseek_cost_cny(usage)
+        ds_usage = dict(_DEEPSEEK_USAGE_TOTAL)
+        ds_cost = compute_deepseek_cost_cny(ds_usage)
+        glm_usage = dict(_GLM_USAGE_TOTAL)
+        glm_cost = compute_glm_cost_cny(glm_usage)
         balance_cny = query_deepseek_balance()
         balance_display = (
             f"¥{balance_cny:.2f}" if balance_cny is not None else "查询失败"
         )
+        if glm_usage['calls']:
+            print(
+                f"🤖 GLM 本次花费: ¥{glm_cost:.4f} "
+                f"(input={glm_usage['input']}, output={glm_usage['output']}, "
+                f"calls={glm_usage['calls']})"
+            )
         print(
-            f"💰 DeepSeek 本次花费: ¥{cost_cny:.4f} "
-            f"(prompt_hit={usage['cache_hit']}, prompt_miss={usage['cache_miss']}, "
-            f"completion={usage['completion']}, calls={usage['calls']}) "
+            f"💰 DeepSeek 本次花费: ¥{ds_cost:.4f} "
+            f"(prompt_hit={ds_usage['cache_hit']}, prompt_miss={ds_usage['cache_miss']}, "
+            f"completion={ds_usage['completion']}, calls={ds_usage['calls']}) "
             f"| 账户余额: {balance_display}"
         )
         html_content = generate_pushplus_content(
             papers_with_summaries,
             EMAIL_LANGUAGE,
             cost_info={
-                'usage': usage,
-                'cost_cny': cost_cny,
+                'ds_usage': ds_usage,
+                'ds_cost': ds_cost,
                 'balance_cny': balance_cny,
+                'glm_usage': glm_usage,
+                'glm_cost': glm_cost,
             },
         )
 
