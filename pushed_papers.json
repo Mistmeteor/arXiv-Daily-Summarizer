@@ -3378,7 +3378,7 @@
       "econ.EM",
       "stat.ME"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "math.ST",
     "push_dates": [
       "2026-10-07",
       "2026-10-14"
@@ -3403,7 +3403,7 @@
       "cs.LG",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-10-07",
       "2026-10-14"
@@ -4247,7 +4247,7 @@
       "stat.AP",
       "stat.CO"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-10-30"
     ],
@@ -4394,7 +4394,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-29"
+      "2026-10-29",
+      "2026-11-06"
     ],
     "title": "Many Hands Make Light Work: Long-Term Effect Inference for the Experiment Reservoir"
   },
@@ -4472,7 +4473,7 @@
       "cs.SI",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.CO",
     "push_dates": [
       "2026-10-30"
     ],
@@ -4786,5 +4787,99 @@
       "2026-11-05"
     ],
     "title": "Regret-based Characterization, Information Limits, and the Sample Complexity of Auditing Adaptive Policies"
+  },
+  "2611.05456": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-06"
+    ],
+    "title": "Aggregating treatment effects across multiple outcomes"
+  },
+  "2611.05584": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-06"
+    ],
+    "title": "Sensitivity Analysis in Population Shares"
+  },
+  "2611.05608": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-06"
+    ],
+    "title": "Debiased Conditional Independence Tests for Causal Effects"
+  },
+  "2611.05644": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-06"
+    ],
+    "title": "On the Theory of Multidimensional Stationary Random Processes (1941): Translation and Commentary"
+  },
+  "2611.05778": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-06"
+    ],
+    "title": "Neural Score-Driven Volatility and Risk Forecasting"
+  },
+  "2611.06067": {
+    "categories": [
+      "cs.GT",
+      "cs.LG",
+      "econ.EM",
+      "stat.ML"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-06"
+    ],
+    "title": "Offline Learning of Reserve Prices from Censored Bids"
+  },
+  "2611.06266": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-06"
+    ],
+    "title": "Online Bayesian Inference for a Dirichlet Process Mixture of Binary Logit Models"
+  },
+  "2611.06557": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-06"
+    ],
+    "title": "Approximate minimax regret for conditionally similar tests"
+  },
+  "2611.06855": {
+    "categories": [
+      "econ.EM",
+      "stat.ML"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-06"
+    ],
+    "title": "Regression with Many Generated Controls"
   }
 }
