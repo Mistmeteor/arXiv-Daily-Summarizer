@@ -4216,7 +4216,8 @@
     ],
     "primary_category": "stat.ME",
     "push_dates": [
-      "2026-10-27"
+      "2026-10-27",
+      "2026-11-08"
     ],
     "title": "Parallel Trends as a Spectrum"
   },
@@ -4297,7 +4298,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-28"
+      "2026-10-28",
+      "2026-11-08"
     ],
     "title": "Higher-Order Marginal Likelihood Approximation for Nonlinear State Space Models"
   },
@@ -4307,7 +4309,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-28"
+      "2026-10-28",
+      "2026-11-08"
     ],
     "title": "Cordon Tolls and Urban Traffic Volumes: Evidence from NYC's 2025 Congestion Relief Zone"
   },
@@ -4318,7 +4321,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-28"
+      "2026-10-28",
+      "2026-11-08"
     ],
     "title": "Regression Adjustment for Ratios of Treatment Effects in Randomized Experiments"
   },
@@ -4330,7 +4334,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-28"
+      "2026-10-28",
+      "2026-11-08"
     ],
     "title": "Fuji: The Shape, Composition, and Spread of Demand Bursts on Robinhood Chain"
   },
@@ -4355,7 +4360,8 @@
     ],
     "primary_category": "stat.ME",
     "push_dates": [
-      "2026-10-28"
+      "2026-10-28",
+      "2026-11-08"
     ],
     "title": "Adequacy radii for stepped-wedge trials with time-varying effects"
   },
@@ -4366,7 +4372,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-30"
+      "2026-10-30",
+      "2026-11-08"
     ],
     "title": "Testing strong exogeneity in proxy SVARs with internal synthetic proxies"
   },
@@ -4388,7 +4395,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-29"
+      "2026-10-29",
+      "2026-11-08"
     ],
     "title": "Indirect inference in incomplete and partially identified econometric models"
   },
@@ -4411,7 +4419,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-29"
+      "2026-10-29",
+      "2026-11-08"
     ],
     "title": "Bias Correction and Inference for Panel Quantile Regression"
   },
@@ -4492,7 +4501,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-31"
+      "2026-10-31",
+      "2026-11-08"
     ],
     "title": "Debiasing Functionals of Conditional Distributions"
   },
