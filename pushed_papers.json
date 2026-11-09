@@ -3368,7 +3368,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-07",
-      "2026-10-14"
+      "2026-10-14",
+      "2026-11-09"
     ],
     "title": "Impulse Response Inference for Matrix Autoregressions"
   },
@@ -3381,7 +3382,8 @@
     "primary_category": "math.ST",
     "push_dates": [
       "2026-10-07",
-      "2026-10-14"
+      "2026-10-14",
+      "2026-11-09"
     ],
     "title": "Surrogate-powered Causal Inference with Censored Outcomes"
   },
@@ -3406,7 +3408,8 @@
     "primary_category": "stat.ME",
     "push_dates": [
       "2026-10-07",
-      "2026-10-14"
+      "2026-10-14",
+      "2026-11-09"
     ],
     "title": "Causal Lag Structure Discovery in Confounded Time Series via Orthogonalized Adaptive Estimation"
   },
@@ -3429,7 +3432,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-07",
-      "2026-10-14"
+      "2026-10-14",
+      "2026-11-09"
     ],
     "title": "Power enhancement via cross-fit variance estimation: Applications to specification, overidentification, and many-restriction testing"
   },
@@ -3503,7 +3507,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-08",
-      "2026-10-15"
+      "2026-10-15",
+      "2026-11-09"
     ],
     "title": "Measuring Gift Card Program Incrementality via Causal Data Fusion"
   },
@@ -3538,7 +3543,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-09",
-      "2026-10-16"
+      "2026-10-16",
+      "2026-11-09"
     ],
     "title": "Building Macroeconomically Relevant Climate Indices via the Assemblage VAR"
   },
@@ -3576,7 +3582,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-10",
-      "2026-10-17"
+      "2026-10-17",
+      "2026-11-09"
     ],
     "title": "Inference in Panel SVARs with Two-Way Dependence"
   },
@@ -3587,7 +3594,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-10",
-      "2026-10-17"
+      "2026-10-17",
+      "2026-11-09"
     ],
     "title": "Rolling Window Selection in FAR Models with Structural Instabilities"
   },
@@ -3598,7 +3606,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-10",
-      "2026-10-17"
+      "2026-10-17",
+      "2026-11-09"
     ],
     "title": "The Panel Information Matrix Test"
   },
@@ -4227,7 +4236,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-10-27"
+      "2026-10-27",
+      "2026-11-09"
     ],
     "title": "Optimal Treatment Assignment Rules on Networked Populations"
   },
