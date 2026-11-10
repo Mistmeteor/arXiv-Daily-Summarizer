@@ -4674,7 +4674,7 @@
       "q-fin.TR",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "q-fin.TR",
     "push_dates": [
       "2026-11-03"
     ],
@@ -4981,5 +4981,115 @@
       "2026-11-06"
     ],
     "title": "Patch Attention Wisely: Understanding Patch Length in Attention-Based Forecasting"
+  },
+  "2611.09023": {
+    "categories": [
+      "math.OC",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-10"
+    ],
+    "title": "Constrained Nested-Logit Pricing: An Exact Reformulation and Global Optimization Method"
+  },
+  "2611.09678": {
+    "categories": [
+      "cs.CE",
+      "stat.ME"
+    ],
+    "primary_category": "stat.ME",
+    "push_dates": [
+      "2026-11-10"
+    ],
+    "title": "Calibrating demand models versus adjusting OD matrices with traffic counts: a controlled comparison"
+  },
+  "2611.09790": {
+    "categories": [
+      "econ.EM",
+      "math.ST",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-10"
+    ],
+    "title": "Box-Cox Transformations of Correlation Matrices"
+  },
+  "2611.09792": {
+    "categories": [
+      "cs.AI",
+      "cs.LG",
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-10"
+    ],
+    "title": "Knowing When to Intervene: Causal Evaluation of AI Agents"
+  },
+  "2611.10372": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-10"
+    ],
+    "title": "Panel Local Projections with Missing Data"
+  },
+  "2611.10383": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-10"
+    ],
+    "title": "Asymptotic Theory of Integrated Pairwise-Difference Functionals of Kernel Estimators, with Applications to Treatment Effect Heterogeneity"
+  },
+  "2611.10447": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-10"
+    ],
+    "title": "Good Looks and the Academic Job Market: Measuring Attractiveness with Vision Embeddings"
+  },
+  "2611.10863": {
+    "categories": [
+      "stat.ME",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-10"
+    ],
+    "title": "Weak-Instrument Inference and Model Diagnostics in Double Machine Learning for Linear Instrumental Variable Models"
+  },
+  "2611.10925": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-10"
+    ],
+    "title": "Z-Estimation under Unignorably Large Clusters"
+  },
+  "2611.10928": {
+    "categories": [
+      "q-fin.MF",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-10"
+    ],
+    "title": "Polynomial-Preserving Processes and Volatility Modelling in Discrete Time"
   }
 }
