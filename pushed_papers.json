@@ -4612,7 +4612,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-03"
+      "2026-11-03",
+      "2026-11-11"
     ],
     "title": "xtlp: A new Stata command for panel local projection"
   },
@@ -4696,7 +4697,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-04"
+      "2026-11-04",
+      "2026-11-11"
     ],
     "title": "When Does $N$ Buy Precision? Heterogeneous Responses to Aggregate Shocks in Micro Panels"
   },
@@ -4717,7 +4719,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-04"
+      "2026-11-04",
+      "2026-11-11"
     ],
     "title": "Conditional expectile-based value-at-risk: Semiparametric estimation and inference"
   },
@@ -4758,9 +4761,10 @@
       "q-fin.PM",
       "stat.ME"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "math.ST",
     "push_dates": [
-      "2026-11-04"
+      "2026-11-04",
+      "2026-11-11"
     ],
     "title": "Specification LASSO and a Flexible Characteristics-Based Asset Pricing Model"
   },
@@ -4771,7 +4775,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-04"
+      "2026-11-04",
+      "2026-11-11"
     ],
     "title": "Unconfoundedness as an Information Constraint"
   },
@@ -5091,5 +5096,59 @@
       "2026-11-10"
     ],
     "title": "Polynomial-Preserving Processes and Volatility Modelling in Discrete Time"
+  },
+  "2611.11003": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-11"
+    ],
+    "title": "Do Modern Difference-in-Differences Estimators Change Published Findings in Business Research?"
+  },
+  "2611.11183": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-11"
+    ],
+    "title": "Testing Conditional Moment Restrictions in Networks"
+  },
+  "2611.12255": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-11"
+    ],
+    "title": "When the Norm is Wrong: Social Norm Misspecification and Targeting with an Application to Microfinance Adoption"
+  },
+  "2611.12368": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-11"
+    ],
+    "title": "Bayesian precision factor models for high-dimensional macroeconomic time series"
+  },
+  "2611.12690": {
+    "categories": [
+      "stat.ME",
+      "cs.LG",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-11"
+    ],
+    "title": "Average versus expected causal effects under interference: Modeling assumptions and estimation bottlenecks"
   }
 }

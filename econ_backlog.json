@@ -2668,7 +2668,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.34198v1",
     "primary_category": "econ.EM",
     "published": "2026-10-25T10:29:50+00:00",
-    "quality_score": -0.8999999999999999,
+    "quality_score": -1.2000000000000002,
     "title": "Testing for Essential Heterogeneity in the Marginal Treatment Effects Model"
   },
   "2610.34547": {
@@ -2684,7 +2684,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.34547v2",
     "primary_category": "econ.EM",
     "published": "2026-10-25T20:16:02+00:00",
-    "quality_score": -0.8999999999999999,
+    "quality_score": -1.2000000000000002,
     "title": "Demand Estimation with Unobserved Stockout Substitution: Exact Likelihood Maximization"
   },
   "2610.34629": {
@@ -2698,7 +2698,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.34629v1",
     "primary_category": "econ.EM",
     "published": "2026-10-25T23:02:45+00:00",
-    "quality_score": -1.9,
+    "quality_score": -2.2,
     "title": "Higher-Order Marginal Likelihood Approximation for Nonlinear State Space Models"
   },
   "2610.34818": {
@@ -2712,7 +2712,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.34818v1",
     "primary_category": "econ.EM",
     "published": "2026-10-26T04:02:59+00:00",
-    "quality_score": -1.5999999999999996,
+    "quality_score": -1.9,
     "title": "Cordon Tolls and Urban Traffic Volumes: Evidence from NYC's 2025 Congestion Relief Zone"
   },
   "2610.35666": {
@@ -2727,7 +2727,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.35666v1",
     "primary_category": "econ.EM",
     "published": "2026-10-26T16:10:44+00:00",
-    "quality_score": -1.5999999999999996,
+    "quality_score": -1.9,
     "title": "Regression Adjustment for Ratios of Treatment Effects in Randomized Experiments"
   },
   "2610.35738": {
@@ -2743,7 +2743,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.35738v1",
     "primary_category": "econ.EM",
     "published": "2026-10-26T16:55:17+00:00",
-    "quality_score": -1.5999999999999996,
+    "quality_score": -1.9,
     "title": "Fuji: The Shape, Composition, and Spread of Demand Bursts on Robinhood Chain"
   },
   "2610.35748": {
@@ -2759,7 +2759,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.35748v1",
     "primary_category": "econ.EM",
     "published": "2026-10-26T16:59:29+00:00",
-    "quality_score": -0.09999999999999964,
+    "quality_score": -0.3999999999999999,
     "title": "Model Selection for Off-Policy Evaluation via Pairwise Bellman Validation"
   },
   "2610.35831": {
@@ -2773,7 +2773,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.35831v1",
     "primary_category": "econ.EM",
     "published": "2026-10-26T17:50:47+00:00",
-    "quality_score": -3.5999999999999996,
+    "quality_score": -3.9,
     "title": "AI in Econometric Theory: An Example"
   },
   "2610.35853": {
@@ -2789,7 +2789,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.35853v1",
     "primary_category": "econ.EM",
     "published": "2026-10-26T17:57:46+00:00",
-    "quality_score": -1.5999999999999996,
+    "quality_score": -1.9,
     "title": "Adequacy radii for stepped-wedge trials with time-varying effects"
   },
   "2610.36093": {
@@ -2804,7 +2804,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.36093v1",
     "primary_category": "econ.EM",
     "published": "2026-10-26T18:15:06+00:00",
-    "quality_score": -1.5999999999999996,
+    "quality_score": -1.9,
     "title": "Testing strong exogeneity in proxy SVARs with internal synthetic proxies"
   },
   "2610.36176": {
@@ -2819,7 +2819,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.36176v1",
     "primary_category": "econ.EM",
     "published": "2026-10-26T19:11:10+00:00",
-    "quality_score": -1.0999999999999996,
+    "quality_score": -1.4,
     "title": "Probabilistic Causal Panel Analysis"
   },
   "2610.36206": {
@@ -2833,7 +2833,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.36206v1",
     "primary_category": "econ.EM",
     "published": "2026-10-26T19:42:05+00:00",
-    "quality_score": -1.5999999999999996,
+    "quality_score": -1.9,
     "title": "Indirect inference in incomplete and partially identified econometric models"
   },
   "2610.36352": {
@@ -2848,7 +2848,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.36352v1",
     "primary_category": "econ.EM",
     "published": "2026-10-26T22:18:00+00:00",
-    "quality_score": -0.5999999999999996,
+    "quality_score": -0.8999999999999999,
     "title": "Many Hands Make Light Work: Long-Term Effect Inference for the Experiment Reservoir"
   },
   "2610.36443": {
@@ -2863,7 +2863,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.36443v1",
     "primary_category": "econ.EM",
     "published": "2026-10-27T00:45:12+00:00",
-    "quality_score": -1.5999999999999996,
+    "quality_score": -1.9,
     "title": "Bias Correction and Inference for Panel Quantile Regression"
   },
   "2610.36634": {
@@ -2877,7 +2877,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.36634v2",
     "primary_category": "econ.EM",
     "published": "2026-10-27T04:47:10+00:00",
-    "quality_score": -0.2999999999999998,
+    "quality_score": -0.5999999999999996,
     "title": "Time-Varying Quantile VAR Models: Estimation and Inference"
   },
   "2610.36739": {
@@ -2891,7 +2891,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.36739v1",
     "primary_category": "econ.EM",
     "published": "2026-10-27T06:55:10+00:00",
-    "quality_score": -0.2999999999999998,
+    "quality_score": -0.5999999999999996,
     "title": "A Semiparametric Real-Time GARCH Model with Nonstationary Variance"
   },
   "2610.37049": {
@@ -2906,7 +2906,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.37049v2",
     "primary_category": "econ.EM",
     "published": "2026-10-27T11:19:26+00:00",
-    "quality_score": -1.2999999999999998,
+    "quality_score": -1.5999999999999996,
     "title": "Identifying and disentangling direct and spillover effects using multiple pre-treatment periods"
   },
   "2610.37269": {
@@ -2921,7 +2921,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.37269v2",
     "primary_category": "econ.EM",
     "published": "2026-10-27T14:02:09+00:00",
-    "quality_score": -0.2999999999999998,
+    "quality_score": -0.5999999999999996,
     "title": "Personal preference or system role? Battery swapping among UK electric vehicle users"
   },
   "2610.37487": {
@@ -2936,7 +2936,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.37487v1",
     "primary_category": "econ.EM",
     "published": "2026-10-27T16:14:07+00:00",
-    "quality_score": -0.2999999999999998,
+    "quality_score": -0.5999999999999996,
     "title": "Contemporaneous Transmission Networks and Systemic Risk in European Banking"
   },
   "2610.37883": {
@@ -2952,7 +2952,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.37883v1",
     "primary_category": "econ.EM",
     "published": "2026-10-27T19:23:32+00:00",
-    "quality_score": -0.7999999999999998,
+    "quality_score": -1.0999999999999996,
     "title": "fastC-GC and fastC-GC*: Efficient RCCP-Guided Graph Estimation for Time Series"
   },
   "2610.38529": {
@@ -2966,7 +2966,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.38529v1",
     "primary_category": "econ.EM",
     "published": "2026-10-28T09:38:00+00:00",
-    "quality_score": -1.0,
+    "quality_score": -1.2999999999999998,
     "title": "Debiasing Functionals of Conditional Distributions"
   },
   "2610.38665": {
@@ -2980,7 +2980,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.38665v1",
     "primary_category": "econ.EM",
     "published": "2026-10-28T18:49:49+00:00",
-    "quality_score": 0.0,
+    "quality_score": -0.2999999999999998,
     "title": "Quantile Methods in Large Panels with Fixed Effects"
   },
   "2610.38896": {
@@ -2995,7 +2995,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.38896v1",
     "primary_category": "econ.EM",
     "published": "2026-10-28T20:54:01+00:00",
-    "quality_score": -1.0,
+    "quality_score": -1.2999999999999998,
     "title": "The Hidden Value of Soft Infrastructure for Urban Flood Adaptation"
   },
   "2610.38965": {
@@ -3011,7 +3011,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.38965v1",
     "primary_category": "econ.EM",
     "published": "2026-10-28T21:50:38+00:00",
-    "quality_score": -1.0,
+    "quality_score": -1.2999999999999998,
     "title": "Orthogonal Inference for Conditional Z-Estimation without Cross-Fitting: A Distributional Nearest-Neighbor Approach"
   },
   "2610.39871": {
@@ -3025,7 +3025,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.39871v1",
     "primary_category": "econ.EM",
     "published": "2026-10-29T11:46:26+00:00",
-    "quality_score": -0.6999999999999997,
+    "quality_score": -1.0,
     "title": "Threshold Regression with a Nearly Integrated Threshold Variable"
   },
   "2610.39995": {
@@ -3039,7 +3039,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.39995v2",
     "primary_category": "econ.EM",
     "published": "2026-10-29T13:16:00+00:00",
-    "quality_score": -0.6999999999999997,
+    "quality_score": -1.0,
     "title": "How Different are Different Differences-in-Differences? A Large-Scale Meta-Analysis"
   },
   "2610.40047": {
@@ -3053,7 +3053,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.40047v1",
     "primary_category": "econ.EM",
     "published": "2026-10-29T13:43:20+00:00",
-    "quality_score": -0.6999999999999997,
+    "quality_score": -1.0,
     "title": "Smooth Threshold GARCH: Quasi Maximum Likelihood Estimation and Empirical Evidence"
   },
   "2610.40582": {
@@ -3067,7 +3067,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.40582v1",
     "primary_category": "econ.EM",
     "published": "2026-10-29T17:45:46+00:00",
-    "quality_score": 0.30000000000000027,
+    "quality_score": 0.0,
     "title": "Optimal Policy With Noisy Sufficient Statistics"
   },
   "2610.40719": {
@@ -3081,7 +3081,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.40719v1",
     "primary_category": "econ.EM",
     "published": "2026-10-29T03:59:13+00:00",
-    "quality_score": -0.6999999999999997,
+    "quality_score": -1.0,
     "title": "Weak Identification in Bunching Designs: Rare Events and Counterfactual Uncertainty"
   },
   "2610.41171": {
@@ -3109,7 +3109,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.41294v1",
     "primary_category": "econ.EM",
     "published": "2026-10-30T05:57:03+00:00",
-    "quality_score": -0.3999999999999999,
+    "quality_score": -0.6999999999999997,
     "title": "The Double Diagonal Estimator: Reducing Bias in Two-Sided Marketplace Experiments"
   },
   "2610.41361": {
@@ -3124,7 +3124,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.41361v1",
     "primary_category": "econ.EM",
     "published": "2026-10-30T07:25:34+00:00",
-    "quality_score": -0.3999999999999999,
+    "quality_score": -0.6999999999999997,
     "title": "Identification through Heteroskedasticity in One Lemma: Partial Identification, an Eigenvalue Construction, and a Caution on Rank Tests"
   },
   "2610.41428": {
@@ -3138,7 +3138,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.41428v1",
     "primary_category": "econ.EM",
     "published": "2026-10-30T08:35:22+00:00",
-    "quality_score": 0.6000000000000001,
+    "quality_score": 0.30000000000000027,
     "title": "xtlp: A new Stata command for panel local projection"
   },
   "2610.41722": {
@@ -3152,7 +3152,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.41722v1",
     "primary_category": "econ.EM",
     "published": "2026-10-30T13:31:44+00:00",
-    "quality_score": -0.3999999999999999,
+    "quality_score": -0.6999999999999997,
     "title": "Covariance Identification from Regression Residuals"
   },
   "2610.41881": {
@@ -3166,7 +3166,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.41881v1",
     "primary_category": "econ.EM",
     "published": "2026-10-30T15:28:15+00:00",
-    "quality_score": -0.3999999999999999,
+    "quality_score": -0.6999999999999997,
     "title": "Evaluating Maternity Leave Reforms When RD Fails"
   },
   "2610.41963": {
@@ -3181,7 +3181,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.41963v1",
     "primary_category": "econ.EM",
     "published": "2026-10-30T16:13:31+00:00",
-    "quality_score": -0.3999999999999999,
+    "quality_score": -0.6999999999999997,
     "title": "Zero Crossings on the Accuracy-Smoothness Frontier: Maximal Monotone and Minimal Inflection Non Stationary Predictors"
   },
   "2610.42052": {
@@ -3195,7 +3195,7 @@
     "pdf_url": "https://arxiv.org/pdf/2610.42052v1",
     "primary_category": "econ.EM",
     "published": "2026-10-30T17:18:05+00:00",
-    "quality_score": -0.3999999999999999,
+    "quality_score": -0.6999999999999997,
     "title": "Valid GMM Inference with Non-parametrically Generated Discrete Type"
   },
   "2611.00338": {
@@ -3210,7 +3210,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.00338v1",
     "primary_category": "econ.EM",
     "published": "2026-10-30T20:13:18+00:00",
-    "quality_score": -0.3999999999999999,
+    "quality_score": -0.6999999999999997,
     "title": "Reading the Count: Prediction Markets and Brazil's 2026 Presidential Election"
   },
   "2611.00348": {
@@ -3224,7 +3224,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.00348v1",
     "primary_category": "econ.EM",
     "published": "2026-10-30T20:29:44+00:00",
-    "quality_score": -0.3999999999999999,
+    "quality_score": -0.6999999999999997,
     "title": "Robustness of Median-based Splitting Rules for Causal Trees"
   },
   "2611.00677": {
@@ -3238,7 +3238,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.00677v1",
     "primary_category": "econ.EM",
     "published": "2026-10-31T06:16:05+00:00",
-    "quality_score": 0.8999999999999999,
+    "quality_score": 0.6000000000000001,
     "title": "When Does $N$ Buy Precision? Heterogeneous Responses to Aggregate Shocks in Micro Panels"
   },
   "2611.00705": {
@@ -3255,7 +3255,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.00705v1",
     "primary_category": "econ.EM",
     "published": "2026-10-31T06:59:30+00:00",
-    "quality_score": -0.10000000000000009,
+    "quality_score": -0.3999999999999999,
     "title": "Estimating Average Treatment Effects with Projected Instrumental Variables"
   },
   "2611.01799": {
@@ -3272,7 +3272,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.01799v1",
     "primary_category": "econ.EM",
     "published": "2026-11-01T11:08:08+00:00",
-    "quality_score": 0.20000000000000018,
+    "quality_score": -0.10000000000000009,
     "title": "Learning AI Agents, Market Makers, and Stress in Automated Markets"
   },
   "2611.01806": {
@@ -3286,7 +3286,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.01806v1",
     "primary_category": "econ.EM",
     "published": "2026-11-01T11:13:28+00:00",
-    "quality_score": 0.20000000000000018,
+    "quality_score": -0.10000000000000009,
     "title": "Testing Exogeneity in Nonparametric Instrumental Variable Models"
   },
   "2611.01854": {
@@ -3303,7 +3303,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.01854v1",
     "primary_category": "econ.EM",
     "published": "2026-11-01T12:45:52+00:00",
-    "quality_score": -0.7999999999999998,
+    "quality_score": -1.1,
     "title": "Exploiting Locally Exogeneous Variation in Spatial Data: Linear Regression with Many Small Units"
   },
   "2611.01857": {
@@ -3319,7 +3319,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.01857v1",
     "primary_category": "econ.EM",
     "published": "2026-11-01T12:48:47+00:00",
-    "quality_score": 0.20000000000000018,
+    "quality_score": -0.10000000000000009,
     "title": "Inference for conditional Fréchet means via Riemannian Robust Bias Correction"
   },
   "2611.02029": {
@@ -3334,7 +3334,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.02029v1",
     "primary_category": "econ.EM",
     "published": "2026-11-01T16:21:43+00:00",
-    "quality_score": 0.20000000000000018,
+    "quality_score": -0.10000000000000009,
     "title": "Does Calibration Pick the Right Model? Likelihood Evidence from Income Risk"
   },
   "2611.02048": {
@@ -3349,7 +3349,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.02048v1",
     "primary_category": "econ.EM",
     "published": "2026-11-01T16:53:45+00:00",
-    "quality_score": 0.20000000000000018,
+    "quality_score": -0.10000000000000009,
     "title": "Minimax-Optimal Static Estimators Under Interference"
   },
   "2611.02061": {
@@ -3363,7 +3363,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.02061v1",
     "primary_category": "econ.EM",
     "published": "2026-11-01T17:06:43+00:00",
-    "quality_score": 0.20000000000000018,
+    "quality_score": -0.10000000000000009,
     "title": "Looking Forward to Constructing Better Causal Comparisons"
   },
   "2611.02443": {
@@ -3392,7 +3392,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.02716v1",
     "primary_category": "econ.EM",
     "published": "2026-11-02T08:10:09+00:00",
-    "quality_score": 1.5,
+    "quality_score": 1.2000000000000002,
     "title": "Conditional expectile-based value-at-risk: Semiparametric estimation and inference"
   },
   "2611.03075": {
@@ -3406,7 +3406,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.03075v1",
     "primary_category": "econ.EM",
     "published": "2026-11-02T13:02:59+00:00",
-    "quality_score": 0.5,
+    "quality_score": 0.20000000000000018,
     "title": "Sharp Fréchet--Hoeffding Bounds under Selectively Incomplete Observation"
   },
   "2611.03079": {
@@ -3420,7 +3420,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.03079v1",
     "primary_category": "econ.EM",
     "published": "2026-11-02T13:06:09+00:00",
-    "quality_score": 0.0,
+    "quality_score": -0.2999999999999998,
     "title": "When Covariates Mask Pre-Trends"
   },
   "2611.03345": {
@@ -3434,7 +3434,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.03345v2",
     "primary_category": "econ.EM",
     "published": "2026-11-02T16:00:17+00:00",
-    "quality_score": 0.5,
+    "quality_score": 0.20000000000000018,
     "title": "Sharp Identification for Regressions with Interval-Observed and Missing Covariates"
   },
   "2611.03391": {
@@ -3451,7 +3451,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.03391v1",
     "primary_category": "econ.EM",
     "published": "2026-11-02T16:28:46+00:00",
-    "quality_score": 1.5,
+    "quality_score": 1.2000000000000002,
     "title": "Specification LASSO and a Flexible Characteristics-Based Asset Pricing Model"
   },
   "2611.03550": {
@@ -3466,7 +3466,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.03550v1",
     "primary_category": "econ.EM",
     "published": "2026-11-02T18:13:04+00:00",
-    "quality_score": 0.5,
+    "quality_score": 0.20000000000000018,
     "title": "Unconfoundedness as an Information Constraint"
   },
   "2611.04000": {
@@ -3481,7 +3481,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.04000v1",
     "primary_category": "econ.EM",
     "published": "2026-11-02T21:40:06+00:00",
-    "quality_score": 2.0,
+    "quality_score": 1.7000000000000002,
     "title": "Revisiting Elliptic++ for Bitcoin Forensics: Feature Reconstruction and Leakage-Resistant Evaluation"
   },
   "2611.04040": {
@@ -3497,7 +3497,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.04040v1",
     "primary_category": "econ.EM",
     "published": "2026-11-02T22:35:34+00:00",
-    "quality_score": 0.5,
+    "quality_score": 0.20000000000000018,
     "title": "PanelGP: A Probabilistic Factor Model for Asset-Return Panels"
   },
   "2611.04366": {
@@ -3513,7 +3513,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.04366v1",
     "primary_category": "econ.EM",
     "published": "2026-11-03T05:52:58+00:00",
-    "quality_score": 0.8,
+    "quality_score": 0.5,
     "title": "When Listwise Deletion Works: Causal Diagrams and Complete-Case Regression"
   },
   "2611.05227": {
@@ -3529,7 +3529,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.05227v2",
     "primary_category": "econ.EM",
     "published": "2026-11-03T17:13:24+00:00",
-    "quality_score": 0.8,
+    "quality_score": 0.5,
     "title": "Regret Equals Integrated Covariance: Exact Identities for the Value of Information in Stochastic Optimization"
   },
   "2611.05456": {
@@ -3543,7 +3543,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.05456v1",
     "primary_category": "econ.EM",
     "published": "2026-11-03T18:45:57+00:00",
-    "quality_score": 0.8,
+    "quality_score": 0.5,
     "title": "Aggregating treatment effects across multiple outcomes"
   },
   "2611.05584": {
@@ -3557,7 +3557,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.05584v1",
     "primary_category": "econ.EM",
     "published": "2026-11-03T20:15:54+00:00",
-    "quality_score": 0.8,
+    "quality_score": 0.5,
     "title": "Sensitivity Analysis in Population Shares"
   },
   "2611.05608": {
@@ -3571,7 +3571,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.05608v1",
     "primary_category": "econ.EM",
     "published": "2026-11-03T20:53:20+00:00",
-    "quality_score": 1.8,
+    "quality_score": 1.5,
     "title": "Debiased Conditional Independence Tests for Causal Effects"
   },
   "2611.05644": {
@@ -3585,7 +3585,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.05644v1",
     "primary_category": "econ.EM",
     "published": "2026-11-03T21:28:06+00:00",
-    "quality_score": 0.8,
+    "quality_score": 0.5,
     "title": "On the Theory of Multidimensional Stationary Random Processes (1941): Translation and Commentary"
   },
   "2611.05778": {
@@ -3599,7 +3599,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.05778v1",
     "primary_category": "econ.EM",
     "published": "2026-11-04T00:31:23+00:00",
-    "quality_score": 2.3,
+    "quality_score": 2.0,
     "title": "Neural Score-Driven Volatility and Risk Forecasting"
   },
   "2611.06067": {
@@ -3616,7 +3616,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.06067v1",
     "primary_category": "econ.EM",
     "published": "2026-11-04T07:13:27+00:00",
-    "quality_score": 2.1,
+    "quality_score": 1.8,
     "title": "Offline Learning of Reserve Prices from Censored Bids"
   },
   "2611.06266": {
@@ -3630,7 +3630,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.06266v1",
     "primary_category": "econ.EM",
     "published": "2026-11-04T10:14:56+00:00",
-    "quality_score": 2.1,
+    "quality_score": 1.8,
     "title": "Online Bayesian Inference for a Dirichlet Process Mixture of Binary Logit Models"
   },
   "2611.06557": {
@@ -3644,7 +3644,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.06557v1",
     "primary_category": "econ.EM",
     "published": "2026-11-04T14:21:28+00:00",
-    "quality_score": 1.1,
+    "quality_score": 0.8,
     "title": "Approximate minimax regret for conditionally similar tests"
   },
   "2611.06855": {
@@ -3659,7 +3659,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.06855v1",
     "primary_category": "econ.EM",
     "published": "2026-11-04T18:10:56+00:00",
-    "quality_score": 1.1,
+    "quality_score": 0.8,
     "title": "Regression with Many Generated Controls"
   },
   "2611.07240": {
@@ -3673,7 +3673,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.07240v1",
     "primary_category": "econ.EM",
     "published": "2026-11-04T23:43:52+00:00",
-    "quality_score": 0.6000000000000001,
+    "quality_score": 0.30000000000000004,
     "title": "Nonparametric Subgraph Regression"
   },
   "2611.07249": {
@@ -3688,7 +3688,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.07249v1",
     "primary_category": "econ.EM",
     "published": "2026-11-04T23:57:32+00:00",
-    "quality_score": 2.1,
+    "quality_score": 1.8,
     "title": "Double Machine Learning for Panel Data: Identification, Specification, and a Bank Regulation Effect"
   },
   "2611.07698": {
@@ -3702,7 +3702,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.07698v1",
     "primary_category": "econ.EM",
     "published": "2026-11-05T09:22:46+00:00",
-    "quality_score": 1.4,
+    "quality_score": 1.1,
     "title": "Willingness-to-pay space and preference space: a unified treatment of equivalence, heterogeneity and interpretation"
   },
   "2611.07774": {
@@ -3718,7 +3718,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.07774v1",
     "primary_category": "econ.EM",
     "published": "2026-11-05T10:12:26+00:00",
-    "quality_score": 1.4,
+    "quality_score": 1.1,
     "title": "Unobserved Consideration and Consumer Welfare"
   },
   "2611.07787": {
@@ -3733,7 +3733,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.07787v1",
     "primary_category": "econ.EM",
     "published": "2026-11-05T10:27:17+00:00",
-    "quality_score": 1.4,
+    "quality_score": 1.1,
     "title": "Discrete Choice under Congestion: Equilibrium and Welfare"
   },
   "2611.08160": {
@@ -3749,7 +3749,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.08160v1",
     "primary_category": "econ.EM",
     "published": "2026-11-05T15:18:11+00:00",
-    "quality_score": 2.9,
+    "quality_score": 2.6,
     "title": "Patch Attention Wisely: Understanding Patch Length in Attention-Based Forecasting"
   },
   "2611.08528": {
@@ -3767,7 +3767,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.08528v1",
     "primary_category": "econ.EM",
     "published": "2026-11-04T10:08:04+00:00",
-    "quality_score": 1.1,
+    "quality_score": 0.8,
     "title": "Price-Volume Correlations Are Always Zero"
   },
   "2611.08859": {
@@ -3796,7 +3796,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.09023v1",
     "primary_category": "econ.EM",
     "published": "2026-11-06T05:54:44+00:00",
-    "quality_score": 1.7,
+    "quality_score": 1.4,
     "title": "Constrained Nested-Logit Pricing: An Exact Reformulation and Global Optimization Method"
   },
   "2611.09790": {
@@ -3812,7 +3812,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.09790v1",
     "primary_category": "econ.EM",
     "published": "2026-11-06T17:45:39+00:00",
-    "quality_score": 1.7,
+    "quality_score": 1.4,
     "title": "Box-Cox Transformations of Correlation Matrices"
   },
   "2611.09792": {
@@ -3829,7 +3829,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.09792v1",
     "primary_category": "econ.EM",
     "published": "2026-11-06T17:46:53+00:00",
-    "quality_score": 3.2,
+    "quality_score": 2.9,
     "title": "Knowing When to Intervene: Causal Evaluation of AI Agents"
   },
   "2611.10372": {
@@ -3844,7 +3844,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.10372v1",
     "primary_category": "econ.EM",
     "published": "2026-11-07T01:19:23+00:00",
-    "quality_score": 1.7,
+    "quality_score": 1.4,
     "title": "Panel Local Projections with Missing Data"
   },
   "2611.10383": {
@@ -3872,7 +3872,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.10447v1",
     "primary_category": "econ.EM",
     "published": "2026-11-07T03:55:53+00:00",
-    "quality_score": 2.5,
+    "quality_score": 1.7,
     "title": "Good Looks and the Academic Job Market: Measuring Attractiveness with Vision Embeddings"
   },
   "2611.10863": {
@@ -3887,7 +3887,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.10863v1",
     "primary_category": "econ.EM",
     "published": "2026-11-07T17:27:24+00:00",
-    "quality_score": 2.5,
+    "quality_score": 1.7,
     "title": "Weak-Instrument Inference and Model Diagnostics in Double Machine Learning for Linear Instrumental Variable Models"
   },
   "2611.10925": {
@@ -3901,7 +3901,7 @@
     "pdf_url": "https://arxiv.org/pdf/2611.10925v1",
     "primary_category": "econ.EM",
     "published": "2026-11-07T19:27:15+00:00",
-    "quality_score": 3.5,
+    "quality_score": 2.7,
     "title": "Z-Estimation under Unignorably Large Clusters"
   },
   "2611.10928": {
@@ -3916,7 +3916,81 @@
     "pdf_url": "https://arxiv.org/pdf/2611.10928v1",
     "primary_category": "econ.EM",
     "published": "2026-11-07T19:33:52+00:00",
-    "quality_score": 3.5,
+    "quality_score": 2.7,
     "title": "Polynomial-Preserving Processes and Volatility Modelling in Discrete Time"
+  },
+  "2611.11003": {
+    "abstract": "Staggered-adoption difference-in-differences (DiD) designs are a workhorse of empirical research in business-school journals. The two-way fixed effects (TWFE) estimator that typically implements them can place negative weights on heterogeneous treatment effects. We ask whether negative weights change published findings by reanalyzing staggered-adoption specifications in business-school journals with journal-wide public replication archives. Following Hull (2026), we use large language model agents to identify eligible specifications, replicate the published TWFE estimate, and re-estimate each specification with the DiD-averaging estimator of Callaway and Sant'Anna (2021) and the imputation estimator of Borusyak et al. (2024). We re-estimate 355 specifications from 40 papers. Across the 283 DiD-averaging and 306 imputation comparisons that pass Hull's leverage screen, from 28 and 29 papers, TWFE and modern estimates have correlations of 0.61 and 0.70, change sign in 25.1 and 18.0 percent of comparisons, and differ significantly with opposite signs in 10.2 and 7.2 percent. Modern standard errors are 1.61 and 1.30 times those of TWFE. Including the comparisons that fail the screen leaves these figures essentially unchanged. Our results suggest that TWFE and heterogeneity-robust estimators disagree in a non-negligible share of the published staggered designs we re-estimate, and more often than in economics.",
+    "authors": "Davide Proserpio",
+    "categories": [
+      "econ.EM"
+    ],
+    "entry_id": "http://arxiv.org/abs/2611.11003v1",
+    "first_seen_at": "2026-11-11",
+    "pdf_url": "https://arxiv.org/pdf/2611.11003v1",
+    "primary_category": "econ.EM",
+    "published": "2026-11-07T23:01:55+00:00",
+    "quality_score": 1.7,
+    "title": "Do Modern Difference-in-Differences Estimators Change Published Findings in Business Research?"
+  },
+  "2611.11183": {
+    "abstract": "Parametric models of network formation, such as dyadic logit models, are increasingly popular, but few tools exist to test their specification. This paper develops a specification test for conditionally independent dyad (CID) models based on the probabilities that these models assign to subgraphs, the patterns of links among small groups of agents. Given the agents' characteristics, a parametric CID model determines not only the probability of each link but also the probability that a group of agents forms a triangle, a star, or any other subgraph. Under correct specification, the expected frequency of each subgraph among agents with given characteristics equals its model-implied probability. This forms the basis of the testable conditional moment restrictions. The test statistic is the weighted integrated squared distance between a nonparametric kernel estimate of these probabilities and the probabilities implied by the estimated parametric model. I derive its asymptotic distribution under the null hypothesis.",
+    "authors": "Wenxuan Ding",
+    "categories": [
+      "econ.EM"
+    ],
+    "entry_id": "http://arxiv.org/abs/2611.11183v1",
+    "first_seen_at": "2026-11-11",
+    "pdf_url": "https://arxiv.org/pdf/2611.11183v1",
+    "primary_category": "econ.EM",
+    "published": "2026-11-08T06:55:17+00:00",
+    "quality_score": 2.5,
+    "title": "Testing Conditional Moment Restrictions in Networks"
+  },
+  "2611.12255": {
+    "abstract": "Structural models of peer effects typically capture peer influence through the average, aggregate, or in some cases through extreme peer actions. Such specifications, however, are imposed ex ante and are typically ad hoc. We study the consequences of social norm misspecification by extending the constant elasticity of substitution (CES) norm from continuous to discrete choices. Considering a binary-choice game with incomplete information, we derive results on existence and uniqueness of a rational expectations equilibrium and establish conditions for identification of the structural parameters. We estimate the model by the Nested Pseudo-Likelihood estimator, implemented using the spectral algorithm. Monte Carlo simulations show that the CES estimates of the peer effects approach their true values as the sample grows, whereas imposing a linear norm biases them even in large samples. We apply the framework to microfinance adoption in India and find a strongly max-leaning norm, with significant heterogeneity in curvature and peer effects across villages grouped by caste composition and wealth. In a counterfactual exercise that allocates a fixed subsidy budget to maximise adoption, the estimated and linear norms target very different households, with the former favouring village \"leaders\", who are more likely to adopt and were the first to be informed about microfinance.",
+    "authors": "Shantanu Chadha",
+    "categories": [
+      "econ.EM"
+    ],
+    "entry_id": "http://arxiv.org/abs/2611.12255v1",
+    "first_seen_at": "2026-11-11",
+    "pdf_url": "https://arxiv.org/pdf/2611.12255v1",
+    "primary_category": "econ.EM",
+    "published": "2026-11-09T11:47:27+00:00",
+    "quality_score": 3.5,
+    "title": "When the Norm is Wrong: Social Norm Misspecification and Targeting with an Application to Microfinance Adoption"
+  },
+  "2611.12368": {
+    "abstract": "Series in a macroeconomic panel are almost all correlated with one another, which makes correlation a poor guide to which pairs are directly linked. For example, Treasury rates at different maturities are all highly correlated, yet a short and a long rate may be related only through the rates at maturities between them; similarly, sectors of the economy such as output, employment, prices, and interest rates may be related directly or only through other series. Both are questions about the inverse covariance matrix. Recovering it from quarterly data is difficult: contemporaneous dependence is entangled with temporal dynamics, the innovations remain densely dependent once those dynamics are removed, and the number of series is comparable to the number of quarters observed. We propose VAPOR (Vector Autoregressive Precision factOR), a Bayesian model that estimates vector autoregressive dynamics jointly with a factor-structured innovation precision matrix, inferring the partial correlations directly from the fitted precision rather than imposing a zero pattern. Applied to 100 quarterly FRED-QD series, VAPOR learns from the data that each Treasury rate is directly related only to the rates at adjacent maturities, places all 26 selected dependencies within a single FRED-QD group, and attains the lowest held-out prediction error among the estimators compared.",
+    "authors": "Peter Dunson",
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "stat.AP"
+    ],
+    "entry_id": "http://arxiv.org/abs/2611.12368v1",
+    "first_seen_at": "2026-11-11",
+    "pdf_url": "https://arxiv.org/pdf/2611.12368v1",
+    "primary_category": "econ.EM",
+    "published": "2026-11-09T13:15:43+00:00",
+    "quality_score": 3.5,
+    "title": "Bayesian precision factor models for high-dimensional macroeconomic time series"
+  },
+  "2611.12690": {
+    "abstract": "Causal inference under treatment interference requires assumptions to reduce the exponentially large number of potential outcomes. We develop hierarchical finite-population models for potential outcomes by separating these assumptions into three layers: interference neighborhoods, exposure mappings, and outcome models. Given an interference neighborhood and exposure mapping, we show that potential outcomes admit a nonparametric decomposition into direct, spillover, and treatment--spillover interaction components. This decomposition provides a common coordinate system for nonparametric, semiparametric, and parametric models of finite-population potential outcomes. For a given potential-outcome model, we define two classes of estimands. Average causal effects (ACEs), such as direct and total treatment effects, contrast potential outcomes under fixed treatment--exposure conditions. Expected causal effects (ECEs), such as expected direct and indirect effects, contrast expectations of potential outcomes under a specified allocation policy. For both classes, we bound the variance of the canonical Horvitz--Thompson estimator by three terms: a diagonal weight term, a term from overlapping interference neighborhoods, and a residual design-dependence term. Our upper and lower bounds show that under graph-unaware designs, nonparametric design-unbiased estimation of ACEs can require sample sizes growing exponentially in the interference degree, whereas polynomial growth can suffice for design-aligned ECEs. Under neighborhood interference, we construct graph-aware independent-set designs with variance bounds polynomial in the maximum degree for direct and total treatment effects on every graph, whereas graph cluster randomization can incur worst-case variance exponential in the degree.",
+    "authors": "Vishesh Karwa, Edoardo M. Airoldi, Donald B. Rubin",
+    "categories": [
+      "stat.ME",
+      "cs.LG",
+      "econ.EM"
+    ],
+    "entry_id": "http://arxiv.org/abs/2611.12690v1",
+    "first_seen_at": "2026-11-11",
+    "pdf_url": "https://arxiv.org/pdf/2611.12690v1",
+    "primary_category": "econ.EM",
+    "published": "2026-11-09T16:50:26+00:00",
+    "quality_score": 4.5,
+    "title": "Average versus expected causal effects under interference: Modeling assumptions and estimation bottlenecks"
   }
 }
