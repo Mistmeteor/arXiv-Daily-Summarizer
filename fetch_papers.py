@@ -307,6 +307,7 @@ TEXT_TEMPLATES = {
         'pinned': '📌 置顶',
         'blp_recommend': '🔥 强推荐',
         'repush': '♻️ 二次推送',
+        'push_count': '第 {n} 次',
         'authors': '作者',
         'published': '发布日期',
         'categories': '分类',
@@ -334,6 +335,7 @@ TEXT_TEMPLATES = {
         'pinned': '📌 PINNED',
         'blp_recommend': '🔥 STRONGLY RECOMMENDED',
         'repush': '♻️ REPUSH',
+        'push_count': 'Push #{n}',
         'authors': 'Authors',
         'published': 'Published',
         'categories': 'Categories',
@@ -1228,6 +1230,16 @@ def generate_email_content(papers_with_summaries, language='zh'):
                 background: #9e9e9e;
                 color: #ffffff;
             }}
+            .push-count-badge {{
+                display: inline-block;
+                padding: 2px 8px;
+                border-radius: 3px;
+                font-size: 11px;
+                font-weight: bold;
+                margin-left: 8px;
+                background: #eceff1;
+                color: #546e7a;
+            }}
             .meta {{
                 color: #666;
                 font-size: 14px;
@@ -1360,7 +1372,12 @@ def generate_email_content(papers_with_summaries, language='zh'):
             paper_class = 'paper paper-blp'
         if paper.get('is_repush'):
             repush_badge = f'<span class="repush-badge">{txt["repush"]}</span>'
-        
+
+        push_count_badge = (
+            f'<span class="push-count-badge">'
+            f'{txt["push_count"].format(n=paper.get("push_count", 1))}</span>'
+        )
+
         # Format category tags: translate to Chinese labels, fall back to raw code
         # for anything not in the map. Space-separated so tags don't visually merge.
         categories_html = ' '.join([
@@ -1386,7 +1403,7 @@ def generate_email_content(papers_with_summaries, language='zh'):
         
         html += f"""
         <div class="{paper_class}">
-            <div class="paper-title">{i}. {paper['title']}{blp_badge}{pinned_badge}{repush_badge}{date_badge}{quality_badge}</div>
+            <div class="paper-title">{i}. {paper['title']}{blp_badge}{pinned_badge}{repush_badge}{push_count_badge}{date_badge}{quality_badge}</div>
             <div class="meta">
                 <div class="meta-item">
                     <strong>👥 {txt['authors']}:</strong> {paper['authors'][:200]}{'...' if len(paper['authors']) > 200 else ''}
@@ -1542,6 +1559,8 @@ def generate_pushplus_content(papers_with_summaries, language='zh', cost_info=No
             badges.append('<span style="color:#ff9800;font-size:14px;">📌</span>')
         if paper.get('is_repush'):
             badges.append('<span style="color:#4caf50;font-size:14px;">♻️</span>')
+        push_n = paper.get('push_count', 1)
+        badges.append(f'<span style="color:#546e7a;font-size:14px;">[第{push_n}次]</span>')
         score = paper.get('quality_score', 0)
         badges.append(f'<span style="color:#888;font-size:14px;">[{score:.1f}]</span>')
         badge_html = ' '.join(badges)
@@ -1682,6 +1701,12 @@ def main():
         # today's slot or are retired after TOTAL_PUSHES_CAP pushes).
         papers, skipped = push_history.filter_papers(papers, history)
         print(f"  Kept {len(papers)} paper(s), skipped {len(skipped)} per schedule")
+
+        # Attach cumulative push count (prior pushes + today) for display.
+        for p in papers:
+            key = push_history.paper_key(p.get('entry_id'))
+            prior = len((history.get(key) or {}).get('push_dates', []))
+            p['push_count'] = prior + 1
 
         if not papers:
             print("\n❌ No papers to push. Either arXiv fetch returned an empty pool "
