@@ -4785,9 +4785,10 @@
       "cs.CR",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "cs.CR",
     "push_dates": [
-      "2026-11-05"
+      "2026-11-05",
+      "2026-11-12"
     ],
     "title": "Revisiting Elliptic++ for Bitcoin Forensics: Feature Reconstruction and Leakage-Resistant Evaluation"
   },
@@ -4797,9 +4798,10 @@
       "econ.EM",
       "stat.ML"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "q-fin.ST",
     "push_dates": [
-      "2026-11-05"
+      "2026-11-05",
+      "2026-11-12"
     ],
     "title": "PanelGP: A Probabilistic Factor Model for Asset-Return Panels"
   },
@@ -4809,9 +4811,10 @@
       "econ.EM",
       "stat.AP"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.ME",
     "push_dates": [
-      "2026-11-05"
+      "2026-11-05",
+      "2026-11-12"
     ],
     "title": "When Listwise Deletion Works: Causal Diagrams and Complete-Case Regression"
   },
@@ -4823,9 +4826,10 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-05"
+      "2026-11-05",
+      "2026-11-12"
     ],
-    "title": "Regret-based Characterization, Information Limits, and the Sample Complexity of Auditing Adaptive Policies"
+    "title": "Regret Equals Integrated Covariance: Exact Identities for the Value of Information in Stochastic Optimization"
   },
   "2611.05456": {
     "categories": [
@@ -5150,5 +5154,69 @@
       "2026-11-11"
     ],
     "title": "Average versus expected causal effects under interference: Modeling assumptions and estimation bottlenecks"
+  },
+  "2611.13169": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-12"
+    ],
+    "title": "Identification, estimation, and robust inference of structural autoregressions for multidimensional data"
+  },
+  "2611.13212": {
+    "categories": [
+      "stat.AP",
+      "econ.EM",
+      "stat.CO",
+      "stat.ME",
+      "stat.ML"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-12"
+    ],
+    "title": "Prediction Inference for Hybrid Models on Realized Volatility Forecasting"
+  },
+  "2611.13313": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-12"
+    ],
+    "title": "Instrumental variables with treatment clusters"
+  },
+  "2611.13882": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-12"
+    ],
+    "title": "Backtesting High-Dimensional Expected Shortfall"
+  },
+  "2611.14385": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-12"
+    ],
+    "title": "Semiparametric Inference in Panel Data with Interactive and High-dimensional Confounding"
+  },
+  "2611.14434": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-12"
+    ],
+    "title": "Hedging out the HEDGE Bias: Identifying Dynamic Partial-Equilibrium Effects with Panel LP-IV"
   }
 }
