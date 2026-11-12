@@ -133,7 +133,7 @@ _DEEPSEEK_USAGE_TOTAL = {
 #   pricing  — https://docs.bigmodel.cn/cn/guide/start/pricing
 GLM_API_KEY = os.environ.get('GLM_API_KEY')
 GLM_BASE_URL = 'https://open.bigmodel.cn/api/paas/v4/'
-GLM_MODEL = 'glm-5.3-flash'
+GLM_MODEL = 'glm-5.3'
 
 # GLM pricing (CNY per 1M tokens). Update if Zhipu changes its price list.
 GLM_PRICE_INPUT_PER_1M = 0.6
@@ -1007,8 +1007,7 @@ Paper abstract:
                     if not chunk.choices:
                         continue
                     # DeepSeek with thinking mode streams reasoning_content before
-                    # content. GLM-5.3-Flash doesn't emit reasoning_content but the
-                    # getattr() is safe either way — we just skip it when present.
+                    # content; GLM may or may not — getattr() is safe either way.
                     reasoning_chunk = getattr(chunk.choices[0].delta, 'reasoning_content', None) or ''
                     answer_chunk = chunk.choices[0].delta.content or ''
                     if reasoning_chunk:
