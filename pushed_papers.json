@@ -4877,7 +4877,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-06"
+      "2026-11-06",
+      "2026-11-13"
     ],
     "title": "Neural Score-Driven Volatility and Risk Forecasting"
   },
@@ -4888,9 +4889,10 @@
       "econ.EM",
       "stat.ML"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "cs.GT",
     "push_dates": [
-      "2026-11-06"
+      "2026-11-06",
+      "2026-11-13"
     ],
     "title": "Offline Learning of Reserve Prices from Censored Bids"
   },
@@ -4900,7 +4902,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-06"
+      "2026-11-06",
+      "2026-11-13"
     ],
     "title": "Online Bayesian Inference for a Dirichlet Process Mixture of Binary Logit Models"
   },
@@ -4942,7 +4945,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-06"
+      "2026-11-06",
+      "2026-11-13"
     ],
     "title": "Double Machine Learning for Panel Data: Identification, Specification, and a Bank Regulation Effect"
   },
@@ -4952,7 +4956,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-06"
+      "2026-11-06",
+      "2026-11-13"
     ],
     "title": "Willingness-to-pay space and preference space: a unified treatment of equivalence, heterogeneity and interpretation"
   },
@@ -4975,7 +4980,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-06"
+      "2026-11-06",
+      "2026-11-13"
     ],
     "title": "Discrete Choice under Congestion: Equilibrium and Welfare"
   },
@@ -4987,7 +4993,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-06"
+      "2026-11-06",
+      "2026-11-13"
     ],
     "title": "Patch Attention Wisely: Understanding Patch Length in Attention-Based Forecasting"
   },
@@ -5218,5 +5225,38 @@
       "2026-11-12"
     ],
     "title": "Hedging out the HEDGE Bias: Identifying Dynamic Partial-Equilibrium Effects with Panel LP-IV"
+  },
+  "2611.14673": {
+    "categories": [
+      "econ.EM",
+      "stat.OT"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-13"
+    ],
+    "title": "Recent developments in spatial econometrics"
+  },
+  "2611.14752": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-13"
+    ],
+    "title": "Identification of Rational Inattention-Additive Random Utility Models"
+  },
+  "2611.14789": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-13"
+    ],
+    "title": "Lost in the Bins: Treatment Effects with Discretized Covariates"
   }
 }
