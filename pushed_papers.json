@@ -4603,7 +4603,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-03"
+      "2026-11-03",
+      "2026-11-15"
     ],
     "title": "Convolution Skew-$t$ Distributions"
   },
@@ -4710,7 +4711,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-04"
+      "2026-11-04",
+      "2026-11-15"
     ],
     "title": "Selective Randomization Inference for Interference"
   },
@@ -4731,7 +4733,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-04"
+      "2026-11-04",
+      "2026-11-15"
     ],
     "title": "Sharp Fréchet--Hoeffding Bounds under Selectively Incomplete Observation"
   },
@@ -4741,7 +4744,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-04"
+      "2026-11-04",
+      "2026-11-15"
     ],
     "title": "When Covariates Mask Pre-Trends"
   },
@@ -4751,9 +4755,10 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-04"
+      "2026-11-04",
+      "2026-11-15"
     ],
-    "title": "Sharp Identification for Regression with Interval-Observed and Missing Covariates"
+    "title": "Sharp Identification for Regressions with Interval-Observed and Missing Covariates"
   },
   "2611.03391": {
     "categories": [
@@ -4838,7 +4843,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-06"
+      "2026-11-06",
+      "2026-11-15"
     ],
     "title": "Aggregating treatment effects across multiple outcomes"
   },
@@ -4848,7 +4854,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-06"
+      "2026-11-06",
+      "2026-11-15"
     ],
     "title": "Sensitivity Analysis in Population Shares"
   },
@@ -4869,7 +4876,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-06"
+      "2026-11-06",
+      "2026-11-15"
     ],
     "title": "On the Theory of Multidimensional Stationary Random Processes (1941): Translation and Commentary"
   },
@@ -4915,7 +4923,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-06"
+      "2026-11-06",
+      "2026-11-15"
     ],
     "title": "Approximate minimax regret for conditionally similar tests"
   },
@@ -4937,7 +4946,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-06"
+      "2026-11-06",
+      "2026-11-15"
     ],
     "title": "Nonparametric Subgraph Regression"
   },
