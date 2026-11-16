@@ -3655,7 +3655,8 @@
     "primary_category": "stat.ME",
     "push_dates": [
       "2026-10-13",
-      "2026-10-20"
+      "2026-10-20",
+      "2026-11-16"
     ],
     "title": "An efficient stochastic generalized method of moments estimator for nonlinear moment models"
   },
@@ -3737,7 +3738,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-15",
-      "2026-10-24"
+      "2026-10-24",
+      "2026-11-16"
     ],
     "title": "Recurrent Neural Networks for Forecasting Autoregressive Noncausal Processes"
   },
@@ -3796,7 +3798,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-15",
-      "2026-10-24"
+      "2026-10-24",
+      "2026-11-16"
     ],
     "title": "Pseudo-Panel Event Studies: Econometric Foundations for Credible Applications"
   },
@@ -3807,7 +3810,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-15",
-      "2026-10-23"
+      "2026-10-23",
+      "2026-11-16"
     ],
     "title": "Dynamic Panel Multinomial Logit Models"
   },
@@ -3821,7 +3825,8 @@
     "primary_category": "q-fin.RM",
     "push_dates": [
       "2026-10-15",
-      "2026-10-23"
+      "2026-10-23",
+      "2026-11-16"
     ],
     "title": "Risk Measures for the Climate Transition Age: Why Symmetric Risk Budgets are unlikely to mitigate two-dimensionally asymmetric Climate Change risks"
   },
@@ -3832,7 +3837,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-15",
-      "2026-10-24"
+      "2026-10-24",
+      "2026-11-16"
     ],
     "title": "Randomization Inference for Dynamic Causal Effects in Short Panels with Autoregressive Instruments"
   },
@@ -3856,7 +3862,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-16",
-      "2026-10-23"
+      "2026-10-23",
+      "2026-11-16"
     ],
     "title": "On the fairness of single round-robin tournaments: Evidence from European football"
   },
@@ -3867,7 +3874,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-16",
-      "2026-10-24"
+      "2026-10-24",
+      "2026-11-16"
     ],
     "title": "Locally Robust Inference with Outcomes Predicted by Machine Learning"
   },
@@ -4625,7 +4633,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-03"
+      "2026-11-03",
+      "2026-11-16"
     ],
     "title": "Covariance Identification from Regression Residuals"
   },
@@ -4679,7 +4688,8 @@
     ],
     "primary_category": "q-fin.TR",
     "push_dates": [
-      "2026-11-03"
+      "2026-11-03",
+      "2026-11-16"
     ],
     "title": "Reading the Count: Prediction Markets and Brazil's 2026 Presidential Election"
   },
