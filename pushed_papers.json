@@ -5027,9 +5027,10 @@
       "math.OC",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "math.OC",
     "push_dates": [
-      "2026-11-10"
+      "2026-11-10",
+      "2026-11-17"
     ],
     "title": "Constrained Nested-Logit Pricing: An Exact Reformulation and Global Optimization Method"
   },
@@ -5038,9 +5039,10 @@
       "cs.CE",
       "stat.ME"
     ],
-    "primary_category": "stat.ME",
+    "primary_category": "cs.CE",
     "push_dates": [
-      "2026-11-10"
+      "2026-11-10",
+      "2026-11-17"
     ],
     "title": "Calibrating demand models versus adjusting OD matrices with traffic counts: a controlled comparison"
   },
@@ -5063,7 +5065,7 @@
       "econ.EM",
       "stat.ME"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "cs.AI",
     "push_dates": [
       "2026-11-10"
     ],
@@ -5105,7 +5107,7 @@
       "stat.ME",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-11-10"
     ],
@@ -5126,7 +5128,7 @@
       "q-fin.MF",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "q-fin.MF",
     "push_dates": [
       "2026-11-10"
     ],
@@ -5359,5 +5361,94 @@
       "2026-11-14"
     ],
     "title": "Uniform Inference for Two-Way Clustered Data"
+  },
+  "2611.17692": {
+    "categories": [
+      "econ.EM",
+      "econ.TH"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-17"
+    ],
+    "title": "Random Utility Models in the Consumption-Budget Setting: Vertex and Network-Flow Characterizations"
+  },
+  "2611.18227": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-17"
+    ],
+    "title": "Broken Adaptive Ridge in High-Dimensional Vector Autoregressions"
+  },
+  "2611.18411": {
+    "categories": [
+      "stat.AP",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-17"
+    ],
+    "title": "Making Experiment Results Comparable through Sitewide Impact Estimation"
+  },
+  "2611.18444": {
+    "categories": [
+      "stat.ME",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-17"
+    ],
+    "title": "Constrained Stochastic Policy Targeting under Heterogeneous Partial Interference"
+  },
+  "2611.18479": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-17"
+    ],
+    "title": "Estimating a Rational Inattention Discrete Choice Model: A Semiparametric Approach"
+  },
+  "2611.19177": {
+    "categories": [
+      "econ.EM",
+      "econ.TH"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-17"
+    ],
+    "title": "Alternative Computational Formulations for Testing Discrete-Choice Random Utility Models: Half-Space and Network-Flow Formulations"
+  },
+  "2611.20030": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-17"
+    ],
+    "title": "High-Dimensional Approximate Factor Models with Score-Driven Dynamics: Estimation and Inference"
+  },
+  "2611.20209": {
+    "categories": [
+      "econ.TH",
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-17"
+    ],
+    "title": "Knowing Less After a Diagnostic Test: Dilation in Clinical Decision-Making"
   }
 }
