@@ -5160,7 +5160,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-11"
+      "2026-11-11",
+      "2026-11-18"
     ],
     "title": "When the Norm is Wrong: Social Norm Misspecification and Targeting with an Application to Microfinance Adoption"
   },
@@ -5170,7 +5171,7 @@
       "econ.EM",
       "stat.AP"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-11-11"
     ],
@@ -5182,7 +5183,7 @@
       "cs.LG",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-11-11"
     ],
@@ -5450,5 +5451,101 @@
       "2026-11-17"
     ],
     "title": "Knowing Less After a Diagnostic Test: Dilation in Clinical Decision-Making"
+  },
+  "2611.21474": {
+    "categories": [
+      "econ.EM",
+      "math.ST"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-18"
+    ],
+    "title": "Sharp High-Dimensional Gaussian Approximations over Rectangles without Covariance Restrictions"
+  },
+  "2611.21496": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-18"
+    ],
+    "title": "Never too LATE: Exploiting restrictions for inference on the Local Average Treatment Effect"
+  },
+  "2611.22197": {
+    "categories": [
+      "eess.SY",
+      "math.OC"
+    ],
+    "primary_category": "math.OC",
+    "push_dates": [
+      "2026-11-18"
+    ],
+    "title": "Grid-Responsive Pricing of Dynamic Wireless Charging with Coupled Residential Demand"
+  },
+  "2611.22257": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-18"
+    ],
+    "title": "The Online LSTM Prediction Models and The Term Structure of Predictions"
+  },
+  "2611.22285": {
+    "categories": [
+      "math.PR",
+      "math.AP",
+      "math.OC"
+    ],
+    "primary_category": "math.OC",
+    "push_dates": [
+      "2026-11-18"
+    ],
+    "title": "Uniform spatial Schauder estimates for backward stochastic partial differential equations with random coefficients"
+  },
+  "2611.22289": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-18"
+    ],
+    "title": "Estimation and Model Selection in Factor Models with Long Memory"
+  },
+  "2611.22533": {
+    "categories": [
+      "stat.ME"
+    ],
+    "primary_category": "stat.ME",
+    "push_dates": [
+      "2026-11-18"
+    ],
+    "title": "Online Inference for Dynamic Categorical Regression"
+  },
+  "2611.22638": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-18"
+    ],
+    "title": "Nested logit: model structure and normalisation"
+  },
+  "2611.22675": {
+    "categories": [
+      "math.ST",
+      "econ.EM",
+      "math.PR"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-18"
+    ],
+    "title": "Exact and Approximate Maximum Likelihood Estimation for Multivariate Diffusions under High-Frequency Sampling"
   }
 }
