@@ -5207,7 +5207,7 @@
       "stat.ME",
       "stat.ML"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.AP",
     "push_dates": [
       "2026-11-12"
     ],
@@ -5452,6 +5452,38 @@
     ],
     "title": "Knowing Less After a Diagnostic Test: Dilation in Clinical Decision-Making"
   },
+  "2611.20806": {
+    "categories": [
+      "eess.SP",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-19"
+    ],
+    "title": "Do Hierarchical Networks Actually Learn? Insights from Word-of-Mouth Estimation"
+  },
+  "2611.21207": {
+    "categories": [
+      "stat.AP",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-19"
+    ],
+    "title": "Who Is the Regression About? Auditing AI-Labeled Treatments When Effects Differ"
+  },
+  "2611.21230": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-19"
+    ],
+    "title": "Shrink Responsibly: Empirical Bayes in Economics"
+  },
   "2611.21474": {
     "categories": [
       "econ.EM",
@@ -5547,5 +5579,82 @@
       "2026-11-18"
     ],
     "title": "Exact and Approximate Maximum Likelihood Estimation for Multivariate Diffusions under High-Frequency Sampling"
+  },
+  "2611.22921": {
+    "categories": [
+      "cs.LG",
+      "cs.CE",
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-19"
+    ],
+    "title": "Action-outcome coupling: a pre-investment feasibility audit for offline reinforcement learning in supply chain operations"
+  },
+  "2611.22984": {
+    "categories": [
+      "econ.EM",
+      "math.ST"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-19"
+    ],
+    "title": "Long-Term Quantile Treatment Effects with Combined Experimental and Observational Data"
+  },
+  "2611.23174": {
+    "categories": [
+      "stat.ME",
+      "cs.AI",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-19"
+    ],
+    "title": "Inference after coding agents"
+  },
+  "2611.23438": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-19"
+    ],
+    "title": "Plausibly Exogenous Instruments in Probit Models: Sensitivity Bounds for Average Partial and Interaction Effects"
+  },
+  "2611.23642": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-19"
+    ],
+    "title": "A Tail-Geometric Approach to Kotlarski's Lemma with Order Statistics"
+  },
+  "2611.23798": {
+    "categories": [
+      "econ.EM",
+      "stat.AP"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-19"
+    ],
+    "title": "Developing a Subdistrict-Level Economic Progress Index Using Geospatial Data"
+  },
+  "2611.23851": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-19"
+    ],
+    "title": "Match Rate Is Not Match Quality"
   }
 }
