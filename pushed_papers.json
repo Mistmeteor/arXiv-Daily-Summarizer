@@ -3940,7 +3940,8 @@
     "primary_category": "math.OC",
     "push_dates": [
       "2026-10-21",
-      "2026-10-28"
+      "2026-10-28",
+      "2026-11-20"
     ],
     "title": "Globally Optimal Estimation of Nested Logit Models"
   },
@@ -5219,7 +5220,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-12"
+      "2026-11-12",
+      "2026-11-20"
     ],
     "title": "Instrumental variables with treatment clusters"
   },
@@ -5239,7 +5241,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-12"
+      "2026-11-12",
+      "2026-11-20"
     ],
     "title": "Semiparametric Inference in Panel Data with Interactive and High-dimensional Confounding"
   },
@@ -5271,7 +5274,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-13"
+      "2026-11-13",
+      "2026-11-20"
     ],
     "title": "Identification of Rational Inattention-Additive Random Utility Models"
   },
@@ -5656,5 +5660,68 @@
       "2026-11-19"
     ],
     "title": "Match Rate Is Not Match Quality"
+  },
+  "2611.23952": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-20"
+    ],
+    "title": "Exploiting Common Volatility Dynamics in High-Dimensional Portfolio Selection"
+  },
+  "2611.24402": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-20"
+    ],
+    "title": "Design-Based Inference for Fuzzy Difference-in-Differences"
+  },
+  "2611.25222": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-20"
+    ],
+    "title": "Network-Adaptive Instrumental Variables"
+  },
+  "2611.25238": {
+    "categories": [
+      "cs.GT",
+      "cs.LG",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-20"
+    ],
+    "title": "Stability Bands for Feature Attribution: The Core, the Nucleolus and the Bargaining Set of Explained-Variance Games"
+  },
+  "2611.25253": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-20"
+    ],
+    "title": "Informative Local Average Treatment Effects Using Propensity Scores"
+  },
+  "2611.25420": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-20"
+    ],
+    "title": "Structural Fine-Tuning under Economic Restrictions"
   }
 }
