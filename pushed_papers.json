@@ -4057,7 +4057,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-22",
-      "2026-10-29"
+      "2026-10-29",
+      "2026-11-21"
     ],
     "title": "Discrete Choice with Generalized Social Interactions"
   },
@@ -5186,7 +5187,8 @@
     ],
     "primary_category": "stat.ME",
     "push_dates": [
-      "2026-11-11"
+      "2026-11-11",
+      "2026-11-21"
     ],
     "title": "Average versus expected causal effects under interference: Modeling assumptions and estimation bottlenecks"
   },
@@ -5231,7 +5233,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-12"
+      "2026-11-12",
+      "2026-11-21"
     ],
     "title": "Backtesting High-Dimensional Expected Shortfall"
   },
@@ -5330,7 +5333,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-14"
+      "2026-11-14",
+      "2026-11-21"
     ],
     "title": "A Sensitivity Framework for Assessing External Validity"
   },
@@ -5340,9 +5344,10 @@
       "econ.EM",
       "econ.TH"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.ME",
     "push_dates": [
-      "2026-11-14"
+      "2026-11-14",
+      "2026-11-21"
     ],
     "title": "One-Sided Randomization in Two-Sided Platform Experiments: Which Side Should be Randomized?"
   },
@@ -5351,9 +5356,10 @@
       "stat.ME",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.ME",
     "push_dates": [
-      "2026-11-14"
+      "2026-11-14",
+      "2026-11-21"
     ],
     "title": "Localizing Mean Shifts in High-Dimensional Vector Autoregressive Models"
   },
@@ -5363,7 +5369,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-14"
+      "2026-11-14",
+      "2026-11-21"
     ],
     "title": "Uniform Inference for Two-Way Clustered Data"
   },
@@ -5723,5 +5730,38 @@
       "2026-11-20"
     ],
     "title": "Structural Fine-Tuning under Economic Restrictions"
+  },
+  "2611.25702": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-21"
+    ],
+    "title": "The Statistical Cost of Second-Order Orthogonality"
+  },
+  "2611.25951": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-21"
+    ],
+    "title": "Measuring climate credibility? Talk, emissions, and corporate debt composition"
+  },
+  "2611.26410": {
+    "categories": [
+      "stat.ME",
+      "cs.LG",
+      "econ.EM",
+      "stat.ML"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-21"
+    ],
+    "title": "Statistical Inference with Ill-Conditioned Random Weight Neural Network Sieves"
   }
 }
