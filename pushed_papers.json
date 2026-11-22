@@ -4190,7 +4190,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-23",
-      "2026-10-30"
+      "2026-10-30",
+      "2026-11-22"
     ],
     "title": "Demand Estimation for Rationally Inattentive Consumers"
   },
@@ -5069,7 +5070,8 @@
     ],
     "primary_category": "cs.AI",
     "push_dates": [
-      "2026-11-10"
+      "2026-11-10",
+      "2026-11-22"
     ],
     "title": "Knowing When to Intervene: Causal Evaluation of AI Agents"
   },
@@ -5121,7 +5123,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-10"
+      "2026-11-10",
+      "2026-11-22"
     ],
     "title": "Z-Estimation under Unignorably Large Clusters"
   },
@@ -5132,7 +5135,8 @@
     ],
     "primary_category": "q-fin.MF",
     "push_dates": [
-      "2026-11-10"
+      "2026-11-10",
+      "2026-11-22"
     ],
     "title": "Polynomial-Preserving Processes and Volatility Modelling in Discrete Time"
   },
@@ -5255,7 +5259,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-12"
+      "2026-11-12",
+      "2026-11-22"
     ],
     "title": "Hedging out the HEDGE Bias: Identifying Dynamic Partial-Equilibrium Effects with Panel LP-IV"
   },
@@ -5266,7 +5271,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-13"
+      "2026-11-13",
+      "2026-11-22"
     ],
     "title": "Recent developments in spatial econometrics"
   },
@@ -5289,7 +5295,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-13"
+      "2026-11-13",
+      "2026-11-22"
     ],
     "title": "Lost in the Bins: Treatment Effects with Discretized Covariates"
   },
@@ -5300,7 +5307,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-14"
+      "2026-11-14",
+      "2026-11-22"
     ],
     "title": "Inference After Model Refutation: Uniform Post-Relaxation Inference for Partially Identified Models"
   },
@@ -5311,7 +5319,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-14"
+      "2026-11-14",
+      "2026-11-22"
     ],
     "title": "Introducing and Repealing an EV Subsidy: Evidence from New Zealand's Clean Car Discount"
   },
@@ -5321,7 +5330,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-14"
+      "2026-11-14",
+      "2026-11-22"
     ],
     "title": "Testing Density Discontinuity Using Spacings"
   },
