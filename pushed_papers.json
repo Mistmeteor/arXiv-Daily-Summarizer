@@ -5401,7 +5401,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-17"
+      "2026-11-17",
+      "2026-11-24"
     ],
     "title": "Random Utility Models in the Consumption-Budget Setting: Vertex and Network-Flow Characterizations"
   },
@@ -5421,7 +5422,7 @@
       "stat.AP",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.AP",
     "push_dates": [
       "2026-11-17"
     ],
@@ -5432,7 +5433,7 @@
       "stat.ME",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-11-17"
     ],
@@ -5445,7 +5446,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-17"
+      "2026-11-17",
+      "2026-11-24"
     ],
     "title": "Estimating a Rational Inattention Discrete Choice Model: A Semiparametric Approach"
   },
@@ -5456,7 +5458,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-17"
+      "2026-11-17",
+      "2026-11-24"
     ],
     "title": "Alternative Computational Formulations for Testing Discrete-Choice Random Utility Models: Half-Space and Network-Flow Formulations"
   },
@@ -5477,7 +5480,7 @@
       "econ.EM",
       "stat.AP"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "econ.TH",
     "push_dates": [
       "2026-11-17"
     ],
@@ -5783,5 +5786,83 @@
       "2026-11-21"
     ],
     "title": "Statistical Inference with Ill-Conditioned Random Weight Neural Network Sieves"
+  },
+  "2611.28690": {
+    "categories": [
+      "math.PR",
+      "math.ST"
+    ],
+    "primary_category": "math.ST",
+    "push_dates": [
+      "2026-11-24"
+    ],
+    "title": "Exact almost sure scale for non-negative stochastic recursions"
+  },
+  "2611.29632": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-24"
+    ],
+    "title": "Probability-Feasible Historical Transport: Sharp Bounds and Falsification Tests for Distributional Pre-Trend Designs"
+  },
+  "2611.29747": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-24"
+    ],
+    "title": "Sharpe Ratio Inference after Machine Learning"
+  },
+  "2611.29797": {
+    "categories": [
+      "econ.EM",
+      "econ.TH",
+      "math.FA",
+      "math.PR"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-24"
+    ],
+    "title": "Shadow economy as a null set. Measure-theoretic approach to shadow economy"
+  },
+  "2611.29833": {
+    "categories": [
+      "stat.CO",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-24"
+    ],
+    "title": "Computational Strategies for Mixed Logit Estimation Automatic Differentiation, GPU Computing, and Floating-Point Precision"
+  },
+  "2611.29837": {
+    "categories": [
+      "math.PR",
+      "math.ST"
+    ],
+    "primary_category": "math.ST",
+    "push_dates": [
+      "2026-11-24"
+    ],
+    "title": "Cumulants, Partitions, and Generalizations of Pólya's Characterization of the Normal Distribution"
+  },
+  "2611.30045": {
+    "categories": [
+      "econ.EM",
+      "econ.TH"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-24"
+    ],
+    "title": "The Entangled Veil: Why Redistribution Requires a New Language"
   }
 }
