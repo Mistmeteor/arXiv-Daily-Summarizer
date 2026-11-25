@@ -5556,7 +5556,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-18"
+      "2026-11-18",
+      "2026-11-25"
     ],
     "title": "The Online LSTM Prediction Models and The Term Structure of Predictions"
   },
@@ -5578,7 +5579,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-18"
+      "2026-11-18",
+      "2026-11-25"
     ],
     "title": "Estimation and Model Selection in Factor Models with Long Memory"
   },
@@ -5588,7 +5590,8 @@
     ],
     "primary_category": "stat.ME",
     "push_dates": [
-      "2026-11-18"
+      "2026-11-18",
+      "2026-11-25"
     ],
     "title": "Online Inference for Dynamic Categorical Regression"
   },
@@ -5598,7 +5601,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-18"
+      "2026-11-18",
+      "2026-11-25"
     ],
     "title": "Nested logit: model structure and normalisation"
   },
@@ -5608,7 +5612,7 @@
       "econ.EM",
       "math.PR"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "math.ST",
     "push_dates": [
       "2026-11-18"
     ],
@@ -5787,6 +5791,30 @@
     ],
     "title": "Statistical Inference with Ill-Conditioned Random Weight Neural Network Sieves"
   },
+  "2611.28301": {
+    "categories": [
+      "stat.ME",
+      "econ.EM",
+      "math.PR",
+      "math.ST"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-25"
+    ],
+    "title": "Skew-Symmetric Factor Models"
+  },
+  "2611.28457": {
+    "categories": [
+      "econ.EM",
+      "econ.TH"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-25"
+    ],
+    "title": "Decision Theory with Degree of Membership in the State Space"
+  },
   "2611.28690": {
     "categories": [
       "math.PR",
@@ -5864,5 +5892,49 @@
       "2026-11-24"
     ],
     "title": "The Entangled Veil: Why Redistribution Requires a New Language"
+  },
+  "2611.30595": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-25"
+    ],
+    "title": "Adaptive experiments with observational data: Efficient experimental design and asymptotic time-uniform inference for long-term treatment effects"
+  },
+  "2611.30599": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-25"
+    ],
+    "title": "What Should an Experiment Measure? Combining a Short-Term Experiment with Confounded Observational Data to Identify Long-Term Treatment Effects"
+  },
+  "2611.30998": {
+    "categories": [
+      "econ.EM",
+      "stat.CO"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-25"
+    ],
+    "title": "Spurious Information in Large Markets: Random Matrix Laws for Entropy, Mutual Information and the Value of Information"
+  },
+  "2611.31707": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-25"
+    ],
+    "title": "An entropy-adjusted invariant likelihood for incidental parameters"
   }
 }
