@@ -4260,7 +4260,8 @@
     "primary_category": "econ.EM",
     "push_dates": [
       "2026-10-27",
-      "2026-11-03"
+      "2026-11-03",
+      "2026-11-26"
     ],
     "title": "Local Polynomial Estimation in Irregular Correlated Random Coefficient Panel Data Models"
   },
@@ -5491,7 +5492,7 @@
       "eess.SP",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "eess.SP",
     "push_dates": [
       "2026-11-19"
     ],
@@ -5502,7 +5503,7 @@
       "stat.AP",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.AP",
     "push_dates": [
       "2026-11-19"
     ],
@@ -5535,7 +5536,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-18"
+      "2026-11-18",
+      "2026-11-26"
     ],
     "title": "Never too LATE: Exploiting restrictions for inference on the Local Average Treatment Effect"
   },
@@ -5625,9 +5627,10 @@
       "econ.EM",
       "stat.AP"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "cs.LG",
     "push_dates": [
-      "2026-11-19"
+      "2026-11-19",
+      "2026-11-26"
     ],
     "title": "Action-outcome coupling: a pre-investment feasibility audit for offline reinforcement learning in supply chain operations"
   },
@@ -5638,7 +5641,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-19"
+      "2026-11-19",
+      "2026-11-26"
     ],
     "title": "Long-Term Quantile Treatment Effects with Combined Experimental and Observational Data"
   },
@@ -5648,7 +5652,7 @@
       "cs.AI",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "stat.ME",
     "push_dates": [
       "2026-11-19"
     ],
@@ -5936,5 +5940,68 @@
       "2026-11-25"
     ],
     "title": "An entropy-adjusted invariant likelihood for incidental parameters"
+  },
+  "2611.33069": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-26"
+    ],
+    "title": "Pragmatic Deeply Debiased ML"
+  },
+  "2611.33204": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-26"
+    ],
+    "title": "Yardstick competition and spatial spillovers of economic infrastructure: a spatial panel analysis of cameroonian regions"
+  },
+  "2611.33265": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-26"
+    ],
+    "title": "Do Language Models Mix? Experimental Evidence from Asymmetric Matching Pennies"
+  },
+  "2611.33350": {
+    "categories": [
+      "stat.ME",
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-26"
+    ],
+    "title": "Geodesic Causal Forests: Learning Heterogeneous Treatment Effects for Random Objects"
+  },
+  "2611.33978": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-26"
+    ],
+    "title": "Will national renewable costs continue declining?"
+  },
+  "2611.34081": {
+    "categories": [
+      "econ.EM",
+      "stat.ME"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-26"
+    ],
+    "title": "Gaussian Process Stochastic Frontiers with Two-Way Fixed Effects"
   }
 }
