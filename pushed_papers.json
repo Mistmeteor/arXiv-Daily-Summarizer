@@ -4311,7 +4311,8 @@
     "primary_category": "stat.ME",
     "push_dates": [
       "2026-10-28",
-      "2026-11-04"
+      "2026-11-04",
+      "2026-11-27"
     ],
     "title": "Demand Estimation with Unobserved Stockout Substitution: Exact Likelihood Maximization"
   },
@@ -5526,7 +5527,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-18"
+      "2026-11-18",
+      "2026-11-27"
     ],
     "title": "Sharp High-Dimensional Gaussian Approximations over Rectangles without Covariance Restrictions"
   },
@@ -5654,7 +5656,8 @@
     ],
     "primary_category": "stat.ME",
     "push_dates": [
-      "2026-11-19"
+      "2026-11-19",
+      "2026-11-27"
     ],
     "title": "Inference after coding agents"
   },
@@ -5695,7 +5698,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-19"
+      "2026-11-19",
+      "2026-11-27"
     ],
     "title": "Match Rate Is Not Match Quality"
   },
@@ -5705,7 +5709,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-20"
+      "2026-11-20",
+      "2026-11-27"
     ],
     "title": "Exploiting Common Volatility Dynamics in High-Dimensional Portfolio Selection"
   },
@@ -5716,7 +5721,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-20"
+      "2026-11-20",
+      "2026-11-27"
     ],
     "title": "Design-Based Inference for Fuzzy Difference-in-Differences"
   },
@@ -5736,9 +5742,10 @@
       "cs.LG",
       "econ.EM"
     ],
-    "primary_category": "econ.EM",
+    "primary_category": "cs.GT",
     "push_dates": [
-      "2026-11-20"
+      "2026-11-20",
+      "2026-11-27"
     ],
     "title": "Stability Bands for Feature Attribution: The Core, the Nucleolus and the Bargaining Set of Explained-Variance Games"
   },
@@ -5748,7 +5755,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-20"
+      "2026-11-20",
+      "2026-11-27"
     ],
     "title": "Informative Local Average Treatment Effects Using Propensity Scores"
   },
@@ -5758,7 +5766,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-20"
+      "2026-11-20",
+      "2026-11-27"
     ],
     "title": "Structural Fine-Tuning under Economic Restrictions"
   },
@@ -6003,5 +6012,15 @@
       "2026-11-26"
     ],
     "title": "Gaussian Process Stochastic Frontiers with Two-Way Fixed Effects"
+  },
+  "2611.34423": {
+    "categories": [
+      "econ.EM"
+    ],
+    "primary_category": "econ.EM",
+    "push_dates": [
+      "2026-11-27"
+    ],
+    "title": "Reading the Room with AI: FOMC Deliberation and Growth-at-Risk"
   }
 }
