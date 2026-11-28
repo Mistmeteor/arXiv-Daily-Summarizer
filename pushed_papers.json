@@ -5415,7 +5415,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-17"
+      "2026-11-17",
+      "2026-11-28"
     ],
     "title": "Broken Adaptive Ridge in High-Dimensional Vector Autoregressions"
   },
@@ -5426,7 +5427,8 @@
     ],
     "primary_category": "stat.AP",
     "push_dates": [
-      "2026-11-17"
+      "2026-11-17",
+      "2026-11-28"
     ],
     "title": "Making Experiment Results Comparable through Sitewide Impact Estimation"
   },
@@ -5437,7 +5439,8 @@
     ],
     "primary_category": "stat.ME",
     "push_dates": [
-      "2026-11-17"
+      "2026-11-17",
+      "2026-11-28"
     ],
     "title": "Constrained Stochastic Policy Targeting under Heterogeneous Partial Interference"
   },
@@ -5618,7 +5621,8 @@
     ],
     "primary_category": "math.ST",
     "push_dates": [
-      "2026-11-18"
+      "2026-11-18",
+      "2026-11-28"
     ],
     "title": "Exact and Approximate Maximum Likelihood Estimation for Multivariate Diffusions under High-Frequency Sampling"
   },
@@ -5667,7 +5671,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-19"
+      "2026-11-19",
+      "2026-11-28"
     ],
     "title": "Plausibly Exogenous Instruments in Probit Models: Sensitivity Bounds for Average Partial and Interaction Effects"
   },
@@ -5677,7 +5682,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-19"
+      "2026-11-19",
+      "2026-11-28"
     ],
     "title": "A Tail-Geometric Approach to Kotlarski's Lemma with Order Statistics"
   },
@@ -5688,7 +5694,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-19"
+      "2026-11-19",
+      "2026-11-28"
     ],
     "title": "Developing a Subdistrict-Level Economic Progress Index Using Geospatial Data"
   },
@@ -5777,7 +5784,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-21"
+      "2026-11-21",
+      "2026-11-28"
     ],
     "title": "The Statistical Cost of Second-Order Orthogonality"
   },
@@ -5787,7 +5795,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-21"
+      "2026-11-21",
+      "2026-11-28"
     ],
     "title": "Measuring climate credibility? Talk, emissions, and corporate debt composition"
   },
@@ -5800,7 +5809,8 @@
     ],
     "primary_category": "econ.EM",
     "push_dates": [
-      "2026-11-21"
+      "2026-11-21",
+      "2026-11-28"
     ],
     "title": "Statistical Inference with Ill-Conditioned Random Weight Neural Network Sieves"
   },
